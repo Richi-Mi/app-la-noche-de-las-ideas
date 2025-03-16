@@ -1,5 +1,6 @@
 package com.ipn.escom.lni
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,16 +17,21 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    private lateinit var mediaPlayer : MediaPlayer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.auido_fondo)
+        mediaPlayer.isLooping = true
+        mediaPlayer.start()
+
         enableEdgeToEdge()
         setContent {
             LaNocheDeLasIdeasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    HomeScreen( innerPadding )
                 }
             }
         }
