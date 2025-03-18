@@ -1,6 +1,5 @@
-package com.ipn.escom.lni
+package com.ipn.escom.lni.ui.navigation
 
-import android.graphics.Paint.Style
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -8,7 +7,6 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -32,15 +30,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ipn.escom.lni.R
 import kotlin.random.Random
 
 @Composable
@@ -106,7 +102,7 @@ fun generateStars(count: Int): List<Star> {
 }
 
 @Composable
-fun HomeScreen( innerPadding: PaddingValues ) {
+fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
     val offset = Offset(5.0f, 10.0f)
 
     Box(
@@ -120,7 +116,7 @@ fun HomeScreen( innerPadding: PaddingValues ) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = stringResource( R.string.app_name ),
+                text = stringResource(R.string.app_name),
                 color = Color.White,
                 textAlign = TextAlign.Center,
                 fontFamily = FontFamily.Cursive,
@@ -132,7 +128,7 @@ fun HomeScreen( innerPadding: PaddingValues ) {
                 )
             )
             Spacer(modifier = Modifier.height(32.dp))
-            StyledButton( onClick = { /* Acción al hacer clic */ }, text = stringResource( R.string.app_entry ) )
+            StyledButton( onClick = { onClick() }, text = stringResource( R.string.app_entry ) )
         }
     }
 }
