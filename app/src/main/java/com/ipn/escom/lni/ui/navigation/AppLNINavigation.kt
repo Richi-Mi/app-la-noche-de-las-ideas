@@ -25,7 +25,7 @@ fun AppLNINavigation() {
             startDestination = NavRoutes.startScreen
         ) {
             addStartScreen( applninavController, innerPadding )
-            addMapScreen( applninavController )
+            addMapScreen( applninavController, innerPadding )
             addDetailScreen( applninavController )
         }
     }
@@ -41,10 +41,14 @@ private fun NavGraphBuilder.addStartScreen(
     }
 }
 private fun NavGraphBuilder.addMapScreen(
-    navController: NavHostController
+    navController: NavHostController,
+    innerPadding: PaddingValues
 ) {
     composable( NavRoutes.mapScreen ) {
-        ScrollableMap()
+        ScrollableMap(
+            navController,
+            innerPadding
+        )
     }
 }
 private fun NavGraphBuilder.addDetailScreen(
