@@ -1,4 +1,4 @@
-package com.ipn.escom.lni.ui.navigation
+package com.ipn.escom.lni.ui.presentation
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> The night of ideas </string>
+    <string name="app_entry"> Entry </string>
+
+    <string name="app_eventType_conference"> Conference </string>
+    <string name="app_eventType_taller"> Workshop </string>
+    <string name="app_eventType_mesa_redonda"> Round Table </string>
+    <string name="app_eventType_exposición"> Exposure </string>
+    <string name="app_evenType_pelicula"> Movie </string>
+</resources>

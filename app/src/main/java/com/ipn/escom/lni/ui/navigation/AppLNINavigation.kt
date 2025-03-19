@@ -12,6 +12,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ipn.escom.lni.NavRoutes
 import com.ipn.escom.lni.ui.presentation.DetailScreen
+import com.ipn.escom.lni.ui.presentation.HomeScreen
+import com.ipn.escom.lni.ui.presentation.ScrollableMap
 
 @Composable
 fun AppLNINavigation() {

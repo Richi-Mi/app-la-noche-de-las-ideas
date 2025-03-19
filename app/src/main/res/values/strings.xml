@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">La noche de las ideas</string>
     <string name="app_entry"> Entrar </string>
+
+    <string name="app_eventType_conference"> Conferencia </string>
+    <string name="app_eventType_taller"> Taller </string>
+    <string name="app_eventType_mesa_redonda"> Mesa Redonda </string>
+    <string name="app_eventType_exposición"> Exposición </string>
+    <string name="app_evenType_pelicula"> Película </string>
 </resources>

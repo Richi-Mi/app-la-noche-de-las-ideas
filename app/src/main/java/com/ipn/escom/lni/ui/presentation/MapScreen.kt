@@ -1,7 +1,9 @@
-package com.ipn.escom.lni.ui.navigation
+package com.ipn.escom.lni.ui.presentation
 
+import android.widget.Toast
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
@@ -12,6 +14,7 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.imageResource
 import androidx.navigation.NavHostController
 import com.ipn.escom.lni.R
@@ -23,6 +26,9 @@ fun ScrollableMap(
     navHostController: NavHostController,
     innerPaddingValues: PaddingValues
 ) {
+    val context = LocalContext.current
+
+    Toast.makeText(context, "Hola XD", Toast.LENGTH_SHORT).show()
     val imageBitmap = ImageBitmap.imageResource(id = R.drawable.mapa) // Reemplaza con tu mapa
 
     var offsetX by remember { mutableFloatStateOf(0f) }
@@ -64,14 +70,12 @@ fun ScrollableMap(
                 scale(scale * initialScale, pivot = pivot) {
                     drawImage(imageBitmap)
                     drawCircle(
-                        radius = 15f * scale,
+                        radius = 85f * scale,
                         center = Offset(imageWidth / 16,10f),
                         color = Color.Red
                     )
                 }
             }
-
-
         }
     }
 }
