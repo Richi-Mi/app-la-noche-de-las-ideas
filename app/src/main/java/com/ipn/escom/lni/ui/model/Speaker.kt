@@ -5,5 +5,5 @@ import android.graphics.drawable.Drawable
 data class Speaker(
     val name: String,
     val institute: String,
-    val image: Drawable
+    val image: Drawable? = null
 )

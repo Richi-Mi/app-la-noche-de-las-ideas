@@ -1,26 +1,32 @@
 package com.ipn.escom.lni.ui.theme
 
-import android.app.Activity
 import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
-    tertiary = Pink80
+    tertiary = Pink80,
+    secondaryContainer = Color(0xFFF9E5A3), // Dentro de la informacion de un evento
+    tertiaryContainer = Color(0xFFD84A26), // Hora en la informacion de un evento
+    onTertiaryContainer = Color(0xFF6A3D9A) //Color del boton flotante
+
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
-    tertiary = Pink40
+    tertiary = Pink40,
+    secondaryContainer = Color(0xFFF9E5A3),
+    tertiaryContainer = Color(0xFFD84A26),
+    onTertiaryContainer = Color(0xFF6A3D9A) //Color del boton flotante
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
