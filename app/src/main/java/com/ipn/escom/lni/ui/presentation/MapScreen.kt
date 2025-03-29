@@ -26,9 +26,6 @@ fun ScrollableMap(
     navHostController: NavHostController,
     innerPaddingValues: PaddingValues
 ) {
-    val context = LocalContext.current
-
-    Toast.makeText(context, "Hola XD", Toast.LENGTH_SHORT).show()
     val imageBitmap = ImageBitmap.imageResource(id = R.drawable.mapa) // Reemplaza con tu mapa
 
     var offsetX by remember { mutableFloatStateOf(0f) }
@@ -69,11 +66,11 @@ fun ScrollableMap(
             translate(left = offsetX, top = offsetY) {
                 scale(scale * initialScale, pivot = pivot) {
                     drawImage(imageBitmap)
-                    drawCircle(
+                    /*drawCircle(
                         radius = 85f * scale,
                         center = Offset(imageWidth / 16,10f),
                         color = Color.Red
-                    )
+                    )*/
                 }
             }
         }

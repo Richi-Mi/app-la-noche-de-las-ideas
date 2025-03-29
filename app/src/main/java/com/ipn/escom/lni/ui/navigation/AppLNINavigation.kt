@@ -58,6 +58,6 @@ private fun NavGraphBuilder.addDetailScreen(
 ) {
     composable( NavRoutes.getDetailRoute() ) { backStackEntry ->
         val id = backStackEntry.arguments?.getInt( NavRoutes.arguments.id ) ?: 0
-        DetailScreen( id )
+        //DetailScreen( id,  )
     }
 }

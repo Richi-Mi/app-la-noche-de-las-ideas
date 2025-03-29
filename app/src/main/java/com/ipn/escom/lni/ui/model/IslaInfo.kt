@@ -1,11 +1,10 @@
 package com.ipn.escom.lni.ui.model
 
 import android.graphics.drawable.Drawable
-import androidx.annotation.Nullable
 
-data class Speaker(
+data class IslaInfo(
     val name: String,
-    val institute: String,
     val image: Int,
-    val biography: String
+    val events: List<EventInfo>,
+    val direction: String //url de map
 )

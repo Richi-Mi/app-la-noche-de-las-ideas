@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name"> The night of ideas </string>
+    <string name="app_name"> Compass of Ideas </string>
     <string name="app_entry"> Entry </string>
 
     <string name="app_eventType_conference"> Conference </string>
