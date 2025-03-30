@@ -75,9 +75,11 @@ fun EventScreen(event: EventInfo) {
                 EventDetailRow(Icons.Default.Place, "Lugar", event.place)
                 EventDetailRow(Icons.Default.Info, "Tipo de evento", event.type.toString())
                 EventDetailRow(Icons.Default.Check, "Descripción", event.description)
-                event.exponents.forEach { speaker: Speaker ->
-                    ExponentsDetails(speaker)
-                    Spacer(modifier = Modifier.height(16.dp))
+                if(event.exponents != null) {
+                    event.exponents.forEach { speaker: Speaker ->
+                        ExponentsDetails(speaker)
+                        Spacer(modifier = Modifier.height(16.dp))
+                    }
                 }
             }
         }

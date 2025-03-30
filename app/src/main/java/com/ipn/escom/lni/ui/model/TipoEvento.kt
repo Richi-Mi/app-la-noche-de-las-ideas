@@ -11,5 +11,12 @@ enum class TipoEvento(
     TALLER(R.string.app_eventType_taller ),
     MESA_REDONDA(R.string.app_eventType_mesa_redonda ),
     EXPOSICION(R.string.app_eventType_exposición),
-    PELICULA(R.string.app_evenType_pelicula)
+    PELICULA(R.string.app_evenType_pelicula),
+    DOCUMENTAL(R.string.app_evenType_documental),
+    COMIDA(R.string.app_evenType_comida),
+    MESA_DIALOGO(R.string.app_evenType_mesa_dialogo),
+    ACTIVIDAD_LUDICA(R.string.app_evenType_actividad),
+    SKETCH(R.string.app_evenType_sketch),
+    ACTO_MUSICAL(R.string.app_evenType_acto_musical),
+    CONVERSATORIO(R.string.app_eventType_conversatorio)
 }

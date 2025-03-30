@@ -7,4 +7,11 @@
     <string name="app_eventType_mesa_redonda"> Mesa Redonda </string>
     <string name="app_eventType_exposición"> Exposición </string>
     <string name="app_evenType_pelicula"> Película </string>
+    <string name="app_evenType_documental"> Documental </string>
+    <string name="app_evenType_comida"> Comida </string>
+    <string name="app_evenType_actividad"> Actividad Ludica </string>
+    <string name="app_evenType_sketch"> Sketch </string>
+    <string name="app_evenType_acto_musical"> Acto Musical </string>
+    <string name="app_evenType_mesa_dialogo"> Mesa de dialogo </string>
+    <string name="app_eventType_conversatorio"> Conversatorio </string>
 </resources>

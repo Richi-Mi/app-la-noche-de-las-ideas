@@ -8,4 +8,11 @@
     <string name="app_eventType_mesa_redonda"> Round Table </string>
     <string name="app_eventType_exposición"> Exposure </string>
     <string name="app_evenType_pelicula"> Movie </string>
+    <string name="app_evenType_documental"> Documentary </string>
+    <string name="app_evenType_comida"> Food </string>
+    <string name="app_evenType_mesa_dialogo"> Dialogue Table </string>
+    <string name="app_evenType_actividad"> Recreational Activity </string>
+    <string name="app_evenType_sketch"> Sketch </string>
+    <string name="app_evenType_acto_musical"> Musical Act </string>
+    <string name="app_eventType_conversatorio"> Conversation </string>
 </resources>
