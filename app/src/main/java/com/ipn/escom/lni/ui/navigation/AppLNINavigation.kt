@@ -11,7 +11,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ipn.escom.lni.NavRoutes
+import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.presentation.DetailScreen
+import com.ipn.escom.lni.ui.presentation.EventScreen
 import com.ipn.escom.lni.ui.presentation.HomeScreen
 import com.ipn.escom.lni.ui.presentation.ScrollableMap
 
@@ -29,6 +31,7 @@ fun AppLNINavigation() {
             addStartScreen( applninavController, innerPadding )
             addMapScreen( applninavController, innerPadding )
             addDetailScreen( applninavController )
+            addEventScreen( applninavController)
         }
     }
 }
@@ -58,6 +61,16 @@ private fun NavGraphBuilder.addDetailScreen(
 ) {
     composable( NavRoutes.getDetailRoute() ) { backStackEntry ->
         val id = backStackEntry.arguments?.getInt( NavRoutes.arguments.id ) ?: 0
-        //DetailScreen( id,  )
+        DetailScreen( navController, islasGlobal[id]) {
+
+        }
+    }
+}
+
+private fun NavGraphBuilder.addEventScreen(
+    navController: NavHostController
+) {
+    composable( NavRoutes.eventScreen ) {
+            //EventScreen()
     }
 }

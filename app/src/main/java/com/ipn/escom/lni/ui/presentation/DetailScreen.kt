@@ -42,6 +42,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.ipn.escom.lni.R
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.IslaInfo
@@ -51,8 +52,7 @@ import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
 import java.time.LocalTime
 
 @Composable
-fun DetailScreen(isla: IslaInfo) {
-    val context = LocalContext.current
+fun DetailScreen(navHostController: NavHostController, isla: IslaInfo , onClick: () -> Unit) {
     Box(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)
@@ -96,46 +96,30 @@ fun DetailScreen(isla: IslaInfo) {
 
             Spacer(modifier = Modifier.height(15.dp))
 
-            ListOfCards(isla.events)
-        }
-
-        FloatingActionButton(
-            onClick = {
-                abrirNavegador(context, isla.direction)
-            },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(15.dp)
-        ) {
-            Icon(Icons.Default.LocationOn, contentDescription = "Ubicación", tint = Color.Red)
+            ListOfCards(isla.events, onClick)
         }
     }
 }
 
-fun abrirNavegador (context: Context, url: String) {
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-    context.startActivity(intent)
-}
 
 @Composable
-fun ListOfCards (events: List<EventInfo>) {
+fun ListOfCards (events: List<EventInfo>, onClick: () -> Unit) {
     LazyColumn {
         items(events) { event ->
-            CardEvent(event)
+            CardEvent(event, onClick)
             Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }
 
 @Composable
-fun CardEvent (info: EventInfo) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
+fun CardEvent (info: EventInfo, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
             .clickable {
-                expanded =! expanded
+                onClick()
             }
     ){
         Box(
@@ -156,11 +140,8 @@ fun CardEvent (info: EventInfo) {
                     modifier = Modifier
                         .padding(start = 50.dp)
                 )
-                if(!expanded)
-                    Text(text = info.description, color = Color.DarkGray, fontSize = 12.sp,
-                        modifier = Modifier.padding(start = 50.dp))
-                else
-                    CardOpen(info.exponents)
+                Text(text = info.description, color = Color.DarkGray, fontSize = 12.sp,
+                    modifier = Modifier.padding(start = 50.dp))
             }
         }
         Box (
@@ -171,7 +152,7 @@ fun CardEvent (info: EventInfo) {
                 .align(Alignment.TopStart)
         ){
             Text(
-                text = info.hora.toString() + " PM",
+                text = info.startHora.toString() + " PM",
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
@@ -180,76 +161,5 @@ fun CardEvent (info: EventInfo) {
                     .align(Alignment.Center)
             )
         }
-    }
-}
-
-@Composable
-fun CardOpen (exponents: List<Speaker>) {
-    Column (Modifier.fillMaxWidth()){
-        Spacer(modifier = Modifier.height(8.dp))
-        exponents.forEach { exponent ->
-            Image(
-                painter = painterResource(id = exponent.image),
-                contentDescription = exponent.name,
-                modifier = Modifier
-                    .size(100.dp)
-                    .clip(CircleShape)
-                    .align(Alignment.CenterHorizontally)
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = exponent.name,
-                fontWeight = FontWeight.Medium,
-                fontSize = 16.sp,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
-            if(exponent.institute != "") {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = exponent.institute,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 16.sp,
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                )
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = exponent.biography,
-                fontSize = 14.sp,
-                modifier = Modifier.padding(horizontal = 8.dp)
-            )
-        }
-    }
-}
-
-@Preview
-@Composable
-fun CardPreview () {
-    val eventos = listOf(
-        EventInfo(
-            "Nombre del evento",
-            LocalTime.of(15, 0),
-            "Este es un evento xd",
-            listOf(Speaker("Juan", "perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", "Perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla")),
-            TipoEvento.PELICULA
-        ),
-        EventInfo(
-            "Nombre del evento2",
-            LocalTime.of(17, 0),
-            "Este es un evento xd",
-            listOf(Speaker("Juan", "perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", "Perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla")),
-            TipoEvento.PELICULA
-        ),
-        EventInfo(
-            "Nombre del evento3",
-            LocalTime.of(19, 0),
-            "Este es un evento xd",
-            listOf(Speaker("Juan", "perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", "Perez", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla")),
-            TipoEvento.PELICULA
-        )
-    )
-    val isl = IslaInfo("Isla de Utopía", R.drawable.ic_launcher_foreground, eventos, "https://www.google.com/maps/place/ESCA+-+Escuela+Superior+de+Comercio+y+Administraci%C3%B3n+Unidad+Santo+Tom%C3%A1s/")
-    LaNocheDeLasIdeasTheme (darkTheme = false) {
-        DetailScreen(isl)
     }
 }

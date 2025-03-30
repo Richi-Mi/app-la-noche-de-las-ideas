@@ -5,7 +5,6 @@ import androidx.annotation.Nullable
 
 data class Speaker(
     val name: String,
-    val institute: String,
     val image: Int,
     val biography: String
 )
