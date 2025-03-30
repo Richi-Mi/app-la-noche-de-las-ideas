@@ -15,8 +15,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
@@ -56,6 +59,7 @@ fun EventScreen(event: EventInfo) {
         Column (
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.SpaceBetween
         ){
@@ -78,7 +82,7 @@ fun EventScreen(event: EventInfo) {
                 if(event.exponents != null) {
                     event.exponents.forEach { speaker: Speaker ->
                         ExponentsDetails(speaker)
-                        Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(8.dp))
                     }
                 }
             }
@@ -174,7 +178,8 @@ fun PreviewEvent (){
         LocalTime.of(19, 0),
         LocalTime.of(21, 0),
         "Este es un evento xd",
-        listOf(Speaker("Juan", R.drawable.logo, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla")),
+        listOf(Speaker("Juan", R.drawable.logo, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla"),
+            Speaker("Jua3n", R.drawable.logo, "Esta es mi biografia, blablalbalbalblabla")),
         TipoEvento.PELICULA,
         "Auditorio B5",
         "https://maps.app.goo.gl/JnjrvTS1H3rKpvHh9"
