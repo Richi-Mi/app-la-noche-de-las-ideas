@@ -104,8 +104,9 @@ fun DetailScreen(navHostController: NavHostController, isla: IslaInfo , onClick:
 
 @Composable
 fun ListOfCards (events: List<EventInfo>, onClick: () -> Unit) {
+    val orderedEvents = events.sortedBy { it.startHora }
     LazyColumn {
-        items(events) { event ->
+        items(orderedEvents) { event ->
             CardEvent(event, onClick)
             Spacer(modifier = Modifier.height(16.dp))
         }
