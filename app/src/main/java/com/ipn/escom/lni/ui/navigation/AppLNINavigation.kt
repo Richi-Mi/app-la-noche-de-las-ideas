@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -46,7 +47,7 @@ private fun NavGraphBuilder.addStartScreen(
     }
 }
 private fun NavGraphBuilder.addMapScreen(
-    navController: NavHostController,
+    navController: NavController,
     innerPadding: PaddingValues
 ) {
     composable( NavRoutes.mapScreen ) {

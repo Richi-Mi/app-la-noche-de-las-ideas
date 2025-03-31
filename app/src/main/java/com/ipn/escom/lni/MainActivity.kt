@@ -27,7 +27,9 @@ class MainActivity : ComponentActivity() {
         mediaPlayer = MediaPlayer.create(this, R.raw.auido_fondo)
         mediaPlayer.isLooping = true
         mediaPlayer.start()
+
         initInformation()
+
         enableEdgeToEdge()
         setContent {
             LaNocheDeLasIdeasTheme {
