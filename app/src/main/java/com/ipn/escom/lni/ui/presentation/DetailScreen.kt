@@ -75,7 +75,7 @@ fun DetailScreen( isla: IslaInfo , onClick: (Int) -> Unit) {
 
 @Composable
 fun ListOfCards ( isla: IslaInfo, events: List<EventInfo>, onClick: ( Int ) -> Unit) {
-    val orderedEvents = events.sortedBy { it.startHora }
+
     LazyColumn{
         item {
             //Imagen de la isla con el nombre de la isla
@@ -116,8 +116,8 @@ fun ListOfCards ( isla: IslaInfo, events: List<EventInfo>, onClick: ( Int ) -> U
 
             Spacer(modifier = Modifier.height(15.dp))
         }
-        items(orderedEvents.size) { id ->
-            CardEvent(orderedEvents[id]) {
+        items(events.size) { id ->
+            CardEvent(events[id]) {
                 onClick( id )
             }
             Spacer(modifier = Modifier.height(8.dp))
