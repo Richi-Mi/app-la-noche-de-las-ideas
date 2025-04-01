@@ -50,7 +50,7 @@ fun StyledButton(onClick: () -> Unit, text: String) {
             .fillMaxWidth(0.6f)
             .clip(RoundedCornerShape(24.dp)) // Bordes redondeados
             .border(2.dp, Color.White, RoundedCornerShape(24.dp)), // Borde decorativo
-        colors = ButtonDefaults.buttonColors(containerColor = Color(0x803A3A3A)) // Fondo transparente para respetar el fondo manual
+        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent) // Fondo transparente para respetar el fondo manual
     ) {
         Text(
             text = text,

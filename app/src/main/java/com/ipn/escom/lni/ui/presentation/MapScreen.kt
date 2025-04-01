@@ -31,9 +31,6 @@ import kotlin.math.min
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-// Datos del círculo y método para detectar si el clic está dentro
-data class ImageData(val center: Offset, val imageBitmap: ImageBitmap )
-
 @Composable
 fun ScrollableMap(
     navHostController: NavController,
@@ -46,14 +43,13 @@ fun ScrollableMap(
     var offsetY by remember { mutableFloatStateOf(0f) }
     var scale by remember   { mutableFloatStateOf(1f) }
 
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Transparent)
             .padding(innerPaddingValues)
             .clickable {
-                navHostController.navigate( NavRoutes.getDetailRoute(1) )
+                navHostController.navigate( NavRoutes.getDetailRoute(3) )
             }
     ) {
         AnimatedStarsBackground()

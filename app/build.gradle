@@ -52,6 +52,7 @@ dependencies {
 
     // Dependencias de dagger Hilt.
     implementation libs.hilt.android
+    implementation libs.androidx.ui.text.google.fonts
     kapt libs.hilt.compiler
 
     // Dependencias de navegación con compose.

@@ -6,6 +6,8 @@ import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,8 +19,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.FloatingActionButton
@@ -44,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.ipn.escom.lni.R
+import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.IslaInfo
 import com.ipn.escom.lni.ui.model.Speaker
@@ -52,24 +57,40 @@ import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
 import java.time.LocalTime
 
 @Composable
-fun DetailScreen(navHostController: NavHostController, isla: IslaInfo , onClick: () -> Unit) {
+fun DetailScreen( isla: IslaInfo , onClick: (Int) -> Unit) {
+
     Box(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)
     ) {
         AnimatedStarsBackground()
-        Column (modifier = Modifier.fillMaxSize()){
+        Column (
+            modifier = Modifier.fillMaxSize()
+        ){
+            ListOfCards(isla, isla.events, onClick)
+        }
+    }
+}
+
+
+@Composable
+fun ListOfCards ( isla: IslaInfo, events: List<EventInfo>, onClick: ( Int ) -> Unit) {
+    val orderedEvents = events.sortedBy { it.startHora }
+    LazyColumn{
+        item {
             //Imagen de la isla con el nombre de la isla
-            Box(modifier = Modifier
+            Column (
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(18.dp))
-                .align(Alignment.CenterHorizontally)
             ) {
-                Image(
-                    painter = painterResource(id = isla.image),
+                Icon(
+                    painter = painterResource( isla.image ),
                     contentDescription = isla.name,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.height(150.dp).align(Alignment.Center)
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size( 64.dp )
                 )
                 Text(
                     text = isla.name,
@@ -77,8 +98,7 @@ fun DetailScreen(navHostController: NavHostController, isla: IslaInfo , onClick:
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .background(Color(0xAA6A1B9A), shape = RoundedCornerShape(16.dp))
+                        .background( MaterialTheme.colorScheme.primaryContainer, shape = RoundedCornerShape(16.dp))
                         .padding(8.dp)
                 )
             }
@@ -95,20 +115,12 @@ fun DetailScreen(navHostController: NavHostController, isla: IslaInfo , onClick:
             )
 
             Spacer(modifier = Modifier.height(15.dp))
-
-            ListOfCards(isla.events, onClick)
         }
-    }
-}
-
-
-@Composable
-fun ListOfCards (events: List<EventInfo>, onClick: () -> Unit) {
-    val orderedEvents = events.sortedBy { it.startHora }
-    LazyColumn {
-        items(orderedEvents) { event ->
-            CardEvent(event, onClick)
-            Spacer(modifier = Modifier.height(16.dp))
+        items(orderedEvents.size) { id ->
+            CardEvent(orderedEvents[id]) {
+                onClick( id )
+            }
+            Spacer(modifier = Modifier.height(8.dp))
         }
     }
 }
@@ -125,7 +137,7 @@ fun CardEvent (info: EventInfo, onClick: () -> Unit) {
     ){
         Box(
             modifier = Modifier
-                .background(MaterialTheme.colorScheme.secondaryContainer, shape = RoundedCornerShape(0.dp, 30.dp, 30.dp, 0.dp))
+                .background(MaterialTheme.colorScheme.secondaryContainer, shape = RoundedCornerShape(10.dp))
                 .fillMaxWidth(0.85f)
                 .align(Alignment.TopEnd)
                 .heightIn(min = 60.dp)
@@ -137,11 +149,11 @@ fun CardEvent (info: EventInfo, onClick: () -> Unit) {
                 Text(
                     text = info.name,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black,
+                    color = MaterialTheme.colorScheme.onSecondaryContainer,
                     modifier = Modifier
                         .padding(start = 50.dp)
                 )
-                Text(text = info.description, color = Color.DarkGray, fontSize = 12.sp,
+                Text(text = info.description, color = MaterialTheme.colorScheme.onSecondaryContainer, fontSize = 12.sp,
                     modifier = Modifier.padding(start = 50.dp))
             }
         }
@@ -154,7 +166,7 @@ fun CardEvent (info: EventInfo, onClick: () -> Unit) {
         ){
             Text(
                 text = info.startHora.toString() + " PM",
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onTertiaryContainer,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 modifier = Modifier

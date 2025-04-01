@@ -8,9 +8,11 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.ipn.escom.lni.NavRoutes
 import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.presentation.DetailScreen
@@ -60,10 +62,14 @@ private fun NavGraphBuilder.addMapScreen(
 private fun NavGraphBuilder.addDetailScreen(
     navController: NavHostController
 ) {
-    composable( NavRoutes.getDetailRoute() ) { backStackEntry ->
+    composable( NavRoutes.infoScreen,
+        arguments = listOf(
+            navArgument( NavRoutes.arguments.id, builder = { type = NavType.IntType } )
+        )
+    ) { backStackEntry ->
         val id = backStackEntry.arguments?.getInt( NavRoutes.arguments.id ) ?: 0
-        DetailScreen( navController, islasGlobal[id]) {
-
+        DetailScreen( islasGlobal[id]) { id2 ->
+            navController.navigate( NavRoutes.getEventRoute(id, id2 ) )
         }
     }
 }
@@ -71,7 +77,16 @@ private fun NavGraphBuilder.addDetailScreen(
 private fun NavGraphBuilder.addEventScreen(
     navController: NavHostController
 ) {
-    composable( NavRoutes.eventScreen ) {
-            //EventScreen()
+    composable(
+        route =  NavRoutes.getEventRoute(),
+        arguments = listOf(
+            navArgument( NavRoutes.arguments.id, builder = { type = NavType.IntType } ),
+            navArgument( NavRoutes.arguments.id2, builder = { type = NavType.IntType } )
+        )
+    ) { backStackEntry ->
+        val id = backStackEntry.arguments?.getInt( NavRoutes.arguments.id ) ?: 0
+        val id2 = backStackEntry.arguments?.getInt( NavRoutes.arguments.id2 ) ?: 0
+        val event = islasGlobal[id].events[id2]
+        EventScreen( event )
     }
 }

@@ -44,7 +44,7 @@ fun initInformation() {
     // ISLA: Utopía en el cine
     val cine = IslaInfo(
         "Utopía en el Cine",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.baseline_movie_24,
         listOf(
             EventInfo(
                 name = "Tant que le soleil frappe",
@@ -384,7 +384,7 @@ fun initInformation() {
 
     val utopiasUrbanas = IslaInfo(
         name = "Utopías urbanas",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.baseline_location_city_24,
         events = listOf(
             EventInfo(
                 name = "La negación del futuro: pensamiento utópico desde y hacia un continuo temporal",
@@ -415,7 +415,7 @@ fun initInformation() {
                 exponents = listOf(
                     Speaker(
                         name = "Alain Musset",
-                        image = R.drawable.ic_launcher_foreground,
+                        image = R.drawable.alain_musset,
                         biography = ""
                     )
                 ),

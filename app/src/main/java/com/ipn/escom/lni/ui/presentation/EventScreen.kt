@@ -15,9 +15,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -139,11 +137,11 @@ fun ExponentsDetails (exponent: Speaker) {
         .background(MaterialTheme.colorScheme.tertiaryContainer, shape = RoundedCornerShape(20.dp))
     )
     {
-        Box(modifier = Modifier.fillMaxWidth()) {
+        Box(modifier = Modifier.fillMaxWidth( )) {
             Image(
                 painter = painterResource(id = exponent.image),
                 modifier = Modifier
-                    .clip(CircleShape)
+                    .clip( RoundedCornerShape( 10.dp ) )
                     .width(150.dp)
                     .align(alignment = Alignment.TopCenter),
                 contentScale = ContentScale.Fit,
