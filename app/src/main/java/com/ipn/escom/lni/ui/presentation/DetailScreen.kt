@@ -127,6 +127,15 @@ fun ListOfCards ( isla: IslaInfo, events: List<EventInfo>, onClick: ( Int ) -> U
 
 @Composable
 fun CardEvent (info: EventInfo, onClick: () -> Unit) {
+    var texto = ""
+
+    if(info.description != "") {
+        texto = info.description
+    } else {
+        info.exponents?.forEach { speaker ->
+            texto += speaker.name + "\n"
+        }
+    }
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -153,7 +162,9 @@ fun CardEvent (info: EventInfo, onClick: () -> Unit) {
                     modifier = Modifier
                         .padding(start = 50.dp)
                 )
-                Text(text = info.description, color = MaterialTheme.colorScheme.onSecondaryContainer, fontSize = 12.sp,
+                Text(text = texto
+                    ,color = MaterialTheme.colorScheme.onSecondaryContainer,
+                    fontSize = 12.sp,
                     modifier = Modifier.padding(start = 50.dp))
             }
         }

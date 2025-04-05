@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -29,6 +30,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -42,6 +48,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.media3.common.MediaItem
+import androidx.media3.common.Player
+import androidx.media3.common.VideoSize
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.ui.PlayerView
 import com.ipn.escom.lni.R
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.Speaker
@@ -52,7 +64,9 @@ import java.time.LocalTime
 @Composable
 fun EventScreen(event: EventInfo) {
     val context = LocalContext.current
-    Box(modifier = Modifier.fillMaxSize().padding(16.dp)){
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)){
         AnimatedStarsBackground()
         Column (
             modifier = Modifier
@@ -76,13 +90,15 @@ fun EventScreen(event: EventInfo) {
                 EventDetailRow(Icons.Default.Star, "Hora", event.startHora.toString() +" PM - " + event.finishHora.toString() + " PM")
                 EventDetailRow(Icons.Default.Place, "Lugar", event.place)
                 EventDetailRow(Icons.Default.Info, "Tipo de evento", event.type.toString())
-                EventDetailRow(Icons.Default.Check, "Descripción", event.description)
+                if(event.description != "")
+                    EventDetailRow(Icons.Default.Check, "Descripción", event.description)
                 if(event.exponents != null) {
                     event.exponents.forEach { speaker: Speaker ->
-                        ExponentsDetails(speaker)
+                        ExponentsDetails(speaker, context)
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                 }
+                Spacer(modifier = Modifier.height(48.dp))
             }
         }
 
@@ -107,7 +123,10 @@ fun EventDetailRow(icon: ImageVector, title: String, content: String){
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
-            .background(MaterialTheme.colorScheme.tertiaryContainer, shape = RoundedCornerShape(20.dp))
+            .background(
+                MaterialTheme.colorScheme.tertiaryContainer,
+                shape = RoundedCornerShape(20.dp)
+            )
     )
     {
         Icon(icon, title, tint = MaterialTheme.colorScheme.primary,
@@ -131,7 +150,7 @@ fun EventDetailRow(icon: ImageVector, title: String, content: String){
 }
 
 @Composable
-fun ExponentsDetails (exponent: Speaker) {
+fun ExponentsDetails (exponent: Speaker, context: Context) {
     Column (modifier = Modifier
         .fillMaxWidth()
         .background(MaterialTheme.colorScheme.tertiaryContainer, shape = RoundedCornerShape(20.dp))
@@ -141,7 +160,7 @@ fun ExponentsDetails (exponent: Speaker) {
             Image(
                 painter = painterResource(id = exponent.image),
                 modifier = Modifier
-                    .clip( RoundedCornerShape( 10.dp ) )
+                    .clip(RoundedCornerShape(10.dp))
                     .width(150.dp)
                     .align(alignment = Alignment.TopCenter),
                 contentScale = ContentScale.Fit,
@@ -160,12 +179,62 @@ fun ExponentsDetails (exponent: Speaker) {
             text = exponent.biography,
             modifier = Modifier.padding(horizontal = 8.dp)
         )
+        Spacer(modifier = Modifier.height(8.dp))
+        if(exponent.video != null){
+            VideoPlayer(
+                context = context,
+                videoUri = "android.resource://${context.packageName}/raw/${exponent.video}",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(3.dp)
+                    .clip(RoundedCornerShape(16.dp))
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
     }
 }
 
 fun abrirNavegador (context: Context, url: String) {
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     context.startActivity(intent)
+}
+
+@Composable
+fun VideoPlayer(context: Context, videoUri: String, modifier: Modifier){
+    var videoAspectRatio by remember { mutableFloatStateOf(16 / 9f) }
+
+    val exoPlayer = remember {
+        ExoPlayer.Builder(context).build().apply {
+            val mediaItem = MediaItem.fromUri(Uri.parse(videoUri))
+            setMediaItem(mediaItem)
+            prepare()
+            playWhenReady = false
+            addListener(object : Player.Listener {
+                override fun onVideoSizeChanged(videoSize: VideoSize) {
+                    //Se obtiene el tamaño real del video
+                    videoAspectRatio = if(videoSize.height != 0)
+                        videoSize.width.toFloat() / videoSize.height
+                    else
+                        16/9f
+                }
+            })
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            exoPlayer.release()
+        }
+    }
+
+
+
+    AndroidView(factory = {
+        PlayerView(context).apply {
+            player = exoPlayer
+            useController = true
+        }
+    }, modifier = modifier.aspectRatio(videoAspectRatio))
 }
 
 @Preview

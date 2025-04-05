@@ -905,7 +905,7 @@ fun initInformation() {
 
     var eventosElMundoDeAntes = listOf(
         EventInfo(
-            name = "La Republica de Platon",
+            name = "La Republica de Platon", //TODO Falta info
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
             description = "",
@@ -927,7 +927,7 @@ fun initInformation() {
             description = "El trabajo parte de una lectura de los viajes de Cyrano de Bergerac como literatura de ciencia ficción. Con base en ello, no sólo se buscará contextualizarlo científica, social y hasta políticamente, sino abrir una cierta discusión filosófica entre la dimensión ficcional de la ciencia y el realismo literario. En el trasfondo se asoman algunas consideraciones derivadas del anarquismo epistemológico feyerabendiano, solo para mostrar que lo de Bergerac es más que meramente posible.",
             exponents = listOf(
                 Speaker(
-                    name = "Rodolfo Suarez",
+                    name = "Rodolfo Suarez UAM",
                     image = R.drawable.rodolfo_suarez,
                     biography = "Licenciado en Psicología (con especialización en psicología colectiva) y maestro y doctor en Filosofía de la Ciencia. A lo largo de su carrera académica ha realizado diversas investigaciones en teoría de la historia y cultura popular, en las que publicó y/o coordinó 9 libros de ensayo académico y más de 20 artículos de investigación.\n" +
                             "Desde hace 15 años ha dedicado buena parte sus labores a la coordinación de proyectos y actividades académico-artísticas cuyo objetivo ha sido el uso de herramientas y dispositivos artísticos para la intervención social.\n"
@@ -954,9 +954,25 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Las utopías urbanas de Disney: construir la ciudad ideal de EPCOT en Cotino Storyliving",
+            name = "La Utopía de Topolobambo", //TODO
             startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(6,0),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Por definir",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Las utopías urbanas de Disney: construir la ciudad ideal de EPCOT en Cotino Storyliving",
+            startHora = LocalTime.of(6,0),
+            finishHora = LocalTime.of(6,30),
             description = "",
             exponents = listOf(
                 Speaker(
@@ -966,16 +982,6 @@ fun initInformation() {
                             "o\tSophie Didier es geógrafa y profesora de planificación urbana y actualmente directora adjunta de la unidad del CNRS en el extranjero Iglobe (Tucson, Arizona). De 2008 a 2012, se desempeñó como Directora de la unidad en el exterior del CNRS IFAS-Research en Johannesburgo, Sudáfrica. Su trabajo se centra en la circulación global de modelos de producción y gestión urbana, en las coaliciones entre actores urbanos a medio plazo y, cada vez más, en la ecologización de las políticas urbanas. Ha podido trabajar en la relación entre Disneyland y su municipio anfitrión en California, en temas de seguridad urbana en Ciudad del Cabo y Johannesburgo, y ahora está interesada en políticas de césped y jardinería urbana en ciudades del sur de California y Arizona.\n"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Por definir",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Topolobambo",
-            startHora = LocalTime.of(6,0),
-            finishHora = LocalTime.of(6,30),
-            description = "",
-            exponents = null,
             type = TipoEvento.EXPOSICION,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
@@ -1009,14 +1015,15 @@ fun initInformation() {
             name = "Ciencia ficción y ciudades del futuro: ¿pesadilla o Utopía?",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "",
+            description = "Desde Metrópolis hasta Coruscant, la ciudad de ciencia ficción aparece a menudo como la inevitable culminación de una serie de problemas y disfunciones que hipotecan el futuro de las metrópolis contemporáneas: congestión, contaminación, deficiencia de los servicios urbanos, disolución del vínculo social, aumento de las desigualdades económicas y de las disparidades espaciales, violencia cotidiana... Sin embargo, si bien la ciudad del mañana se presenta a menudo como una pesadilla, una verdadera distopía, algunos autores también ofrecen pistas para sugerirnos que otro mundo es posible y que nuestro futuro aún no está trazado. En el fondo del abismo, entre las ruinas del futuro, tal vez nos espere la utopía.",
             exponents = listOf(
                 Speaker(
                     name = "Alain Musset",
                     image = R.drawable.alain_musset,
                     biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia.\n" +
                             "Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. \n" +
-                            "Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992), ¿Geohistoria o geoficción ? Ciudades vulnerables y justicia espacial (Medellín, Universidad de Antioquia, 2009) ; Ciudades nómadas del Nuevo Mundo (México, Fondo de Cultura Económica, 2011). Aficionado a la ciencia ficción, también se interesa por los imaginarios de la ciudad y las visiones futuras de nuestro planeta. Ha publicado varias obras sobre estos temas: Star Wars, un ensayo urbano-galáctico (Santiago de Chile, Bifurcaciones, 2018 – reeditado en 2023) ; Station Métropolis-Direction Coruscant. Ville, science-fiction et sciences sociales (Saint Mammès, Le Bélial’, 2019) ; El síndrome Babilonia. Geoficciones del fin del mundo (Santiago de Chile, Bifurcaciones, 2022); Chères Babylones. Villes rêvées de l’apocalypse (Paris, Serendip’Editions, 2025).\n"
+                            "Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992), ¿Geohistoria o geoficción ? Ciudades vulnerables y justicia espacial (Medellín, Universidad de Antioquia, 2009) ; Ciudades nómadas del Nuevo Mundo (México, Fondo de Cultura Económica, 2011). Aficionado a la ciencia ficción, también se interesa por los imaginarios de la ciudad y las visiones futuras de nuestro planeta. Ha publicado varias obras sobre estos temas: Star Wars, un ensayo urbano-galáctico (Santiago de Chile, Bifurcaciones, 2018 – reeditado en 2023) ; Station Métropolis-Direction Coruscant. Ville, science-fiction et sciences sociales (Saint Mammès, Le Bélial’, 2019) ; El síndrome Babilonia. Geoficciones del fin del mundo (Santiago de Chile, Bifurcaciones, 2022); Chères Babylones. Villes rêvées de l’apocalypse (Paris, Serendip’Editions, 2025).\n",
+                    video = "musset_video"
                 )
             ),
             type = TipoEvento.EXPOSICION,
