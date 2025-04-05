@@ -41,6 +41,145 @@ class MainActivity : ComponentActivity() {
 
 
 fun initInformation() {
+    var eventosAmaurote = listOf(
+        EventInfo(
+            name = "El Familisterio de Godin en Guisa",
+            startHora = LocalTime.of(4,0),
+            finishHora = LocalTime.of(4,30),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Frédéric Panini",
+                    image = R.drawable.fredric_panni,
+                    biography = "Curador del patrimonio, Frédéric Panni estuvo a cargo en el 2000 de la rehabilitación del Familisterio de Guise (Norte de Francia) y de la creación de su museo.",
+                    video = "https://firebasestorage.googleapis.com/v0/b/noche-de-las-ideas.firebasestorage.app/o/resumen%20ponencia%20FAMILISTERE%20DE%20GUISE%20.mp4?alt=media&token=d6a5f306-784a-4fab-83b4-2cb2104e8d84"
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "Construir sus sueños bajo el mar",
+            startHora = LocalTime.of(4,30),
+            finishHora = LocalTime.of(5,0),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Jacques Rougerie\n" +
+                            "Arquitecto de los Oceanos",
+                    image = R.drawable.jacques_rougerie,
+                    biography = "Arquitecto-oceanógrafo y visionario de renombre internacional, académico, Jacques Rougerie es apasionado por el mar y el espacio. \n" +
+                            "Desde hace más de 30 años, su trabajo tiene enfoque sobre una arquitectura biomimética, bio-inspirada y tan resiliente como sostenible. Para ello, se inspira a la vez de los trabajos de Leonardo da Vinci, así como de la obra de Julio Verne, de quien adoptó la máxima: “Todo lo que una persona puede imaginar, otros pueden hacerlo realidad\".\n" +
+                            "Con ese espíritu construyó hábitats y laboratorios submarinos, centros acuáticos, navíos y museos subacuáticos, también proyectos de ciudades flotantes, aeropuertos, centros culturales, un centro base y también una ciudad lunar. \n" +
+                            "Otros proyectos importantes como «SeaOrbiter» y la ciudad flotante llamada “Meriens» sintetizan las investigaciones innovadoras en el campo de la arquitectura marina y submarina, incitando a la vez, a seguir explorando. \n" +
+                            "Experimentando él mismo sus creaciones, vivió en varias ocasiones en hábitats subacuáticos con una estancia récord de 71 días bajo el mar en los Estados Unidos. \n" +
+                            "Desde hace 15 años, obra a través de su fundación para apoyar a jóvenes arquitectos, ingenieros y diseñadores para poner en el centro de su trabajo los desafíos de hoy y del mañana:  las nuevas formas de vida en las costas debido al cambio climático y el aumento del nivel del mar, así como las nuevas exploraciones oceánicas y espaciales. \n" +
+                            "Estas acciones se llevan a cabo a través de una red de jóvenes embajadores de la fundación sobre los cinco continentes, el concurso internacional de arquitectura e innovación suma hoy, un centenar de soluciones arquitecturales a los grandes retos del planeta y a través de la participación a numerosos eventos como los COP o bien la exposición universal.\n" +
+                            "\n" +
+                            "Liga de interes : https://www.fondation-jacques-rougerie.com/en/",
+                    video = "https://firebasestorage.googleapis.com/v0/b/noche-de-las-ideas.firebasestorage.app/o/RESUMEN%20PONENCIA%20Jacques%20Rougerie.mp4?alt=media&token=044e6acb-2d60-4153-949a-c247489287f9"
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "CONSTRUIR, COOPERAR Y COMUNICAR EN CIENCIA, POR QUE CIENCIA QUE NO SE COMUNICA NO SIRVE",
+            startHora = LocalTime.of(5,0),
+            finishHora = LocalTime.of(5,30),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Dalila Aldana Aranda\n" +
+                            "Cinvestav IPN Unidad Mérida",
+                    image = R.drawable.dalila_foto,
+                    biography = "Bióloga por el Instituto Politécnico Nacional en su Escuela Nacional de Ciencias Biológicas. Doctora en Oceanografía Biológica, Acuacultura y Pesca por la Universidad de Bretagne Occidentale, Francia. Con un segundo Doctorado en Biología de Poblaciones por la Universidad de Marsella, Francia. Posee además la Habilitación para dirigir tesis de doctorado en Francia (HRD).\n" +
+                            "Entre sus distinciones destacan el ser Premio Nacional al Mérito Ecológico, Caballero de la Legión de Honor, de la República de Francia, Caballero de las Palmas Académicas del Ministerio de Educación de Francia y Premio Iberoamericano de Comunicación de la Ciencia, por la Agencia Española de científicos.\n" +
+                            "Entre sus posiciones Directivas destacan el haber sido la Primera Mujer en ocupar la Presidencia del Gulf and Caribbean Fisheries Institute y Coordinadora Iberoamericana del Programa Ciencia y Tecnología para el Desarrollo. Presidenta de la Asociación de Laboratorio Marinos del Caribe y Presidenta de la Academia Mexicana de Ciencias. Es consultora científica para la FAO, la OEA, y el Caribbean Fisheries Management Council.\n" +
+                            "Toda su actividad profesional la ha desarrollado en el Caribe, como investigadora del CINVESTAV IPN en acuicultura y pesca. Así como, en el efecto de Cambio Climático y Acidificación Oceánica y la Contaminación marina por plásticos y micro plásticos. Colabora estrechamente con Universidades de Francia entre ellas la de las Antillas, la de Bretaña Occidentale y la de Maine. Maniente colaboraciones con varias Instituciones del Caribe y América Latina.\n" +
+                            "Se ha involucrado activamente en diversos programas de vulgarización y difusión de la ciencia de la Academia Mexicana de Ciencias, entre ellos el Pasaporte al Camino del Conocimiento Científico. También se ha involucrado activamente con el Programa 11F de la ONU, sobre el Día Internacional de la niña y la mujer en la Ciencia. \n" +
+                            "Ha montado 5 exposiciones en museos en México, y 2 exposiciones en museos en Francia. Es autora de un centenar de publicaciones científicas y de tesis de posgrado. Es autora de una colección de 10 libros de divulgación sobre Conservación del Caribe y escribe temas de opinión en la prensa.\n"
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "Utopía de los océanos: uniendo el Pacífico y el Atlántico a través del Corredor Interoceánico azul",
+            startHora = LocalTime.of(5,30),
+            finishHora = LocalTime.of(6,0),
+            description = "La utopía de los océanos con el interoceánico sería un corredor azul, donde la tecnología y la innovación permitan el comercio sin sacrificar la salud del mar. Un modelo en el que los la océanos se regeneren más rápido de lo que se impactan, asegurando su equilibrio para las futuras generaciones",
+            exponents = listOf(
+                Speaker(
+                    name = "Dr. Javier Aguilera",
+                    image = R.drawable.dr_javier_aguilera,
+                    biography = "Javier Aguilera Peña es el presidente del Consejo de Administración de la Promotora de Desarrollo de Industria y Bienestar del Istmo de Tehuantepec .Esta organización participa activamente en el desarrollo del Corredor Interoceánico del Istmo de Tehuantepec (CIIT), un proyecto destinado a impulsar el crecimiento económico en la región sureste del país."
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "Trauma y utopía: la Biblia hebrea como una \"literatura de crisis\"", //TODO
+            startHora = LocalTime.of(6,0),
+            finishHora = LocalTime.of(6,30),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Thomas Römer",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "Fiesta y tragedia de la Comuna de París", //TODO
+            startHora = LocalTime.of(6,30),
+            finishHora = LocalTime.of(7,15),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Christopher Dominguez Michael\n" +
+                            "Colegio Nacional",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        ),
+        EventInfo(
+            name = "Presentación del proyecto urbano sobre las Utopías", //TODO
+            startHora = LocalTime.of(7,15),
+            finishHora = LocalTime.of(7,45),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Maria Antonieta Perez Orozco",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Auditorio Principal",
+            direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
+        )
+    )
+    eventosAmaurote = eventosAmaurote.sortedBy { it.startHora }
+    val amaurote = IslaInfo(
+        "Amaurote",
+        R.drawable.ic_launcher_foreground,
+        eventosAmaurote
+    )
+
     // ISLA: Utopía en el cine
     var eventosCine = listOf(
         EventInfo(
@@ -611,7 +750,7 @@ fun initInformation() {
         events = eventosUtopiasUrbanas
     )
 
-    var eventosSociedadesIdeales = listOf(
+    var eventosMundosDeseablesYNoDeseables = listOf(
         EventInfo(
             name = "La utopía democrática pospartidista",
             startHora = LocalTime.of(4,0),
@@ -629,9 +768,93 @@ fun initInformation() {
             direction = "https://www.google.com/maps"
         ),
         EventInfo(
-            name = "Sociedad Inclusiva",
+            name = "Imaginación política y distopia desde los estudios de género.", //TODO
             startHora = LocalTime.of(4,30),
+            finishHora = LocalTime.of(5,30),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Laura Pedraza Pinto",
+                    image = R.drawable.laura_pedraza_pinto,
+                    biography = "Laura es abogada con experiencia en el ámbito de los estudios de género, los derechos " +
+                            "humanos y la incidencia social. Cuenta con un Doctorado en Estudios Críticos de Género por la " +
+                            "Universidad Iberoamericana, donde su tesis se centró en la construcción y expresión de la " +
+                            "identidad de género de mujeres trans en el sistema carcelario. Asimismo, tiene una Maestría " +
+                            "en Justicia Constitucional.\n" +
+                            "A lo largo de su trayectoria, ha trabajado en proyectos interdisciplinarios enfocados en la " +
+                            "defensa de los derechos humanos, particularmente de personas trans en prisión. Ha " +
+                            "colaborado en la creación de materiales educativos y de sensibilización, como cartillas y " +
+                            "podcasts. Actualmente es Coordinadora de Vinculación e Incidencia del Centro de Estudios " +
+                            "Críticos de Género y Feminismos de la Universidad Iberoamericana."
+                ),
+                Speaker(
+                    name = " Michelle Gama Leyva",
+                    image = R.drawable.michelle_gama,
+                    biography = "Michelle Gama Leyva es la directora del Centro de Estudios Críticos de Género y Feminismos " +
+                            "de la IBERO CDMX, institución en la que ha sido académica de tiempo completo del " +
+                            "Departamento de Letras desde 2016. Sus líneas de investigación son los estudios de género, " +
+                            "los feminismos, la teoría de la literatura, la narrativa contemporánea, los estudios del cuerpo " +
+                            "y de la identidad, y el posthumanismo crítico. Es doctora en Teoría de la Literatura con " +
+                            "especialidad en Estudios de Género y Maestra en Literatura Comparada y Estudios Culturales " +
+                            "por la Universidad Autónoma de Barcelona. Sus dos tesis de posgrado fueron dirigidas por Meri " +
+                            "Torras. Pertenece desde el año 2012 al Grupo de Investigación Cuerpo y Textualidad (Cos i " +
+                            "Textualitat) de dicha Universidad."
+                ),
+                Speaker(
+                    name = "Moises Sheinberg",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = "Moisés es ingeniero en electrónica y comunicaciones. Tiene una maestría en " +
+                            "tecnología educativa y otra en literatura latinoamericana. Actualmente imparte la " +
+                            "materia de ciencia ficción feminista en la licenciatura de letras en la Ibero CDMX, " +
+                            "misma institución en la que cursa el doctorado en letras modernas. Moisés dirige " +
+                            "varios grupos privados de lectura guiada, además de ser director de mercadotecnia en " +
+                            "una prestigiosa empresa de herramientas. Sus líneas de investigación son lo " +
+                            "fantástico, la ciencia ficción, el posthumanismo, los feminismos y la literatura " +
+                            "latinoamericana. Su tesis de maestría se centró en la representación de la mujer en la " +
+                            "obra de Ricardo Piglia y su tesis de doctorado se encamina hacia las representaciones " +
+                            "monstruosas de cuerpos femeninos en la ciencia ficción hispanoamericana."
+                )
+            ),
+            type = TipoEvento.MESA_REDONDA,
+            place = "Por definir",
+            direction = "https://www.google.com/maps"
+        ),
+        EventInfo(
+            name = "La utopía zapatista: futuros emergentes, mundos posibles",
+            startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(6,0),
+            description = "",
+            exponents = listOf(
+                Speaker(
+                    name = "Carlos Rios Gardillo",
+                    image = R.drawable.guillem_compte,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Por definir",
+            direction = "https://www.google.com/maps"
+        ),
+        EventInfo(
+            name = "Comunicación de la ciencia para todas las lenguas",
+            startHora = LocalTime.of(6,0),
+            finishHora = LocalTime.of(6,30),
+            description = "La ciencia es conocimiento, y todo conocimiento se construye a través del lenguaje. Teóricamente se afirma que de alguna manera todas las lenguas humanas conocidas pueden representar cualquier realidad que esté al alcance de la ciencia ¿Será? Se ha dicho que el inglés es el idioma de la ciencia actual y que hay conceptos que difícilmente se pueden representar en otras lenguas; sin embargo, si seguimos la máxima de Fernando Birri  con relación al sentido de las utopías, acaso bien podemos poner en el horizonte la idea de que cualquier conocimiento científico puede comunicarse en cualquier lengua. Caminemos hacia ese horizonte.",
+            exponents = listOf(
+                Speaker(
+                    name = "Mtra. Libia Barajas",
+                    image = R.drawable.libia_barajas,
+                    biography = "Libia Elena Barajas Mariscal es Licenciada en Literaturas Hispánicas por la Universidad de Sonora y Maestra en Pedagogía por la Universidad Nacional Autónoma de México. Con 30 años de experiencia en divulgación científica, está adscrita a la Dirección General de Divulgación de la Ciencia de la UNAM. Es socia titular de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica, A. C. (Somedicyt), donde ha desempeñado el cargo de secretaria electa. Autora de cuatro libros de divulgación científica para niños, ha destacado por su labor en proyectos innovadores. Entre sus logros, trazó las líneas generales y coordinó los esfuerzos de un equipo multidisciplinario que hizo posible la producción de 51 cápsulas radiofónicas de divulgación científica en ocho lenguas indígenas y español, de 2016 a 2019. Este proyecto, financiado por el Consejo Nacional de Ciencia y Tecnología (CONACYT) y administrado por la Somedicyt, está disponible de manera libre y gratuita a través de internet."
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Por definir",
+            direction = "https://www.google.com/maps"
+        ),
+        EventInfo(
+            name = "Sociedad Inclusiva",
+            startHora = LocalTime.of(6,30),
+            finishHora = LocalTime.of(8,0),
             description = "Este conversatorio tiene como objetivo explorar los alcances, los obstáculos y los desafíos que plantea el tema de la inclusión en nuestras sociedades contemporáneas. Más precisamente, se compartirán diversas reflexiones y experiencias desde cuatro perspectivas principales. La primera de ellas, centrada en el lenguaje inclusivo, abordará las prácticas y resistencias asociadas con las formas en que construimos nuestro discurso para reflejar una sociedad más equitativa. A continuación, la cuestión de la inclusión de las personas LGBTQ+ se referirá al tema de los derechos, la visibilidad y las discriminaciones aún presentes en muchas esferas sociales. La inclusión de las personas con discapacidad, por su parte, pondrá de manifiesto los desafíos de accesibilidad e igualdad de oportunidades, a la vez que cuestionará nuestras representaciones de la diversidad de los cuerpos y las mentes. Finalmente, la inclusión de las personas migrantes planteará cómo las sociedades reciben, integran y valoran a las personas provenientes de trayectorias migratorias. En este conversatorio se discutirán las tensiones, las utopías y las realidades relacionadas con la inclusión en un mundo en constante evolución.",
             exponents = listOf(
                 Speaker(
@@ -666,58 +889,54 @@ fun initInformation() {
             direction = "https://www.google.com/maps"
         ),
         EventInfo(
-            name = "Comunicación de la ciencia para todas las lenguas",
-            startHora = LocalTime.of(6,0),
-            finishHora = LocalTime.of(6,30),
-            description = "",
+            name = "De los Origenes de la Misogenia",
+            startHora = LocalTime.of(4,30),
+            finishHora = LocalTime.of(6,45),
+            description = "En esta pieza el mito del génesis y de la culpa de Eva en la caída del hombre son " +
+                    "cuestionados como generadores de cultura, idiosincrasia, y por ende discriminacion, odio, " +
+                    "violencia y sus consecuencias de indiferencia, impunidad, injusticia y culpabilización de las " +
+                    "víctimas como generadoras de los agravios sufridos.\n" +
+                    "A través de la sutileza de la fotografía viva, los lugares de el nacimiento del mito, y de su " +
+                    "máxima expresión misógina: El feminicidio, así como sus lecturas más destructivas, a través " +
+                    "de la lectura en OFF de un antiguo poema irlandés, se unen para conformar una pieza en " +
+                    "tres canales de video que nos remite a los orígenes occidentales del mito, de su " +
+                    "representación, y a sus inevitables consecuencias en el mundo Cristiano Occidental y " +
+                    "mayoritario.",
             exponents = listOf(
                 Speaker(
-                    name = "Mtra. Libia Barajas",
-                    image = R.drawable.libia_barajas,
-                    biography = "Libia Elena Barajas Mariscal es Licenciada en Literaturas Hispánicas por la Universidad de Sonora y Maestra en Pedagogía por la Universidad Nacional Autónoma de México. Con 30 años de experiencia en divulgación científica, está adscrita a la Dirección General de Divulgación de la Ciencia de la UNAM. Es socia titular de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica, A. C. (Somedicyt), donde ha desempeñado el cargo de secretaria electa. Autora de cuatro libros de divulgación científica para niños, ha destacado por su labor en proyectos innovadores. Entre sus logros, trazó las líneas generales y coordinó los esfuerzos de un equipo multidisciplinario que hizo posible la producción de 51 cápsulas radiofónicas de divulgación científica en ocho lenguas indígenas y español, de 2016 a 2019. Este proyecto, financiado por el Consejo Nacional de Ciencia y Tecnología (CONACYT) y administrado por la Somedicyt, está disponible de manera libre y gratuita a través de internet."
+                    name = "Ximena Alarcon",
+                    image = R.drawable.ximena_alarcon,
+                    biography = "Ximena Alarcón (CDMX, 1968) es una artista franco-mexicana cuya práctica ha " +
+                            "evolucionado de la escultura hacia una exploración conceptual más amplia mediante " +
+                            "fotomontaje, collage, instalación, video y performance. Su trabajo, cada vez más vinculado " +
+                            "con la reflexión social y el activismo, aborda temas como la inmigración, la dominación " +
+                            "patriarcal y la violencia de género, liberándose de una exploración meramente formal para " +
+                            "responder a las exigencias del discurso. Ha presentado exposiciones individuales en " +
+                            "instituciones como el Museo de Arte Contemporáneo de Querétaro, el Museo de Arte de " +
+                            "Ciudad Juárez y la Fundación Sebastián, así como en espacios de México, Perú, Japón y " +
+                            "Estados Unidos. Su obra también ha sido parte de exposiciones colectivas en el Museo de " +
+                            "Arte Contemporáneo de Lima y Casa Mérida Contemporary, entre otros. Su trabajo forma " +
+                            "parte de colecciones en México, España, Suecia, Francia, Estados Unidos, Perú y Japón.\n" +
+                            "Es acreedora de la beca Aiko Nakane Fellowship, durante el periodo 2025-2026. Y " +
+                            "ganadora del Premio de Posgrado III de Columbia College 2024 para cursar una Maestría " +
+                            "en Bellas Artes. Además, es fundadora y curadora de Casa Mérida Contemporary."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Por definir",
-            direction = "https://www.google.com/maps"
-        ),
-        EventInfo(
-            name = "Imaginación política y distopia desde los estudios de género.",
-            startHora = LocalTime.of(6,30),
-            finishHora = LocalTime.of(7,15),
-            description = "",
-            exponents = listOf(
-                Speaker(
-                    name = "Laura Alejandra Pedraza Pinto",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                ),
-                Speaker(
-                    name = " Michelle Gama Leyva",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                ),
-                Speaker(
-                    name = "Moises Sheinberg",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.MESA_REDONDA,
+            type = TipoEvento.CONVERSATORIO,
             place = "Por definir",
             direction = "https://www.google.com/maps"
         )
     )
-    eventosSociedadesIdeales = eventosSociedadesIdeales.sortedBy { it.startHora }
-    val sociedadesIdeales = IslaInfo(
-        name = "Sociedades Ideales",
+    eventosMundosDeseablesYNoDeseables = eventosMundosDeseablesYNoDeseables.sortedBy { it.startHora }
+    val mundosDeseablesYNoDeseables = IslaInfo(
+        name = "Mundos Deseables Y No Deseables",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosSociedadesIdeales
+        events = eventosMundosDeseablesYNoDeseables
     )
 
     var eventosUtopiasCientificas = listOf(
         EventInfo(
-            name = "La aviación en la Edad-Media",
+            name = "Las utopías científicas en la Edad Media",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
             description = "",
@@ -779,22 +998,27 @@ fun initInformation() {
             name = "Utopías, Ciencias y Tecnologías ",
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,30),
-            description = "",
+            description = "Tres autoras de la revista Obsidiana, investigadoras mexicanas de diversas disciplinas, se reúnen para conversar y compartir con el público respecto a la influencia que ejercen las utopías y la imaginación en el futuro y en la construcción de nuevo conocimiento. ¡Imagina con ellas el futuro de la ciencia!",
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Clara Fleiz",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Dra. Clara Fleiz Bautista",
+                    image = R.drawable.clara_fleiz,
+                    biography = "Investigadora en Ciencias Médicas en el Instituto Nacional de Psiquiatría. Ha colaborado en distintos proyectos de investigación sobre consumo de drogas y otros problemas de salud mental. Actualmente es investigadora titular del estudio de heroína y otros opioides en la frontera norte del país. Ha sido certificada por la OMS como entrenadora de la Entrevista Diagnóstica Compuesta (CIDI) de la Iniciativa Mundial de Encuestas en Salud Mental y ha impartido dicho entrenamiento en distintas universidades de América Latina, España y México."
                 ),
                 Speaker(
-                    name = "Dra. Elva Excobar",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Dra. Elva Excobar Briones",
+                    image = R.drawable.elva_escobar_briones,
+                    biography = "Es investigadora del Instituto de Ciencias del Mar y Limnología (ICML) y docente de la UNAM. Ella realiza investigación en la biodiversidad de los fondos marinos profundos a bordo de los buques oceanográficos. El conocimiento que ha generado apoya la toma de decisiones nacionales e internacionales. Fue directora del ICML y representa al país como miembro de diversos foros internacionales y comités enfocados a las ciencias del océano."
                 ),
                 Speaker(
-                    name = "Dra. Luz de Teresa",
+                    name = "Dra. Luz de Teresa de Oteyza",
+                    image = R.drawable.luz_de_teresa,
+                    biography = "Matemática hispano-mexicana especializada en la teoría de control de ecuaciones diferenciales parciales parabólicas. Es investigadora del Instituto de Matemáticas de la UNAM, y expresidenta de la Sociedad Matemática Mexicana. (para el período 2018-2020). En 2020 fue nombrada miembro de la junta de gobierno del consejo universitario de la UNAM. Ha colaborado con matemáticos e ingenieros de México, Francia, España, Chile, Brasil, Colombia, Estados Unidos, Italia, Rumanía y Argentina."
+                ),
+                Speaker(
+                    name = "Luisa F. González Arribas",
                     image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    biography = "Luisa inició su labor en comunicación de la ciencia a partir del año 2000. Desde entonces ha colaborado como reportera, editora, profesora, coordinadora de prensa, guionista, tallerista y consultora en diversos proyectos e instituciones. Actualmente es Vicepresidenta de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica (Somedicyt) y Editora en jefe de la revista Obsidiana: ciencia y cultura por México."
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
@@ -805,7 +1029,9 @@ fun initInformation() {
             name = "Predicción del futuro. ¿Qué sigue con la I.A.?",
             startHora = LocalTime.of(6,30),
             finishHora = LocalTime.of(7,15),
-            description = "",
+            description = "Esta platica tiene como objetivo demostrar el impacto disruptivo que está generando la Inteligencia Artificial en todas las industrias. Por medio de una breve historia de la IA, se mostrarán los impactos más significativos que han habido, con el fin de entender el alcance en el cercano y largo plazo.\n" +
+                    "También por medio de ejemplos prácticos, se planea mostrar la facilidad y el poder de desarrollar soluciones. \n" +
+                    "También se busca que haya participación por parte del público para discutir sobre el rol que tendrá el humano para co existir con la Inteligencia Artificial.",
             exponents = listOf(
                 Speaker(
                     name = "Carlos Andrés Hernández Alamillo",
@@ -826,7 +1052,7 @@ fun initInformation() {
             name = "Comunicacion pública de la ciencia en la construccion de las utopias",
             startHora = LocalTime.of(7,15),
             finishHora = LocalTime.of(7,45),
-            description = "",
+            description = "Como decía Eduardo Galeano \"Las utopías sirven para caminar\".  Para caminar hacia la utopía de un futuro sostenible con una sociedad equitativa e incluyente se requiere de la construcción de otra utopía: la de la Sociedad Educativa que propusieron Jacques Delors y sus colegas. En la construcción de esta gran utopía, la comunicación pública de la ciencia desempeña un papel protagónico.",
             exponents = listOf(
                 Speaker(
                     name = "Elaine Reynoso Haynes",
@@ -960,7 +1186,7 @@ fun initInformation() {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "",
+                    name = "Veronica Velasquez",
                     image = R.drawable.ic_launcher_foreground,
                     biography = ""
                 )
@@ -972,14 +1198,13 @@ fun initInformation() {
         EventInfo(
             name = "Las utopías urbanas de Disney: construir la ciudad ideal de EPCOT en Cotino Storyliving",
             startHora = LocalTime.of(6,0),
-            finishHora = LocalTime.of(6,30),
+            finishHora = LocalTime.of(6,45),
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Sophie Didier",
+                    name = "Sophie Didier (CNRS)",
                     image = R.drawable.sophie_didier,
-                    biography = "Subdirectora del Laboratorio Internacional de Investigación Iglobes CNRS/Universidad de Arizona / ENS-PSL (Tucson, Arizona)\n" +
-                            "o\tSophie Didier es geógrafa y profesora de planificación urbana y actualmente directora adjunta de la unidad del CNRS en el extranjero Iglobe (Tucson, Arizona). De 2008 a 2012, se desempeñó como Directora de la unidad en el exterior del CNRS IFAS-Research en Johannesburgo, Sudáfrica. Su trabajo se centra en la circulación global de modelos de producción y gestión urbana, en las coaliciones entre actores urbanos a medio plazo y, cada vez más, en la ecologización de las políticas urbanas. Ha podido trabajar en la relación entre Disneyland y su municipio anfitrión en California, en temas de seguridad urbana en Ciudad del Cabo y Johannesburgo, y ahora está interesada en políticas de césped y jardinería urbana en ciudades del sur de California y Arizona.\n"
+                    biography = "Geógrafa y Profesora en Planificación-Urbanismo. Sus trabajos se centran en la circulación mundial de los modelos de producción y gestión de la ciudad, en las coaliciones entre actores de la ciudad a medio plazo y, cada vez más, en la ecologización de las políticas urbanas. Pudo trabajar sobre las relaciones entre Disneyland y su municipio de acogida en California. "
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -987,7 +1212,7 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Aquí, no hay Lugar",
+            name = "Aquí, no hay Lugar", //TODO
             startHora = LocalTime.of(6,30),
             finishHora = LocalTime.of(7,15),
             description = "",
@@ -1023,7 +1248,7 @@ fun initInformation() {
                     biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia.\n" +
                             "Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. \n" +
                             "Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992), ¿Geohistoria o geoficción ? Ciudades vulnerables y justicia espacial (Medellín, Universidad de Antioquia, 2009) ; Ciudades nómadas del Nuevo Mundo (México, Fondo de Cultura Económica, 2011). Aficionado a la ciencia ficción, también se interesa por los imaginarios de la ciudad y las visiones futuras de nuestro planeta. Ha publicado varias obras sobre estos temas: Star Wars, un ensayo urbano-galáctico (Santiago de Chile, Bifurcaciones, 2018 – reeditado en 2023) ; Station Métropolis-Direction Coruscant. Ville, science-fiction et sciences sociales (Saint Mammès, Le Bélial’, 2019) ; El síndrome Babilonia. Geoficciones del fin del mundo (Santiago de Chile, Bifurcaciones, 2022); Chères Babylones. Villes rêvées de l’apocalypse (Paris, Serendip’Editions, 2025).\n",
-                    video = "musset_video"
+                    video = "https://firebasestorage.googleapis.com/v0/b/noche-de-las-ideas.firebasestorage.app/o/Musset-video-Mexico-Paris3.mp4?alt=media&token=d891525a-8b72-4ce7-982b-71ddd298f2cd"
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1034,12 +1259,15 @@ fun initInformation() {
             name = "Pensar el mundo de hoy, imaginar el mundo de mañana: sociogénesis de las representaciones infantiles del espacio global y de los problemas globales.",
             startHora = LocalTime.of(4,30),
             finishHora = LocalTime.of(5,0),
-            description = "La vida de los niños se ve afectada diariamente por los procesos globalizados y por las consecuencias de la globalización o antropización del planeta (Klocker & Ansell, 2016, Twum-Danso Imoh et al., 2019). Sin embargo, sus propias narrativas y representaciones de espacios y problemas globales siguen siendo en gran medida ignoradas, tanto en el debate público como en la investigación científica (Walker, 2020, Jones y Lucas, 2023). Mis diversos proyectos de investigación, sobre las representaciones del mundo o sobre la construcción del sentido de la justicia, muestran, sin embargo, que los niños tienen cosas que decir sobre el mundo. Sus representaciones del espacio global también están marcadas por imaginarios de futuro, a menudo preocupados por el futuro del planeta (Ott, 2022, 2025, próximo). Las encuestas cualitativas que realicé con varios niños en Francia, en diversos contextos sociales, y los protocolos multimetodológicos originales (dibujo, reconstrucción de un planisferio ilustrado, juegos serios, entrevistas grupales) que desplegué sobre el terreno muestran, sin embargo, que las representaciones de los niños están socialmente construidas y diferenciadas, e influenciadas por diversas instancias de socialización, como la escuela, la familia, los pares o los medios de comunicación (Lignier & Pagis, 2017, Lahire, 2019). Sus representaciones de cuestiones globales, presentes y futuras, reflejan la particular importancia que tiene para ellos la cuestión de las desigualdades y los problemas ambientales. También ofrecen narrativas alternativas sobre el futuro del mundo, más politizadas que los discursos adultos e institucionales, y notablemente más sensibles a lo vivo o no humano. Sus maneras de ver el mundo de hoy y de mañana abren entonces caminos científicos y cívicos para (re)pensar la habitabilidad de la Tierra.",
+            description = "Las vidas de los niños se ven afectadas a diario por los procesos globalizados y por las consecuencias de la globalización o la antropización del planeta (Klocker & Ansell, 2016; Twum-Danso Imoh et al., 2019). Sin embargo, sus propias narrativas y representaciones de los espacios y desafíos globales siguen siendo ampliamente ignoradas, tanto en el debate público como por la investigación científica (Walker, 2020; Jones & Lucas, 2023). Mis diferentes trabajos de investigación, sobre las representaciones del mundo o sobre la construcción del sentido de la justicia, muestran sin embargo que los niños tienen cosas que decir sobre el mundo. Sus representaciones del espacio mundial están además marcadas por imaginarios del futuro, a menudo preocupados por el futuro del planeta.",
             exponents = listOf(
                 Speaker(
                     name = "Anne-Cécile OTT",
                     image = R.drawable.anne_cecile,
-                    biography = "Doctora en geografía, Anne-Cécile Ott es actualmente investigadora postdoctoral en sociología en el Centro Émile Durkheim de la Universidad de Burdeos. Tras finalizar una tesis sobre las representaciones infantiles del espacio global, trabajó como investigadora postdoctoral en la construcción de prácticas culturales y gustos musicales, así como en las transformaciones de estas prácticas durante la pandemia de COVID-19, dentro de los proyectos MaMa y RECORDS, en el Centro de Investigación sobre Desigualdades Sociales de SciencesPo. Su actual investigación postdoctoral, en el marco del proyecto colectivo “C'est pô juste” (Contrato de Paneles del Ministerio de Cultura), se centra en la construcción del sentido de justicia e injusticia en la infancia. Su trabajo se centra de forma más general en la socialización primaria, los procesos de transmisión de modos de pensar y de actuar y en la construcción social de prácticas y representaciones, ya sean espaciales, culturales o morales. Están particularmente interesados en la construcción, en la infancia, de relaciones con el espacio y las cuestiones globales."
+                    biography = "Anne-Cécile Ott es actualmente investigadora\n" +
+                            "Posdoctoral en sociología en el Centro Émile\n" +
+                            "Durkheim de la Universidad de Burdeos.  Después\n" +
+                            "de haber realizado una tesis sobre las representaciones infantiles del espacio mundial, ha trabajado como postdoctoral en la construcción de prácticas culturales y gustos musicales, así como en las transformaciones de estas prácticas durante la pandemia de COVID-1919, dentro de los proyectos MaMa y RECORDS, en el Centro de Investigación sobre las Desigualdades Sociales de SciencesPo. Sus investigaciones postdoctorales actuales, en el marco del proyecto colectivo \"C'est pô juste\" (Contrato Panels del Ministerio de la Cultura), se centran en la construcción del sentido de justicia e injusticia en la infancia. Sus trabajos se centran más generalmente en la socialización primaria, los procesos de transmisión de las formas de pensar y actuar y en la construcción social de las prácticas y representaciones que sean espaciales, culturales o morales. Se interesan en particular por la construcción en la infancia de las relaciones con el espacio y los retos globales."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1056,7 +1284,6 @@ fun initInformation() {
                     name = "Alejandro Frank",
                     image = R.drawable.alejandro_frank,
                     biography = "El Dr. Frank ha centrado su investigación en las áreas de Física Nuclear y Molecular, pero su producción científica ha abarcado otros temas diversos, como sus estudios de aspectos fundamentales de la Mecánica Cuántica, la óptica y la teoría algebraica de la dispersión. En la última década ha dirigido su atención a la ciencia de la complejidad, en particular al estudio de sistemas ecológicos, biológicos y fisiológicos. Es uno de los fundadores y fue el primer director del Centro de Ciencias de la Complejidad (C3) de la UNAM.\n" +
-                            "\n" +
                             "Recibió la Beca Guggenheim y el Premio Manuel Noriega Morales de la Organización de los Estados Americanos y es Fellow de la American Physical Society. Entre otros honores, recibió el Premio de la Academia Mexicana de Ciencias, el Premio Universidad Nacional y el Premio Nacional de Ciencias y Artes. Es Investigador Emérito de la UNAM y del Sistema Nacional de Investigadores (SNI) y Miembro del Colegio Nacional."
                 )
             ),
@@ -1065,36 +1292,10 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Le Campus franco-mexicain des Transitions",
+            name = "Utopías, Futuros y decisiones. ¿Como diseñar el mundo que queremos?",
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,30),
-            description = "",
-            exponents = listOf(
-                Speaker(
-                    name = "Salomon Gonzales",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                ),
-                Speaker(
-                    name = "Marycarmen Villegas",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                ),
-                Speaker(
-                    name = "Jorge Garcia Flores",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.MESA_REDONDA,
-            place = "Por definir",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Utopías, Futuros y decisiones. ¿Como diseñar el mundo que queremos?",
-            startHora = LocalTime.of(6,30),
-            finishHora = LocalTime.of(7,15),
-            description = "",
+            description = "Conferencia de diseño de futuros basada en “Utopía” de Tomás Moro, combinando análisis de señales, modelos de escenarios y una perspectiva estratégica orientada a la toma de decisiones, a partir de un enfoque teórico-práctico, incluyendo modelos y herramientas aplicables para gobiernos, empresas y tomadores de decisión.",
             exponents = listOf(
                 Speaker(
                     name = "Mtro. Luis Herrera Rojas" +
@@ -1114,8 +1315,8 @@ fun initInformation() {
         ),
         EventInfo(
             name = "El “trumpismo” fase superior del neoliberalismo",
-            startHora = LocalTime.of(7,15),
-            finishHora = LocalTime.of(7,45),
+            startHora = LocalTime.of(6,30),
+            finishHora = LocalTime.of(7,0),
             description = "",
             exponents = listOf(
                 Speaker(
@@ -1129,15 +1330,15 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "El “trumpismo” fase superior del neoliberalismo",
-            startHora = LocalTime.of(7,15),
-            finishHora = LocalTime.of(7,45),
+            name = "Utopías de la Ciencia Ficción", //TODO
+            startHora = LocalTime.of(7,0),
+            finishHora = LocalTime.of(7,30),
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Alejandro Estrella Gonzales",
-                    image = R.drawable.alejandro_estrella,
-                    biography = "Alejandro Estrella González es doctor en Filosofía y Letras por la Universidad de Cádiz (España) y profesor de Humanidades de la Universidad Autónoma Metropolitana de México, unidad Cuajimalpa. Las áreas de investigación en las que se ha desempeñado son: la historia intelectual, la sociología de la filosofía, la epistemología histórica y la historia social. Alejandro Estrella ha escrito 6 libros y más de 40 artículos sobre estos temas, preocupándose por vincular sus avances de investigación en la formación de alumnos de posgrado y de comunidades de aprendizaje. Desde 2019 es miembro del Consejo editorial de la Revista Común, en la que publica la columna Necesidad y deseo."
+                    name = "Alberto Chimal",
+                    image = R.drawable.ic_launcher_foreground,
+                    biography = ""
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1148,7 +1349,7 @@ fun initInformation() {
             name = "Economía basada en future thinking",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
-            description = "",
+            description = "Esta plática tiene como objetivo explorar el espacio cognitivo y a través del pensamiento futuro donde haremos un recorrido por algunas teorías económicas y a partir de ello viajaremos al año 2050 para traernos ideas y algún artefacto que nos permita el bien común, generar bienestar social y por supuesto crecimiento y desarrollo económico en nuestro entorno.",
             exponents = listOf(
                 Speaker(
                     name = "Alejandro Toledo Utrero",
@@ -1161,7 +1362,7 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Proyección documental",
+            name = "Proyección documental", //TODO
             startHora = LocalTime.of(4,45),
             finishHora = LocalTime.of(6,0),
             description = "",
@@ -1183,9 +1384,9 @@ fun initInformation() {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Maria Zorilla",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Maria Zorrilla Ramos",
+                    image = R.drawable.maria_zorrilla,
+                    biography = "Licenciada en Ciencia Política por el ITAM, maestra en Estudios Regionales por el Instituto Mora, y con estudios de doctorado en Ciencias Sociales en la UNAM y en el 17 Instituto de Estudios Críticos. Sus principales líneas de investigación tienen que ver con el análisis y diseño de políticas públicas en temas de biodiversidad, adaptación al cambio climático y sustentabilidad. Ha sido investigadora, consultora y coordinadora de proyectos sobre biodiversidad y cambio climático para diversas organizaciones entre las que destacan el Centro del Cambio Global y la Sustentabilidad en el Sureste (CCGSS), GEF-ONU Medio Ambiente, CONABIO, la Cooperación Alemana al Desarrollo (GIZ), BIOFIN-México, el Programa de las Naciones Unidas para el Desarrollo (PNUD), UNICEF y CEMEFI. Desde 2019 es académica de tiempo completo en el CENTRUS, de la Universidad Iberoamericana, en donde coordinó entre 2020 y 2024 la Licenciatura en Sustentabilidad Ambiental."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1220,22 +1421,6 @@ fun initInformation() {
             type = TipoEvento.CONVERSATORIO,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Utopías en la Ciencia Ficción",
-            startHora = LocalTime.of(7,15),
-            finishHora = LocalTime.of(7,45),
-            description = "",
-            exponents = listOf(
-                Speaker(
-                    name = "Alberto Chimal",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
-            place = "Por definir",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosElMundoQueViene = eventosElMundoQueViene.sortedBy { it.startHora }
@@ -1250,12 +1435,34 @@ fun initInformation() {
             name = "Utopía de la masonería",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
-            description = "",
+            description = "La francmasonería es una utopía, en todos los sentidos del término de esta noción polimorfa.\n" +
+                    "Ya que esta fraternidad iniciática, sin lugar o bien, uno imaginario, al contrario de la isla de Tomas Moro, estando en todas partes y a la vez en ninguna, se concibe como una cadena de unión planetaria que comprende construir la paz universal más allá de las fronteras del espacio y tiempo.\n" +
+                    "Más allá de su dimensión imaginaria, la francmasonería sugiere entonces un horizonte de perfección del cual, cuyos miembros intentan acercarse con una meta de mejora. Sin embargo este horizonte puede ser tanto una fuerza de contestación, que ofrece un modelo de sociedad alternativo (según Karl Mannheim quien define “utopía”  de forma opuesta al de ideología) y, constituyendo un motor efectivo de cambio, produce a veces una utopía concreta que transforma lo real;  como un ideal inaccesible, una quimera cuando los francmasones reproducen las imperfecciones del mundo profano (inagualidades, discriminaciones… )\n" +
+                    "Pero, esta utopía multiples facetes que es la francmasonería se arraiga también y sobre todo en la realidad de la logia masónica que se puede considerar como una verdadera heterotopia desde el punto de vista foucaultiano.. \n",
             exponents = listOf(
                 Speaker(
                     name = "Céline Bryon-Portet\nUniv. Montpellier",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.celine_bryon,
+                    biography = "Céline Bryon-Portet es doctora en letras, habilitada como directora de investigaciones en ciencias de la información y de la comunicación y profesora de sociología en la universidad Paul Valéry – Montpellier 3. \n" +
+                            "Es titular de una maestría en sociología de las religiones y dirige sus investigaciones con el equipo IRIEC, Instituto de Investigación de Estudios Culturales - EA 740, en donde es co-responsable de  « Imperium, contestaciones y utopías. \n" +
+                            "Desde un enfoque constructivista, estudia la “re”construcción social y cultural de la realidad, especialmente en las organizaciones cerradas como  la armada y la francmasonería, en utopías concretas y también, a través de ficciones audiovisuales (series y películas).  Es autor y  coautor de numerosas publicaciones y artículos como “La Utopía masónica, mejorar el Hombre y la sociedad” París, Dervy, 2014."
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Por definir",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Apocalipsis y después el cielo",
+            startHora = LocalTime.of(4,45),
+            finishHora = LocalTime.of(5,15),
+            description = "El mundo post-apocalíptico, imaginado por los teólogos cristianos medievales, es utópico: para los humanos, es un mundo justo donde unos reciben penas bien merecidas y otros son recompensados. Ahora bien, ¿qué pasa con la naturaleza en este mundo que se supone es el más perfecto posible?  ¿Qué destino espera a los astros, las plantas, los animales o incluso los cuatro elementos de los que están hechos todos los cuerpos? Tantas preguntas planteadas en los escritos de los siglos XIII-XIV.",
+            exponents = listOf(
+                Speaker(
+                    name = "Maria Sorokina (UPEC)",
+                    image = R.drawable.maria_sorokina,
+                    biography = "investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. \n" +
+                            "En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. Para este trabajo, se centró en los escritos de los teólogos que estaban indudablemente interesados en cuestiones científicas. Contrariamente a las expectativas, se esforzaban por describir los mundos celestial y terrenal, apoyándose en dos fuentes a primera vista contradictorias - la obra del filósofo payën Aristóteles y la Biblia - y, en lo posible, reconciliarlas. Actualmente, María Sorokina estudia el enfoque científico de campos desconocidos para Aristóteles que elaboraron los teólogos medievales: el universo antes de la Caída y después del Apocalipsis."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1264,7 +1471,7 @@ fun initInformation() {
         ),
         EventInfo(
             name = "Una historia del futuro: el porvenir en la Ciudad del Sol de T. Campanella",
-            startHora = LocalTime.of(4,45),
+            startHora = LocalTime.of(5,15),
             finishHora = LocalTime.of(5,45),
             description = "En el siglo XVII, Tommaso Campanella imaginó un mundo ideal en La ciudad del Sol, una sociedad basada en el conocimiento, la armonía y la organización colectiva, gobernada por la razón y la filosofía. Campanella proyectó un modelo utópico que respondía a los desafíos de su tiempo: una sociedad alternativa regida por el saber y la cooperación. ¿Qué lugar ocupa La ciudad del Sol en la tradición utópica? ¿Cómo concibió Campanella el futuro a través de esta ciudad ideal? Esta obra reflejó las aspiraciones de una época marcada por la Contrarreforma y la consolidación de los Estados absolutistas, a la vez que influyó en la forma en que seguimos imaginando sociedades alternativas.",
             exponents = listOf(
@@ -1325,16 +1532,6 @@ fun initInformation() {
             type = TipoEvento.EXPOSICION,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Teología de la contingencia",
-            startHora = LocalTime.of(7,15),
-            finishHora = LocalTime.of(7,45),
-            description = "",
-            exponents = null,
-            type = TipoEvento.EXPOSICION,
-            place = "Por definir",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosEspiritualidades = eventosEspiritualidades.sortedBy { it.startHora }
@@ -1345,11 +1542,12 @@ fun initInformation() {
     )
 
     islasGlobal = mutableListOf(
+        amaurote,
         cine,
         estraterrestres,
         fabricaDelCuerpo,
         utopiasUrbanas,
-        sociedadesIdeales,
+        mundosDeseablesYNoDeseables,
         utopiasCientificasyTecnologicas,
         arteEnUtipias,
         elMundoDeAntes,
