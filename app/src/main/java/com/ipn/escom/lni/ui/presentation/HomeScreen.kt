@@ -9,6 +9,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,13 +19,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,6 +46,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ipn.escom.lni.R
+import com.ipn.escom.lni.mediaPlayer
+import com.ipn.escom.lni.volume
 import kotlin.random.Random
 
 @Composable
@@ -107,11 +115,44 @@ fun generateStars(count: Int): List<Star> {
 @Composable
 fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
     val offset = Offset(5.0f, 10.0f)
+    var volumeImage by remember { mutableIntStateOf(
+        when (volume) {
+            0.5f -> R.drawable.volume_low_solid
+            0.0f -> R.drawable.volume_off_solid
+            1.0f -> R.drawable.volume_high_solid
+            else -> R.drawable.volume_high_solid
+        }
+    ) }
 
     Box(
         modifier = Modifier.fillMaxSize().padding( innerPadding )
     ) {
         AnimatedStarsBackground()
+        Icon(
+            painter = painterResource(id = volumeImage),
+            contentDescription = "Volumen",
+            modifier = Modifier
+                .size(50.dp)
+                .align(Alignment.TopEnd)
+                .padding(8.dp)
+                .clickable {
+                    when (volume) {
+                        1.0f -> {
+                            volume = 0.5f
+                            volumeImage = R.drawable.volume_low_solid
+                        }
+                        0.5f -> {
+                            volume = 0.0f
+                            volumeImage = R.drawable.volume_off_solid
+                        }
+                        0.0f -> {
+                            volume = 1.0f
+                            volumeImage = R.drawable.volume_high_solid
+                        }
+                    }
+                    mediaPlayer.setVolume(volume, volume)
+                }
+        )
         Column(
             modifier = Modifier
                 .fillMaxSize(),

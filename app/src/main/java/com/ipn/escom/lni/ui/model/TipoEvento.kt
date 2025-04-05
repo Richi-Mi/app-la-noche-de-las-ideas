@@ -18,5 +18,6 @@ enum class TipoEvento(
     ACTIVIDAD_LUDICA(R.string.app_evenType_actividad),
     SKETCH(R.string.app_evenType_sketch),
     ACTO_MUSICAL(R.string.app_evenType_acto_musical),
-    CONVERSATORIO(R.string.app_eventType_conversatorio)
+    CONVERSATORIO(R.string.app_eventType_conversatorio),
+    EXHIBICION_ARTE(R.string.app_eventType_exhibicion_arte)
 }

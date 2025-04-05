@@ -15,4 +15,5 @@
     <string name="app_evenType_sketch"> Sketch </string>
     <string name="app_evenType_acto_musical"> Musical Act </string>
     <string name="app_eventType_conversatorio"> Conversation </string>
+    <string name="app_eventType_exhibicion_arte"> Art Exhibition </string>
 </resources>

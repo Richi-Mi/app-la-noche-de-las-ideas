@@ -14,4 +14,5 @@
     <string name="app_evenType_acto_musical"> Acto Musical </string>
     <string name="app_evenType_mesa_dialogo"> Mesa de dialogo </string>
     <string name="app_eventType_conversatorio"> Conversatorio </string>
+    <string name="app_eventType_exhibicion_arte"> Exhibición de Arte </string>
 </resources>

@@ -15,11 +15,11 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalTime
 
 lateinit var islasGlobal: MutableList<IslaInfo>
+lateinit var mediaPlayer : MediaPlayer
+var volume =1.0f
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    private lateinit var mediaPlayer : MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         mediaPlayer = MediaPlayer.create(this, R.raw.auido_fondo)
         mediaPlayer.isLooping = true
         mediaPlayer.start()
-
+        volume = 1.0f
         initInformation()
 
         enableEdgeToEdge()
@@ -46,7 +46,7 @@ fun initInformation() {
             name = "El Familisterio de Godin en Guisa",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "",
+            description = "El Familistère, fundado en 1859 por Jean-Baptiste Godin, era un modelo de hábitat comunitario destinado a mejorar las condiciones de vida de los trabajadores. Este lugar ilustra la idea de una sociedad donde el bienestar colectivo era prioritario, a través de la organización de la vida social y económica",
             exponents = listOf(
                 Speaker(
                     name = "Frédéric Panini",
@@ -63,7 +63,7 @@ fun initInformation() {
             name = "Construir sus sueños bajo el mar",
             startHora = LocalTime.of(4,30),
             finishHora = LocalTime.of(5,0),
-            description = "",
+            description = "Jacques Rougerie volverá sobre su fascinante recorrido de mérien. Desde sus primeras inspiraciones de niño hasta la realización de sus proyectos visionarios, compartirá su aventura en el corazón del océano. Presentará los hábitats submarinos icónicos que él mismo imaginó, diseñó, construyó y probó, y contará sobre las extraordinarias experiencias humanas que jalonaron su trayectoria. Entre mares y estrellas, explorará los profundos vínculos entre el abismo y el espacio. También presentará obras emblemáticas de su estudio de arquitectura, antes de sumergirnos en el ambicioso proyecto SeaOrbiter, la estación oceánica internacional, verdadero logro de su trabajo. Por último, presentará la Fundación Jacques Rougerie - Académie des Beaux-Arts, que trabaja en todo el mundo para construir los marcos de vida actuales y futuros frente a los grandes retos planetarios: cambio climático y subida del nivel de las aguas, cuestiones oceánicas y espaciales.  Un viaje cautivador al corazón de la innovación y del sueño a través del Arte, las Ciencias y las Tecnologías en relación con la naturaleza.",
             exponents = listOf(
                 Speaker(
                     name = "Jacques Rougerie\n" +
@@ -124,15 +124,16 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
-            name = "Trauma y utopía: la Biblia hebrea como una \"literatura de crisis\"", //TODO
+            name = "Trauma y utopía: la Biblia hebrea como una \"literatura de crisis\"",
             startHora = LocalTime.of(6,0),
             finishHora = LocalTime.of(6,30),
             description = "",
             exponents = listOf(
                 Speaker(
                     name = "Thomas Römer",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.thomas_romer,
+                    biography = "Sus trabajos han contribuido a renovar profundamente la comprensión de la formación y de la datación del Pentateuco, así como de la constitución de las tradiciones judías sobre Abraham y Moisés en particular. Por ejemplo, su obra “The So-Called Deuteronomistic History”, publicada en inglés en 2005 y traducida a varios idiomas, marca un hito en la historia de la investigación deuteronómica. En enero de 2019, hace la cobertura de la revista de divulgación científica al gran público Sciences et Avenir por sus trabajos filológicos y arqueológicos sobre el Arca de la Alianza y su participación en las excavaciones en el sitio arqueológico de Kiriath Yearim (cerca de Abu Gosh en Israel). \n" +
+                            "El 1 de septiembre de 2019, es nombrado administrador del Collège de France. Sucede a Alain Prochiantz. De nacionalidad alemana y suiza, se convierte en el primer extranjero en dirigir el Collège de France, al término de la primera elección abierta entre los cuarenta y cinco profesores de la institución para un puesto hasta entonces atribuido por cooptación del administrador a la salida. Se renueva en este puesto el 22 de agosto de 2022 por decreto del Presidente de la República\n"
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -140,16 +141,16 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
-            name = "Fiesta y tragedia de la Comuna de París", //TODO
+            name = "Fiesta y tragedia de la Comuna de París",
             startHora = LocalTime.of(6,30),
             finishHora = LocalTime.of(7,15),
-            description = "",
+            description = "Entre el 18 de marzo y el 28 de mayo de 1871, Francia, en particular su capital, fue el escenario de una revuelta que habría de ser considerado el primer gobierno de la clase obrera del mundo, el primer gobierno comunista de la historia o uno de los principales acontecimientos revolucionarios de la historia. ¿Cómo reaccionó la intelectualidad francesa, incluyendo a la izquierda o progresistas frente a ese movimiento? La Comuna es más un antecedente de la política de la socialdemocracia, que de la política que soñaban los anarquistas o los bolcheviques. La reacción de los escritores franceses ante la Comuna de París fue la primera muestra de la estetización de la violencia y de la destrucción por parte de escritores, muchos de los cuales se habían dedicado a lo que se llamaba de manera infamante ‘el arte por el arte’. La Comuna de París no tomó ninguna medida comunista: los propios comuneros hicieron mucho esfuerzo en no ser llamados comunistas, sino comuneros o “comunalistas”. Lo sucedido en Francia en 1871, vuelve materia del presente la destrucción de la historia y la convierte en una historia muy difícil de llevar y aún de comprender.",
             exponents = listOf(
                 Speaker(
                     name = "Christopher Dominguez Michael\n" +
                             "Colegio Nacional",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.christopher_dominguez,
+                    biography = "Ensayista, historiador y crítico literario. Es considerado uno de los críticos literarios iberoamericanos más reconocidos. A la fecha, ha publicado más de dos mil artículos de crítica e historia literaria, un gran número de prólogos y capítulos en libros colectivos y varias compilaciones de literatura mexicana. Fue subdirector (1987) y miembro del consejo de redacción (1989-1998) de la revista Vuelta, investigador asociado de El Colegio de México (2010-2018) y es consejero editorial de la revista Letras Libres. Autor de Vida de fray Servando (2004), Diccionario crítico de literatura mexicana del siglo XX (2007), Octavio Paz en su siglo (2014), Historia mínima de la literatura mexicana del siglo XIX (2019), Maiakovski punk y otras figuras del siglo XXI (2022) y Tiros en el concierto. Literatura mexicana del siglo V (2024). Recibió el Premio Xavier Villaurrutia 2004, la Beca Guggenheim 2006 y el Premio del Círculo de Críticos de Arte de Chile 2010. Ha sido profesor invitado en La Sorbona, la Universidad de Chicago y la Universidad de Columbia. Es miembro de El Colegio Nacional desde 2017 y su discurso de ingreso ¿Qué es un crítico literario? fue respondido por Enrique Krauze"
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -222,7 +223,7 @@ fun initInformation() {
     // ISLA: Utopías Extraterrestres
     var eventosExtraterrestres = listOf(
         EventInfo(
-            name = "Utopías Espaciales",
+            name = "Martenochtitlan/Martelolco ¿Una utopía en Marte?",
             startHora = LocalTime.of(4, 0),
             finishHora = LocalTime.of(4, 30),
             description = "",
@@ -238,7 +239,7 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "Utopías Extraterrestres",
+            name = "Utopías Extraterrestres", //TODO
             startHora = LocalTime.of(4, 30),
             finishHora = LocalTime.of(5, 30),
             description = "",
@@ -276,16 +277,23 @@ fun initInformation() {
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Jesus René",
+                    name = "Jesus René Flores",
                     image = R.drawable.jesus_rene,
                     biography = "Licenciado, maestro y doctor en filosofía. Es académico de tiempo completo en la Biblioteca Francisco Xavier Clavigero de la Universidad Iberoamericana, donde ha coordinado diversas actividades académica y culturales, además de presidir el Club de Ciencia Ficción Ibero. Es también profesor del Departamento de Filosofía de la misma universidad y del doctorado en bioética en la Universidad Anáhuac. Ha participado en numerosos eventos académicos como conferencista magistral y ponente, así como publicado diferentes artículos en revistas académicas de prestigio internacional. Sus intereses de investigación giran en torno a la filosofía antigua, el pensamiento del filósofo danés Soren Kierkegaard y la filosofía de la literatura y el cine. Es miembro de la Sociedad Internacional de Platonistas y de la Sociedad Iberoamericana de Estudios Kierkegaardianos"
+                ),
+                Speaker(
+                    name = "Gerardo Martínez Avilés",
+                    image = R.drawable.gerardo_martinez,
+                    biography = "Licenciado en física por la UNAM, maestro en ciencias por la Universidad de Innsbruck, Austria y doctor en Astronomía por el Observatorio de Niza, Francia.\n" +
+                            "Su tema de especialidad son observaciones de cúmulos de galaxias. Ha trabajado en astrobiología, modelos numéricos de interacción de marea en estrellas binarias y radioastronomía. Ha sido docente de física, matemáticas, historia y geografía en el Colegio Marymount Cuernavaca y la Universidad Panamericana CDMX.\n" +
+                            "Ha escrito varios artículos de divulgación en las revistas ¿Cómo ves?, Ciencias, Chilango y otros más en diversas páginas electrónicas. Fue además colaborador del programa de divulgación científica La oveja eléctrica en canal 22 y del programa radiofónico Random.  Actualmente es académico y docente en la Universidad Iberoamericana Ciudad de México, así como astrónomo y divulgador científico en el Centro Astronómico Clavius de la Ibero. Es conductor del Programa Calypso, por Ibero 90.9 FM los miércoles a las 16:30 horas. "
                 )
             ),
             place = "Salón Lázaro Cárdenas (Edificio B)",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "Utopías del Universo",
+            name = "Utopías del Universo", //TODO
             startHora = LocalTime.of(6, 0),
             finishHora = LocalTime.of(6, 30),
             description = "La astronomía en el urbanismo prehispánico",
@@ -304,20 +312,20 @@ fun initInformation() {
             name = "Cielos utópicos: entre la astronomía cultural y la exploración del cosmos",
             startHora = LocalTime.of(6, 30),
             finishHora = LocalTime.of(7, 0),
-            description = "",
+            description = "Desde tiempos inmemoriales, las civilizaciones han mirado al cielo en busca de significado, orden y respuestas. Los pueblos antiguos imaginaron sus propias \"utopías celestes\", reflejando en el cosmos sus esperanzas y estructuras sociales. En la actualidad, la astronomía y la exploración espacial nos llevan a imaginar nuevas utopías extraterrestres, desde colonias en Marte hasta ciudades flotantes en Venus. Esta ponencia explorará cómo las visiones ancestrales del cosmos dialogan con los proyectos actuales de colonización espacial, planteando preguntas sobre la sostenibilidad, la ética y el futuro de la humanidad más allá de la Tierra.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Milagros Varguez Ramirez",
+                    name = "Milagros Varquez Ramirez",
                     image = R.drawable.milagros_varguez,
-                    biography = "Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados. Sus áreas de especialización en el campo de la CPC incluyen la planeación, evaluación, desarrollo y operación de museos de ciencia; la formación de divulgadores; y el diseño curricular en comunicación pública de la ciencia. Con una amplia trayectoria académica, cuenta con más de 100 publicaciones en revistas especializadas y libros, además de numerosas participaciones en congresos nacionales e internacionales. Ha organizado diversos congresos y foros académicos en el ámbito de la CPC, tanto en México como en el extranjero. Ha sido profesora invitada en prestigiosas instituciones como la Universidad Federal Fluminense y la Universidad Federal de Río de Janeiro, en Brasil; la Universidad “La Sapienza” en Roma y la Universidad de Messina, en Italia. Asimismo, ha asesorado a varios museos de ciencia en México y otros países. "
+                    biography = "Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados. Sus áreas de especialización en el campo de la CPC incluyen la planeación, evaluación, desarrollo y operación de museos de ciencia; la formación de divulgadores; y el diseño curricular en comunicación pública de la ciencia. Con una amplia trayectoria académica, cuenta con más de 100 publicaciones en revistas especializadas y libros, además de numerosas participaciones en congresos nacionales e internacionales. Ha organizado diversos congresos y foros académicos en el ámbito de la CPC, tanto en México como en el extranjero. Ha sido profesora invitada en prestigiosas instituciones como la Universidad Federal Fluminense y la Universidad Federal de Río de Janeiro, en Brasil; la Universidad “La Sapienza” en Roma y la Universidad de Messina, en Italia. Asimismo, ha asesorado a varios museos de ciencia en México y otros países."
                 )
             ),
             place = "Salón Lázaro Cárdenas (Edificio B)",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "La ciudad de la imaginación",
+            name = "La ciudad de la imaginación", //TODO
             startHora = LocalTime.of(4, 15),
             finishHora = LocalTime.of(6, 0),
             description = "Galería de constelaciones y de objetos, como nebulosas o galaxias que nos lleva a la imaginación de la mente humana para encontrar formas en el cielo",
@@ -378,16 +386,20 @@ fun initInformation() {
 
     var eventosFabricadelCuerpo = listOf(
         EventInfo(
-            name = "La utopía de la inmortalidad",
+            name = "La ciencia de la resurección",
             startHora = LocalTime.of(4, 0),
             finishHora = LocalTime.of(4, 45),
-            description = "",
+            description = "¿Qué sucede en nuestro cerebro cuando pasamos de la vida a la muerte? ¿Por qué su actividad persiste a veces? Y ¿qué es morir?\n" +
+                    "Por extraño que parezca, las fronteras de la muerte siguen sin definirse. Y por causa: desde la «resurrección» de una ahorcada en 1650 y las electrizaciones de cadáveres llevadas a cabo por Galvani, no han dejado de ser rechazadas. Hoy, los nuevos doctores Frankenstein incluso considerarían trasplantar un cuerpo para prolongar la vida...\n" +
+                    "Después de haber estado cerca de la muerte, el autor se apasionó por esta epopeya científica. Con una pluma afilada en contacto con los archivos, repasa la historia de los fisiólogos y médicos que allanaron el camino a los descubrimientos actuales. De laboratorios a hospitales, nos lleva al encuentro de estos muertos con el corazón latiendo, de este alpinista, indemne después de nueve horas de reanimación cardíaca, de estos cerebros sacados de sus cráneos y todavía activos, sin olvidar los «revenantes» de una experiencia de muerte inminente (EMI). Un relato impactante que cuestiona nuestra condición humana.",
             type = TipoEvento.CONFERENCIA,
             exponents = listOf(
                 Speaker(
                     name = "Dr. Stéphane Charpier",
                     image = R.drawable.stephane_charpier,
-                    biography = "Soy profesor de neurociencia en la Universidad de Sorbonne Paris e investigador en el Instituto del cerebro de Paris. Tendré el gusto de presentarles nuestras investigaciones sobre el mundo de la muerte y las fronteras que existen entre la vida y la muerte."
+                    biography = "Stéphane Charpier es coordinador del equipo de Excitabilidad celular y dinámica de las redes neuronales del ICM y profesor de neurociencias en la Universidad Pierre et Marie Curie. \n" +
+                            "Doctor (1991) y doctorado en neurociencia por la Universidad Pierre y Marie Curie (1995). Es experto para la Agencia de evaluación de la investigación y de la enseñanza superior (AERES) y miembro del consejo científico de la Fundación de Francia (comité Parkinson). En 2011, recibió el premio Valérie Chamaillard, otorgado por la Fundación francesa para la investigación de la epilepsia.",
+                    video = "https://firebasestorage.googleapis.com/v0/b/noche-de-las-ideas.firebasestorage.app/o/St%C3%A9phane%20Carpier.mp4?alt=media&token=6267adc0-03d0-4afa-8630-b4f02cea05d2"
                 )
             ),
             place = "Auditorio Armando Cuspinera",
@@ -432,7 +444,7 @@ fun initInformation() {
             name = "Utopías y distopía en la relación del ser humano con las maquinas",
             startHora = LocalTime.of(5, 15),
             finishHora = LocalTime.of(5, 45),
-            description = "",
+            description = "La tecnología ha sido siempre compañera y aliada de la humanidad. Pero las nuevas tecnologías basadas en los avances de la computación y la robótica ofrecen posibilidades cada día más cercanas que, si bien abren perspectivas nuevas e inexploradas que son fascinantes, también pueden resultar inquietantes y hasta riesgosas. Conocerlos y entenderlos ayudará a su buen uso.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
@@ -445,7 +457,7 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "La utopía de la juventud y de la belleza perpetuales",
+            name = "La utopía de la juventud y de la belleza perpetuales", //TODO
             startHora = LocalTime.of(5, 45),
             finishHora = LocalTime.of(6, 30),
             description = "",
@@ -475,8 +487,12 @@ fun initInformation() {
                 ),
                 Speaker(
                     name = "PERI",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.peri,
+                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible.\n" +
+                            "Su formación como artista tiene sus raíces en el taller de taxidermia de su padre, un maestro en el oficio. Desde joven, Peri estuvo rodeado de cuerpos de animales, aprendiendo a observar la anatomía con detalle y a comprender la transformación de la vida a través de la taxidermia. Esta experiencia fue crucial en el desarrollo de su mirada artística, la cual combina lo fantástico con lo grotesco, desafiando las convenciones estéticas y buscando una conexión profunda con el espectador.\n" +
+                            "A lo largo de su carrera, Peri ha experimentado con diferentes materiales como resina, bronce, plastilina, silicón, fibra de vidrio y acero inoxidable, siempre con un enfoque experimental y en constante evolución. Su obra no busca solo impactar a nivel visual, sino también provocar una reflexión sobre nuestra relación con el entorno natural y los seres vivos, invitando a los espectadores a mirar más allá de lo aparente y conectar con lo que se esconde en lo profundo de nuestra existencia.\n" +
+                            "Peri está dedicado a crear seres híbridos que se manifiestan como seres imaginarios, entre lo real y lo surreal, explorando una nueva forma de percibir la naturaleza y el ser humano a través de la creación de especies que no existen, pero que parecen tan reales como el mismo mundo en el que habitamos.\n" +
+                            "A lo largo de su carrera, Peri ha expuesto sus piezas en diversos espacios, donde sus esculturas han generado una profunda conexión emocional con quienes las observan, provocando preguntas sobre el futuro de la humanidad y el mundo natural."
                 ),
                 Speaker(
                     name = "Nadia Rivero",
@@ -491,20 +507,24 @@ fun initInformation() {
             name = "Proceso creativo detrás de seres híbridos",
             startHora = LocalTime.of(6, 30),
             finishHora = LocalTime.of(7, 0),
-            description = "",
+            description = "Mi ponencia abordará el proceso creativo detrás de los seres híbridos que caracterizan mi trabajo escultórico. Hablaré desde el origen conceptual de cada obra, la elección simbólica de las especies humanas y animales, hasta el desarrollo del diseño y modelado. Compartiré cómo se materializa la pieza a través de técnicas como el moldeado, vaciado y fundición en bronce. Exploraré la relación entre naturaleza, cuerpo y transformación, que da vida a estas criaturas fantásticas. La charla busca revelar el viaje completo de una escultura, desde la idea hasta su forma final.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
                     name = "Artista plástico PERI",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.peri,
+                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible.\n" +
+                            "Su formación como artista tiene sus raíces en el taller de taxidermia de su padre, un maestro en el oficio. Desde joven, Peri estuvo rodeado de cuerpos de animales, aprendiendo a observar la anatomía con detalle y a comprender la transformación de la vida a través de la taxidermia. Esta experiencia fue crucial en el desarrollo de su mirada artística, la cual combina lo fantástico con lo grotesco, desafiando las convenciones estéticas y buscando una conexión profunda con el espectador.\n" +
+                            "A lo largo de su carrera, Peri ha experimentado con diferentes materiales como resina, bronce, plastilina, silicón, fibra de vidrio y acero inoxidable, siempre con un enfoque experimental y en constante evolución. Su obra no busca solo impactar a nivel visual, sino también provocar una reflexión sobre nuestra relación con el entorno natural y los seres vivos, invitando a los espectadores a mirar más allá de lo aparente y conectar con lo que se esconde en lo profundo de nuestra existencia.\n" +
+                            "Peri está dedicado a crear seres híbridos que se manifiestan como seres imaginarios, entre lo real y lo surreal, explorando una nueva forma de percibir la naturaleza y el ser humano a través de la creación de especies que no existen, pero que parecen tan reales como el mismo mundo en el que habitamos.\n" +
+                            "A lo largo de su carrera, Peri ha expuesto sus piezas en diversos espacios, donde sus esculturas han generado una profunda conexión emocional con quienes las observan, provocando preguntas sobre el futuro de la humanidad y el mundo natural."
                 )
             ),
             place = "Auditorio Armando Cuspinera",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "Titulo",
+            name = "Titulo", //TODO
             startHora = LocalTime.of(7, 0),
             finishHora = LocalTime.of(7, 30),
             description = "",
@@ -524,12 +544,16 @@ fun initInformation() {
             startHora = LocalTime.of(4, 0),
             finishHora = LocalTime.of(7, 15),
             description = "",
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.EXHIBICION_ARTE,
             exponents = listOf(
                 Speaker(
-                    name = "PERI",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Artista plástico PERI",
+                    image = R.drawable.peri,
+                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible.\n" +
+                            "Su formación como artista tiene sus raíces en el taller de taxidermia de su padre, un maestro en el oficio. Desde joven, Peri estuvo rodeado de cuerpos de animales, aprendiendo a observar la anatomía con detalle y a comprender la transformación de la vida a través de la taxidermia. Esta experiencia fue crucial en el desarrollo de su mirada artística, la cual combina lo fantástico con lo grotesco, desafiando las convenciones estéticas y buscando una conexión profunda con el espectador.\n" +
+                            "A lo largo de su carrera, Peri ha experimentado con diferentes materiales como resina, bronce, plastilina, silicón, fibra de vidrio y acero inoxidable, siempre con un enfoque experimental y en constante evolución. Su obra no busca solo impactar a nivel visual, sino también provocar una reflexión sobre nuestra relación con el entorno natural y los seres vivos, invitando a los espectadores a mirar más allá de lo aparente y conectar con lo que se esconde en lo profundo de nuestra existencia.\n" +
+                            "Peri está dedicado a crear seres híbridos que se manifiestan como seres imaginarios, entre lo real y lo surreal, explorando una nueva forma de percibir la naturaleza y el ser humano a través de la creación de especies que no existen, pero que parecen tan reales como el mismo mundo en el que habitamos.\n" +
+                            "A lo largo de su carrera, Peri ha expuesto sus piezas en diversos espacios, donde sus esculturas han generado una profunda conexión emocional con quienes las observan, provocando preguntas sobre el futuro de la humanidad y el mundo natural."
                 )
             ),
             place = "Vestíbulo",
@@ -548,17 +572,24 @@ fun initInformation() {
             name = "La negación del futuro: pensamiento utópico desde y hacia un continuo temporal",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "",
+            description = "Pablo y Lucía desarrollan su práctica artística en el estudio Kobayashi | Aumann, donde investigan y producen " +
+                    "piezas textiles y neumáticas como medio de exploración de sistemas materiales. En su practica docente, imparten " +
+                    "juntos el taller de Moduladores procesales | expresiones espaciales en el departamento de Arquitectura, Urbanismo " +
+                    "e Ingeniería Civil de la Universidad Iberoamericana, como una extensión de su practica profesional.",
             exponents = listOf(
                 Speaker(
                     name = "Lucia Aumann",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.lucia_y_pablo,
+                    biography = "Lucía Aumann (Bs.As, Argentina, 1992) Investigadora en filosofía crítica con estudios en The New Centre (EUA., 2022-2024) y arquitecta por la Universidad Iberoamericana (CDMX, 2011-2017). Su práctica se desenvuelve a partir de procesos experimentales en los que convergen su exploración artística y arquitectónica, cuestionamientos filosóficos y estudios biológicos tomando como base los sistemas de auto-organización.\n" +
+                            "A través de la exploración gráfica, la escritura y la experimentación material analiza procesos morfológicos que pueden operar más allá del rango de atención y percepción humana, abordando la forma como la expresión dinámica del cambio. Esta aproximación la ha llevado a problematizar nociones como el tiempo, la ilusión de control, la teoría de categorías, los bordes y gradientes, la creatividad y la invención, entre otros temas que le han permitido cuestionar y poner a prueba sus investigaciones y por extensión la propia realidad. Desde un enfoque que evita el antropocentrismo, su trabajo es un proceso en constante transformación, donde cada medio con el que experimenta lo informa y redefine.\n" +
+                            "Desde el 2025 forma parte del grupo de investigación Filosofía de la computación en la Facultad de Ciencias de la UNAM, donde expande su aproximación filosófica a través de nuevas y complementarias líneas de investigación."
                 ),
                 Speaker(
                     name = "Pablo Kobayashi",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.lucia_y_pablo,
+                    biography = "Pablo Kobayashi (México D.F., 1976.) Maestro en Artes especializado en Tecnologías y Diseño Emergentes (EmTech) por la Architectural Association School of Architecture en Londres y Arquitecto por la Universidad Intercontinental en la Ciudad de México.\n" +
+                            "Investigador y manipulador de comportamientos materiales, sus expresiones morfológicas y sus consecuencias espaciales. Ha desarrollado su práctica alrededor del concepto de la emergencia, donde el todo no es la suma directa de sus partes y dónde la interacción de elementos simples siguiendo reglas de bajo nivel de sofisticación resulta en fenómenos complejos. Estudia el rol de las herramientas digitales en procesos de diseño en conjunción con métodos analógicos y técnicas tradicionales de construcción, buscando una integración dialéctica entre la forma, la materia y la herramienta, integrando al cuerpo como procesador del código. Se ha interesado en la implementación de estructuras de pensamiento sistémico que parten de lo digital pero prescinden de la computadora.\n" +
+                            "Sus más recientes líneas de investigación se enfocan en dos vertientes de expresión material: estructuras neumáticas y el uso de cimbras textiles para la formación de piezas especiales de concreto. Ha mantenido una práctica académica constante, implementando metodologías pedagógicas no lineales en diversos ejercicios de especulación teórica y desarrollo práctico tanto a nivel licenciatura como maestría."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -569,14 +600,14 @@ fun initInformation() {
             name = "Paris, nueva Babilonia, cuando se apaga la ciudad de la luz",
             startHora = LocalTime.of(4,30),
             finishHora = LocalTime.of(5,0),
-            description = "",
+            description = "Según el momento, la cultura o la moda, todas las sociedades han imaginado algún día el fin de los tiempos y todos los medios para lograrlo, desde el choque con un meteorito hasta la guerra nuclear, pasando por el diluvio, la peste o el cambio climático... En el centro de estas narrativas, y en particular en los países de tradición bíblica, se encuentra la ciudad, ya que Babel y Babilonia encarnaron todos los males de una civilización al borde del colapso. Es así como, desde el siglo XIX, París se convirtió en el blanco preferido de los autores de anticipación y ciencia ficción, especialmente de cultura francesa. La Nueva Babilonia de los tiempos modernos, esta utopía heredada de la Ilustración y la revolución industrial, será a menudo destruida para permitir a los supervivientes del apocalipsis pasear por las ruinas de una ciudad que se habrá vuelto legendaria.",
             exponents = listOf(
                 Speaker(
                     name = "Alain Musset",
                     image = R.drawable.alain_musset,
                     biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia.\n" +
                             "Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. \n" +
-                            "Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992), ¿Geohistoria o geoficción ? Ciudades vulnerables y justicia espacial (Medellín, Universidad de Antioquia, 2009) ; Ciudades nómadas del Nuevo Mundo (México, Fondo de Cultura Económica, 2011). Aficionado a la ciencia ficción, también se interesa por los imaginarios de la ciudad y las visiones futuras de nuestro planeta. Ha publicado varias obras sobre estos temas: Star Wars, un ensayo urbano-galáctico (Santiago de Chile, Bifurcaciones, 2018 – reeditado en 2023) ; Station Métropolis-Direction Coruscant. Ville, science-fiction et sciences sociales (Saint Mammès, Le Bélial’, 2019) ; El síndrome Babilonia. Geoficciones del fin del mundo (Santiago de Chile, Bifurcaciones, 2022); Chères Babylones. Villes rêvées de l’apocalypse (Paris, Serendip’Editions, 2025).\n"
+                            "Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992), ¿Geohistoria o geoficción ? Ciudades vulnerables y justicia espacial (Medellín, Universidad de Antioquia, 2009) ; Ciudades nómadas del Nuevo Mundo (México, Fondo de Cultura Económica, 2011). Aficionado a la ciencia ficción, también se interesa por los imaginarios de la ciudad y las visiones futuras de nuestro planeta. Ha publicado varias obras sobre estos temas: Star Wars, un ensayo urbano-galáctico (Santiago de Chile, Bifurcaciones, 2018 – reeditado en 2023) ; Station Métropolis-Direction Coruscant. Ville, science-fiction et sciences sociales (Saint Mammès, Le Bélial’, 2019) ; El síndrome Babilonia. Geoficciones del fin del mundo (Santiago de Chile, Bifurcaciones, 2022); Chères Babylones. Villes rêvées de l’apocalypse (Paris, Serendip’Editions, 2025)."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -584,10 +615,10 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "La ciudad, utopía permanente",
+            name = "La ciudad, utopía permanente", //TODO FAlta foto Bruno
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,45),
-            description = "",
+            description = "La utopía desde su definición se identifica como la idea de una sociedad futura guiada por características favorecedoras del bien humano y consta de un plan, un proyecto, una doctrina o un sistema ideales que parecen de muy difícil realización. Trata de un sueño inalcanzable y a su vez de la metodología para intentar lograrlo. La mesa iniciará con el recordatorio de varias Ciudades Utópicas a través de la Historia, tanto reales como ficticias; se hablará de la Atlántida, de la Republica de Platón y de Brasilia. Se podrá mencionar otros ejemplos como Metrópolis, la Ciudad del Sol o Filadelfia. En un segundo tiempo, se cuestionará cuáles son las utopías actuales para las ciudades contemporáneas y los retos que pueden representar. Posteriormente se presentará el proyecto de ciudad eco amigable del Mtro. Broissin. La platica de cierre retomara el tema de las utopías contemporáneas y de los mecanismos e instrumentos para lograrlas.\n",
             exponents = listOf(
                 Speaker(
                     name = "Gerardo Broissin",
@@ -601,8 +632,9 @@ fun initInformation() {
                 ),
                 Speaker(
                     name = "Sara Topelson",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.sara_topelson,
+                    biography = "Arquitecta-UNAM. Fundadora de GRINBERG + TOPELSON Arquitectos,                         desarrolló proyectos de diseño urbano, educación, cultura, industria,                                   comercio y vivienda. \n" +
+                            "Catedrática en la Universidad Anáhuac 1972-2000. Presidenta de la Unión Internacional de Arquitectos 1996 – 1999. Directora - Arquitectura y Conservación del Patrimonio Artístico INBAL 2001 - 2003. Subsecretaría de Desarrollo Urbano y Ordenación del Territorio SEDESOL, 2007 - 2012. Directora del Centro de Investigación y Documentación de la Casa “CIDOC”; publicó anualmente el estudio “Estado Actual de la Vivienda en México” 2004 - 2022. Reconocimientos: Mujer del Año México 1996; Miembro de Honor de los Institutos Americano de Arquitectos de Canadá, Inglaterra, Australia, Japón y España. Caballero de la Orden de Artes y Letras del Ministerio Cultura de Francia 1998. Medalla al Mérito Académico Universidad Anáhuac – 2000. Premio Nacional de Arquitectura México 2021- Primera mujer en recibirlo. Premio – Trayectoria: Lorenzo H. Zambrano 2022 CEMEX. “Cátedra Extraordinaria Federico E. Mariscal” 2022 FA UNAM. Doctorado Honoris Causa - U. Anáhuac 2023. Medalla “Bellas Artes” en Arquitectura 2024 México. Grinberg + Topelson Arquitectos han obtenido el primer lugar en diversos concursos: Complejo Urbano CIDECO, Lerma, 1986. Primer Lugar Concurso Biblioteca Pública del Estado de Jalisco - UDG 2005. Premio Obras Cemex 2006. Premio Nacional de Vivienda en México 2021 conjunto Los Almendros, Tizayuca, Hidalgo. Obra relevante: Centro Cultural Mexiquense Anáhuac inaugurado en 2019."
                 )
             ),
             type = TipoEvento.MESA_DIALOGO,
@@ -610,7 +642,7 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "Conferencia",
+            name = "Conferencia",  //TODO descripción
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,30),
             description = "",
@@ -631,9 +663,9 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         ),
         EventInfo(
-            name = "Gip EPAU",
+            name = "Gip EPAU", //TODO descripción, foto y bio
             startHora = LocalTime.of(6,30),
-            finishHora = LocalTime.of(7,15),
+            finishHora = LocalTime.of(7,0),
             description = "",
             exponents = listOf(
                 Speaker(
@@ -642,6 +674,16 @@ fun initInformation() {
                     biography = ""
                 )
             ),
+            type = TipoEvento.EXPOSICION,
+            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
+            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+        ),
+        EventInfo(
+            name = "Benoît d'ALMEIDA", //TODO descripción
+            startHora = LocalTime.of(7,0),
+            finishHora = LocalTime.of(7,30),
+            description = "",
+            exponents = null,
             type = TipoEvento.EXPOSICION,
             place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
@@ -657,44 +699,20 @@ fun initInformation() {
                     "Premiación (15 min): Reconocimiento a las ciudades más innovadoras",
             exponents = null,
             type = TipoEvento.ACTIVIDAD_LUDICA,
-            place = "CENLEX UST + Coordinación de Francés, CENLEX UST",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
-        ),
-        EventInfo(
-            name = "Contruyendo la ciudad del futuro \n" +
-                    "Fomentar la reflexión crítica y la creatividad sobre la organización de ciudades ideales",
-            startHora = LocalTime.of(4,0),
-            finishHora = LocalTime.of(5,45),
-            description = "Inicio (15 min): Explicación y formación de equipos.\n" +
-                    "Actividad (90 min): Cada estación plantea un reto que los equipos deben completar.\n" +
-                    "Exposición (30 min): Los equipos presentan sus ciudades al jurado.\n" +
-                    "Premiación (15 min): Reconocimiento a las ciudades más innovadoras",
-            exponents = null,
-            type = TipoEvento.ACTIVIDAD_LUDICA,
-            place = "CENLEX UST + Coordinación de Francés, CENLEX UST",
+            place = "Hall 1ER PISO. (EDIFICIO B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         ),
         EventInfo(
             name = "Foro Creativo: reimaginando la ciudad",
             startHora = LocalTime.of(5,45),
-            finishHora = LocalTime.of(7,0),
+            finishHora = LocalTime.of(7,30),
             description = "Introducción (10 min): Presentación del tema y dinámica del taller.\n" +
                     "Taller colaborativo (60 min): Los participantes trabajan en grupos pequeños.\n" +
                     "Creación del mural (30 min): Cada grupo aporta su propuesta al mural colectivo.\n" +
-                    "Cierre (10 min): Reflexión conjunta y agradecimiento\n",
+                    "Cierre (10 min): Reflexión conjunta y agradecimiento",
             exponents = null,
             type = TipoEvento.TALLER,
-            place = "CENLEX UST + Coordinación de Francés, CENLEX UST",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
-        ),
-        EventInfo(
-            name = "Acto musical",
-            startHora = LocalTime.of(7,0),
-            finishHora = LocalTime.of(7,30),
-            description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores",
-            exponents = null,
-            type = TipoEvento.ACTO_MUSICAL,
-            place = "CENLEX UST + Coordinación de Francés, CENLEX UST",
+            place = "Hall 1ER PISO. (EDIFICIO B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         ),
         EventInfo(
@@ -702,10 +720,26 @@ fun initInformation() {
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(5,0),
             description = "Conservatorio y Presentación:\n"
-                    + "Rebeldía compasiva. Encuentro cultural universitario",
-            exponents = null,
+                    + "Rebeldía compasiva. Encuentro cultural universitario\n" +
+                    "Trece bailarines en escena interpetan \"Miradas\", en donde los cuerpos que habitan el espacio se agrupan, se disocian, se alejan y se unen para apoyarse unxs a otrxs y así llegar a mirar lo que tanto anhelan. Esto a través del lenguaje del ballet contemporáneo. Todo esto a través del lenguaje del ballet contemporáneo y el acompañamiento de piano a cargo de Erick Salinas.",
+            exponents = listOf(
+                Speaker(
+                    name = "Andrea de Caso Rivero Borell",
+                    image = R.drawable.andrea_del_caso,
+                    biography = "Andrea de Caso Rivero Borrell (Ciudad de México, 1986)\n" +
+                            "Licenciada en Historia del Arte por la Universidad Iberoamericana y Maestra en Teoría Crítica del Arte por la School of Visual Arts de NY. Trabajó durante seis años como subdirectora en Patricia Conde Galería.\n" +
+                            "Del 2017 al 2023 se desempeñó como asistente curatorial de la Colección Artística del Museo Universitario Arte Contemporáneo MUAC, en la Ciudad de México en donde colaboró en la alimentación de la base de datos de la colección artística, la coordinación de exposiciones como Un arte sin tutela: El Salón Independiente en México 1968-1971, Tierra Firme. Jan Hendrix (proyecto Materia prima), Trayectorias: Manuel Felguérez, así como la coordinación del proyecto de Digitalización de la Colección artística del MUAC.\n" +
+                            "A partir de noviembre del 2023, es Responsable de Exposiciones e Intervenciones culturales en la Coordinación de Arte y Cultura de la Universidad Iberoamericana de la CDMX. "
+                ),
+                Speaker(
+                    name = "Carolina Pérez",
+                    image = R.drawable.carolina_perez,
+                    biography = "Carolina Pérez (CDMX, 1992)\n" +
+                            "Filósofa, arte marcialista, tallerista, laboratorista y gestora cultural. Con una larga trayectoria llevando procesos culturales, siempre desde una mirada pluricultural e interseccional. Ha colaborado con instituciones públicas y privadas, destacándose en procesos en las áreas gubernamentales de Vinculación Comunitaria desde el área cultural y desde el área privada en cuidado medioambiental. Cuenta con una formación multidisciplinaria, teniendo como eje de su atención el estudio del cuerpo y su entorno para la formación humanista de tejido social desde un acercamiento al arte y la cultura. Actualmente es Responsable de laboratorios y talleres artísticos y culturales en IBERO CDMX, donde también está al frente del laboratorio de autocuidados."
+                )
+            ),
             type = TipoEvento.TALLER,
-            place = "Docentes y usuarios del CENLEX Zac",
+            place = "Hall Planta Baja (Edificio B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         ),
         EventInfo(
@@ -715,7 +749,7 @@ fun initInformation() {
             description = "Reflexion de 20 estudiantes de la Ibero de la matéria Historia y teoria de la arquitectura del siglo XVII a inicios del XIX. Presentaran laminas. ",
             exponents = null,
             type = TipoEvento.EXPOSICION,
-            place = "Docentes y usuarios del CENLEX Zac",
+            place = "Hall Planta Baja (Edificio B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         ),
         EventInfo(
@@ -729,7 +763,7 @@ fun initInformation() {
                     "Cierre (5 min): Agradecimiento",
             exponents = null,
             type = TipoEvento.SKETCH,
-            place = "Docentes y usuarios del CENLEX Zac",
+            place = "Hall Planta Baja (Edificio B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         ),
         EventInfo(
@@ -739,7 +773,7 @@ fun initInformation() {
             description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores",
             exponents = null,
             type = TipoEvento.ACTO_MUSICAL,
-            place = "Docentes y usuarios del CENLEX Zac",
+            place = "Hall Planta Baja (Edificio B ESCA IPN)",
             direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
         )
     )
@@ -755,7 +789,7 @@ fun initInformation() {
             name = "La utopía democrática pospartidista",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "",
+            description = "La utopía social (en contraposición a la literaria o filosófica) nos invita a construir una sociedad ideal (no solo a leerla o pensarla). Pero ¿qué sociedad ideal? O, mejor, ¿cómo decidimos qué sociedad ideal? Esta última formulación pone en juego la utopía democrática, para quienes creemos en la igualdad política sustantiva. Ahora bien, ¿el actual sistema político de democracia liberal-representativa –la democracia existente– encarna suficientemente esa utopía democrática? Si no lo creemos (y muchos datos nos invitan a no creerlo), entonces la pregunta deviene: ¿qué sistema político democrático podría facilitar la construcción de una sociedad ideal? En esta ponencia abordaré tal interrogante, planteando la posibilidad realista (no fantasiosa) de una democracia pospartidista. Discutiré tanto la falla fundamental de la democracia existente como su superación a través de la institución y operación de un Cuarto Poder del Estado, el Poder Ciudadano.",
             exponents = listOf(
                 Speaker(
                     name = "Guillem Compte Nunes",
@@ -939,7 +973,7 @@ fun initInformation() {
             name = "Las utopías científicas en la Edad Media",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "",
+            description = "La Edad Media no estuvo exenta de utopías científicas o tecnocientíficas. Una utopía científica puede entenderse como un proyecto imaginado, extraordinario, postulado como científico, cuya realización se sitúa entre lo posible y lo imposible, incluso a los ojos de quien lo concibe. Dicho más brevemente, es una proyección científica más allá de lo que es posible actualmente en ciencia. La utopía científica se ilustrará con varios ejemplos de sueños tecnocientíficos, destacando en particular la figura singular del franciscano Roger Bacon (siglo XIII), que postuló la posibilidad de desarrollar todo tipo de inventos extraordinarios, desde el carro que se desplazaría sin caballo hasta la máquina voladora.",
             exponents = listOf(
                 Speaker(
                     name = "Nicolas Weill-Parot",
@@ -1084,35 +1118,14 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
         ),
         EventInfo(
-            name = "Rebeldía compasiva. Encuentro cultural universitario",
-            startHora = LocalTime.of(7,15),
-            finishHora = LocalTime.of(8,0),
-            description = "TALLER DE BALLET \n" +
-                    "CONVERSATORIO y PRESENTACION",
-            exponents = listOf(
-                Speaker(
-                    name = "Carolina Perez",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                ),
-                Speaker(
-                    name = "Andrea De Caso",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.TALLER,
-            place = "Recinto historico y cultural Juan de Dios Batiz Paredes",
-            direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
-        ),
-        EventInfo(
             name = "Concierto \"Tengo un sueño\"",
             startHora = LocalTime.of(8,0),
             finishHora = LocalTime.of(10,0),
-            description = "",
+            description = "La orquesta Iberoamericana, bajo la dirección de Lizzie Ciniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hijal del compositor.\n" +
+                    "Además, contará con la intervención del Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), dirigido por Alejandro León.",
             exponents = listOf(
                 Speaker(
-                    name = "Arturo Marquez",
+                    name = "Arturo Márquez",
                     image = R.drawable.arturo_marquez,
                     biography = ""
                 )
@@ -1167,7 +1180,11 @@ fun initInformation() {
             name = "La revolución del tiempo: la Comuna de París y la función social de las utopías",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,30),
-            description = "",
+            description = "La construcción del tiempo social no es homogénea ni sincrónica como el tiempo mecánico de los relojes. En el caso de las rebeliones y revoluciones sociales los tiempos se aceleran, se intensifican; bifurcan y reavivan el diálogo entre presente pasado y futuro. En este sentido, las utopías juegan funciones sociales prácticas muy importantes: \n" +
+                    "1) Son el motor de la acción social; \n" +
+                    "2) Son el espejo que permiten una critica ética que dan o quitan legitimidad al orden político; \n" +
+                    "3) Tienen una función etica o festiva con la que desestructuran el aparente “orden” del mundo.\n" +
+                    "A partir del ejemplo histórico paradigmático de la Comuna de París como ejemplo de revolución en acto se analizará la función práctica de lo utópico.\n",
             exponents = listOf(
                 Speaker(
                     name = "Araceli Mondragon",
@@ -1180,15 +1197,17 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "La Utopía de Topolobambo", //TODO
+            name = "La Utopía de Topolobambo",
             startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(6,0),
-            description = "",
+            description = "Se propone mostrar, a grandes rasgos, los resultados de la investigación arqueológica en torno a la vida de los colonos que integraron la Crédit Foncier Company de Sinaloa en el período que abarcó de 1886 a 1892. La colonia estuvo conformada por extranjeros que arribaron al norte de Sinaloa, alentados por un líder carismático, Albert K. Owen, visionario cuyo plan era construir Pacific City, que se rigiera por la felicidad y la armonía, y que sirviera de ejemplo para aquellos oprimidos en el mundo.\n" +
+                    "Con todo lo que está ocurriendo hoy día, las propuestas alternativas para cambiar el mundo son muchas y muy variadas. Por ello consideré aproximarme desde la arqueología al estudio de la Crédit Foncier Company, como oportunidad para entender nuestro presente y añadir las voces de quienes creían poder construir un mundo mejor para la humanidad.\n",
             exponents = listOf(
                 Speaker(
                     name = "Veronica Velasquez",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.veronica_velasquz,
+                    biography = "Verónica Velasquez es investigadora especializada en el estudio de comunidades y sitios pertenecientes al mundo moderno temprano. Verónica es licenciada en Antropología con especialidad en Arqueología por parte de la Universidad de las Américas-Puebla, maestra en Arqueología por parte de la Escuela Nacional de Antropología e Historia, maestra en Arqueología Histórica Europea por parte de la Universidad de Sheffield en Reino Unido y doctora en Arqueología por parte de esa misma universidad.\n" +
+                            "Su tesis de maestría en la ENAH estuvo dedicada a la investigación arqueológica de la utopía de Topolobampo, donde integró fuentes documentales, fotográficas y arqueológicas para conocer la vida de los colonos que la integraron. Esta investigación resultó en la publicación del libro Lugar de Maravillas. Arqueología en Pacific City (2012, Axial, México)."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1199,7 +1218,7 @@ fun initInformation() {
             name = "Las utopías urbanas de Disney: construir la ciudad ideal de EPCOT en Cotino Storyliving",
             startHora = LocalTime.of(6,0),
             finishHora = LocalTime.of(6,45),
-            description = "",
+            description = "Esta intervención se centrará en la larga historia de la participación de la Walt Disney Company en el diseño y la producción de ciudades ideales. Desde los años 60, la fuerte proximidad entre parques de ocio y ciudad ideal no solo ha sido mantenida por los comentaristas en la opinión pública sino que ha dado lugar a varios experimentos. Desde el proyecto inicial de EPCOT en la década de 1960 hasta la inauguración esta primavera de Cotino Storyliving en las afueras de Palm Springs, esta actividad de producción de la ciudad ideal ha tenido un lugar más o menos central en la estructura misma de la Walt Disney Company. A través de los ejemplos citados, es aquí la historia del capitalismo americano desde los años 1960 que se nos da a ver, y el lugar de las grandes empresas privadas en la invención de modelos de ciudades ideales, Modelos cuya influencia en el diseño y la gestión de las ciudades ordinarias es ya muy real.\"",
             exponents = listOf(
                 Speaker(
                     name = "Sophie Didier (CNRS)",
@@ -1264,9 +1283,9 @@ fun initInformation() {
                 Speaker(
                     name = "Anne-Cécile OTT",
                     image = R.drawable.anne_cecile,
-                    biography = "Anne-Cécile Ott es actualmente investigadora\n" +
-                            "Posdoctoral en sociología en el Centro Émile\n" +
-                            "Durkheim de la Universidad de Burdeos.  Después\n" +
+                    biography = "Anne-Cécile Ott es actualmente investigadora " +
+                            "Posdoctoral en sociología en el Centro Émile " +
+                            "Durkheim de la Universidad de Burdeos.  Después " +
                             "de haber realizado una tesis sobre las representaciones infantiles del espacio mundial, ha trabajado como postdoctoral en la construcción de prácticas culturales y gustos musicales, así como en las transformaciones de estas prácticas durante la pandemia de COVID-1919, dentro de los proyectos MaMa y RECORDS, en el Centro de Investigación sobre las Desigualdades Sociales de SciencesPo. Sus investigaciones postdoctorales actuales, en el marco del proyecto colectivo \"C'est pô juste\" (Contrato Panels del Ministerio de la Cultura), se centran en la construcción del sentido de justicia e injusticia en la infancia. Sus trabajos se centran más generalmente en la socialización primaria, los procesos de transmisión de las formas de pensar y actuar y en la construcción social de las prácticas y representaciones que sean espaciales, culturales o morales. Se interesan en particular por la construcción en la infancia de las relaciones con el espacio y los retos globales."
                 )
             ),
@@ -1278,7 +1297,7 @@ fun initInformation() {
             name = "La utopía de Gaia: ¿Puede nuestro planeta recuperar el equilibrio y la autoorganización?",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,45),
-            description = "",
+            description = "Se ha propuesto que la criticalidad, definida como la zona fronteriza entre dos fases (o estados colectivos diferentes) en los que pueden encontrarse los sistemas complejos, corresponde a un equilibrio dinámico en estos sistemas. Esto puede interpretarse, en el caso biológico, como el estado al que tienden por selección natural los sistemas que evolucionan en un medio ambiente cambiante, de manera que optimizan los requerimientos antagónicos de robustez y adaptabilidad. Esto ha sido comprobado, por ejemplo, a través de la medición de la variabilidad del ritmo cardíaco en mamíferos jóvenes y sanos, incluyendo los seres humanos. Estudiamos el comportamiento de la temperatura promedio de nuestro planeta desde 1880 hasta la fecha para demostrar el sorprendente equilibrio que se ha establecido entre la vida (nuestra biósfera) y nuestra atmósfera: el comportamiento  autoorganizado de la Tierra (Gaia) y su acelerada pérdida, debida esencialmente al desequilibrio ecológico y a la emisión de gases de invernadero.\n",
             exponents = listOf(
                 Speaker(
                     name = "Alejandro Frank",
@@ -1287,7 +1306,7 @@ fun initInformation() {
                             "Recibió la Beca Guggenheim y el Premio Manuel Noriega Morales de la Organización de los Estados Americanos y es Fellow de la American Physical Society. Entre otros honores, recibió el Premio de la Academia Mexicana de Ciencias, el Premio Universidad Nacional y el Premio Nacional de Ciencias y Artes. Es Investigador Emérito de la UNAM y del Sistema Nacional de Investigadores (SNI) y Miembro del Colegio Nacional."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1309,7 +1328,7 @@ fun initInformation() {
                             "Actualmente, es miembro de consejo en diversas organizaciones académicas y sin fines de lucro, profesor de maestría y conferencista recurrente en eventos internacionales como Google Awards, Effie Awards, Promax Global Awards y What Design Can Do Challenge. Además, sigue explorando nuevas tecnologías como Web 4.0, Inteligencia Artificial, metaverso e IoT, con el propósito de construir modelos de negocio y soluciones replicables que generen un impacto positivo en las personas, los negocios y la sociedad.\n"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1317,7 +1336,7 @@ fun initInformation() {
             name = "El “trumpismo” fase superior del neoliberalismo",
             startHora = LocalTime.of(6,30),
             finishHora = LocalTime.of(7,0),
-            description = "",
+            description = "En mi intervención partiré de la tesis de que nos encontramos ante un cambio de época marcada por la erosión del orden mundial imperante desde 1991. Este se caracterizó por la expansión del neoliberalismo, el globalismo y la supremacía de las democracias liberales representativas, tuteladas por la hegemonía norteamericana. Pero para poder captar la particular textura de nuestra época debemos ser capaces de comprender cómo las nuevas tendencias engarzan con lo viejo. La nueva fase en la que entramos surge de dinámicas y estructuras características del periodo anterior, sin las cuáles, su eclosión no se habría producido o habría tenido lugar de otra forma. Es necesario entender cómo las nuevas tendencias enraízan sobre condiciones previas, reordenándolas y proyectándolas hacia una nueva dirección. Para lograr dar cuenta de esto me centraré en tres puntos: 1) los imaginarios tecno-libertarios y la utopía reaccionaria que ha precipitado en lo que se ha denominado como la “ilustración oscura” 2) la formación de una nueva elite económica y política globalmente interconectada y 3) algunas estrategias y proyectos de gobernanza que está élite está implementando ante la crisis actual. Mi conclusión es que estos elementos convergen en una amenaza real, no ya a la democracia como sistema de gobierno, sino a sus propios fundamentos: el espacio público y la condición ciudadana.",
             exponents = listOf(
                 Speaker(
                     name = "Alejandro Estrella Gonzales",
@@ -1357,20 +1376,29 @@ fun initInformation() {
                     biography = "Economista, Maestro y Doctor en Administración Pública con Mención Honorifica, realizó el Postdoctorado Iberoamericano en Nuevos Retos de Gobernanza Pública por la Universidad de Salamanca, Senior Executive National and International Security, Harvard University, Executive Certificate in Public Policy, Harvard University, The Threat of Nuclear Terrorism Stanford University, Espionage, Intelligence and National Security University of Oxford. Es Especialista en Inteligencia y Seguridad Nacional por el INAP, A.C. Ha sido Catedrático de la Facultad de Derecho de la UNAM, Asociado del Centro Olof Palme México, es Director de la Agenda de Futuros Posibles. Fue Director de Normatividad de TIC de la Suprema Corte de Justicia de la Nación; fue Titular del Órgano Interno de Control de la Oficina del Gobernador de Veracruz, Director de Ejercicio Presupuestal SEDESOL, Asesor en la Comisión de Energía LX Legislatura Cámara de Diputados, laboró como Jefe del Departamento de Licitación de Servicios en la Secretaría de Gobernación."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Proyección documental", //TODO
+            name = "Héroes Verdes. MAR",
             startHora = LocalTime.of(4,45),
             finishHora = LocalTime.of(6,0),
-            description = "",
+            description = "Este documental muestra las historias de tres ambientalistas y sus estrategias para combatir la degradación de la vida marina en México. Han creado asociaciones y cooperativas sostenibles y promovido políticas públicas. Nélida Barajas asesora a cooperativas de pescadoras, logrando algo icónico en Sonora, en el mar de Cortés. Es directora del Centro Intercultural de Estudios de Desiertos y Océanos (CEDO). Esteban García-Peña, admirador de Jacques-Yves Cousteau, ha realizado importantes censos de especies marinas. Es director de campañas en pesquerías de Oceana México. Valeria Mas es una fotógrafa marina que fundó la Asociación Mexicana de Imagen Subacuática. Sus hermosas imágenes han creado conciencias y obtenido varios premios.\n" +
+                    "Ficha técnica\n" +
+                    "Título: Héroes Verdes México\n" +
+                    "Director:  Jordi Mariscal\n" +
+                    "Narradora: Regina Blandón\n" +
+                    "País: México\n" +
+                    "Productora: La Casa de Cine\n" +
+                    "Duración: 52 minutos \n",
             exponents = listOf(
                 Speaker(
                     name = "Jordi Mariscal",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.jordi_mariscal,
+                    biography = "Es un director, guionista y productor que ha combinado ficción y documental. Entre 2019 y 2024 dirigió y creó Héroes Verdes México, una serie sobre activistas ambientales que transforman su entorno. Para ello recorrió el país, desde las selvas de Chiapas hasta el desierto de Sonora. Ha sido productor ejecutivo de filmes como Días negros (2020) y Niebla de Culpa (2017). En 2012 dirigió y coescribió Canela, una historia que destaca la unión familiar y la cocina mexicana de gran éxito en Estados Unidos. También codirigió el documental El danzón del coyote (2007). \n" +
+                            "\n" +
+                            "Ha vivido por temporadas en Francia, España e India. Cuenta con maestrías de periodismo y de literatura. Además, ha escrito dos libros e impartido pláticas de cine y de literatura."
                 )
             ),
             type = TipoEvento.DOCUMENTAL,
@@ -1432,13 +1460,13 @@ fun initInformation() {
 
     var eventosEspiritualidades = listOf(
         EventInfo(
-            name = "Utopía de la masonería",
+            name = "Utopía de la masonería, una utopía polimorfa",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
-            description = "La francmasonería es una utopía, en todos los sentidos del término de esta noción polimorfa.\n" +
+            description = "La masonería es una utopía, en todos los sentidos del término de esta noción polimorfa.\n" +
                     "Ya que esta fraternidad iniciática, sin lugar o bien, uno imaginario, al contrario de la isla de Tomas Moro, estando en todas partes y a la vez en ninguna, se concibe como una cadena de unión planetaria que comprende construir la paz universal más allá de las fronteras del espacio y tiempo.\n" +
                     "Más allá de su dimensión imaginaria, la francmasonería sugiere entonces un horizonte de perfección del cual, cuyos miembros intentan acercarse con una meta de mejora. Sin embargo este horizonte puede ser tanto una fuerza de contestación, que ofrece un modelo de sociedad alternativo (según Karl Mannheim quien define “utopía”  de forma opuesta al de ideología) y, constituyendo un motor efectivo de cambio, produce a veces una utopía concreta que transforma lo real;  como un ideal inaccesible, una quimera cuando los francmasones reproducen las imperfecciones del mundo profano (inagualidades, discriminaciones… )\n" +
-                    "Pero, esta utopía multiples facetes que es la francmasonería se arraiga también y sobre todo en la realidad de la logia masónica que se puede considerar como una verdadera heterotopia desde el punto de vista foucaultiano.. \n",
+                    "Pero, esta utopía multiples facetes que es la francmasonería se arraiga también y sobre todo en la realidad de la logia masónica que se puede considerar como una verdadera heterotopia desde el punto de vista foucaultiano. \n",
             exponents = listOf(
                 Speaker(
                     name = "Céline Bryon-Portet\nUniv. Montpellier",
@@ -1448,7 +1476,7 @@ fun initInformation() {
                             "Desde un enfoque constructivista, estudia la “re”construcción social y cultural de la realidad, especialmente en las organizaciones cerradas como  la armada y la francmasonería, en utopías concretas y también, a través de ficciones audiovisuales (series y películas).  Es autor y  coautor de numerosas publicaciones y artículos como “La Utopía masónica, mejorar el Hombre y la sociedad” París, Dervy, 2014."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Por definir",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1461,7 +1489,7 @@ fun initInformation() {
                 Speaker(
                     name = "Maria Sorokina (UPEC)",
                     image = R.drawable.maria_sorokina,
-                    biography = "investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. \n" +
+                    biography = "Investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. \n" +
                             "En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. Para este trabajo, se centró en los escritos de los teólogos que estaban indudablemente interesados en cuestiones científicas. Contrariamente a las expectativas, se esforzaban por describir los mundos celestial y terrenal, apoyándose en dos fuentes a primera vista contradictorias - la obra del filósofo payën Aristóteles y la Biblia - y, en lo posible, reconciliarlas. Actualmente, María Sorokina estudia el enfoque científico de campos desconocidos para Aristóteles que elaboraron los teólogos medievales: el universo antes de la Caída y después del Apocalipsis."
                 )
             ),
@@ -1486,10 +1514,10 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "La evangelización dominicana de América latina",
+            name = "Utopías y experiencias de alteridad en la evangelización dominicana en el siglo XVI",
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,15),
-            description = "",
+            description = "En las épocas de efervescencia y transición hay muchas posibilidades en juego y muchas maneras de articular y llevar a la práctica proyectos. Estas posibilidades de futuro se reflejan en diferentes posibilidades de evangelización, aún dentro de una misma orden religiosa como sucedió a los dominicos en el siglo XVI. A pesar de compartir un carisma y una herencia religiosa común, ante la apertura de un Nuevo Mundo, los frailes construyen de diversa manera el tiempo social; conforman de manera distinta su compromiso religioso y se construyen a un otro, el indio, al que temen, aman o no alcanzan a comprender. Estos procesos son pensados a partir de tres modelos de evangelización y cuatro personajes paradigmáticos que dejarán profunda huella en las políticas indianas: Domingo de Betanzos; Francisco de Vitoria; Julián Garcés y Bartolomé de Las Casas.",
             exponents = listOf(
                 Speaker(
                     name = "Araceli Mondragón\nUAM",

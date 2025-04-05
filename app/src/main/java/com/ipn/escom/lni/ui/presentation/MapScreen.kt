@@ -49,7 +49,7 @@ fun ScrollableMap(
             .background(Color.Transparent)
             .padding(innerPaddingValues)
             .clickable {
-                navHostController.navigate( NavRoutes.getDetailRoute(0) )
+                navHostController.navigate( NavRoutes.getDetailRoute(3) )
             }
     ) {
         AnimatedStarsBackground()
