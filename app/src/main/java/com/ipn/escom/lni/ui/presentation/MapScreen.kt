@@ -95,9 +95,9 @@ fun ScrollableMap(
                 onDismiss = { showDialog = false },
                 onViewClick = {
                     showDialog = false
-                    navHostController.navigate( NavRoutes.getDetailRoute(3) )
+                    navHostController.navigate( NavRoutes.getDetailRoute(10) )
                 },
-                islasGlobal[3]
+                islasGlobal[10]
             )
         }
     }

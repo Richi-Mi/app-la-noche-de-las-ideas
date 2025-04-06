@@ -176,9 +176,11 @@ fun initInformation() {
     )
     eventosAmaurote = eventosAmaurote.sortedBy { it.startHora }
     val amaurote = IslaInfo(
-        "Amaurote",
+        "Amaurota",
         R.drawable.ic_launcher_foreground,
-        eventosAmaurote
+        eventosAmaurote,
+        description = "Acompáñanos en un viaje fascinante donde hablaremos de hábitats comunitarios visionarios, arquitectura submarina, divulgación científica, sostenibilidad oceánica, textos sagrados como literatura de crisis, y la Comuna de París como episodio revolucionario.\n" +
+                "Con exponentes internacionales como Frédéric Panni, Jacques Rougerie, Dalila Aldana, Javier Aguilera, Thomas Römer y Christopher Domínguez Michael, reflexionaremos sobre cómo construir un futuro más justo, resiliente y conectado con el planeta y con nuestra historia.\n"
     )
 
     // ISLA: Utopía en el cine
@@ -218,7 +220,8 @@ fun initInformation() {
     val cine = IslaInfo(
         "Utopía en el Cine",
         R.drawable.baseline_movie_24,
-        eventosCine
+        eventosCine,
+        description = "Prepárate para una experiencia enriquecedora con nuestra selección de eventos. Déjate llevar por las historias del cine, desde momentos divertidos y conmovedores hasta viajes a mundos futuristas. Amplía tus horizontes con la presentación de un interesante documental que explora la teología desde una perspectiva contemporánea."
     )
     // ISLA: Utopías Extraterrestres
     var eventosExtraterrestres = listOf(
@@ -381,7 +384,8 @@ fun initInformation() {
     val estraterrestres = IslaInfo(
         "Utopías Extraterrestres",
         R.drawable.ic_launcher_foreground,
-        eventosExtraterrestres
+        eventosExtraterrestres,
+        description = "Adéntrate en un fascinante viaje que explora las fronteras del espacio y la imaginación humana. Desde la concepción de utopías extraterrestres y la reflexión filosófica sobre la vida más allá de la Tierra, hasta la conexión ancestral entre la astronomía y las civilizaciones prehispánicas. Descubre exposiciones inmersivas, participa en una mesa redonda con expertos y maravíllate con la observación astronómica. ¡Una oportunidad para expandir tus horizontes cósmicos y terrestres!"
     )
 
     var eventosFabricadelCuerpo = listOf(
@@ -410,14 +414,13 @@ fun initInformation() {
             startHora = LocalTime.of(4, 45),
             finishHora = LocalTime.of(5, 15),
             description = "En esta charla exploraré cómo la narrativa del anti-envejecimiento está plagada de promesas utópicas: una búsqueda por desafiar el tiempo, detener la muerte y alcanzar una juventud eterna. Revisaré los mensajes culturales que nos han condicionado en Occidente sobre la lucha contra la edad y cómo esta narrativa se entrelaza con expectativas de salud, bienestar, riqueza y belleza.\n" +
-                    " \n" +
                     "A través de ejemplos de publicidad y narrativas de la industria wellness, plantearé preguntas como: ¿Qué futuro imaginamos al correr del envejecimiento? ¿Qué tipo de utopía buscamos cuando esperamos que la medicina o la industria del bienestar nos detengan el tiempo? ¿Porque hablar de la muerte es necesario?\n",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
                     name = "Sr. Victor Saadia",
                     image = R.drawable.victor_saadia,
-                    biography = "Victor Saadia es empresario, autor, consultor, speaker y profesor. Es Licenciado en Economía por el ITAM y tiene una Maestría en Pensamiento Social Interdisciplinario por la Universidad de Nueva York. Ahora cursa su Doctorado en Filosofía y Pensamiento Crítico en Suiza. Es fundador de BioCenter, una agrupación de negocios relacionados a la medicina regenerativa; y de ALIVE, una consultora de bienestar. Es autor de 3 libros y de diversos artículos relacionados a la educación, el bienestar y la filosofía de la ciencia. También es Fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida y creador del Podcast: “Volver al Futuro”.\n" +
+                    biography = "Victor Saadia es empresario, autor, consultor, speaker y profesor. Es Licenciado en Economía por el ITAM y tiene una Maestría en Pensamiento Social Interdisciplinario por la Universidad de Nueva York. Ahora cursa su Doctorado en Filosofía y Pensamiento Crítico en Suiza. Es fundador de BioCenter, una agrupación de negocios relacionados a la medicina regenerativa; y de ALIVE, una consultora de bienestar. Es autor de 3 libros y de diversos artículos relacionados a la educación, el bienestar y la filosofía de la ciencia. También es Fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida y creador del Podcast: \"Volver al Futuro\".\n" +
                             "Suscríbete a mi Newsletter:\n" +
                             "https://unique-author-3554.ck.page/8d0abc381c\n" +
                             "\n" +
@@ -564,7 +567,8 @@ fun initInformation() {
     val fabricaDelCuerpo = IslaInfo(
         name = "La fábrica del cuerpo",
         image = R.drawable.ic_launcher_foreground,
-        eventosFabricadelCuerpo
+        eventosFabricadelCuerpo,
+        description = "Sumérgete en una profunda reflexión sobre las fronteras de la vida y la muerte, la búsqueda de la juventud eterna y la creciente interacción entre el ser humano y la tecnología. A través de conferencias, exposiciones y una mesa redonda, exploraremos las utopías y distopías que surgen de nuestros avances científicos y tecnológicos, así como la fascinante visión de un artista que crea seres híbridos entre lo humano y lo natural."
     )
 
     var eventosUtopiasUrbanas = listOf(
@@ -781,7 +785,8 @@ fun initInformation() {
     val utopiasUrbanas = IslaInfo(
         name = "Utopías urbanas",
         image = R.drawable.baseline_location_city_24,
-        events = eventosUtopiasUrbanas
+        events = eventosUtopiasUrbanas,
+        description = "Sumérgete en una exploración del pensamiento utópico y su relación con el tiempo, analizando cómo concebimos y a veces negamos el futuro. Descubre visiones de ciudades ideales a través de la historia y reflexiona sobre los retos y las utopías de las urbes contemporáneas. Además, explora proyectos arquitectónicos innovadores y participa en actividades creativas que reimaginan el espacio urbano."
     )
 
     var eventosMundosDeseablesYNoDeseables = listOf(
@@ -965,7 +970,8 @@ fun initInformation() {
     val mundosDeseablesYNoDeseables = IslaInfo(
         name = "Mundos Deseables Y No Deseables",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosMundosDeseablesYNoDeseables
+        events = eventosMundosDeseablesYNoDeseables,
+        description = "Adéntrate en un espacio de reflexión crítica sobre los futuros que anhelamos y aquellos que debemos evitar. A través de diversas ponencias, mesas redondas y conversatorios, exploraremos desde la utopía de una democracia pospartidista y las distopías imaginadas desde los estudios de género, hasta la propuesta de una sociedad más inclusiva y la persistencia de la misoginia. Analizaremos cómo construimos nuestras visiones de mundos deseables y los obstáculos que enfrentamos en el camino."
     )
 
     var eventosUtopiasCientificas = listOf(
@@ -1103,7 +1109,8 @@ fun initInformation() {
     val utopiasCientificasyTecnologicas = IslaInfo(
         name = "Utopías Científicas y Tecnológicas",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosUtopiasCientificas
+        events = eventosUtopiasCientificas,
+        description = "Descubre cómo la humanidad ha imaginado futuros impulsados por la ciencia y la tecnología a lo largo de la historia. Desde los sueños tecnocientíficos de la Edad Media hasta las promesas y desafíos de la Inteligencia Artificial y la economía conductual en el presente, exploraremos la fascinante relación entre la imaginación, la ética y la construcción de mundos ideales."
     )
 
     var eventosArteEnUtopias = listOf(
@@ -1139,7 +1146,8 @@ fun initInformation() {
     val arteEnUtipias = IslaInfo(
         name = "Arte en Utopías",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosArteEnUtopias
+        events = eventosArteEnUtopias,
+        description = "Sumérgete en una experiencia artística que explora la conexión entre el arte y las utopías. Disfruta de un juego de cartas que invita a la interacción y culmina la jornada con un emotivo concierto a cargo de la Orquesta Iberoamericana, interpretando la cantata \"Tengo un sueño\" del maestro Arturo Márquez"
     )
 
     var eventosElMundoDeAntes = listOf(
@@ -1251,7 +1259,8 @@ fun initInformation() {
     val elMundoDeAntes = IslaInfo(
         name = "El mundo de antes",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosElMundoDeAntes
+        events = eventosElMundoDeAntes,
+        description = "Viaja en el tiempo para descubrir cómo se imaginaron las sociedades ideales en diferentes épocas. Desde la República de Platón hasta los viajes cósmicos de Bergerac, la utopía de Topolobambo y las visiones urbanas de Disney, exploraremos los sueños y los proyectos que buscaron construir un mundo mejor en el pasado, analizando su contexto y su legado."
     )
 
     var eventosElMundoQueViene = listOf(
@@ -1455,7 +1464,8 @@ fun initInformation() {
     val elMundoQueViene = IslaInfo(
         name = "El mundo que viene",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosElMundoQueViene
+        events = eventosElMundoQueViene,
+        description = "¿Cómo imaginamos las ciudades del mañana? ¿Son nuestras visiones del futuro utopías o distopías? Esta sección te invita a explorar el mundo que viene a través de la lente de la ciencia ficción, la sociología, la ecología y la economía. Analizaremos desde las representaciones urbanas en la ciencia ficción hasta las ideas para construir un futuro sostenible y equitativo, pasando por reflexiones sobre el impacto de las decisiones actuales en el mundo que heredaremos."
     )
 
     var eventosEspiritualidades = listOf(
@@ -1566,7 +1576,8 @@ fun initInformation() {
     val espiritualidadesYReligiones = IslaInfo(
         name = "Espiritualidades y religiones",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosEspiritualidades
+        events = eventosEspiritualidades,
+        description = "Sumérgete en un viaje a través de las utopías inherentes a diferentes expresiones de la espiritualidad. Desde la concepción masónica de una fraternidad universal y la visión cristiana del paraíso post-apocalíptico, hasta los ideales de justicia social en la evangelización dominicana y la Teología de la Liberación, exploraremos cómo la fe ha inspirado la búsqueda de mundos ideales y la transformación de la realidad."
     )
 
     islasGlobal = mutableListOf(

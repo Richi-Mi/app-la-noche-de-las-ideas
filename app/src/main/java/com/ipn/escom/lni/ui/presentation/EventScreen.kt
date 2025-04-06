@@ -55,6 +55,7 @@ import androidx.media3.common.VideoSize
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import com.ipn.escom.lni.R
+import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.Speaker
 import com.ipn.escom.lni.ui.model.TipoEvento
@@ -252,6 +253,6 @@ fun PreviewEvent (){
         "https://maps.app.goo.gl/JnjrvTS1H3rKpvHh9"
     )
     LaNocheDeLasIdeasTheme (darkTheme = false) {
-        EventScreen(event)
+        EventScreen(islasGlobal[3].events[0])
     }
 }
