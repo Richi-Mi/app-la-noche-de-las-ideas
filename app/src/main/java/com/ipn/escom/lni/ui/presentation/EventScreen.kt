@@ -184,7 +184,7 @@ fun ExponentsDetails (exponent: Speaker, context: Context) {
         if(exponent.video != null){
             VideoPlayer(
                 context = context,
-                videoUri = exponent.video,//"android.resource://${context.packageName}/raw/${exponent.video}",
+                videoUri = "android.resource://${context.packageName}/raw/${exponent.video}",
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(3.dp)
