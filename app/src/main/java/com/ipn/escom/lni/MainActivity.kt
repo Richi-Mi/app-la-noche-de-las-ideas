@@ -54,7 +54,7 @@ fun initInformation() {
                     "Sra. Delphine Borione, Embajadora de Francia en México. \n",
             exponents = null,
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -71,7 +71,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -91,7 +91,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -107,7 +107,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -125,7 +125,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -144,7 +144,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -161,7 +161,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -177,7 +177,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio Principal",
+            place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         )
     )
@@ -198,8 +198,8 @@ fun initInformation() {
             description = "De Phillippe PETIT\nPelícula de Ficción, Comedia, Dramática\nDuración 1h25",
             type = TipoEvento.PELICULA,
             exponents = null,
-            place = "Auditorio Fernando Diez Edificio B",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Carpa Negra Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Alphaville Une étrange aventure",
@@ -208,8 +208,8 @@ fun initInformation() {
             description = "De Jean-Luc Gogard\nPelícula de Ciencia, Ficción\nDuración 1h39",
             type = TipoEvento.PELICULA,
             exponents = null,
-            place = "Auditorio Fernando Diez Edificio B",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Carpa Negra Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosCine = eventosCine.sortedBy { it.startHora }
@@ -244,8 +244,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.TALLER,
-            place = "Hall Planta Baja (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Problemas de comunicación que provocan la ambigüedad lingüística",
@@ -258,8 +258,8 @@ fun initInformation() {
                     "Cierre (5 min): Agradecimiento",
             exponents = null,
             type = TipoEvento.SKETCH,
-            place = "Hall Planta Baja (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Acto Musical",
@@ -268,8 +268,8 @@ fun initInformation() {
             description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores",
             exponents = null,
             type = TipoEvento.ACTO_MUSICAL,
-            place = "Hall Planta Baja (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosEscena = eventosEscena.sortedBy { it.startHora }
@@ -380,8 +380,8 @@ fun initInformation() {
                     biography = "Marcela Chao es psicóloga, curadora y artista. Desde 2016 dirige Marsarchive.org, una plataforma dedicada a la investigación y creación artística en torno al planeta Marte como metáfora para repensar los futuros de la humanidad y sus ficciones. Su trabajo articula arte, ciencias y pensamiento crítico para cuestionar las visiones hegemónicas sobre la exploración espacial."
                 )
             ),
-            place = "Salón Lázaro Cárdenas (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Utopías Extraterrestres", //TODO
@@ -411,8 +411,8 @@ fun initInformation() {
                     biography = "Marcela Chao es psicóloga, curadora y artista. Desde 2016 dirige Marsarchive.org, una plataforma dedicada a la investigación y creación artística en torno al planeta Marte como metáfora para repensar los futuros de la humanidad y sus ficciones. Su trabajo articula arte, ciencias y pensamiento crítico para cuestionar las visiones hegemónicas sobre la exploración espacial."
                 )
             ),
-            place = "Salón Lázaro Cárdenas (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Buscando una iluminación exterior: implicaciones filosóficas de la vida extraterrestre a partir de la C-F",
@@ -434,8 +434,8 @@ fun initInformation() {
                             "Ha escrito varios artículos de divulgación en las revistas ¿Cómo ves?, Ciencias, Chilango y otros más en diversas páginas electrónicas."
                 )
             ),
-            place = "Salón Lázaro Cárdenas (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Utopías del Universo \"La astronomía en el urbanismo prehispánico\"",
@@ -450,8 +450,8 @@ fun initInformation() {
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
             ),
-            place = "Salón Lázaro Cárdenas (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Cielos utópicos: entre la astronomía cultural y la exploración del cosmos",
@@ -466,8 +466,8 @@ fun initInformation() {
                     biography = "Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados."
                 )
             ),
-            place = "Salón Lázaro Cárdenas (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosExtraterrestres = eventosExtraterrestres.sortedBy { it.startHora }
@@ -501,8 +501,8 @@ fun initInformation() {
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
             ),
-            place = "Estacionamiento IPN - ESCA",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Patio Exterior Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosObservacion = eventosObservacion.sortedBy { it.startHora }
@@ -520,8 +520,8 @@ fun initInformation() {
             description = "Galería de constelaciones y de objetos, como nebulosas o galaxias que nos lleva a la imaginación de la mente humana para encontrar formas en el cielo",
             type = TipoEvento.EXPOSICION,
             exponents = null,
-            place = "Hall Planta Baja (Edificio B)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Sala B Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosImaginacion = eventosImaginacion.sortedBy { it.startHora }
@@ -550,8 +550,8 @@ fun initInformation() {
                     video = "stephane_carpier"
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "Antienvejecimiento:¿de quién estamos corriendo?",
@@ -567,8 +567,8 @@ fun initInformation() {
                     biography = "Victor Saadia es empresario, autor, consultor, speaker y profesor. Es Licenciado en Economía por el ITAM y tiene una Maestría en Pensamiento Social Interdisciplinario por la Universidad de Nueva York. Ahora cursa su Doctorado en Filosofía y Pensamiento Crítico en Suiza. Es fundador de BioCenter, una agrupación de negocios relacionados a la medicina regenerativa; y de ALIVE, una consultora de bienestar. Es autor de 3 libros y de diversos artículos relacionados a la educación, el bienestar y la filosofía de la ciencia. También es Fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida y creador del Podcast: \"Volver al Futuro\"."
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "Utopías y distopía en la relación del ser humano con las maquinas",
@@ -583,8 +583,8 @@ fun initInformation() {
                     biography = "Martín Bonfil Olivera es químico farmacéutico biólogo por la Facultad de Química de la UNAM, y realizó estudios de la Maestría en Enseñanza e Historia de la Biología en la Facultad de Ciencias de la UNAM. Es académico de la Dirección General de Divulgación de la Ciencia de la UNAM, donde se dedica a la divulgación científica desde 1990. Participó en los proyectos del museo de ciencias Universum y el Museo de la Luz. Es autor de varios libros y numerosos artículos de divulgación científica y colabora regularmente en revistas y periódicos. "
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "La utopía de la juventud y de la belleza perpetuales", //TODO
@@ -609,8 +609,8 @@ fun initInformation() {
                     biography = ""
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "Proceso creativo detrás de seres híbridos",
@@ -625,8 +625,8 @@ fun initInformation() {
                     biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "Titulo", //TODO
@@ -641,8 +641,8 @@ fun initInformation() {
                     biography = ""
                 )
             ),
-            place = "Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         )
     )
     eventosFabricadelCuerpo = eventosFabricadelCuerpo.sortedBy { it.startHora }
@@ -666,8 +666,8 @@ fun initInformation() {
                     biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 )
             ),
-            place = "Vestíbulo del Auditorio Armando Cuspinera",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         )
     )
     eventosAmorfo = eventosAmorfo.sortedBy { it.startHora }
@@ -702,8 +702,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Presentación del Proyecto de las Utopías de la CDMX", //TODO
@@ -718,8 +718,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "La ciudad, utopía permanente", //TODO FAlta foto Bruno
@@ -745,8 +745,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.MESA_DIALOGO,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Conferencia",
@@ -763,8 +763,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Sacha Dalias", //TODO descripción, foto y bio
@@ -779,8 +779,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Paris, nueva Babilonia, cuando se apaga la ciudad de la luz",
@@ -795,8 +795,8 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salón de actos san Ignacio (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
+            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosUtopiasUrbanas = eventosUtopiasUrbanas.sortedBy { it.startHora }
@@ -850,8 +850,8 @@ fun initInformation() {
             description = "Reflexion de 20 estudiantes de la Ibero de la matéria Historia y teoria de la arquitectura del siglo XVII a inicios del XIX. Presentaran laminas. ",
             exponents = null,
             type = TipoEvento.EXPOSICION,
-            place = "Hall Planta Baja (Edificio B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "Pasillo de la sala B Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosArkhi = eventosArkhi.sortedBy { it.startHora }
@@ -896,7 +896,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
-            place = "Aula 5",
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -948,7 +948,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.MESA_REDONDA,
-            place = "Aula 5",
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -964,7 +964,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 5",
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -980,7 +980,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 5",
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -996,7 +996,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 5",
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1044,7 +1044,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
-            place = "Cámara de Gesell",
+            place = "Cámara de Gesell Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1070,7 +1070,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1086,7 +1086,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1113,7 +1113,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1139,7 +1139,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1161,7 +1161,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1177,7 +1177,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 6",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1194,8 +1194,18 @@ fun initInformation() {
             name = "Concierto \"Tengo un sueño\"",
             startHora = LocalTime.of(8,0),
             finishHora = LocalTime.of(10,0),
-            description = "La orquesta Iberoamericana, bajo la dirección de Lizzie Ciniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hijal del compositor.\n" +
-                    "Además, contará con la intervención del Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), dirigido por Alejandro León.",
+            description = "La Orquesta Iberoamericana, dirigida por Lizzi Ceniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hija del compositor.\n" +
+                    "Contará también con el Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), bajo la dirección de Alejandro León.\n\n" +
+                    "Además, se interpretarán obras del repertorio francés y mexicano:\n\n" +
+                    "REPERTORIO FRANCÉS\n" +
+                    "• Jean-Philippe Rameau – Les sauvages, \"Forêts paisibles\" (Les Indes galantes)\n" +
+                    "• Édith Piaf – La vie en rose\n" +
+                    "• Bruno Coulais – Cerf-volant, Caresse sur l'océan (Les Choristes)\n\n" +
+                    "REPERTORIO MEXICANO\n" +
+                    "• Arturo Márquez – Danzón No. 2\n" +
+                    "• Consuelo Velázquez – Bésame mucho\n" +
+                    "• Homenaje – Sones de México\n" +
+                    "• José Pablo Moncayo – Huapango",
             exponents = listOf(
                 Speaker(
                     name = "Arturo Márquez",
@@ -1204,7 +1214,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.ACTO_MUSICAL,
-            place = "Recinto historico y cultural Juan de Dios Batiz Paredes",
+            place = "Centro histórico y cultural Juan de Dios Batiz IPN",
             direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
         )
     )
@@ -1230,7 +1240,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1247,7 +1257,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1267,7 +1277,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1285,7 +1295,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1301,7 +1311,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1317,7 +1327,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 1",
+            place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1344,7 +1354,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1360,7 +1370,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1376,7 +1386,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1395,7 +1405,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1411,7 +1421,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1427,7 +1437,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1453,7 +1463,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 3",
+            place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1477,7 +1487,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.DOCUMENTAL,
-            place = "Aula 3",
+            place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1493,7 +1503,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 3",
+            place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1520,7 +1530,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
-            place = "Aula 3",
+            place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
@@ -1550,7 +1560,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 4",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1566,7 +1576,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 4",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1583,7 +1593,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 4",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1599,7 +1609,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 4",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1616,7 +1626,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 4",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1632,7 +1642,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 2",
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1662,7 +1672,7 @@ fun initInformation() {
             description = "Coedición entre el ITESO, Universidad Jesuita de Guadalajara, a través de la Biblioteca Dr. Jorge Villalobos Padilla SJ, el Departamento de Ciencias Religiosas de la Universidad Iberoamericana Ciudad de México y el CEX",
             type = TipoEvento.DOCUMENTAL,
             exponents = null,
-            place = "Salón Niño Álvarez IPN",
+            place = "AULA 5 UNIVERSIDAD NACIONAL ROSARIO CASTELLANOS",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
         )
     )
