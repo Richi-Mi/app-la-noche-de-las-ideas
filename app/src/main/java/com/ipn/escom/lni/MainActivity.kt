@@ -189,47 +189,56 @@ fun initInformation()  {
         description = "Explora la búsqueda de sociedades ideales a través de diversas lentes: desde modelos históricos de bienestar colectivo hasta visiones futuristas de hábitats submarinos y ciencia abierta. Reflexionaremos sobre la construcción del futuro, la comunicación científica, la interpretación de textos antiguos en busca de esperanza, y las lecciones de movimientos históricos. Finalmente, imaginaremos utopías oceánicas innovadoras. Únete a esta exploración del ideal utópico en sus múltiples manifestaciones."
     )
 
-    // ISLA: Utopía en el cine
+    // EVENTOS DE ARTES
     var eventosCine = listOf(
         EventInfo(
             name = "Tant que le soleil frappe",
             startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(5, 30),
+            finishHora = LocalTime.of(5, 25),
             description = "De Phillippe PETIT\nPelícula de Ficción, Comedia, Dramática\nDuración 1h25",
             type = TipoEvento.PELICULA,
             exponents = null,
-            place = "Carpa Negra Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Carpa Negra (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
+        ),
+        EventInfo(
+            name = "Debate",
+            startHora = LocalTime.of(5, 25),
+            finishHora = LocalTime.of(5, 45),
+            description = "",
+            type = TipoEvento.CONVERSATORIO,
+            exponents = null,
+            place = "Carpa Negra (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Alphaville Une étrange aventure",
-            startHora = LocalTime.of(5, 30),
-            finishHora = LocalTime.of(7, 15),
+            startHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(7, 45),
             description = "De Jean-Luc Gogard\nPelícula de Ciencia, Ficción\nDuración 1h39",
             type = TipoEvento.PELICULA,
             exponents = null,
-            place = "Carpa Negra Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Carpa Negra (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosCine = eventosCine.sortedBy { it.startHora }
     val cine = IslaInfo(
-        "Utopía en el Cine",
+        "ARTES EN UTOPÍAS: Carpa Negra",
         R.drawable.baseline_movie_24,
         eventosCine,
         description = "Prepárate para una experiencia enriquecedora con nuestra selección de eventos. Déjate llevar por las historias del cine, desde momentos divertidos y conmovedores hasta viajes a mundos futuristas. Amplía tus horizontes con la presentación de un interesante documental que explora la teología desde una perspectiva contemporánea."
     )
     var eventosEscena = listOf(
         EventInfo(
-            name = "Taller de Ballet",
+            name = "Taller de Ballet: CONVERSATORIO y PRESENTACION \"Rebeldía compasiva. Encuentro cultural universitario\"",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(5,0),
-            description = "Conservatorio y Presentación:\n"
-                    + "Rebeldía compasiva. Encuentro cultural universitario\n" +
+            description = "Rebeldía compasiva. Encuentro cultural universitario\n" +
                     "Trece bailarines en escena interpetan \"Miradas\", en donde los cuerpos que habitan el espacio se agrupan, se disocian, se alejan y se unen para apoyarse unxs a otrxs y así llegar a mirar lo que tanto anhelan. Esto a través del lenguaje del ballet contemporáneo. Todo esto a través del lenguaje del ballet contemporáneo y el acompañamiento de piano a cargo de Erick Salinas.",
             exponents = listOf(
                 Speaker(
-                    name = "Andrea de Caso Rivero Borell",
+                    name = "Mtra. Andrea de Caso Rivero Borell (IBERO)",
                     image = R.drawable.andrea_del_caso,
                     biography = "Andrea de Caso Rivero Borrell (Ciudad de México, 1986)\n" +
                             "Licenciada en Historia del Arte por la Universidad Iberoamericana y Maestra en Teoría Crítica del Arte por la School of Visual Arts de NY. Trabajó durante seis años como subdirectora en Patricia Conde Galería.\n" +
@@ -237,14 +246,14 @@ fun initInformation()  {
                             "A partir de noviembre del 2023, es Responsable de Exposiciones e Intervenciones culturales en la Coordinación de Arte y Cultura de la Universidad Iberoamericana de la CDMX. "
                 ),
                 Speaker(
-                    name = "Carolina Pérez",
+                    name = "Filosofa Carolina Pérez",
                     image = R.drawable.carolina_perez,
                     biography = "Carolina Pérez (CDMX, 1992)\n" +
                             "Filósofa, arte marcialista, tallerista, laboratorista y gestora cultural. Con una larga trayectoria llevando procesos culturales, siempre desde una mirada pluricultural e interseccional. Ha colaborado con instituciones públicas y privadas, destacándose en procesos en las áreas gubernamentales de Vinculación Comunitaria desde el área cultural y desde el área privada en cuidado medioambiental. Cuenta con una formación multidisciplinaria, teniendo como eje de su atención el estudio del cuerpo y su entorno para la formación humanista de tejido social desde un acercamiento al arte y la cultura. Actualmente es Responsable de laboratorios y talleres artísticos y culturales en IBERO CDMX, donde también está al frente del laboratorio de autocuidados."
                 )
             ),
             type = TipoEvento.TALLER,
-            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Escenario Principal (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
@@ -258,7 +267,7 @@ fun initInformation()  {
                     "Cierre (5 min): Agradecimiento",
             exponents = null,
             type = TipoEvento.SKETCH,
-            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Escenario Principal (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
@@ -268,13 +277,13 @@ fun initInformation()  {
             description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores",
             exponents = null,
             type = TipoEvento.ACTO_MUSICAL,
-            place = "Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Escenario Principal (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosEscena = eventosEscena.sortedBy { it.startHora }
     val escena = IslaInfo(
-        "Isla de Terpsícore y de Polimnia",
+        "ARTES EN UTOPÍAS: Escenario Principal",
         R.drawable.ic_launcher_foreground,
         eventosEscena,
         description = "Disfruta de diversas formas de expresión artística, desde la danza contemporánea explorando la conexión humana hasta una representación humorística sobre los desafíos de la comunicación lingüística. Culminaremos con una presentación de música tradicional francesa en vivo. Únete a esta muestra de la creatividad y el arte en escena."
@@ -288,7 +297,7 @@ fun initInformation()  {
             type = TipoEvento.TALLER,
             exponents = listOf(
                 Speaker(
-                    name = "Nahiely Flores Fajardo",
+                    name = "Dra. Nahiely Flores Fajardo",
                     image = R.drawable.nahiely_flores_fajardo,
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
@@ -303,26 +312,6 @@ fun initInformation()  {
             description = "Una calle cerrada al transito se transformara en un espacio comunotario. Se instalaran mesas comunales decoradas con elemento urbanos y naturales. Cada mesa contara con una fondue cenral que los participantes compartiran mientras participan a un dialogo guiado. Un mediator especializado planteara preguntas claves.",
             type = TipoEvento.ACTIVIDAD_LUDICA,
             exponents = null,
-            place = "Calle Manuel Carpio",
-            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
-        ),
-        EventInfo(
-            name = "Poesía Slam",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(5, 0),
-            description = "Versos de Utopía",
-            type = TipoEvento.TALLER,
-            exponents = null,
-            place = "Calle Manuel Carpio",
-            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
-        ),
-        EventInfo(
-            name = "Jeu de cartes",
-            startHora = LocalTime.of(4,30),
-            finishHora = LocalTime.of(6,45),
-            description = "Juego de cartas",
-            exponents = null,
-            type = TipoEvento.ACTIVIDAD_LUDICA,
             place = "Calle Manuel Carpio",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         ),
@@ -359,10 +348,53 @@ fun initInformation()  {
     )
     eventosRioAnidro = eventosRioAnidro.sortedBy { it.startHora }
     val rioAnidro = IslaInfo(
-        "Rio Anidro",
+        "ARTES EN UTOPÍAS: Calle Manuel Carpio",
         R.drawable.ic_launcher_foreground,
         eventosRioAnidro,
         description = "Transforma la calle en un vibrante espacio comunitario. Participa en la creación de universos imaginarios a través del dibujo, comparte un diálogo guiado alrededor de una fondue colectiva, experimenta la fuerza de la poesía slam con versos de utopía, disfruta de juegos de cartas y déjate llevar por diversas presentaciones musicales. Únete a esta corriente de creatividad y conexión al aire libre."
+    )
+
+    var eventosArteEnUtopias = listOf(
+        EventInfo(
+            name = "Concierto \"Tengo un sueño\"",
+            startHora = LocalTime.of(8,0),
+            finishHora = LocalTime.of(9,30),
+            description = "La Orquesta Iberoamericana, dirigida por Lizzi Ceniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hija del compositor.\n" +
+                    "Contará también con el Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), bajo la dirección de Alejandro León.\n\n" +
+                    "Además, se interpretarán obras del repertorio francés y mexicano:\n\n" +
+                    "REPERTORIO FRANCÉS  \n" +
+                    "« Les sauvages, forêts paisibles\" (Les Indes galantes), de Jean-Philippe Rameau. \n" +
+                    "« La vie en rose » de Édith Piaf. \n" +
+                    "« Cerf-volant », (Les Choristes), de Bruno Coulais. \n" +
+                    "« Caresse sur l'océan », (Les Choristes), de Bruno Coulais. \n" +
+                    "REPERTORIO MEXICANO  \n" +
+                    "“Danzón No 2” de Arturo Márquez. \n" +
+                    "“Bésame mucho “ de Consuelo Velázquez. \n" +
+                    "“Sones de México”. Homenaje. \n" +
+                    "“Huapango” de José Pablo Moncayo. ",
+            exponents = listOf(
+                Speaker(
+                    name = "Arturo Márquez",
+                    image = R.drawable.arturo_marquez,
+                    biography = "Arturo Márquez nació el 20 de diciembre de 1950 en Álamos, Sonora. Desde pequeño estuvo rodeado de música gracias a su padre, mariachi y violinista. Estudió en el Conservatorio de Música de México y amplió su formación en Francia y Estados Unidos. Alcanzó fama internacional con sus Danzones, especialmente el Danzón No. 2, considerado un segundo himno nacional. Actualmente, vive en la Ciudad de México y colabora con instituciones como la UNAM, destacando como uno de los compositores más importantes de México."
+                ),
+                Speaker(
+                    name = "Lizzi Ceniceros",
+                    image = R.drawable.lizzi_ceniceros,
+                    biography = "Lizzi Ceniceros es directora de la Orquesta Sinfónica de la BUAP. Es pianista y directora de orquesta mexicana."
+                )
+            ),
+            type = TipoEvento.ACTO_MUSICAL,
+            place = "Centro histórico y cultural Juan de Dios Batiz IPN",
+            direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
+        )
+    )
+    eventosArteEnUtopias = eventosArteEnUtopias.sortedBy { it.startHora }
+    val arteEnUtipias = IslaInfo(
+        name = "ARTES EN UTOPÍAS",
+        image = R.drawable.ic_launcher_foreground,
+        events = eventosArteEnUtopias,
+        description = "Sumérgete en una experiencia artística que explora la conexión entre el arte y las utopías. Culmina la jornada con un emotivo concierto a cargo de la Orquesta Iberoamericana, interpretando la cantata \"Tengo un sueño\" del maestro Arturo Márquez"
     )
 
     // ISLA: Utopías Extraterrestres
@@ -392,17 +424,17 @@ fun initInformation()  {
             exponents = listOf(
                 Speaker(
                     name = "Pepe Franco",
-                    image = R.drawable.ic_launcher_foreground,
+                    image = R.drawable.person_solid,
                     biography = ""
                 ),
                 Speaker(
                     name = "Stéphane Basa",
-                    image = R.drawable.ic_launcher_foreground,
+                    image = R.drawable.person_solid,
                     biography = ""
                 ),
                 Speaker(
                     name = "William Lee",
-                    image = R.drawable.ic_launcher_foreground,
+                    image = R.drawable.person_solid,
                     biography = ""
                 ),
                 Speaker(
@@ -472,22 +504,12 @@ fun initInformation()  {
     )
     eventosExtraterrestres = eventosExtraterrestres.sortedBy { it.startHora }
     val estraterrestres = IslaInfo(
-        "Utopías Extraterrestres",
+        "UTOPÍAS EXTRATERRESTRES",
         R.drawable.ic_launcher_foreground,
         eventosExtraterrestres,
         description = "Adéntrate en un fascinante viaje que explora las fronteras del espacio y la imaginación humana. Desde la concepción de utopías extraterrestres y la reflexión filosófica sobre la vida más allá de la Tierra, hasta la conexión ancestral entre la astronomía y las civilizaciones prehispánicas. Descubre exposiciones inmersivas, participa en una mesa redonda con expertos y maravíllate con la observación astronómica. ¡Una oportunidad para expandir tus horizontes cósmicos y terrestres!"
     )
     var eventosObservacion = listOf(
-        EventInfo(
-            name = "Planetario",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(7, 30),
-            description = "",
-            type = TipoEvento.TALLER,
-            exponents = null,
-            place = "Estacionamiento IPN - ESCA",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
-        ),
         EventInfo(
             name = "Observación del sol y de la luna con 4 telescopios",
             startHora = LocalTime.of(4, 0),
@@ -496,18 +518,18 @@ fun initInformation()  {
             type = TipoEvento.TALLER,
             exponents = listOf(
                 Speaker(
-                    name = "Nahiely Flores Fajardo (coordinador)",
+                    name = "Dra. Nahiely Flores Fajardo (coordinador)",
                     image = R.drawable.nahiely_flores_fajardo,
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
             ),
-            place = "Patio Exterior Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosObservacion = eventosObservacion.sortedBy { it.startHora }
     val observacion = IslaInfo(
-        "Utopías Extraterrestres: Observación",
+        "UTOPÍAS EXTRATERRESTRES : Observación",
         R.drawable.ic_launcher_foreground,
         eventosObservacion,
         description = "Acompañanos a explorar el cosmos. Sumérgete en la experiencia de un planetario y, si el clima lo permite, observa el Sol con telescopios especiales durante la tarde. Al caer la noche, maravíllate con la Luna y Júpiter a través de nuestros telescopios. Una oportunidad para conectar directamente con las maravillas del universo."
@@ -520,13 +542,13 @@ fun initInformation()  {
             description = "Galería de constelaciones y de objetos, como nebulosas o galaxias que nos lleva a la imaginación de la mente humana para encontrar formas en el cielo",
             type = TipoEvento.EXPOSICION,
             exponents = null,
-            place = "Sala B Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Sala B (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosImaginacion = eventosImaginacion.sortedBy { it.startHora }
     val imaginacion = IslaInfo(
-        "Utopías Extraterrestres: Imaginación",
+        "UTOPÍAS EXTRATERRESTRES: Imaginación",
         R.drawable.ic_launcher_foreground,
         eventosImaginacion,
         description = "Haz un viaje visual a través de una galería de constelaciones y objetos celestes. Descubre cómo la mente humana proyecta formas y narrativas en el firmamento, explorando la conexión entre el universo y nuestra capacidad de imaginar."
@@ -543,51 +565,35 @@ fun initInformation()  {
             type = TipoEvento.CONFERENCIA,
             exponents = listOf(
                 Speaker(
-                    name = "Dr. Stéphane Charpier",
+                    name = "Dr. Stéphane Charpier\n(Institut du Cerveau, Université Pierre et Marie Curie)",
                     image = R.drawable.stephane_charpier,
                     biography = "Stéphane Charpier es coordinador del equipo de Excitabilidad celular y dinámica de las redes neuronales del ICM y profesor de neurociencias en la Universidad Pierre et Marie Curie. \n" +
                             "Doctor (1991) y doctorado en neurociencia por la Universidad Pierre y Marie Curie (1995). Es experto para la Agencia de evaluación de la investigación y de la enseñanza superior (AERES) y miembro del consejo científico de la Fundación de Francia (comité Parkinson). En 2011, recibió el premio Valérie Chamaillard, otorgado por la Fundación francesa para la investigación de la epilepsia.",
                     video = "stephane_carpier"
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
             name = "Antienvejecimiento:¿de quién estamos corriendo?",
             startHora = LocalTime.of(4, 45),
-            finishHora = LocalTime.of(5, 15),
+            finishHora = LocalTime.of(5, 45),
             description = "En esta charla exploraré cómo la narrativa del anti-envejecimiento está plagada de promesas utópicas: una búsqueda por desafiar el tiempo, detener la muerte y alcanzar una juventud eterna. Revisaré los mensajes culturales que nos han condicionado en Occidente sobre la lucha contra la edad y cómo esta narrativa se entrelaza con expectativas de salud, bienestar, riqueza y belleza.\n" +
                     "A través de ejemplos de publicidad y narrativas de la industria wellness, plantearé preguntas como: ¿Qué futuro imaginamos al correr del envejecimiento? ¿Qué tipo de utopía buscamos cuando esperamos que la medicina o la industria del bienestar nos detengan el tiempo? ¿Porque hablar de la muerte es necesario?\n",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Sr. Victor Saadia",
+                    name = "Sr. Victor Saadia, fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida. ",
                     image = R.drawable.victor_saadia,
                     biography = "Victor Saadia es empresario, autor, consultor, speaker y profesor. Es Licenciado en Economía por el ITAM y tiene una Maestría en Pensamiento Social Interdisciplinario por la Universidad de Nueva York. Ahora cursa su Doctorado en Filosofía y Pensamiento Crítico en Suiza. Es fundador de BioCenter, una agrupación de negocios relacionados a la medicina regenerativa; y de ALIVE, una consultora de bienestar. Es autor de 3 libros y de diversos artículos relacionados a la educación, el bienestar y la filosofía de la ciencia. También es Fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida y creador del Podcast: \"Volver al Futuro\"."
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
-            name = "Utopías y distopía en la relación del ser humano con las maquinas",
-            startHora = LocalTime.of(5, 15),
-            finishHora = LocalTime.of(5, 45),
-            description = "La tecnología ha sido siempre compañera y aliada de la humanidad. Pero las nuevas tecnologías basadas en los avances de la computación y la robótica ofrecen posibilidades cada día más cercanas que, si bien abren perspectivas nuevas e inexploradas que son fascinantes, también pueden resultar inquietantes y hasta riesgosas. Conocerlos y entenderlos ayudará a su buen uso.",
-            type = TipoEvento.EXPOSICION,
-            exponents = listOf(
-                Speaker(
-                    name = "Martin Bonfil Olivera",
-                    image = R.drawable.martin_bonfil_olivera,
-                    biography = "Martín Bonfil Olivera es químico farmacéutico biólogo por la Facultad de Química de la UNAM, y realizó estudios de la Maestría en Enseñanza e Historia de la Biología en la Facultad de Ciencias de la UNAM. Es académico de la Dirección General de Divulgación de la Ciencia de la UNAM, donde se dedica a la divulgación científica desde 1990. Participó en los proyectos del museo de ciencias Universum y el Museo de la Luz. Es autor de varios libros y numerosos artículos de divulgación científica y colabora regularmente en revistas y periódicos. "
-                )
-            ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
-            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
-        ),
-        EventInfo(
-            name = "La utopía de la juventud y de la belleza perpetuales", //TODO
+            name = "La utopía de la juventud y de la belleza perpetuales",
             startHora = LocalTime.of(5, 45),
             finishHora = LocalTime.of(6, 30),
             description = "",
@@ -604,12 +610,16 @@ fun initInformation()  {
                     biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 ),
                 Speaker(
-                    name = "Nadia Rivero",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Dra. Nadia Alejandra Rivero Segura",
+                    image = R.drawable.person_solid,
+                    biography = "Posdoctorado.\n" +
+                            "Instituto de Fisiología Celular, UNAM.\n" +
+                            "Doctorado en Ciencias Biomédicas.\n" +
+                            "Facultad de Médicina, UNAM.\n" +
+                            "Licenciatura en Biología. Facultad de Ciencias, UNAM."
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
@@ -625,29 +635,33 @@ fun initInformation()  {
                     biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
-            name = "Titulo", //TODO
+            name = "Ponencia de la Dra. Nadia Rivero Segura",
             startHora = LocalTime.of(7, 0),
             finishHora = LocalTime.of(7, 30),
             description = "",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Nadia Rivero",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Dra. Nadia Alejandra Rivero Segura",
+                    image = R.drawable.person_solid,
+                    biography = "Posdoctorado.\n" +
+                            "Instituto de Fisiología Celular, UNAM.\n" +
+                            "Doctorado en Ciencias Biomédicas.\n" +
+                            "Facultad de Médicina, UNAM.\n" +
+                            "Licenciatura en Biología. Facultad de Ciencias, UNAM."
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         )
     )
     eventosFabricadelCuerpo = eventosFabricadelCuerpo.sortedBy { it.startHora }
     val fabricaDelCuerpo = IslaInfo(
-        name = "La fábrica del cuerpo",
+        name = "UTOPÍAS DE LA FÁBRICA DEL CUERPO",
         image = R.drawable.ic_launcher_foreground,
         eventosFabricadelCuerpo,
         description = "Sumérgete en una profunda reflexión sobre las fronteras de la vida y la muerte, la búsqueda de la juventud eterna y la creciente interacción entre el ser humano y la tecnología. A través de conferencias, exposiciones y una mesa redonda, exploraremos las utopías y distopías que surgen de nuestros avances científicos y tecnológicos, así como la fascinante visión de un artista que crea seres híbridos entre lo humano y lo natural."
@@ -666,13 +680,13 @@ fun initInformation()  {
                     biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 )
             ),
-            place = "Biblioteca Central Salvador Ragaña Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         )
     )
     eventosAmorfo = eventosAmorfo.sortedBy { it.startHora }
     val amorfo = IslaInfo(
-        name = "La fábrica del cuerpo: Amorfo",
+        name = "UTOPÍAS DE LA FÁBRICA DEL CUERPO: Amorfo",
         image = R.drawable.ic_launcher_foreground,
         eventosAmorfo,
         description = "Sumérgete en una profunda reflexión sobre las fronteras de la vida y la muerte, la búsqueda de la juventud eterna y la creciente interacción entre el ser humano y la tecnología. A través de conferencias, exposiciones y una mesa redonda, exploraremos las utopías y distopías que surgen de nuestros avances científicos y tecnológicos, así como la fascinante visión de un artista que crea seres híbridos entre lo humano y lo natural."
@@ -689,73 +703,82 @@ fun initInformation()  {
                     "e Ingeniería Civil de la Universidad Iberoamericana, como una extensión de su practica profesional.",
             exponents = listOf(
                 Speaker(
-                    name = "Lucia Aumann",
+                    name = "Arq. Lucia Aumann",
                     image = R.drawable.lucia_y_pablo,
                     biography = "Lucía Aumann (Bs.As, Argentina, 1992) Investigadora en filosofía crítica con estudios en The New Centre (EUA.,2022-2024) y arquitecta por la Universidad Iberoamericana (CDMX, 2011-2017). Su práctica se desenvuelve a partir de procesos experimentales en los que convergen su exploración artística y arquitectónica, cuestionamientos filosóficos y estudios biológicos tomando como base los sistemas de auto-organización.\n" +
                             "A través de la exploración gráfica, la escritura y la experimentación material analiza procesos morfológicos que pueden operar más allá del rango de atención y percepción humana, abordando la forma como la expresión dinámica del cambio."
                 ),
                 Speaker(
-                    name = "Pablo Kobayashi",
+                    name = "Mtro. Pablo Kobayashi (IBERO)",
                     image = R.drawable.lucia_y_pablo,
                     biography = "Pablo Kobayashi (México D.F., 1976.) Maestro en Artes especializado en Tecnologías y Diseño Emergentes (EmTech) por la Architectural Association School of Architecture en Londres y Arquitecto por la Universidad Intercontinental en la Ciudad de México.\n" +
                             "Investigador y manipulador de comportamientos materiales, sus expresiones morfológicas y sus consecuencias espaciales. Ha desarrollado su práctica alrededor del concepto de la emergencia, donde el todo no es la suma directa de sus partes y dónde la interacción de elementos simples siguiendo reglas de bajo nivel de sofisticación resulta en fenómenos complejos."
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Salón de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "Presentación del Proyecto de las Utopías de la CDMX", //TODO
+            name = "Presentación del Proyecto de las Utopías de la CDMX",
             startHora = LocalTime.of(4,30),
             finishHora = LocalTime.of(5,0),
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Ana Francis Mör",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Ana Francis Mör Bayghen\nSecretaria de Cultura CDMX",
+                    image = R.drawable.ana_francis_mor,
+                    biography = "Ana Francis Mor [López Bayghen Patiño] es una dramaturga, escritora, actriz, cabaretera, directora teatral y activista mexicana. Licenciada en Artes Escénicas para la Expresión Teatral por la Universidad de Guadalajara uag, egresada de Actuación por del Foro Teatro-Contemporáneo."
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Salon de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "La ciudad, utopía permanente", //TODO FAlta foto Bruno
+            name = "La ciudad, utopía permanente",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,45),
             description = "La utopía desde su definición se identifica como la idea de una sociedad futura guiada por características favorecedoras del bien humano y consta de un plan, un proyecto, una doctrina o un sistema ideales que parecen de muy difícil realización. Trata de un sueño inalcanzable y a su vez de la metodología para intentar lograrlo. La mesa iniciará con el recordatorio de varias Ciudades Utópicas a través de la Historia, tanto reales como ficticias; se hablará de la Atlántida, de la Republica de Platón y de Brasilia. Se podrá mencionar otros ejemplos como Metrópolis, la Ciudad del Sol o Filadelfia. En un segundo tiempo, se cuestionará cuáles son las utopías actuales para las ciudades contemporáneas y los retos que pueden representar. Posteriormente se presentará el proyecto de ciudad eco amigable del Mtro. Broissin. La platica de cierre retomara el tema de las utopías contemporáneas y de los mecanismos e instrumentos para lograrlas.\n",
             exponents = listOf(
                 Speaker(
-                    name = "Gerardo Broissin",
+                    name = "Arq. Gerardo Broissin Covarrubias (ANAHUAC)",
                     image = R.drawable.gerardo_broissin,
                     biography = "Gerardo Broissin, nacido en la Ciudad de México en 1975, es  arquitecto y Director de la Facultad de Arquitectura de la Universidad Anáhuac México desde 2022. Fundó el despacho BROISSINarchitects en el 2000, el cual ha sido premiado y publicado internacionalmente por sus propuestas innovadoras. Fue nombrado por Architectural Record como uno de los 10 arquitectos más vanguardistas del mundo. Es egresado con honores de la Universidad Anáhuac México, realizó estudios de intercambio en el Southern California Institute of Architecture (SCI-Arc) en Los Ángeles, y se ha especializado en finanzas y alta dirección en el IPADE, Harvard y el ITAM. Fue alumno de Agustín Hernández,  y colaboró en sus inicios con el español Federico Soriano. Entre sus proyectos más importantes destacan Centro Cultural Roberto el Cantoral, Shelter 02, Green Hills School, Anáhuac Cultural Center y Corporativo Banorte. Ha sido jurado de los WAN Awards en Londres y ha impartido conferencias en Texas A&M y Nottingham Trent University entre otros.  Su arquitectura se caracteriza por una fusión única de forma, textura e ideología."
                 ),
                 Speaker(
-                    name = "Bruno Roche",
-                    image = R.drawable.ic_launcher_foreground,
+                    name = "Arq. Bruno Roche\n(Secretaria de Comunicaciones y Transporte - SICT)",
+                    image = R.drawable.person_solid,
                     biography = "Bruno Roche es un arquitecto nacido en Francia en 1982 y titulado de la Escuela Nacional de Arquitectura y Paisaje de Bordeaux (Burdeos). Después de varios viajes a México, toma la decisión en 2012 de mudarse e inicia una colaboración de 10 años con el despacho liderado por el arq. Gerardo Broissin. En 2022, se le ofrece de participar en el Programa de Mejoramiento Urbano realizado por la Secretaria de Desarrollo Territorial (SEDATU); durante 2 años participa en mas de 100 proyectos ejecutivos y obras en toda la República. Actualmente se encuentra en la Secretaria de Comunicaciones y Transporte (SICT) como Director Ejecutivo en la Unidad de Proyectos de Infraestructura Urbana y Espacio Público con el arq. Roman Meyer con el propósito de mantener una estética basada en una arquitectura económica y funcional en colaboración con las distintas instancias del Gobierno Federal."
                 ),
                 Speaker(
-                    name = "Sara Topelson",
+                    name = "Mtro. Sacha Dalis (GIP-EPAU)",
+                    image = R.drawable.sacha_dalis,
+                    biography = "Sacha DALIS, Secretario General de la Europa de los Proyectos Arquitectónicos y Urbanos, es diplomado en geografía y urbanismo por la Escuela Normal Superior, la Escuela Urbana de Sciences Po y la London School of Economics. Publicó un artículo sobre el fenómeno de la vivienda temporal en Londres.\n" +
+                            "Su trayectoria profesional le permitió conocer los distintos actores que dibujan las ciudades hoy en día, trabajar con asociaciones de representantes electos especializadas en cuestiones como el riesgo de inundaciones, y en la oficina del Ministro de Cohesión Territorial. \n" +
+                            "De 2018 a 2022, se unió a la “Société du Grand Paris” como Director Adjunto de Relaciones Territoriales, responsable de la interfaz entre las dimensiones técnicas y políticas del proyecto urbano y de infraestructuras Grand Paris Express.\n" +
+                            "En 2022, estudió los desafíos de la gestión de proyectos arquitectónicos como Director de Planificación y Desarrollo Prospectivo en la agencia internacional Dominique Perrault Architecture, antes de unirse a “Europe des projets architecturaux et urbains” en 2023.\n" +
+                            "“Europe des projets architecturaux et urbains” es un grupo francés de interés público que lleva a cabo programas de investigación-acción y experimentación, con el objetivo de informar las políticas públicas previas sobre urbanismo y arquitectura. En un momento de calentamiento global, moviliza a un amplio abanico de investigadores académicos, diseñadores y artistas para cuestionar las utopías de mañana  y contribuye de esa forma a dibujar un horizonte de transición hacia un  mundo habitable."
+                ),
+                Speaker(
+                    name = "Moderación por: Arq. Sara Topelson",
                     image = R.drawable.sara_topelson,
-                    biography = "Arquitecta-UNAM. Fundadora de GRINBERG + TOPELSON Arquitectos,                         desarrolló proyectos de diseño urbano, educación, cultura, industria,                                   comercio y vivienda. \n" +
+                    biography = "Arquitecta-UNAM. Fundadora de GRINBERG + TOPELSON Arquitectos,                         desarrolló proyectos de diseño urbano, educación, cultura, industria, comercio y vivienda. \n" +
                             "Catedrática en la Universidad Anáhuac 1972-2000. Presidenta de la Unión Internacional de Arquitectos 1996 – 1999. Directora - Arquitectura y Conservación del Patrimonio Artístico INBAL 2001 - 2003. Subsecretaría de Desarrollo Urbano y Ordenación del Territorio SEDESOL, 2007 - 2012. Directora del Centro de Investigación y Documentación de la Casa “CIDOC”; publicó anualmente el estudio “Estado Actual de la Vivienda en México” 2004 - 2022. Reconocimientos: Mujer del Año México 1996; Miembro de Honor de los Institutos Americano de Arquitectos de Canadá, Inglaterra, Australia, Japón y España. Caballero de la Orden de Artes y Letras del Ministerio Cultura de Francia 1998. Medalla al Mérito Académico Universidad Anáhuac – 2000. Premio Nacional de Arquitectura México 2021- Primera mujer en recibirlo. Premio – Trayectoria: Lorenzo H. Zambrano 2022 CEMEX. “Cátedra Extraordinaria Federico E. Mariscal” 2022 FA UNAM. Doctorado Honoris Causa - U. Anáhuac 2023. Medalla “Bellas Artes” en Arquitectura 2024 México. Grinberg + Topelson Arquitectos han obtenido el primer lugar en diversos concursos: Complejo Urbano CIDECO, Lerma, 1986. Primer Lugar Concurso Biblioteca Pública del Estado de Jalisco - UDG 2005. Premio Obras Cemex 2006. Premio Nacional de Vivienda en México 2021 conjunto Los Almendros, Tizayuca, Hidalgo. Obra relevante: Centro Cultural Mexiquense Anáhuac inaugurado en 2019."
                 )
             ),
             type = TipoEvento.MESA_DIALOGO,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Salon de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "Conferencia",
+            name = "Utopías a prueba de la realidad",
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,30),
-            description = "",
+            description = "La utopía en la arquitectura puede convertirse en una herramienta para revelar nuevos potenciales, explorar otras formas de vivir y responder a los desafíos contemporáneos. Al igual que Black Mountain College, donde la experimentación educativa forjó nuevas prácticas, debemos reinventar nuestra relación con el mundo. Frente a las crisis, la arquitectura debe generar nuevo encanto, abrir la imaginación y ofrecer nuevas formas. Los métodos de enseñanza experimentales permiten la exploración de materiales y sistemas alternativos. No se trata sólo de construir de manera diferente, sino también de soñar con un mundo capaz de reinventarse.",
             exponents = listOf(
                 Speaker(
-                    name = "Marc Hymans",
+                    name = "Arq. Marc Hymans",
                     image = R.drawable.marc_hymens,
                     biography = "Marc HYMANS, es un arquitecto e ingeniero egresado de la Escuela de Arquitectura de la Ciudad y Territorios, de la Universidad de Venecia IUAV , de la Escuela Nacional de Puentes y Caminos ENPC y del Politécnico de Milano.\n" +
                             "Trabajó en varias agencias de arquitectura y de ingeniería en Francia y al internacional. También, participó en el lanzamiento de las oficinas Ney & Partners WOW en Francia las mismas que dirigió durante 3 años antes de crear su propia oficina de estudios dedicados a la innovación y a la investigación.\n" +
@@ -763,23 +786,27 @@ fun initInformation()  {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Salon de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "Sacha Dalias", //TODO descripción, foto y bio
+            name = "Dibujar los horizontes de las transiciones: ¿una utopía para la acción pública?",
             startHora = LocalTime.of(6,30),
             finishHora = LocalTime.of(7,0),
-            description = "Secretario General del GIP EPAU",
+            description = "En un momento en que la ciudad se está convirtiendo más en un lugar de distopía que de utopía -a imagen de Blade Runner-, la perspectiva de una «Francia de +4 °C» anunciada por el Gobierno francés para 2023 ha reforzado una visión del futuro que provoca ansiedad. Esta desviación del objetivo de +2°C fijado por el Acuerdo de París ilustra nuestra impotencia ante los futuros trastornos climáticos. Hoy en día, la utopía urbana parece haberse roto: la ciudad se ve como un freno y las limitaciones científicas exigen adaptaciones tan profundas que parecen inalcanzables sin grandes transformaciones sociales, si no se imponen. Ante esta situación, ¿qué papel puede desempeñar la utopía en la acción pública? ¿Cómo llevar a cabo una auténtica transición, basada en hechos científicos y socialmente aceptada? Desde hace varios años, el GIP Europe des projets architecturaux et urbains trabaja para construir narrativas positivas de transición reuniendo a investigadores, diseñadores y artistas. Un enfoque exigente, pero imprescindible para reabrir el campo de posibilidades.",
             exponents = listOf(
                 Speaker(
-                    name = "Sacha Dalis",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Mtro. Sacha Dalis (GIP-EPAU)",
+                    image = R.drawable.sacha_dalis,
+                    biography = "Sacha DALIS, Secretario General de la Europa de los Proyectos Arquitectónicos y Urbanos, es diplomado en geografía y urbanismo por la Escuela Normal Superior, la Escuela Urbana de Sciences Po y la London School of Economics. Publicó un artículo sobre el fenómeno de la vivienda temporal en Londres.\n" +
+                            "Su trayectoria profesional le permitió conocer los distintos actores que dibujan las ciudades hoy en día, trabajar con asociaciones de representantes electos especializadas en cuestiones como el riesgo de inundaciones, y en la oficina del Ministro de Cohesión Territorial. \n" +
+                            "De 2018 a 2022, se unió a la “Société du Grand Paris” como Director Adjunto de Relaciones Territoriales, responsable de la interfaz entre las dimensiones técnicas y políticas del proyecto urbano y de infraestructuras Grand Paris Express.\n" +
+                            "En 2022, estudió los desafíos de la gestión de proyectos arquitectónicos como Director de Planificación y Desarrollo Prospectivo en la agencia internacional Dominique Perrault Architecture, antes de unirse a “Europe des projets architecturaux et urbains” en 2023.\n" +
+                            "“Europe des projets architecturaux et urbains” es un grupo francés de interés público que lleva a cabo programas de investigación-acción y experimentación, con el objetivo de informar las políticas públicas previas sobre urbanismo y arquitectura. En un momento de calentamiento global, moviliza a un amplio abanico de investigadores académicos, diseñadores y artistas para cuestionar las utopías de mañana  y contribuye de esa forma a dibujar un horizonte de transición hacia un  mundo habitable."
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "Salon de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
@@ -789,24 +816,24 @@ fun initInformation()  {
             description = "Según el momento, la cultura o la moda, todas las sociedades han imaginado algún día el fin de los tiempos y todos los medios para lograrlo, desde el choque con un meteorito hasta la guerra nuclear, pasando por el diluvio, la peste o el cambio climático... En el centro de estas narrativas, y en particular en los países de tradición bíblica, se encuentra la ciudad, ya que Babel y Babilonia encarnaron todos los males de una civilización al borde del colapso. Es así como, desde el siglo XIX, París se convirtió en el blanco preferido de los autores de anticipación y ciencia ficción, especialmente de cultura francesa. La Nueva Babilonia de los tiempos modernos, esta utopía heredada de la Ilustración y la revolución industrial, será a menudo destruida para permitir a los supervivientes del apocalipsis pasear por las ruinas de una ciudad que se habrá vuelto legendaria.",
             exponents = listOf(
                 Speaker(
-                    name = "Alain Musset",
+                    name = "Dr. Alain Musset",
                     image = R.drawable.alain_musset,
                     biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia. Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992)"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Salon de los fundadores Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            type = TipoEvento.GRABACION,
+            place = "Salon de los fundadores (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosUtopiasUrbanas = eventosUtopiasUrbanas.sortedBy { it.startHora }
     val utopiasUrbanas = IslaInfo(
-        name = "Utopías urbanas",
+        name = "UTOPÍAS URBANAS",
         image = R.drawable.baseline_location_city_24,
         events = eventosUtopiasUrbanas,
         description = "Sumérgete en una exploración del pensamiento utópico y su relación con el tiempo, analizando cómo concebimos y a veces negamos el futuro. Descubre visiones de ciudades ideales a través de la historia y reflexiona sobre los retos y las utopías de las urbes contemporáneas. Además, explora proyectos arquitectónicos innovadores y participa en actividades creativas que reimaginan el espacio urbano."
     )
-    var eventosLudos = listOf(
+    var eventosLudos = listOf( //TODO checar horas
         EventInfo(
             name = "Contruyendo la ciudad del futuro \n" +
                     "Fomentar la reflexión crítica y la creatividad sobre la organización de ciudades ideales",
@@ -818,8 +845,8 @@ fun initInformation()  {
                     "Premiación (15 min): Reconocimiento a las ciudades más innovadoras",
             exponents = null,
             type = TipoEvento.ACTIVIDAD_LUDICA,
-            place = "Hall 1ER PISO. (EDIFICIO B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "SALA B (Centro Histórico y Cultural \"Juan de Dios Bátiz\" IPN) ",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
             name = "Foro Creativo: reimaginando la ciudad",
@@ -831,18 +858,18 @@ fun initInformation()  {
                     "Cierre (10 min): Reflexión conjunta y agradecimiento",
             exponents = null,
             type = TipoEvento.TALLER,
-            place = "Hall 1ER PISO. (EDIFICIO B ESCA IPN)",
-            direction = "https://maps.app.goo.gl/sk912ipDmjrtJymH6"
+            place = "PASILLO DE LA SALA B (Centro Histórico y Cultural \"Juan de Dios Bátiz\" IPN) ",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosLudos = eventosLudos.sortedBy { it.startHora }
     val ludos = IslaInfo(
-        name = "Utopías urbanas: Ludos",
+        name = "UTOPÍAS URBANAS: Ludos",
         image = R.drawable.ic_launcher_foreground,
         events = eventosLudos,
         description = "Participa activamente en la creación y reimaginación de la ciudad ideal. Construye tu visión del futuro urbano en equipos y colabora en un mural colectivo. Un espacio lúdico para fomentar la creatividad y la reflexión crítica sobre nuestros entornos."
     )
-    var eventosArkhi = listOf(
+    var eventosArkhi = listOf( //TODO checar horas
         EventInfo(
             name = "Historia y teoría de la arquitectura",
             startHora = LocalTime.of(5,0),
@@ -856,7 +883,7 @@ fun initInformation()  {
     )
     eventosArkhi = eventosArkhi.sortedBy { it.startHora }
     val arkhi = IslaInfo(
-        name = "Utopías urbanas: Arkhi",
+        name = "UTOPÍAS URBANAS: Arkhi",
         image = R.drawable.ic_launcher_foreground,
         events = eventosArkhi,
         description = "Haz un viaje sobre la historia y teoria de la arquitectura."
@@ -1147,36 +1174,9 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "La Utopía de la Inteligencia Artificial y la Economía Conductual: Empresas, Tecnología e Inclusión para un México más Competitivo",
+            name = "Utopías, Ciencias y Tecnologías ",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,45),
-            description = "En un mundo donde la Inteligencia Artificial y la Economía Conductual están redefiniendo la manera en que tomamos decisiones, las empresas tienen la oportunidad (y la responsabilidad) de utilizar estas herramientas para construir un futuro más equitativo y próspero.\n" +
-                    "Esta ponencia explorará cómo la integración ética de la IA y la economía conductual no solo optimiza la experiencia del cliente y la toma de decisiones empresariales, sino que también puede servir como un motor de transformación social, impulsando la inclusión de talento\n" +
-                    "femenino en sectores de alta tecnología.\n" +
-                    "A través del modelo de Impacto Colectivo de Fundemex (Fundación del Empresariado en México, CCE), analizaremos cómo las cámaras industriales y sus empresas miembros pueden sumarse a esta visión utópica, movilizando recursos, sensibilizando y creando espacios donde el talento y las perspectivas de las mujeres sean clave para la innovación. \n" +
-                    "El futuro de la IA no puede construirse con las mismas estructuras de poder del pasado. Es momento de que las empresas y la industria adopten la tecnología y que la utilicen para diseñar un México más inclusivo, competitivo y creativo. \n",
-            exponents = listOf(
-                Speaker(
-                    name = "Jimena Fernández Cortina",
-                    image = R.drawable.jimena_fernandez_cortina,
-                    biography = "Jimena Fernández Cortina es una líder en gobernanza corporativa, sostenibilidad e inversión social, con más de 25 años de experiencia en sectores estratégicos a nivel nacional e internacional.\n" +
-                            "Actualmente es Consejera Independiente en empresas listadas en la Bolsa Mexicana de Valores y Directora General de Fundemex, la fundación del Consejo Coordinador Empresarial, donde impulsa iniciativas de inclusión laboral y desarrollo sostenible a gran escala.\n" +
-                            "Reconocida por su liderazgo en ASG (ESG), ha promovido esta agenda tanto en consejos de administración como en el sector social, contribuyendo a la creación de valor a largo plazo.\n" +
-                            "Adicionalmente, ha dirigido proyectos de investigación en finanzas sostenibles con enfoque de género para el Programa de Naciones Unidqas para el Medio Ambiente (PNUMA).\n" +
-                            "Su enfoque estratégico en impacto colectivo la ha llevado a articular alianzas innovadoras con empresas de diversas industrias, sectores y regiones para escalar soluciones de inclusión laboral y desarrollo territorial en comunidades clave.\n" +
-                            "Economista, graduada con honores cum laude por la Universidad de Harvard, con una maestría en Administración y Políticas Públicas por el Tecnológico de Monterrey y una especialización en ESG por Competent Boards, Jimena también preside el Alumni Network of Harvard Women en México.\n" +
-                            "Es miembro de Women Corporate Directors, la comunidad más grande del mundo de mujeres directoras en consejos de administración corporativos; AliaRSE, la Alianza para la Responsabilidad Social Empresarial (RSE) en México; Latimpacto, red que impulsa la movilización estratégica de capital para generar impacto social y ambiental en América Latina y el Caribe; y Ensamble, red de articulación entre las y los líderes de entidades donantes empresariales, institucionales y familiares en México.\n" +
-                            "Su liderazgo ha sido reconocido en distintos foros, incluyendo Forbes México, que en 2022 la destacó entre las 100 Mujeres más Poderosas del país.\n"
-                )
-            ),
-            type = TipoEvento.CONFERENCIA,
-            place = "Aula 8 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Utopías, Ciencias y Tecnologías ",
-            startHora = LocalTime.of(5,45),
-            finishHora = LocalTime.of(6,30),
             description = "Tres autoras de la revista Obsidiana, investigadoras mexicanas de diversas disciplinas, se reúnen para conversar y compartir con el público respecto a la influencia que ejercen las utopías y la imaginación en el futuro y en la construcción de nuevo conocimiento. ¡Imagina con ellas el futuro de la ciencia!",
             exponents = listOf(
                 Speaker(
@@ -1196,6 +1196,33 @@ fun initInformation()  {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "La Utopía de la Inteligencia Artificial y la Economía Conductual: Empresas, Tecnología e Inclusión para un México más Competitivo",
+            startHora = LocalTime.of(5,45),
+            finishHora = LocalTime.of(6,30),
+            description = "En un mundo donde la Inteligencia Artificial y la Economía Conductual están redefiniendo la manera en que tomamos decisiones, las empresas tienen la oportunidad (y la responsabilidad) de utilizar estas herramientas para construir un futuro más equitativo y próspero.\n" +
+                    "Esta ponencia explorará cómo la integración ética de la IA y la economía conductual no solo optimiza la experiencia del cliente y la toma de decisiones empresariales, sino que también puede servir como un motor de transformación social, impulsando la inclusión de talento\n" +
+                    "femenino en sectores de alta tecnología.\n" +
+                    "A través del modelo de Impacto Colectivo de Fundemex (Fundación del Empresariado en México, CCE), analizaremos cómo las cámaras industriales y sus empresas miembros pueden sumarse a esta visión utópica, movilizando recursos, sensibilizando y creando espacios donde el talento y las perspectivas de las mujeres sean clave para la innovación. \n" +
+                    "El futuro de la IA no puede construirse con las mismas estructuras de poder del pasado. Es momento de que las empresas y la industria adopten la tecnología y que la utilicen para diseñar un México más inclusivo, competitivo y creativo. \n",
+            exponents = listOf(
+                Speaker(
+                    name = "Jimena Fernández Cortina\nDirectora General de Fundemex",
+                    image = R.drawable.jimena_fernandez_cortina,
+                    biography = "Jimena Fernández Cortina es una líder en gobernanza corporativa, sostenibilidad e inversión social, con más de 25 años de experiencia en sectores estratégicos a nivel nacional e internacional.\n" +
+                            "Actualmente es Consejera Independiente en empresas listadas en la Bolsa Mexicana de Valores y Directora General de Fundemex, la fundación del Consejo Coordinador Empresarial, donde impulsa iniciativas de inclusión laboral y desarrollo sostenible a gran escala.\n" +
+                            "Reconocida por su liderazgo en ASG (ESG), ha promovido esta agenda tanto en consejos de administración como en el sector social, contribuyendo a la creación de valor a largo plazo.\n" +
+                            "Adicionalmente, ha dirigido proyectos de investigación en finanzas sostenibles con enfoque de género para el Programa de Naciones Unidqas para el Medio Ambiente (PNUMA).\n" +
+                            "Su enfoque estratégico en impacto colectivo la ha llevado a articular alianzas innovadoras con empresas de diversas industrias, sectores y regiones para escalar soluciones de inclusión laboral y desarrollo territorial en comunidades clave.\n" +
+                            "Economista, graduada con honores cum laude por la Universidad de Harvard, con una maestría en Administración y Políticas Públicas por el Tecnológico de Monterrey y una especialización en ESG por Competent Boards, Jimena también preside el Alumni Network of Harvard Women en México.\n" +
+                            "Es miembro de Women Corporate Directors, la comunidad más grande del mundo de mujeres directoras en consejos de administración corporativos; AliaRSE, la Alianza para la Responsabilidad Social Empresarial (RSE) en México; Latimpacto, red que impulsa la movilización estratégica de capital para generar impacto social y ambiental en América Latina y el Caribe; y Ensamble, red de articulación entre las y los líderes de entidades donantes empresariales, institucionales y familiares en México.\n" +
+                            "Su liderazgo ha sido reconocido en distintos foros, incluyendo Forbes México, que en 2022 la destacó entre las 100 Mujeres más Poderosas del país.\n"
+                )
+            ),
+            type = TipoEvento.CONFERENCIA,
             place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1246,43 +1273,6 @@ fun initInformation()  {
         description = "Descubre cómo la humanidad ha imaginado futuros impulsados por la ciencia y la tecnología a lo largo de la historia. Desde los sueños tecnocientíficos de la Edad Media hasta las promesas y desafíos de la Inteligencia Artificial y la economía conductual en el presente, exploraremos la fascinante relación entre la imaginación, la ética y la construcción de mundos ideales."
     )
 
-    var eventosArteEnUtopias = listOf(
-        EventInfo(
-            name = "Concierto \"Tengo un sueño\"",
-            startHora = LocalTime.of(8,0),
-            finishHora = LocalTime.of(10,0),
-            description = "La Orquesta Iberoamericana, dirigida por Lizzi Ceniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hija del compositor.\n" +
-                    "Contará también con el Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), bajo la dirección de Alejandro León.\n\n" +
-                    "Además, se interpretarán obras del repertorio francés y mexicano:\n\n" +
-                    "REPERTORIO FRANCÉS\n" +
-                    "• Jean-Philippe Rameau – Les sauvages, \"Forêts paisibles\" (Les Indes galantes)\n" +
-                    "• Édith Piaf – La vie en rose\n" +
-                    "• Bruno Coulais – Cerf-volant, Caresse sur l'océan (Les Choristes)\n\n" +
-                    "REPERTORIO MEXICANO\n" +
-                    "• Arturo Márquez – Danzón No. 2\n" +
-                    "• Consuelo Velázquez – Bésame mucho\n" +
-                    "• Homenaje – Sones de México\n" +
-                    "• José Pablo Moncayo – Huapango",
-            exponents = listOf(
-                Speaker(
-                    name = "Arturo Márquez",
-                    image = R.drawable.arturo_marquez,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.ACTO_MUSICAL,
-            place = "Centro histórico y cultural Juan de Dios Batiz IPN",
-            direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
-        )
-    )
-    eventosArteEnUtopias = eventosArteEnUtopias.sortedBy { it.startHora }
-    val arteEnUtipias = IslaInfo(
-        name = "Isla de Euphonia",
-        image = R.drawable.ic_launcher_foreground,
-        events = eventosArteEnUtopias,
-        description = "Sumérgete en una experiencia artística que explora la conexión entre el arte y las utopías. Culmina la jornada con un emotivo concierto a cargo de la Orquesta Iberoamericana, interpretando la cantata \"Tengo un sueño\" del maestro Arturo Márquez"
-    )
-
     var eventosElMundoDeAntes = listOf(
         EventInfo(
             name = "La Republica de Platon", //TODO Falta info
@@ -1292,7 +1282,7 @@ fun initInformation()  {
             exponents = listOf(
                 Speaker(
                     name = "Leopoldo Iribarren ",
-                    image = R.drawable.ic_launcher_foreground,
+                    image = R.drawable.person_solid,
                     biography = ""
                 )
             ),
@@ -1740,27 +1730,26 @@ fun initInformation()  {
     )
 */
     islasGlobal = mutableListOf(
-        amaurote, //AMAUROTE 0
-        cine, //CINEMA 1
+        amaurote, //UTOPÍA 0
+        cine, //ARTES:CINE (carpa negra) 1
         estraterrestres, //EXTRATERRESTRE 2
-        observacion, //OBSERVACION 3
-        imaginacion, //IMAGINACION 4
+        observacion, //EXTRATERRESTRE: OBSERVACION 3
+        imaginacion, //EXTRATERRESTRE: IMAGINACION 4
         fabricaDelCuerpo, //FABRICA DEL CUERPO 5
-        amorfo, //AMORFO 6
+        amorfo, //FABRICA DEL CUERPO: AMORFO 6
         utopiasUrbanas, // UTOPÍAS URBANAS 7
-        ludos, // LUDOS 8
-        arkhi, // ARKHI 9
-        mundosDeseablesYNoDeseables, //MUNDOS MEJORES O PEORES 10
-        mundosDeseablesYNoDeseables2,
-        sonoro, //SONORO 11
-        utopiasCientificasyTecnologicas, //CIENCIA Y TECNOLOGÍA 12
-        arteEnUtipias, //MUSICA 13
-        escena, //ESCENA 14
-        rioAnidro, //RIO ANIDRO 15
-        elMundoDeAntes, //MUNDO DE ANTES 16
-        elMundoQueViene, // MUNDO QUE VIENE 17
-        sateliteElMundoQueViene, //FUTURO 18
-        espiritualidadesYReligiones //EXPIRITUALIDADES Y RELIGIONES 19
-        //teologia //TEOLOGIA 20
+        ludos, // UTOPÍAS URBANAS: LUDOS 8
+        arkhi, // UTOPÍAS URBANAS: ARKHI 9
+        mundosDeseablesYNoDeseables, //UTOPÍAS vs DISTOPÍAS 10
+        mundosDeseablesYNoDeseables2, //UTOPÍAS vs DISTOPÍAS: SATELITE 11
+        sonoro, //UTOPÍAS vs DISTOPÍAS: SONORO 12
+        utopiasCientificasyTecnologicas, //CIENCIA Y TECNOLOGÍA 13
+        arteEnUtipias, //ARTES 14
+        escena, //ARTES: ESCENA (escenario principal) 15
+        rioAnidro, //Calle Manuel Carpio 16
+        elMundoDeAntes, //MUNDO DE ANTES 17
+        elMundoQueViene, // MUNDO QUE VIENE 18
+        sateliteElMundoQueViene, //MUNDO QUE VIENE: FUTURO 19
+        espiritualidadesYReligiones //EXPIRITUALIDADES Y RELIGIONES 20
     )
 }
