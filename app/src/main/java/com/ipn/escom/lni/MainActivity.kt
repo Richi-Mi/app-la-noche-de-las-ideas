@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
-fun initInformation() {
+fun initInformation()  {
     var eventosAmaurote = listOf(
         EventInfo(
             name = "Inaguración del evento",
@@ -53,8 +53,8 @@ fun initInformation() {
                     "Dra. Rosaura Ruiz Gutiérrez, Secretaria de Ciencias, Humanidades, Tecnología e Innovaciones, \n" +
                     "Sra. Delphine Borione, Embajadora de Francia en México. \n",
             exponents = null,
-            type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            type = TipoEvento.INAGURACION,
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -64,14 +64,14 @@ fun initInformation() {
             description = "El Familistère, fundado en 1859 por Jean-Baptiste Godin, era un modelo de hábitat comunitario destinado a mejorar las condiciones de vida de los trabajadores. Este lugar ilustra la idea de una sociedad donde el bienestar colectivo era prioritario, a través de la organización de la vida social y económica",
             exponents = listOf(
                 Speaker(
-                    name = "Frédéric Panini",
+                    name = "Frédéric Panni\nCurador del Familisterio",
                     image = R.drawable.fredric_panni,
                     biography = "Curador del patrimonio, Frédéric Panni estuvo a cargo en el 2000 de la rehabilitación del Familisterio de Guise (Norte de Francia) y de la creación de su museo.",
                     video = "familistere_de_guise"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            type = TipoEvento.VIDEOCONFERENCIA,
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -90,20 +90,20 @@ fun initInformation() {
                     video = "jacques_rougerie"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            type = TipoEvento.VIDEOCONFERENCIA,
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
             name = "¿Por una ciencia abierta: una utopía?",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,30),
-            description = "", //TODO
+            description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Ofelia Angulo Guerrero",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    name = "Dra. Ofelia Angulo Guerrero\nDirectora General de Incidencia en Ciencia y Humanidades",
+                    image = R.drawable.ofelia_angulo_guerrero,
+                    biography = "Maestría en Ciencias por la Universidad de Purdue, USA y obtuvo su Doctorado en Ciencias de los Alimentos por la Universidad de París, realizó su estancia posdoctoral en la Universidad de California-Davis; es pionera en el desarrollo de la Evaluación Sensorial en México y América Latina."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -125,7 +125,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -143,8 +143,8 @@ fun initInformation() {
                             "De nacionalidad alemana y suiza, se convierte en el primer extranjero en dirigir el Collège de France.\n"
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            type = TipoEvento.GRABACION,
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -155,12 +155,12 @@ fun initInformation() {
             exponents = listOf(
                 Speaker(
                     name = "Christopher Dominguez Michael\n" +
-                            "Colegio Nacional",
+                            "(Colegio Nacional)",
                     image = R.drawable.christopher_dominguez,
                     biography = "Ensayista, historiador y crítico literario. Es considerado uno de los críticos literarios iberoamericanos más reconocidos. A la fecha, ha publicado más de dos mil artículos de crítica e historia literaria, un gran número de prólogos y capítulos en libros colectivos y varias compilaciones de literatura mexicana. Es miembro de El Colegio Nacional desde 2017 y su discurso de ingreso ¿Qué es un crítico literario? fue respondido por Enrique Krauze."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Auditorio de la universidad nacional rosario castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
@@ -171,7 +171,7 @@ fun initInformation() {
             description = "La utopía de los océanos con el interoceánico sería un corredor azul, donde la tecnología y la innovación permitan el comercio sin sacrificar la salud del mar. Un modelo en el que los la océanos se regeneren más rápido de lo que se impactan, asegurando su equilibrio para las futuras generaciones",
             exponents = listOf(
                 Speaker(
-                    name = "Dr. Javier Aguilera",
+                    name = "Dr. Javier Aguilera Peña",
                     image = R.drawable.dr_javier_aguilera,
                     biography = "Javier Aguilera Peña es el presidente del Consejo de Administración de la Promotora de Desarrollo de Industria y Bienestar del Istmo de Tehuantepec .Esta organización participa activamente en el desarrollo del Corredor Interoceánico del Istmo de Tehuantepec (CIIT), un proyecto destinado a impulsar el crecimiento económico en la región sureste del país."
                 )
@@ -183,7 +183,7 @@ fun initInformation() {
     )
     eventosAmaurote = eventosAmaurote.sortedBy { it.startHora }
     val amaurote = IslaInfo(
-        "Amaurota",
+        "ISLA DE UTOPÍA",
         R.drawable.ic_launcher_foreground,
         eventosAmaurote,
         description = "Explora la búsqueda de sociedades ideales a través de diversas lentes: desde modelos históricos de bienestar colectivo hasta visiones futuristas de hábitats submarinos y ciencia abierta. Reflexionaremos sobre la construcción del futuro, la comunicación científica, la interpretación de textos antiguos en busca de esperanza, y las lecciones de movimientos históricos. Finalmente, imaginaremos utopías oceánicas innovadoras. Únete a esta exploración del ideal utópico en sus múltiples manifestaciones."
@@ -870,27 +870,27 @@ fun initInformation() {
             description = "Este conversatorio tiene como objetivo explorar los alcances, los obstáculos y los desafíos que plantea el tema de la inclusión en nuestras sociedades contemporáneas. Más precisamente, se compartirán diversas reflexiones y experiencias desde cuatro perspectivas principales. La primera de ellas, centrada en el lenguaje inclusivo, abordará las prácticas y resistencias asociadas con las formas en que construimos nuestro discurso para reflejar una sociedad más equitativa. A continuación, la cuestión de la inclusión de las personas LGBTQ+ se referirá al tema de los derechos, la visibilidad y las discriminaciones aún presentes en muchas esferas sociales. La inclusión de las personas con discapacidad, por su parte, pondrá de manifiesto los desafíos de accesibilidad e igualdad de oportunidades, a la vez que cuestionará nuestras representaciones de la diversidad de los cuerpos y las mentes. Finalmente, la inclusión de las personas migrantes planteará cómo las sociedades reciben, integran y valoran a las personas provenientes de trayectorias migratorias. En este conversatorio se discutirán las tensiones, las utopías y las realidades relacionadas con la inclusión en un mundo en constante evolución.",
             exponents = listOf(
                 Speaker(
-                    name = "Ana Paulina Gutiérrez",
+                    name = "Dra. Ana Paulina Gutiérrez",
                     image = R.drawable.ana_paulina,
                     biography = "Ana Paulina Gutiérrez es profesora-investigadora del Centro de Estudios de Género de El Colegio de México. En esta misma institución, es actualmente directora de la Revista Interdisciplinaria de Estudios de Género y ha sido coordinadora de la Maestría en Estudios de Género. Es miembro del sistema Nacional de Investigadoras e Investigadores, nivel I; su formación, en Maestría y Doctorado, fue en Ciencias Sociales respectivamente en la Universidad de Quintana Roo y El Colegio de México."
                 ),
                 Speaker(
-                    name = "Ramiro Chaves",
+                    name = "Artista Ramiro Chaves (COLMEX)",
                     image = R.drawable.ramiro_chaves,
                     biography = "La práctica de Ramiro Chaves subvierte fronteras disciplinarias instaurando imágenes y cosas a partir del uso de fotografía, dibujo, pintura, escultura y diversas técnicas mixtas. Estas tentativas ocurren en el insistente cruce entre el trabajo de estudio, la práctica educativa y la documentación. Sus trabajos pueden tomar forma expositiva pero también la de productos editoriales y audiovisuales que circulan en diversos espacios culturales nacionales e internacionales. Entre sus múltiples proyectos podemos mencionar: Proyecto CANADA, Museo de Arte Carrillo Gil, 2006; el proyecto XXXXXXXXXX, realizado como parte del Programa Arte Actual BVVA Bancomer – Museo de Arte Carrillo Gil, 2012-2014; Lxs brutos, Museo Universitario del Chopo, 2015"
                 ),
                 Speaker(
-                    name = "Matilde Gonzáles-Izás",
+                    name = "Dra. Matilde Gonzáles-Izás",
                     image = R.drawable.matilde_gonzales,
                     biography = "Doctora en Ciencias Sociales con especialidad en Sociología por el Centro de Estudios Sociológicos de El Colegio de México. Actualmente, es Profesora-Investigadora del Centro de Estudios de Género y Coordinadora de la Cátedra Centroamérica de El Colegio de México. Sus líneas de investigación son: trasformaciones del capitalismo y desigualdades de género, formación del Estado y desigualdades socioespaciales, racismo y violencia. Como resultado de su labor de investigación ha publicado ocho libros, varios capítulos de libros y artículos en revistas indexadas. Ha participado en espacios de discusión y redes de investigación a nivel nacional e internacional."
                 ),
                 Speaker(
-                    name = "Karine Tinat",
+                    name = "Dra. Karine Tinat",
                     image = R.drawable.karine_tinat,
                     biography = "Karine Tinat es profesora-investigadora en El Colegio de México desde 2007. En la institución, ha coordinado la Cátedra Simone de Beauvoir, la Maestría en Estudios de Género y el Programa Interdisciplinario de Estudios de la Mujer; ha fundado la revista Estudios de género, dirigido el Centro de Estudios Sociológicos y el Centro de Estudios de Género donde está afiliada ahora. Sus intereses científicos se inscriben en una sociología del cuerpo y de la sexualidad, así como en los estudios de género. Su libro de autor más representativo de sus reflexiones y preocupaciones teóricas es Las bocas útiles. Aproximaciones sociológicas y antropológicas a la anorexia. Es parte del SNII nivel 2, miembro regular de la Academia Mexicana de Ciencias y Chevalier de l’Ordre National du Mérite."
                 ),
                 Speaker(
-                    name = "Danielle Zaslavsky",
+                    name = "Dra. Danielle Zaslavsky",
                     image = R.drawable.danielle_zaslavsky,
                     biography = "Doctora en ciencias del lenguaje por la Universidad de Paris XIII, Danielle Zaslavsky es traductora y profesora investigadora de El Colegio de México desde 1992. Sus líneas de investigación atañen al análisis del discurso y la traductología, disciplinas que le permiten abordar la articulación entre lenguas, discurso y política. Autora de varios artículos en ambas disciplinas, coeditora con Gertrudis Payas del libro Perspectivas traductológicas desde América Latina (Universidad Católica de Temuco & Bonilla Editores, 2023) ha sido miembro fundador de varias asociaciones que han estimulado el desarrollo de estos dos campos de investigación en América Latina."
                 )
@@ -900,13 +900,13 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Imaginación política y distopia desde los estudios de género.",
+            name = "Imaginación política y distopía desde los estudios de género.",
             startHora = LocalTime.of(5,15),
             finishHora = LocalTime.of(6,0),
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Laura Pedraza Pinto",
+                    name = "Dra. Laura Pedraza Pinto",
                     image = R.drawable.laura_pedraza_pinto,
                     biography = "Laura es abogada con experiencia en el ámbito de los estudios de género, los derechos " +
                             "humanos y la incidencia social. Cuenta con un Doctorado en Estudios Críticos de Género por la " +
@@ -920,7 +920,7 @@ fun initInformation() {
                             "Críticos de Género y Feminismos de la Universidad Iberoamericana."
                 ),
                 Speaker(
-                    name = " Michelle Gama Leyva",
+                    name = "Dra. Michelle Gama Leyva",
                     image = R.drawable.michelle_gama,
                     biography = "Michelle Gama Leyva es la directora del Centro de Estudios Críticos de Género y Feminismos " +
                             "de la IBERO CDMX, institución en la que ha sido académica de tiempo completo del " +
@@ -933,8 +933,8 @@ fun initInformation() {
                             "Textualitat) de dicha Universidad."
                 ),
                 Speaker(
-                    name = "Moises Sheinberg",
-                    image = R.drawable.ic_launcher_foreground,
+                    name = "Mtro. Moises Sheinberg",
+                    image = R.drawable.moises_sheinberg,
                     biography = "Moisés es ingeniero en electrónica y comunicaciones. Tiene una maestría en " +
                             "tecnología educativa y otra en literatura latinoamericana. Actualmente imparte la " +
                             "materia de ciencia ficción feminista en la licenciatura de letras en la Ibero CDMX, " +
@@ -952,6 +952,85 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
+            name = "Utopías y distopías en la relación del ser humano con las maquinas",
+            startHora = LocalTime.of(6, 0),
+            finishHora = LocalTime.of(6, 30),
+            description = "La tecnología ha sido siempre compañera y aliada de la humanidad. Pero las nuevas tecnologías basadas en los avances de la computación y la robótica ofrecen posibilidades cada día más cercanas que, si bien abren perspectivas nuevas e inexploradas que son fascinantes, también pueden resultar inquietantes y hasta riesgosas. Conocerlos y entenderlos ayudará a su buen uso.",
+            type = TipoEvento.EXPOSICION,
+            exponents = listOf(
+                Speaker(
+                    name = "Martin Bonfil Olivera (DGDC)",
+                    image = R.drawable.martin_bonfil_olivera,
+                    biography = "Martín Bonfil Olivera es químico farmacéutico biólogo por la Facultad de Química de la UNAM, y realizó estudios de la Maestría en Enseñanza e Historia de la Biología en la Facultad de Ciencias de la UNAM. Es académico de la Dirección General de Divulgación de la Ciencia de la UNAM, donde se dedica a la divulgación científica desde 1990. Participó en los proyectos del museo de ciencias Universum y el Museo de la Luz. Es autor de varios libros y numerosos artículos de divulgación científica y colabora regularmente en revistas y periódicos. "
+                )
+            ),
+            place = "Aula 6 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
+        )
+    )
+    eventosMundosDeseablesYNoDeseables = eventosMundosDeseablesYNoDeseables.sortedBy { it.startHora }
+    val mundosDeseablesYNoDeseables = IslaInfo(
+        name = "UTOPÍAS vs DISTOPÍAS",
+        image = R.drawable.ic_launcher_foreground,
+        events = eventosMundosDeseablesYNoDeseables,
+        description = "Adéntrate en un espacio de reflexión crítica sobre los futuros que anhelamos y aquellos que debemos evitar. A través de diversas ponencias, mesas redondas y conversatorios, exploraremos desde la utopía de una democracia pospartidista y las distopías imaginadas desde los estudios de género, hasta la propuesta de una sociedad más inclusiva y la persistencia de la misoginia. Analizaremos cómo construimos nuestras visiones de mundos deseables y los obstáculos que enfrentamos en el camino."
+    )
+
+    var eventosMundosDeseablesYNoDeseables2 = listOf(
+        EventInfo(
+            name = "La utopía zapatista: futuros emergentes, mundos posibles",
+            startHora = LocalTime.of(4,0),
+            finishHora = LocalTime.of(4,30),
+            description = "El objetivo de esta conferencia es mostrar cómo posterior al momento de la fundación del EZLN –aquel de la vía insurgente y guerrillera–, pronto devino en la formación de un proyecto social alternativo, donde las exigencias o demandas como tierra, trabajo, alimentación, justicia, salud, educación o cultura, fueron convertidas en áreas de trabajo por quienes fundaron el EZLN.  Irresolubles en el marco del actual sistema-mundo capitalista, estas áreas de trabajo representan una praxis revolucionaria anticapitalista y la gran contribución de los pueblos zapatistas en áreas de educación, cultura, economía, alimentación, salud, justicia y nuevas relaciones sociales, que en conjunto prefiguran un futuro emergente que nace justamente desde nuestro presente. Futuros emergentes, representan, a su vez, mundos posibles, que los zapatistas han llamado: “un mundo donde quepan muchos mundos”.",
+            exponents = listOf(
+                Speaker(
+                    name = "Carlos Rios Gardillo (UAM Azcapotzalco)",
+                    image = R.drawable.guillem_compte,
+                    biography = "Carlos Alberto Ríos es historiador egresado de la Universidad Autónoma de Chiapas, doctor en historia por la Universidad Autónoma Metropolitana, Iztapalapa y alumno de “La escuelita zapatista”, organizada por el Ejército Zapatista de Liberación Nacional. Así mismo, ha sido cofundador del “Centro Immanuel Wallerstein”, cofundador de la revista Contrahistorias. La otra mirada de Clío. Actualmente, es el Jefe del Departamento de Sociología, de la UAM Azcapotzalco."
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Utopía del deporte",
+            startHora = LocalTime.of(4,30),
+            finishHora = LocalTime.of(5,15),
+            description = "Ponencia de Brenda Osnaya, atleta paralímpica de los JO Paris 2024 y su entrenadora Jessica Edith",
+            exponents = listOf(
+                Speaker(
+                    name = "Sra. Brenda Osnaya Álvarez",
+                    image = R.drawable.brenda_osnaya,
+                    biography = "Brenda Osnaya Álvarez es una deportista mexicana que ha logrado clasificar a los Juegos Paralímpicos de Tokio, Japón, en la rama femenil de patinaje sobre ruedas a alta velocidad. A los 28 años de edad, es la primer mujer mexicana en participar en el paratriatlón de los Juegos Olímpicos"
+                ),
+                Speaker(
+                    name = "Lic. Jessica Edith Gonzáles Martínez",
+                    image = R.drawable.jess_gonzales,
+                    biography = ""
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Comunicación de la ciencia para todas las lenguas",
+            startHora = LocalTime.of(5,15),
+            finishHora = LocalTime.of(6,0),
+            description = "La ciencia es conocimiento, y todo conocimiento se construye a través del lenguaje. Teóricamente se afirma que de alguna manera todas las lenguas humanas conocidas pueden representar cualquier realidad que esté al alcance de la ciencia ¿Será? Se ha dicho que el inglés es el idioma de la ciencia actual y que hay conceptos que difícilmente se pueden representar en otras lenguas; sin embargo, si seguimos la máxima de Fernando Birri  con relación al sentido de las utopías, acaso bien podemos poner en el horizonte la idea de que cualquier conocimiento científico puede comunicarse en cualquier lengua. Caminemos hacia ese horizonte.",
+            exponents = listOf(
+                Speaker(
+                    name = "Mtra. Libia Barajas (DGDC)",
+                    image = R.drawable.libia_barajas,
+                    biography = "Libia Elena Barajas Mariscal es Licenciada en Literaturas Hispánicas por la Universidad de Sonora y Maestra en Pedagogía por la Universidad Nacional Autónoma de México. Con 30 años de experiencia en divulgación científica, está adscrita a la Dirección General de Divulgación de la Ciencia de la UNAM. Es socia titular de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica, A. C. (Somedicyt), donde ha desempeñado el cargo de secretaria electa. Autora de cuatro libros de divulgación científica para niños, ha destacado por su labor en proyectos innovadores. "
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
             name = "La utopía democrática pospartidista",
             startHora = LocalTime.of(6,0),
             finishHora = LocalTime.of(6,30),
@@ -964,54 +1043,32 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 6 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "La utopía zapatista: futuros emergentes, mundos posibles",
-            startHora = LocalTime.of(5,30),
-            finishHora = LocalTime.of(6,0),
-            description = "El objetivo de esta conferencia es mostrar cómo posterior al momento de la fundación del EZLN –aquel de la vía insurgente y guerrillera–, pronto devino en la formación de un proyecto social alternativo, donde las exigencias o demandas como tierra, trabajo, alimentación, justicia, salud, educación o cultura, fueron convertidas en áreas de trabajo por quienes fundaron el EZLN.  Irresolubles en el marco del actual sistema-mundo capitalista, estas áreas de trabajo representan una praxis revolucionaria anticapitalista y la gran contribución de los pueblos zapatistas en áreas de educación, cultura, economía, alimentación, salud, justicia y nuevas relaciones sociales, que en conjunto prefiguran un futuro emergente que nace justamente desde nuestro presente. Futuros emergentes, representan, a su vez, mundos posibles, que los zapatistas han llamado: “un mundo donde quepan muchos mundos”.",
-            exponents = listOf(
-                Speaker(
-                    name = "Carlos Rios Gardillo",
-                    image = R.drawable.guillem_compte,
-                    biography = "Carlos Alberto Ríos es historiador egresado de la Universidad Autónoma de Chiapas, doctor en historia por la Universidad Autónoma Metropolitana, Iztapalapa y alumno de “La escuelita zapatista”, organizada por el Ejército Zapatista de Liberación Nacional. Así mismo, ha sido cofundador del “Centro Immanuel Wallerstein”, cofundador de la revista Contrahistorias. La otra mirada de Clío. Actualmente, es el Jefe del Departamento de Sociología, de la UAM Azcapotzalco."
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 6 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Comunicación de la ciencia para todas las lenguas",
-            startHora = LocalTime.of(6,0),
-            finishHora = LocalTime.of(6,30),
-            description = "La ciencia es conocimiento, y todo conocimiento se construye a través del lenguaje. Teóricamente se afirma que de alguna manera todas las lenguas humanas conocidas pueden representar cualquier realidad que esté al alcance de la ciencia ¿Será? Se ha dicho que el inglés es el idioma de la ciencia actual y que hay conceptos que difícilmente se pueden representar en otras lenguas; sin embargo, si seguimos la máxima de Fernando Birri  con relación al sentido de las utopías, acaso bien podemos poner en el horizonte la idea de que cualquier conocimiento científico puede comunicarse en cualquier lengua. Caminemos hacia ese horizonte.",
-            exponents = listOf(
-                Speaker(
-                    name = "Mtra. Libia Barajas",
-                    image = R.drawable.libia_barajas,
-                    biography = "Libia Elena Barajas Mariscal es Licenciada en Literaturas Hispánicas por la Universidad de Sonora y Maestra en Pedagogía por la Universidad Nacional Autónoma de México. Con 30 años de experiencia en divulgación científica, está adscrita a la Dirección General de Divulgación de la Ciencia de la UNAM. Es socia titular de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica, A. C. (Somedicyt), donde ha desempeñado el cargo de secretaria electa. Autora de cuatro libros de divulgación científica para niños, ha destacado por su labor en proyectos innovadores. "
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 6 Universidad Nacional Rosario Castellanos",
+            place = "Aula 7 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
-    eventosMundosDeseablesYNoDeseables = eventosMundosDeseablesYNoDeseables.sortedBy { it.startHora }
-    val mundosDeseablesYNoDeseables = IslaInfo(
-        name = "Mundos Mejores o Peores",
+    eventosMundosDeseablesYNoDeseables2 = eventosMundosDeseablesYNoDeseables2.sortedBy { it.startHora }
+    val mundosDeseablesYNoDeseables2 = IslaInfo(
+        name = "UTOPÍAS vs DISTOPÍAS: AULA 7",
         image = R.drawable.ic_launcher_foreground,
-        events = eventosMundosDeseablesYNoDeseables,
+        events = eventosMundosDeseablesYNoDeseables2,
         description = "Adéntrate en un espacio de reflexión crítica sobre los futuros que anhelamos y aquellos que debemos evitar. A través de diversas ponencias, mesas redondas y conversatorios, exploraremos desde la utopía de una democracia pospartidista y las distopías imaginadas desde los estudios de género, hasta la propuesta de una sociedad más inclusiva y la persistencia de la misoginia. Analizaremos cómo construimos nuestras visiones de mundos deseables y los obstáculos que enfrentamos en el camino."
     )
 
     var eventosSonoro = listOf(
         EventInfo(
+            name = "Teología en Contigencia",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(5, 30),
+            description = "Coedición entre el ITESO, Universidad Jesuita de Guadalajara, a través de la Biblioteca Dr. Jorge Villalobos Padilla SJ, el Departamento de Ciencias Religiosas de la Universidad Iberoamericana Ciudad de México y el CEX",
+            type = TipoEvento.DOCUMENTAL,
+            exponents = null,
+            place = "Cámara de Gesell Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
             name = "De los Origenes de la Misogenia",
-            startHora = LocalTime.of(4,0),
+            startHora = LocalTime.of(5,15),
             finishHora = LocalTime.of(7,30),
             description = "En esta pieza el mito del génesis y de la culpa de Eva en la caída del hombre son " +
                     "cuestionados como generadores de cultura, idiosincrasia, y por ende discriminacion, odio, " +
@@ -1043,14 +1100,14 @@ fun initInformation() {
                             "en Bellas Artes. Además, es fundadora y curadora de Casa Mérida Contemporary."
                 )
             ),
-            type = TipoEvento.CONVERSATORIO,
+            type = TipoEvento.GRABACION,
             place = "Cámara de Gesell Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosSonoro = eventosSonoro.sortedBy { it.startHora }
     val sonoro = IslaInfo(
-        name = "Mundos Mejores o Peores: Sonoro",
+        name = "UTOPÍAS vs DISTOPÍAS: Sonoro",
         image = R.drawable.ic_launcher_foreground,
         events = eventosSonoro,
         description = "Disfruta de una pieza audiovisual que cuestiona los orígenes de la misoginia, explorando su impacto cultural y sus manifestaciones más extremas como el feminicidio. A través de fotografía viva, paisajes significativos y la lectura de un antiguo poema, la obra invita a reflexionar sobre las raíces occidentales de este problema."
@@ -1064,13 +1121,13 @@ fun initInformation() {
             description = "La Edad Media no estuvo exenta de utopías científicas o tecnocientíficas. Una utopía científica puede entenderse como un proyecto imaginado, extraordinario, postulado como científico, cuya realización se sitúa entre lo posible y lo imposible, incluso a los ojos de quien lo concibe. Dicho más brevemente, es una proyección científica más allá de lo que es posible actualmente en ciencia. La utopía científica se ilustrará con varios ejemplos de sueños tecnocientíficos, destacando en particular la figura singular del franciscano Roger Bacon (siglo XIII), que postuló la posibilidad de desarrollar todo tipo de inventos extraordinarios, desde el carro que se desplazaría sin caballo hasta la máquina voladora.",
             exponents = listOf(
                 Speaker(
-                    name = "Nicolas Weill-Parot",
+                    name = "Nicolas Weill-Parot\n(Ecole Pratique des Hautes Etudes)",
                     image = R.drawable.nicolas_weill,
                     biography = "Nicolas Weill-Parot es Profesor en la École pratique des Hautes Études, a la Sección de Ciencias Históricas y Filológicas, a París. Ocupa la cátedra de «Historia de la ciencia en el Occidente medieval». Sus investigaciones se centran en la racionalidad científica medieval, sus desafíos y sus fronteras. Il a co-dirigé avec Roberto Poma le volume collectif : Les Utopies scientifiques au Moyen Âge et à la Renaissance (Florence, Sismel/Edizioni del Galluzzo, 2021)."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            type = TipoEvento.VIDEOCONFERENCIA,
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1080,13 +1137,13 @@ fun initInformation() {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Verónica Díaz de León",
+                    name = "Verónica Díaz de León (UNAM)",
                     image = R.drawable.veronica_diaz,
                     biography = "Doctora en Filosofía por la Ibero, CDMX, Maestra en Filosofía por la UNAM y Licenciada en Filosofía por la UCSJ. Es integrante del Sistema Nacional de Investigadoras e Investigadores (SNII). Ha sido Personal Docente e Investigador (PDI) en la Universitat de Barcelona. (2019-2020). Pertenece a la Asociación de Epistemología de la Universidad Complutense de Madrid, a la Red de Mujeres Filósofas de América Latina y a la Asociación Filosófica de México. Se ha desempeñado como Árbitro en el Programa de Apoyo a Proyectos de Investigación e Innovación Tecnológica (PAPIT), Convocatorias 2024-2025, de la UNAM. También ha realizado dictámenes para revistas internacionales y nacionales. Es co-autora del libro El desmontaje de la filosofía. Editorial Sicómoro, Madrid, 2022. ISBN 9788412538908, y autora de artículos en revistas arbitradas. Cuenta con 18 años de experiencia como catedrática universitaria, tanto en posgrado como en licenciatura. Es especialista en filosofía de la tecnología disruptiva, historia de la filosofía, filosofía de la cultura e interseccionalidad."
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1113,7 +1170,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1139,7 +1196,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONVERSATORIO,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1161,7 +1218,7 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
@@ -1177,13 +1234,13 @@ fun initInformation() {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Aula 7 Universidad Nacional Rosario Castellanos",
+            place = "Aula 8 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosUtopiasCientificas = eventosUtopiasCientificas.sortedBy { it.startHora }
     val utopiasCientificasyTecnologicas = IslaInfo(
-        name = "Isla de la Ciencia y Tecnología",
+        name = "UTOPÍAS DE LA CIENCIA Y DE LA TECNOLOGÍA",
         image = R.drawable.ic_launcher_foreground,
         events = eventosUtopiasCientificas,
         description = "Descubre cómo la humanidad ha imaginado futuros impulsados por la ciencia y la tecnología a lo largo de la historia. Desde los sueños tecnocientíficos de la Edad Media hasta las promesas y desafíos de la Inteligencia Artificial y la economía conductual en el presente, exploraremos la fascinante relación entre la imaginación, la ética y la construcción de mundos ideales."
@@ -1250,7 +1307,7 @@ fun initInformation() {
             description = "El trabajo parte de una lectura de los viajes de Cyrano de Bergerac como literatura de ciencia ficción. Con base en ello, no sólo se buscará contextualizarlo científica, social y hasta políticamente, sino abrir una cierta discusión filosófica entre la dimensión ficcional de la ciencia y el realismo literario. En el trasfondo se asoman algunas consideraciones derivadas del anarquismo epistemológico feyerabendiano, solo para mostrar que lo de Bergerac es más que meramente posible.",
             exponents = listOf(
                 Speaker(
-                    name = "Rodolfo Suarez UAM",
+                    name = "Rodolfo Suarez Molnar (UAM)",
                     image = R.drawable.rodolfo_suarez,
                     biography = "Licenciado en Psicología (con especialización en psicología colectiva) y maestro y doctor en Filosofía de la Ciencia. A lo largo de su carrera académica ha realizado diversas investigaciones en teoría de la historia y cultura popular, en las que publicó y/o coordinó 9 libros de ensayo académico y más de 20 artículos de investigación.\n" +
                             "Desde hace 15 años ha dedicado buena parte sus labores a la coordinación de proyectos y actividades académico-artísticas cuyo objetivo ha sido el uso de herramientas y dispositivos artísticos para la intervención social."
@@ -1271,7 +1328,7 @@ fun initInformation() {
                     "A partir del ejemplo histórico paradigmático de la Comuna de París como ejemplo de revolución en acto se analizará la función práctica de lo utópico.\n",
             exponents = listOf(
                 Speaker(
-                    name = "Araceli Mondragon",
+                    name = "Araceli Mondragon González (UAM)",
                     image = R.drawable.araceli_mondragon,
                     biography = "Dra. Araceli Mondragón González, Profesora-Investigadora de la Universidad Autónoma Metropolitana, adscrita al Departamento de Relaciones Sociales. Licenciada y maestra en Ciencia Política por la Facultad de Ciencias Políticas y Sociales de la UNAM; doctora en Estudios Latinoamericanos por la Facultad de Filosofía y Letras de la UNAM. Líneas de investigación y publicaciones en torno a los temas: relación entre política y utopía; filosofía de Ernst Bloch; memoria, utopía y cambio social; interculturalidad, ethos histórico y experiencias de alteridad."
                 )
@@ -1294,7 +1351,7 @@ fun initInformation() {
                             "Su tesis de maestría en la ENAH estuvo dedicada a la investigación arqueológica de la utopía de Topolobampo, donde integró fuentes documentales, fotográficas y arqueológicas para conocer la vida de los colonos que la integraron. Esta investigación resultó en la publicación del libro Lugar de Maravillas. Arqueología en Pacific City (2012, Axial, México)."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.VIDEOCONFERENCIA,
             place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1310,7 +1367,7 @@ fun initInformation() {
                     biography = "Subdirectora del Laboratorio de Investigación Internacional Iglobes CNRS/ University of Arizona/ ENS-PSL (Tucson, Arizona). Geógrafa y Profesora en Planificación-Urbanismo. Sus trabajos se centran en la circulación mundial de los modelos de producción y gestión de la ciudad, en las coaliciones entre actores de la ciudad a medio plazo y, cada vez más, en la ecologización de las políticas urbanas. Pudo trabajar sobre las relaciones entre Disneyland y su municipio de acogida en California. "
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Aula 1 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1333,7 +1390,7 @@ fun initInformation() {
     )
     eventosElMundoDeAntes = eventosElMundoDeAntes.sortedBy { it.startHora }
     val elMundoDeAntes = IslaInfo(
-        name = "El mundo de antes",
+        name = "UTOPÍAS DEL MUNDO DE ANTES",
         image = R.drawable.ic_launcher_foreground,
         events = eventosElMundoDeAntes,
         description = "Viaja en el tiempo para descubrir cómo se imaginaron las sociedades ideales en diferentes épocas. Desde la República de Platón hasta los viajes cósmicos de Bergerac, la utopía de Topolobambo y las visiones urbanas de Disney, exploraremos los sueños y los proyectos que buscaron construir un mundo mejor en el pasado, analizando su contexto y su legado."
@@ -1341,58 +1398,25 @@ fun initInformation() {
 
     var eventosElMundoQueViene = listOf(
         EventInfo(
-            name = "Ciencia ficción y ciudades del futuro: ¿pesadilla o Utopía?",
+            name = "Pensar el mundo de hoy, imaginar el mundo de mañana: sociogénesis de las representaciones infantiles del espacio global y de los problemas globales.",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
-            description = "Desde Metrópolis hasta Coruscant, la ciudad de ciencia ficción aparece a menudo como la inevitable culminación de una serie de problemas y disfunciones que hipotecan el futuro de las metrópolis contemporáneas: congestión, contaminación, deficiencia de los servicios urbanos, disolución del vínculo social, aumento de las desigualdades económicas y de las disparidades espaciales, violencia cotidiana... Sin embargo, si bien la ciudad del mañana se presenta a menudo como una pesadilla, una verdadera distopía, algunos autores también ofrecen pistas para sugerirnos que otro mundo es posible y que nuestro futuro aún no está trazado. En el fondo del abismo, entre las ruinas del futuro, tal vez nos espere la utopía.",
-            exponents = listOf(
-                Speaker(
-                    name = "Alain Musset",
-                    image = R.drawable.alain_musset,
-                    biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia. Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992)",
-                    video = "musset_video"
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 2 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "Pensar el mundo de hoy, imaginar el mundo de mañana: sociogénesis de las representaciones infantiles del espacio global y de los problemas globales.",
-            startHora = LocalTime.of(4,30),
-            finishHora = LocalTime.of(5,0),
             description = "Las vidas de los niños se ven afectadas a diario por los procesos globalizados y por las consecuencias de la globalización o la antropización del planeta (Klocker & Ansell, 2016; Twum-Danso Imoh et al., 2019). Sin embargo, sus propias narrativas y representaciones de los espacios y desafíos globales siguen siendo ampliamente ignoradas, tanto en el debate público como por la investigación científica (Walker, 2020; Jones & Lucas, 2023). Mis diferentes trabajos de investigación, sobre las representaciones del mundo o sobre la construcción del sentido de la justicia, muestran sin embargo que los niños tienen cosas que decir sobre el mundo. Sus representaciones del espacio mundial están además marcadas por imaginarios del futuro, a menudo preocupados por el futuro del planeta.",
             exponents = listOf(
                 Speaker(
-                    name = "Anne-Cécile OTT",
+                    name = "Anne-Cécile OTT\n(Universodad de Bordeaux)",
                     image = R.drawable.anne_cecile,
                     biography = "Anne-Cécile Ott es actualmente investigadora Posdoctoral en sociología en el Centro Émile Durkheim de la Universidad de Burdeos.  Después de haber realizado una tesis sobre las representaciones infantiles del espacio mundial, ha trabajado como postdoctoral en la construcción de prácticas culturales y gustos musicales, así como en las transformaciones de estas prácticas durante la pandemia de COVID-1919, dentro de los proyectos MaMa y RECORDS, en el Centro de Investigación sobre las Desigualdades Sociales de SciencesPo."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 2 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
-        EventInfo(
-            name = "La utopía de Gaia: ¿Puede nuestro planeta recuperar el equilibrio y la autoorganización?",
-            startHora = LocalTime.of(5,0),
-            finishHora = LocalTime.of(5,45),
-            description = "Se ha propuesto que la criticalidad, definida como la zona fronteriza entre dos fases (o estados colectivos diferentes) en los que pueden encontrarse los sistemas complejos, corresponde a un equilibrio dinámico en estos sistemas. Esto puede interpretarse, en el caso biológico, como el estado al que tienden por selección natural los sistemas que evolucionan en un medio ambiente cambiante, de manera que optimizan los requerimientos antagónicos de robustez y adaptabilidad. Esto ha sido comprobado, por ejemplo, a través de la medición de la variabilidad del ritmo cardíaco en mamíferos jóvenes y sanos, incluyendo los seres humanos. Estudiamos el comportamiento de la temperatura promedio de nuestro planeta desde 1880 hasta la fecha para demostrar el sorprendente equilibrio que se ha establecido entre la vida (nuestra biósfera) y nuestra atmósfera: el comportamiento  autoorganizado de la Tierra (Gaia) y su acelerada pérdida, debida esencialmente al desequilibrio ecológico y a la emisión de gases de invernadero.\n",
-            exponents = listOf(
-                Speaker(
-                    name = "Alejandro Frank",
-                    image = R.drawable.alejandro_frank,
-                    biography = "El Dr. Frank centró su investigación en las áreas de Física Nuclear y Molecular, pero su producción científica abarcó otros temas diversos, como sus estudios de aspectos fundamentales de la Mecánica Cuántica, la óptica y la teoría algebraica de la dispersión. En la última década ha dirigido su atención a la ciencia de la complejidad, en particular al estudio de sistemas ecológicos, biológicos y fisiológicos. Es uno de los fundadores y fue el primer director del Centro de Ciencias de la Complejidad (C3) de la UNAM. Recibió la Beca Guggenheim y el Premio Manuel Noriega Morales de la Organización de los Estados Americanos y es Fellow de la American Physical Society."
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.VIDEOCONFERENCIA,
             place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
             name = "Utopías, Futuros y decisiones. ¿Como diseñar el mundo que queremos?",
-            startHora = LocalTime.of(5,45),
-            finishHora = LocalTime.of(6,30),
+            startHora = LocalTime.of(4,30),
+            finishHora = LocalTime.of(5,15),
             description = "Conferencia de diseño de futuros basada en “Utopía” de Tomás Moro, combinando análisis de señales, modelos de escenarios y una perspectiva estratégica orientada a la toma de decisiones, a partir de un enfoque teórico-práctico, incluyendo modelos y herramientas aplicables para gobiernos, empresas y tomadores de decisión.",
             exponents = listOf(
                 Speaker(
@@ -1404,14 +1428,14 @@ fun initInformation() {
                             "globales decididas a cambiar las reglas del juego para generar impacto sistémico."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "El “trumpismo” fase superior del neoliberalismo",
-            startHora = LocalTime.of(6,30),
-            finishHora = LocalTime.of(7,0),
+            name = "El \"trumpismo\" fase superior del neoliberalismo",
+            startHora = LocalTime.of(5,15),
+            finishHora = LocalTime.of(5,45),
             description = "En mi intervención partiré de la tesis de que nos encontramos ante un cambio de época marcada por la erosión del orden mundial imperante desde 1991. Este se caracterizó por la expansión del neoliberalismo, el globalismo y la supremacía de las democracias liberales representativas, tuteladas por la hegemonía norteamericana. Pero para poder captar la particular textura de nuestra época debemos ser capaces de comprender cómo las nuevas tendencias engarzan con lo viejo. La nueva fase en la que entramos surge de dinámicas y estructuras características del periodo anterior, sin las cuáles, su eclosión no se habría producido o habría tenido lugar de otra forma. Es necesario entender cómo las nuevas tendencias enraízan sobre condiciones previas, reordenándolas y proyectándolas hacia una nueva dirección.",
             exponents = listOf(
                 Speaker(
@@ -1425,25 +1449,40 @@ fun initInformation() {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Utopías de la Ciencia Ficción", //TODO
-            startHora = LocalTime.of(7,0),
-            finishHora = LocalTime.of(7,30),
+            name = "Utopías de la Ciencia Ficción",
+            startHora = LocalTime.of(5,45),
+            finishHora = LocalTime.of(6,30),
             description = "",
             exponents = listOf(
                 Speaker(
                     name = "Alberto Chimal",
-                    image = R.drawable.ic_launcher_foreground,
-                    biography = ""
+                    image = R.drawable.alberto_chimal,
+                    biography = "Alberto Chimal (Toluca, México, 1970), con más de cincuenta libros en su haber, es una de las voces más notables de la literatura latinoamericana en la actualidad. Se ha dedicado principalmente al cuento, la novela, el libro infantil y la minificción, y también ha escrito ensayo, teatro, novela gráfica y guión de cine."
                 )
             ),
             type = TipoEvento.EXPOSICION,
             place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        )
+        ), EventInfo(
+        name = "La utopía de Gaia: ¿Puede nuestro planeta recuperar el equilibrio y la autoorganización?",
+        startHora = LocalTime.of(6,30),
+        finishHora = LocalTime.of(7,15),
+        description = "Se ha propuesto que la criticalidad, definida como la zona fronteriza entre dos fases (o estados colectivos diferentes) en los que pueden encontrarse los sistemas complejos, corresponde a un equilibrio dinámico en estos sistemas. Esto puede interpretarse, en el caso biológico, como el estado al que tienden por selección natural los sistemas que evolucionan en un medio ambiente cambiante, de manera que optimizan los requerimientos antagónicos de robustez y adaptabilidad. Esto ha sido comprobado, por ejemplo, a través de la medición de la variabilidad del ritmo cardíaco en mamíferos jóvenes y sanos, incluyendo los seres humanos. Estudiamos el comportamiento de la temperatura promedio de nuestro planeta desde 1880 hasta la fecha para demostrar el sorprendente equilibrio que se ha establecido entre la vida (nuestra biósfera) y nuestra atmósfera: el comportamiento  autoorganizado de la Tierra (Gaia) y su acelerada pérdida, debida esencialmente al desequilibrio ecológico y a la emisión de gases de invernadero.\n",
+        exponents = listOf(
+            Speaker(
+                name = "Alejandro Frank (UNAM)",
+                image = R.drawable.alejandro_frank,
+                biography = "El Dr. Frank centró su investigación en las áreas de Física Nuclear y Molecular, pero su producción científica abarcó otros temas diversos, como sus estudios de aspectos fundamentales de la Mecánica Cuántica, la óptica y la teoría algebraica de la dispersión. En la última década ha dirigido su atención a la ciencia de la complejidad, en particular al estudio de sistemas ecológicos, biológicos y fisiológicos. Es uno de los fundadores y fue el primer director del Centro de Ciencias de la Complejidad (C3) de la UNAM. Recibió la Beca Guggenheim y el Premio Manuel Noriega Morales de la Organización de los Estados Americanos y es Fellow de la American Physical Society."
+            )
+        ),
+        type = TipoEvento.CONFERENCIA,
+        place = "Aula 2 Universidad Nacional Rosario Castellanos",
+        direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+    ),
     )
     eventosElMundoQueViene = eventosElMundoQueViene.sortedBy { it.startHora }
     val elMundoQueViene = IslaInfo(
-        name = "El mundo que viene",
+        name = "UTOPÍAS DEL MUNDO QUE VIENE",
         image = R.drawable.ic_launcher_foreground,
         events = eventosElMundoQueViene,
         description = "Descubre diversas visiones del futuro, desde distopías urbanas hasta utopías tecnológicas. Analizaremos cómo imaginamos el planeta, su equilibrio, y cómo podemos diseñar el mundo deseado. Exploraremos las fuerzas que nos moldean y las utopías de la ciencia ficción. Únete a esta reflexión sobre los futuros posibles y nuestras decisiones."
@@ -1457,17 +1496,17 @@ fun initInformation() {
             description = "Esta plática tiene como objetivo explorar el espacio cognitivo y a través del pensamiento futuro donde haremos un recorrido por algunas teorías económicas y a partir de ello viajaremos al año 2050 para traernos ideas y algún artefacto que nos permita el bien común, generar bienestar social y por supuesto crecimiento y desarrollo económico en nuestro entorno.",
             exponents = listOf(
                 Speaker(
-                    name = "Alejandro Toledo Utrero",
+                    name = "Alejandro Toledo Utrero\nEspecialista em Inteligencia y Seguridad Nacional por el INAP",
                     image = R.drawable.alejandro_toledo,
                     biography = "Economista, Maestro y Doctor en Administración Pública con Mención Honorifica, realizó el Postdoctorado Iberoamericano en Nuevos Retos de Gobernanza Pública por la Universidad de Salamanca, Senior Executive National and International Security, Harvard University, Executive Certificate in Public Policy, Harvard University, The Threat of Nuclear Terrorism Stanford University, Espionage, Intelligence and National Security University of Oxford. Es Especialista en Inteligencia y Seguridad Nacional por el INAP, A.C."
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.CONFERENCIA,
             place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "Héroes Verdes.",
+            name = "Documental: Héroes Verdes.",
             startHora = LocalTime.of(4,45),
             finishHora = LocalTime.of(6,0),
             description = "Este documental muestra las historias de tres ambientalistas y sus estrategias para combatir la degradación de la vida marina en México. Han creado asociaciones y cooperativas sostenibles y promovido políticas públicas. Nélida Barajas asesora a cooperativas de pescadoras, logrando algo icónico en Sonora, en el mar de Cortés. Es directora del Centro Intercultural de Estudios de Desiertos y Océanos (CEDO). Esteban García-Peña, admirador de Jacques-Yves Cousteau, ha realizado importantes censos de especies marinas. Es director de campañas en pesquerías de Oceana México. Valeria Mas es una fotógrafa marina que fundó la Asociación Mexicana de Imagen Subacuática. Sus hermosas imágenes han creado conciencias y obtenido varios premios.\n" +
@@ -1497,7 +1536,7 @@ fun initInformation() {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Maria Zorrilla Ramos",
+                    name = "Maria Zorrilla Ramos (IBERO)",
                     image = R.drawable.maria_zorrilla,
                     biography = "Licenciada en Ciencia Política por el ITAM, maestra en Estudios Regionales por el Instituto Mora, y con estudios de doctorado en Ciencias Sociales en la UNAM y en el 17 Instituto de Estudios Críticos. Sus principales líneas de investigación tienen que ver con el análisis y diseño de políticas públicas en temas de biodiversidad, adaptación al cambio climático y sustentabilidad."
                 )
@@ -1509,7 +1548,7 @@ fun initInformation() {
         EventInfo(
             name = "(des)encanto de las distopias para la construcción de un mundo futuro utópico",
             startHora = LocalTime.of(6,30),
-            finishHora = LocalTime.of(7,15),
+            finishHora = LocalTime.of(7,0),
             description = "",
             exponents = listOf(
                 Speaker(
@@ -1532,11 +1571,28 @@ fun initInformation() {
             type = TipoEvento.CONVERSATORIO,
             place = "Aula 3 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Ciencia ficción y ciudades del futuro: ¿pesadilla o Utopía?",
+            startHora = LocalTime.of(7,0),
+            finishHora = LocalTime.of(7,30),
+            description = "Desde Metrópolis hasta Coruscant, la ciudad de ciencia ficción aparece a menudo como la inevitable culminación de una serie de problemas y disfunciones que hipotecan el futuro de las metrópolis contemporáneas: congestión, contaminación, deficiencia de los servicios urbanos, disolución del vínculo social, aumento de las desigualdades económicas y de las disparidades espaciales, violencia cotidiana... Sin embargo, si bien la ciudad del mañana se presenta a menudo como una pesadilla, una verdadera distopía, algunos autores también ofrecen pistas para sugerirnos que otro mundo es posible y que nuestro futuro aún no está trazado. En el fondo del abismo, entre las ruinas del futuro, tal vez nos espere la utopía.",
+            exponents = listOf(
+                Speaker(
+                    name = "Alain Musset",
+                    image = R.drawable.alain_musset,
+                    biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia. Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992)",
+                    video = "musset_video"
+                )
+            ),
+            type = TipoEvento.GRABACION,
+            place = "Aula 3 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosFuturo = eventosFuturo.sortedBy { it.startHora }
     val sateliteElMundoQueViene = IslaInfo(
-        name = "El mundo que viene: Futuro",
+        name = "UTOPÍAS DEL MUNDO QUE VIENE: Futuro",
         image = R.drawable.ic_launcher_foreground,
         events = eventosFuturo,
         description = "Este satelite explora el futuro desde diversas perspectivas: la economía impulsada por el pensamiento prospectivo, la defensa del medio marino, la filosofía como base para construir el mañana, y el análisis crítico de las distopías para imaginar futuros utópicos. Únete a esta reflexión sobre cómo concebimos y creamos el porvenir."
@@ -1559,7 +1615,7 @@ fun initInformation() {
                             "Es titular de una maestría en sociología de las religiones y dirige sus investigaciones con el equipo IRIEC, Instituto de Investigación de Estudios Culturales - EA 740, en donde es co-responsable de  « Imperium, contestaciones y utopías. \n"
                 )
             ),
-            type = TipoEvento.CONFERENCIA,
+            type = TipoEvento.GRABACION,
             place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1575,7 +1631,7 @@ fun initInformation() {
                     biography = "Investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. "
                 )
             ),
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.VIDEOCONFERENCIA,
             place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1586,7 +1642,7 @@ fun initInformation() {
             description = "En el siglo XVII, Tommaso Campanella imaginó un mundo ideal en La ciudad del Sol, una sociedad basada en el conocimiento, la armonía y la organización colectiva, gobernada por la razón y la filosofía. Campanella proyectó un modelo utópico que respondía a los desafíos de su tiempo: una sociedad alternativa regida por el saber y la cooperación. ¿Qué lugar ocupa La ciudad del Sol en la tradición utópica? ¿Cómo concibió Campanella el futuro a través de esta ciudad ideal? Esta obra reflejó las aspiraciones de una época marcada por la Contrarreforma y la consolidación de los Estados absolutistas, a la vez que influyó en la forma en que seguimos imaginando sociedades alternativas.",
             exponents = listOf(
                 Speaker(
-                    name = "Jorge Rizo",
+                    name = "Dr. Jorge Rizo Martinez (IBERO)",
                     image = R.drawable.jorge_rizo,
                     biography = "Jorge Rizo es doctor en Historia por la École des Hautes Études en Sciences Sociales (EHESS) de París y maestro en Historia por la Universidad Iberoamericana, donde se graduó con mención honorífica. Ha realizado estancias de investigación en la École Française de Rome y la Pontificia Università Gregoriana.\n" +
                             "Su investigación se centra en la historia de la Compañía de Jesús en el Antiguo Régimen, la historia cultural de los siglos XVI y XVII y la historiografía francesa del siglo XX."
@@ -1603,7 +1659,7 @@ fun initInformation() {
             description = "En las épocas de efervescencia y transición hay muchas posibilidades en juego y muchas maneras de articular y llevar a la práctica proyectos. Estas posibilidades de futuro se reflejan en diferentes posibilidades de evangelización, aún dentro de una misma orden religiosa como sucedió a los dominicos en el siglo XVI. A pesar de compartir un carisma y una herencia religiosa común, ante la apertura de un Nuevo Mundo, los frailes construyen de diversa manera el tiempo social; conforman de manera distinta su compromiso religioso y se construyen a un otro, el indio, al que temen, aman o no alcanzan a comprender. Estos procesos son pensados a partir de tres modelos de evangelización y cuatro personajes paradigmáticos que dejarán profunda huella en las políticas indianas: Domingo de Betanzos; Francisco de Vitoria; Julián Garcés y Bartolomé de Las Casas.",
             exponents = listOf(
                 Speaker(
-                    name = "Araceli Mondragón\nUAM",
+                    name = "Araceli Mondragón González\nUAM",
                     image = R.drawable.araceli_mondragon,
                     biography = "Dra. Araceli Mondragón González, Profesora-Investigadora de la Universidad Autónoma Metropolitana, adscrita al Departamento de Relaciones Sociales. Licenciada y maestra en Ciencia Política por la Facultad de Ciencias Políticas y Sociales de la UNAM; doctora en Estudios Latinoamericanos por la Facultad de Filosofía y Letras de la UNAM."
                 )
@@ -1619,10 +1675,9 @@ fun initInformation() {
             description = "El pueblo-hospital de Santa Fe que fundó Vasco de Quiroga en 1532, muy cerca de lo que hoy conocemos como Tacubaya, surgió de una utopía. El oidor y obispo de la Nueva España pensó en un espacio idílico de protección del cuerpo y el alma, la salud y la religión, para indígenas, clérigos y españoles, inspirado en la obra de Tomás Moro. ¿Qué tan cercano fue el sueño a la realidad? ¿Por qué La Utopía, publicada unos cuantos años antes de la fundación de Santa Fe, llamó tanto la atención de Vasco de Quiroga? ¿Qué propuestas de Tomás Moro se aterrizaron en el proyecto de Santa Fe y con qué fines? Conoce más sobre la forma en que las ciudades han jugado el mundo de \"lo ideal\" o \"lo mejor\" a lo largo de la historia.",
             exponents = listOf(
                 Speaker(
-                    name = "Pablo Abascal",
+                    name = "Dr. Pablo Abascal (IBERO - UAM)",
                     image = R.drawable.pablo_abascal,
-                    biography = "Semblanza\n" +
-                            "Pablo Abascal es doctor en Historia y Civilización por el European University Institute de Florencia. Es maestro en Investigación por la misma institución y licenciado en Historia por la Universidad Iberoamericana.Miembro del Sistema Nacional de Investigadores (SNI), Nivel I, ha realizado estancias posdoctorales en la UNAM y la Universidad Autónoma de Querétaro. Su libro De residencia a colegio será publicado en 2024 por la Universidad Iberoamericana."
+                    biography = "Pablo Abascal es doctor en Historia y Civilización por el European University Institute de Florencia. Es maestro en Investigación por la misma institución y licenciado en Historia por la Universidad Iberoamericana.Miembro del Sistema Nacional de Investigadores (SNI), Nivel I, ha realizado estancias posdoctorales en la UNAM y la Universidad Autónoma de Querétaro. Su libro De residencia a colegio será publicado en 2024 por la Universidad Iberoamericana."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1636,7 +1691,7 @@ fun initInformation() {
             description = "¿Por qué una revolución política sustentada en la fe tuvo eco en la Guerra Fría latinoamericana? ¿Qué ideas de utopía había detrás? En 1966, el padre Camilo Torres Restrepo se insertó a la guerrilla del Ejército de Liberación Nacional en Colombia con la idea de que la revolución era un imperativo cristiano. En 1971, el padre Gustavo Gutierrez publicó el libro “Teología de la Liberación” con la idea de que la emancipación del hombre en lo político, lo social y lo económico tenía relación con el reino de Dios y el mundo de los pobres. Las similitudes y las distancias entre estas dos experiencias revelan una noción de utopía que se readaptó y se puso en crisis al mismo tiempo en su conexión con la historia y la acción. En este espacio hablaremos de utopías cristianas contemporáneas en contracara con un anhelo de transformación social que no llegó a concretarse.",
             exponents = listOf(
                 Speaker(
-                    name = "Laura Camila Ramírez Bonilla",
+                    name = "Laura Camila Ramírez Bonilla\nIBERO",
                     image = R.drawable.laura_camila_ramirez,
                     biography = "Laura Camila Ramírez Bonilla es doctora y maestra en Historia por El Colegio de México, magíster en Estudios Políticos por el Instituto de Estudios Políticos y Relaciones Internacionales (IEPRI) de la Universidad Nacional de Colombia y politóloga de la misma institución. Directora del Departamento de Historia de la Universidad Iberoamericana, CDMX (2024-2026)."
                 )
@@ -1644,7 +1699,7 @@ fun initInformation() {
             type = TipoEvento.EXPOSICION,
             place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
+        )/*,
         EventInfo(
             name = "Teología en Contigencia",
             startHora = LocalTime.of(4, 0),
@@ -1654,16 +1709,16 @@ fun initInformation() {
             exponents = null,
             place = "Salón Niño Álvarez IPN",
             direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
-        )
+        )*/
     )
     eventosEspiritualidades = eventosEspiritualidades.sortedBy { it.startHora }
     val espiritualidadesYReligiones = IslaInfo(
-        name = "Espiritualidades y religiones",
+        name = "UTOPÍAS ESPIRITUALES Y RELIGIOSAS",
         image = R.drawable.ic_launcher_foreground,
         events = eventosEspiritualidades,
         description = "Sumérgete en un viaje a través de las utopías inherentes a diferentes expresiones de la espiritualidad. Desde la concepción masónica de una fraternidad universal y la visión cristiana del paraíso post-apocalíptico, hasta los ideales de justicia social en la evangelización dominicana y la Teología de la Liberación, exploraremos cómo la fe ha inspirado la búsqueda de mundos ideales y la transformación de la realidad."
     )
-
+/*
     var eventosTeologia = listOf(
         EventInfo(
             name = "Teología en Contigencia",
@@ -1683,7 +1738,7 @@ fun initInformation() {
         events = eventosTeologia,
         description = "¿Qué significa la teología hoy? Desvélalo en \"Teología en Contigencia\". Una coedición imperdible del ITESO, la Ibero y el CEX que te invita a cuestionar y comprender el papel de la teología en un mundo en constante cambio. Prepárate para una experiencia documental que te hará pensar."
     )
-
+*/
     islasGlobal = mutableListOf(
         amaurote, //AMAUROTE 0
         cine, //CINEMA 1
@@ -1696,6 +1751,7 @@ fun initInformation() {
         ludos, // LUDOS 8
         arkhi, // ARKHI 9
         mundosDeseablesYNoDeseables, //MUNDOS MEJORES O PEORES 10
+        mundosDeseablesYNoDeseables2,
         sonoro, //SONORO 11
         utopiasCientificasyTecnologicas, //CIENCIA Y TECNOLOGÍA 12
         arteEnUtipias, //MUSICA 13
@@ -1704,7 +1760,7 @@ fun initInformation() {
         elMundoDeAntes, //MUNDO DE ANTES 16
         elMundoQueViene, // MUNDO QUE VIENE 17
         sateliteElMundoQueViene, //FUTURO 18
-        espiritualidadesYReligiones, //EXPIRITUALIDADES Y RELIGIONES 19
-        teologia //TEOLOGIA 20
+        espiritualidadesYReligiones //EXPIRITUALIDADES Y RELIGIONES 19
+        //teologia //TEOLOGIA 20
     )
 }

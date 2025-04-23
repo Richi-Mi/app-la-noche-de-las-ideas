@@ -6,7 +6,7 @@
     <string name="app_eventType_conference"> Conference </string>
     <string name="app_eventType_taller"> Workshop </string>
     <string name="app_eventType_mesa_redonda"> Round Table </string>
-    <string name="app_eventType_exposición"> Exposure </string>
+    <string name="app_eventType_exposición"> Presentation </string>
     <string name="app_evenType_pelicula"> Movie </string>
     <string name="app_evenType_documental"> Documentary </string>
     <string name="app_evenType_comida"> Food </string>
@@ -16,4 +16,7 @@
     <string name="app_evenType_acto_musical"> Musical Act </string>
     <string name="app_eventType_conversatorio"> Conversation </string>
     <string name="app_eventType_exhibicion_arte"> Art Exhibition </string>
+    <string name="app_eventType_video_conferencia"> Video conference </string>
+    <string name="app_eventType_inaguracion"> Inauguration </string>
+    <string name="app_eventType_grabacion"> Recording </string>
 </resources>
