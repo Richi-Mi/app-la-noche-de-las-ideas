@@ -43,9 +43,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -54,17 +54,13 @@ import androidx.media3.common.Player
 import androidx.media3.common.VideoSize
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
-import com.ipn.escom.lni.R
-import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.Speaker
-import com.ipn.escom.lni.ui.model.TipoEvento
-import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
-import java.time.LocalTime
 
 @Composable
 fun EventScreen(event: EventInfo) {
     val context = LocalContext.current
+    val nombreEvento = stringResource(id = event.type.value)
     Box(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)){
@@ -90,7 +86,7 @@ fun EventScreen(event: EventInfo) {
 
                 EventDetailRow(Icons.Default.Star, "Hora", event.startHora.toString() +" PM - " + event.finishHora.toString() + " PM")
                 EventDetailRow(Icons.Default.Place, "Lugar", event.place)
-                EventDetailRow(Icons.Default.Info, "Tipo de evento", event.type.toString())
+                EventDetailRow(Icons.Default.Info, "Tipo de evento", nombreEvento)
                 if(event.description != "")
                     EventDetailRow(Icons.Default.Check, "Descripción", event.description)
                 if(event.exponents != null) {
@@ -236,23 +232,4 @@ fun VideoPlayer(context: Context, videoUri: String, modifier: Modifier){
             useController = true
         }
     }, modifier = modifier.aspectRatio(videoAspectRatio))
-}
-
-@Preview
-@Composable
-fun PreviewEvent (){
-    val event = EventInfo(
-        "Nombre del evento3",
-        LocalTime.of(19, 0),
-        LocalTime.of(21, 0),
-        "Este es un evento xd",
-        listOf(Speaker("Juan", R.drawable.logo, "Esta es mi biografia, blablalbalbalblabla"), Speaker("Juan", R.drawable.ic_launcher_foreground, "Esta es mi biografia, blablalbalbalblabla"),
-            Speaker("Jua3n", R.drawable.logo, "Esta es mi biografia, blablalbalbalblabla")),
-        TipoEvento.PELICULA,
-        "Auditorio B5",
-        "https://maps.app.goo.gl/JnjrvTS1H3rKpvHh9"
-    )
-    LaNocheDeLasIdeasTheme (darkTheme = false) {
-        EventScreen(islasGlobal[3].events[0])
-    }
 }

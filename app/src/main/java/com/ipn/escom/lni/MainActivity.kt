@@ -992,7 +992,7 @@ fun initInformation()  {
                 )
             ),
             place = "Aula 6 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         )
     )
     eventosMundosDeseablesYNoDeseables = eventosMundosDeseablesYNoDeseables.sortedBy { it.startHora }
