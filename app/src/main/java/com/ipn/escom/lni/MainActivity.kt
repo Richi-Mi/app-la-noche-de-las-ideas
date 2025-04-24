@@ -184,7 +184,7 @@ fun initInformation()  {
     eventosAmaurote = eventosAmaurote.sortedBy { it.startHora }
     val amaurote = IslaInfo(
         "ISLA DE UTOPÍA",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.ic_flower,
         eventosAmaurote,
         description = "Explora la búsqueda de sociedades ideales a través de diversas lentes: desde modelos históricos de bienestar colectivo hasta visiones futuristas de hábitats submarinos y ciencia abierta. Reflexionaremos sobre la construcción del futuro, la comunicación científica, la interpretación de textos antiguos en busca de esperanza, y las lecciones de movimientos históricos. Finalmente, imaginaremos utopías oceánicas innovadoras. Únete a esta exploración del ideal utópico en sus múltiples manifestaciones."
     )
@@ -284,7 +284,7 @@ fun initInformation()  {
     eventosEscena = eventosEscena.sortedBy { it.startHora }
     val escena = IslaInfo(
         "ARTES EN UTOPÍAS: Satelite",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.ic_art,
         eventosEscena,
         description = "Disfruta de diversas formas de expresión artística, desde la danza contemporánea explorando la conexión humana hasta una representación humorística sobre los desafíos de la comunicación lingüística. Culminaremos con una presentación de música tradicional francesa en vivo. Únete a esta muestra de la creatividad y el arte en escena."
     )
@@ -393,7 +393,7 @@ fun initInformation()  {
     eventosRioAnidro = eventosRioAnidro.sortedBy { it.startHora }
     val rioAnidro = IslaInfo(
         "Calle Manuel Carpio",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.ic_rio,
         eventosRioAnidro,
         description = "La calle Manuel Carpio se convierte en un vibrante espacio comunitario donde la creatividad y la imaginación toman el control. Explora universos imaginarios mediante el dibujo, comparte una fondue mientras dialogas con otras personas, déjate llevar por la poesía slam y los versos de utopía, participa en juegos de cartas con temática cultural y disfruta de presentaciones musicales en vivo. Una experiencia colectiva al aire libre que celebra la expresión artística, la ciencia y la convivencia."
     )
@@ -437,7 +437,7 @@ fun initInformation()  {
     eventosArteEnUtopias = eventosArteEnUtopias.sortedBy { it.startHora }
     val arteEnUtipias = IslaInfo(
         name = "ARTES EN UTOPÍAS: Clausura de la noche de las ideas",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_art,
         events = eventosArteEnUtopias,
         description = "Sumérgete en una experiencia artística que explora la conexión entre el arte y las utopías. Culmina la jornada con un emotivo concierto a cargo de la Orquesta Iberoamericana, interpretando la cantata \"Tengo un sueño\" del maestro Arturo Márquez"
     )
@@ -625,7 +625,7 @@ fun initInformation()  {
     eventosObservacion = eventosObservacion.sortedBy { it.startHora }
     val observacion = IslaInfo(
         "UTOPÍAS EXTRATERRESTRES: Satelite",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.ic_telescope,
         eventosObservacion,
         description = "Acompañanos a explorar el cosmos. Sumérgete en la experiencia de un planetario y, si el clima lo permite, observa el Sol con telescopios especiales durante la tarde. Al caer la noche, maravíllate con la Luna y Júpiter a través de nuestros telescopios. Una oportunidad para conectar directamente con las maravillas del universo."
     )
@@ -644,7 +644,7 @@ fun initInformation()  {
     eventosImaginacion = eventosImaginacion.sortedBy { it.startHora }
     val imaginacion = IslaInfo(
         "UTOPÍAS EXTRATERRESTRES: Satelite",
-        R.drawable.ic_launcher_foreground,
+        R.drawable.ic_telescope,
         eventosImaginacion,
         description = "Haz un viaje visual a través de una galería de constelaciones y objetos celestes. Descubre cómo la mente humana proyecta formas y narrativas en el firmamento, explorando la conexión entre el universo y nuestra capacidad de imaginar."
     )
@@ -770,7 +770,7 @@ fun initInformation()  {
     eventosFabricadelCuerpo = eventosFabricadelCuerpo.sortedBy { it.startHora }
     val fabricaDelCuerpo = IslaInfo(
         name = "UTOPÍAS DE LA FÁBRICA DEL CUERPO",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_body,
         eventosFabricadelCuerpo,
         description = "Sumérgete en una profunda reflexión sobre las fronteras de la vida y la muerte, la búsqueda de la juventud eterna y la creciente interacción entre el ser humano y la tecnología. A través de conferencias, exposiciones y una mesa redonda, exploraremos las utopías y distopías que surgen de nuestros avances científicos y tecnológicos, así como la fascinante visión de un artista que crea seres híbridos entre lo humano y lo natural."
     )
@@ -795,7 +795,7 @@ fun initInformation()  {
     eventosAmorfo = eventosAmorfo.sortedBy { it.startHora }
     val amorfo = IslaInfo(
         name = "UTOPÍAS DE LA FÁBRICA DEL CUERPO: Amorfo",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.mikunakano,
         eventosAmorfo,
         description = "Sumérgete en una profunda reflexión sobre las fronteras de la vida y la muerte, la búsqueda de la juventud eterna y la creciente interacción entre el ser humano y la tecnología. A través de conferencias, exposiciones y una mesa redonda, exploraremos las utopías y distopías que surgen de nuestros avances científicos y tecnológicos, así como la fascinante visión de un artista que crea seres híbridos entre lo humano y lo natural."
     )
@@ -973,7 +973,7 @@ fun initInformation()  {
     eventosLudos = eventosLudos.sortedBy { it.startHora }
     val ludos = IslaInfo(
         name = "UTOPÍAS URBANAS: Satelite",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.baseline_location_city_24,
         events = eventosLudos,
         description = "Participa activamente en la creación y reimaginación de la ciudad ideal. Construye tu visión del futuro urbano en equipos y colabora en un mural colectivo. Un espacio lúdico para fomentar la creatividad y la reflexión crítica sobre nuestros entornos."
     )
@@ -992,7 +992,7 @@ fun initInformation()  {
     eventosArkhi = eventosArkhi.sortedBy { it.startHora }
     val arkhi = IslaInfo(
         name = "UTOPÍAS URBANAS: Satelite",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.baseline_location_city_24,
         events = eventosArkhi,
         description = "Haz un viaje sobre la historia y teoria de la arquitectura."
     )
@@ -1106,7 +1106,7 @@ fun initInformation()  {
     eventosMundosDeseablesYNoDeseables = eventosMundosDeseablesYNoDeseables.sortedBy { it.startHora }
     val mundosDeseablesYNoDeseables = IslaInfo(
         name = "UTOPÍAS vs DISTOPÍAS",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_vs,
         events = eventosMundosDeseablesYNoDeseables,
         description = "Adéntrate en un espacio de reflexión crítica sobre los futuros que anhelamos y aquellos que debemos evitar. A través de diversas ponencias, mesas redondas y conversatorios, exploraremos desde la utopía de una democracia pospartidista y las distopías imaginadas desde los estudios de género, hasta la propuesta de una sociedad más inclusiva y la persistencia de la misoginia. Analizaremos cómo construimos nuestras visiones de mundos deseables y los obstáculos que enfrentamos en el camino."
     )
@@ -1185,7 +1185,7 @@ fun initInformation()  {
     eventosMundosDeseablesYNoDeseables2 = eventosMundosDeseablesYNoDeseables2.sortedBy { it.startHora }
     val mundosDeseablesYNoDeseables2 = IslaInfo(
         name = "UTOPÍAS vs DISTOPÍAS: Satelite",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_vs,
         events = eventosMundosDeseablesYNoDeseables2,
         description = "¿Te has preguntado cómo sería un mundo verdaderamente justo, inclusivo y sostenible? ¿Y qué pasa cuando los sueños colectivos se enfrentan a las realidades más duras? Te invitamos a reflexionar, imaginar y debatir en este ciclo de ponencias con enfoques diversos sobre futuros posibles, desde la experiencia zapatista hasta la utopía del deporte y la democracia pospartidista."
     )
@@ -1243,7 +1243,7 @@ fun initInformation()  {
     eventosSonoro = eventosSonoro.sortedBy { it.startHora }
     val sonoro = IslaInfo(
         name = "UTOPÍAS vs DISTOPÍAS: Satelite",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_vs,
         events = eventosSonoro,
         description = "Reflexiona sobre el papel de la religión, la cultura y sus implicaciones sociales. A través del documental Teología en Contingencia y la obra visual De los Orígenes de la Misoginia, se propone un diálogo entre pensamiento teológico contemporáneo y crítica artística sobre los orígenes culturales de la violencia de género, explorando símbolos, mitos y realidades que siguen marcando nuestras sociedades."
     )
@@ -1376,7 +1376,7 @@ fun initInformation()  {
     eventosUtopiasCientificas = eventosUtopiasCientificas.sortedBy { it.startHora }
     val utopiasCientificasyTecnologicas = IslaInfo(
         name = "UTOPÍAS DE LA CIENCIA Y DE LA TECNOLOGÍA",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_science,
         events = eventosUtopiasCientificas,
         description = "Descubre cómo la humanidad ha imaginado futuros impulsados por la ciencia y la tecnología a lo largo de la historia. Desde los sueños tecnocientíficos de la Edad Media hasta las promesas y desafíos de la Inteligencia Artificial y la economía conductual en el presente, exploraremos la fascinante relación entre la imaginación, la ética y la construcción de mundos ideales."
     )
@@ -1489,7 +1489,7 @@ fun initInformation()  {
     eventosElMundoDeAntes = eventosElMundoDeAntes.sortedBy { it.startHora }
     val elMundoDeAntes = IslaInfo(
         name = "UTOPÍAS DEL MUNDO DE ANTES",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_past,
         events = eventosElMundoDeAntes,
         description = "Viaja en el tiempo para descubrir cómo se imaginaron las sociedades ideales en diferentes épocas. Desde la República de Platón hasta los viajes cósmicos de Bergerac, la utopía de Topolobambo y las visiones urbanas de Disney, exploraremos los sueños y los proyectos que buscaron construir un mundo mejor en el pasado, analizando su contexto y su legado."
     )
@@ -1581,7 +1581,7 @@ fun initInformation()  {
     eventosElMundoQueViene = eventosElMundoQueViene.sortedBy { it.startHora }
     val elMundoQueViene = IslaInfo(
         name = "UTOPÍAS DEL MUNDO QUE VIENE",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_future,
         events = eventosElMundoQueViene,
         description = "Descubre diversas visiones del futuro, desde distopías urbanas hasta utopías tecnológicas. Analizaremos cómo imaginamos el planeta, su equilibrio, y cómo podemos diseñar el mundo deseado. Exploraremos las fuerzas que nos moldean y las utopías de la ciencia ficción. Únete a esta reflexión sobre los futuros posibles y nuestras decisiones."
     )
@@ -1691,7 +1691,7 @@ fun initInformation()  {
     eventosFuturo = eventosFuturo.sortedBy { it.startHora }
     val sateliteElMundoQueViene = IslaInfo(
         name = "UTOPÍAS DEL MUNDO QUE VIENE: Satelite",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_future,
         events = eventosFuturo,
         description = "Este satelite explora el futuro desde diversas perspectivas: la economía impulsada por el pensamiento prospectivo, la defensa del medio marino, la filosofía como base para construir el mañana, y el análisis crítico de las distopías para imaginar futuros utópicos. Únete a esta reflexión sobre cómo concebimos y creamos el porvenir."
     )
@@ -1802,7 +1802,7 @@ fun initInformation()  {
     eventosEspiritualidades = eventosEspiritualidades.sortedBy { it.startHora }
     val espiritualidadesYReligiones = IslaInfo(
         name = "UTOPÍAS ESPIRITUALES Y RELIGIOSAS",
-        image = R.drawable.ic_launcher_foreground,
+        image = R.drawable.ic_religion,
         events = eventosEspiritualidades,
         description = "Sumérgete en un viaje a través de las utopías inherentes a diferentes expresiones de la espiritualidad. Desde la concepción masónica de una fraternidad universal y la visión cristiana del paraíso post-apocalíptico, hasta los ideales de justicia social en la evangelización dominicana y la Teología de la Liberación, exploraremos cómo la fe ha inspirado la búsqueda de mundos ideales y la transformación de la realidad."
     )

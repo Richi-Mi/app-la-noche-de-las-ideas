@@ -46,9 +46,8 @@ import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
 @Composable
 fun CirclePoint( modifier: Modifier = Modifier, onCircleClicked: () -> Unit ) {
     Box( modifier = modifier
-            .background(Color.Red.copy(alpha = 0.3f), CircleShape)
+            .background(Color.Black.copy(alpha = 0.05f), CircleShape)
             .clip(CircleShape)
-            .border(2.dp, Color.Red, CircleShape)
             .clickable {
                 onCircleClicked()
             }
