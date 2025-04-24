@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.0"
+constraintlayoutComposeAndroid = "1.1.1"
 hiltCompiler = "2.55"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
@@ -13,6 +14,7 @@ navigationCompose = "2.8.9"
 uiTextGoogleFonts = "1.7.8"
 
 [libraries]
+androidx-constraintlayout-compose-android = { module = "androidx.constraintlayout:constraintlayout-compose-android", version.ref = "constraintlayoutComposeAndroid" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltCompiler" }

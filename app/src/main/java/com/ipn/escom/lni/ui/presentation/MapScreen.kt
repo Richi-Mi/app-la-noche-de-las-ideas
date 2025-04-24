@@ -1,12 +1,15 @@
 package com.ipn.escom.lni.ui.presentation
 
 
-import androidx.compose.foundation.Canvas
+import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.detectTransformGestures
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
@@ -20,74 +23,180 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.drawscope.scale
-import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.PointMode
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import com.ipn.escom.lni.NavRoutes
 import com.ipn.escom.lni.R
 import com.ipn.escom.lni.islasGlobal
 import com.ipn.escom.lni.ui.model.IslaInfo
-import kotlin.math.max
-import kotlin.math.min
+import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
 
+@Composable
+fun CirclePoint( modifier: Modifier = Modifier, onCircleClicked: () -> Unit ) {
+    Box( modifier = modifier
+            .background(Color.Red.copy(alpha = 0.3f), CircleShape)
+            .clip(CircleShape)
+            .border(2.dp, Color.Red, CircleShape)
+            .clickable {
+                onCircleClicked()
+            }
+    )
+}
 @Composable
 fun ScrollableMap(
     navHostController: NavController,
     innerPaddingValues: PaddingValues
 ) {
-    val imageBitmap = ImageBitmap.imageResource(id = R.drawable.mapa) // Reemplaza con tu mapa
     var showDialog by remember { mutableStateOf(false) }
-
-    var offsetX by remember { mutableFloatStateOf(0f) }
-    var offsetY by remember { mutableFloatStateOf(0f) }
-    var scale by remember   { mutableFloatStateOf(1f) }
-
+    var idIsland by remember { mutableStateOf(0) }
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Transparent)
+            .background(Color.Black)
             .padding(innerPaddingValues)
     ) {
-        AnimatedStarsBackground()
+        ConstraintLayout(modifier = Modifier.fillMaxSize()) {
+            val (fondo, U1, U2, U3, U4, U5, U6, I1, I2, I3, I4) = createRefs()
+            val firstGuideline = createGuidelineFromTop(0.05f)
+            val secondGuideline = createGuidelineFromEnd(0.25f)
 
-        Canvas(
-            modifier = Modifier.fillMaxSize()
-                .pointerInput(Unit) {
-                    detectTransformGestures{  _,pan, zoom, _ ->
-                        offsetX += pan.x
-                        offsetY += pan.y
-                        scale = max(0.7f, min(scale*zoom, 2.5f))
+            val middleGuideline = createGuidelineFromTop(0.5f)
+            val middleGuidelineH = createGuidelineFromStart(0.5f)
+
+            val bottomGuideline = createGuidelineFromBottom(0.2f)
+
+            Image(
+                painter = painterResource(R.drawable.mapautopias),
+                contentDescription = null,
+                contentScale = ContentScale.FillHeight,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .constrainAs(fondo) {
+                        top.linkTo(parent.top)
+                        start.linkTo(parent.start)
                     }
-                }
-                .clickable { showDialog=true }
-        ) {
-            val canvasWidth = size.width
-            val canvasHeight = size.height
+            )
+            // Mundo de antes.
+            CirclePoint(
+                modifier = Modifier.size( width = 140.dp, height = 104.dp)
+                .constrainAs(U1) {
+                    top.linkTo(firstGuideline)
+                    start.linkTo(parent.start, margin = 32.dp)
+                }) {
+                idIsland = 17
+                showDialog = true
+            }
 
-            val imageWidth = imageBitmap.width.toFloat()
-            val imageHeight = imageBitmap.height.toFloat()
+            // Mundo que viene.
+            CirclePoint( modifier = Modifier.size(104.dp)
+                .constrainAs(U2) {
+                    top.linkTo(firstGuideline)
+                    end.linkTo(secondGuideline)
+                }) {
+                idIsland = 18
+                showDialog = true
 
-            // Escala inicial para que la imagen llene la pantalla sin deformarse
-            val scaleX = canvasWidth / imageWidth
-            val scaleY = canvasHeight / imageHeight
-            val initialScale = max(scaleX, scaleY) // Mantener la proporción sin deformar
+            }
+            // Espiritualidades y religiones
+            CirclePoint( modifier = Modifier.size(104.dp)
+                .constrainAs(U3) {
+                    top.linkTo(firstGuideline, margin = 108.dp)
+                    start.linkTo(parent.start, margin = 32.dp)
+                }) {
+                idIsland = 20
+                showDialog = true
 
-            val pivot = Offset((canvasWidth / 2) - (imageWidth / 2), (canvasHeight / 2) - imageHeight)
 
-            translate(left = offsetX, top = offsetY) {
-                scale(scale * initialScale, pivot = pivot) {
-                    drawImage(imageBitmap)
-                }
+            }
+            // Utopias vs distopias
+            CirclePoint( modifier = Modifier.size(width = 88.dp, height = 124.dp)
+                .constrainAs(U4) {
+                    top.linkTo(firstGuideline, margin = 104.dp)
+                    end.linkTo(secondGuideline, margin = 48.dp)
+                }) {
+                idIsland = 10
+                showDialog = true
+
+            }
+            CirclePoint( modifier = Modifier.size(width = 96.dp, height = 124.dp)
+                .constrainAs(U5) {
+                    bottom.linkTo(middleGuideline, margin = 24.dp)
+                    end.linkTo(middleGuidelineH, margin = 16.dp)
+                }) {
+                idIsland = 13
+                showDialog = true
+
+            }
+            /// Utopias
+            CirclePoint(
+                modifier = Modifier.size(112.dp)
+                    .constrainAs(U6) {
+                        bottom.linkTo(middleGuideline, margin = 80.dp)
+                        start.linkTo(middleGuidelineH, margin = 48.dp)
+                    }
+            ) {
+                idIsland = 0
+                showDialog = true
+
+            }
+            // Artes
+            CirclePoint(
+                modifier = Modifier.size(104.dp)
+                    .constrainAs(I1) {
+                        bottom.linkTo(bottomGuideline, margin = 16.dp)
+                        start.linkTo(parent.start, margin = 42.dp)
+                    }
+            ) {
+                idIsland = 14
+                showDialog = true
+
+            }
+            // Extraterrestres.
+            CirclePoint(
+                modifier = Modifier.size(104.dp)
+                    .constrainAs(I2) {
+                        bottom.linkTo(bottomGuideline, margin = 16.dp)
+                        start.linkTo(middleGuidelineH, margin = 44.dp)
+                    }
+            ) {
+                idIsland = 2
+                showDialog = true
+
+
+            }
+            // Fabrica del cuerpo
+            CirclePoint(
+                modifier = Modifier.size(96.dp)
+                    .constrainAs(I3) {
+                        top.linkTo(bottomGuideline, margin = 48.dp)
+                        end.linkTo(parent.end, margin = 16.dp)
+                    }
+            ) {
+                idIsland = 5
+                showDialog = true
+
+            }
+            CirclePoint(
+                modifier = Modifier.size(width = 96.dp, height = 112.dp)
+                    .constrainAs(I4) {
+                        top.linkTo(bottomGuideline, margin = 24.dp)
+                        end.linkTo(middleGuidelineH, margin = 16.dp)
+                    }
+            ) {
+                idIsland = 7
+                showDialog = true
+
             }
         }
         if (showDialog){
@@ -97,7 +206,7 @@ fun ScrollableMap(
                     showDialog = false
                     navHostController.navigate( NavRoutes.getDetailRoute(10) )
                 },
-                islasGlobal[10]
+                islasGlobal[idIsland]
             )
         }
     }

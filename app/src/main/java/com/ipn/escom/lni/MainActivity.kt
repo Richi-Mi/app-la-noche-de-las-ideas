@@ -413,17 +413,17 @@ fun initInformation()  {
                 ),
                 Speaker(
                     name = "Karla GASCÓN",
-                    image = R.drawable.`Karla_Gascón`,
+                    image = R.drawable.karla_gascon,
                     biography = "Karla Gascón (CDMX) estudió psicología social y diseño de la comunicación gráfica, entusiasta incansable, improvisadora en el teatro y en la vida. Actualmente se dedica a acompañar procesos de formación y empoderamiento para mujeres en América Latina.\n"
                 ),
                 Speaker(
                     name = "Alejandra ESPINO DEL CASTILLO",
-                    image = R.drawable.Alejandra_ESPINO,
+                    image = R.drawable.alejandra_espino,
                     biography = "Historietista y artista visual. Becaria del programa Jóvenes Creadores del FONCA (2011-2012) y miembro del Sistema Nacional de Creadores de Arte (2019-2022). Realizó la residencia de creación de historieta de la Casa del Autor de Zapopan (2024) y fue seleccionada para la colaboración entre esta institución y la editorial/librería Casa Impronta. Fue seleccionada para el proyecto de intercambio de artistas de cómic Transcómic, como parte del Año Dual Alemania-México. Ha colaborado en antologías como Keret en su tinta (Ed. Sexto Piso, 2013), La Familia Mexicana (Éditions FLBLB, 2016) y Transcómic (Marvin/Goethe Institut, 2018). Con el colectivo Cúmulo de Tesla publicó el libro Mis pies tienen raíz (Océano, 2022). Desde 2021 es parte del Seminario de Estéticas de Ciencia Ficción del CENIDIAP. Desde 2020 desarrolla el podcast de divulgación de historieta Conversacómix con Alfredo Guzmán Tinajero.\n"
                 ),
                 Speaker(
                     name = "Dra. Anne W. JOHNSON",
-                    image = R.drawable.Johnson,
+                    image = R.drawable.johnson,
                     biography = "Profesora-Investigadora del Posgrado en Antropología Social del Departamento de Ciencias Políticas y Sociales de la Universidad Iberoamericana, donde imparte cursos sobre ciencia y tecnología, antropología de los futuros y cultura material. Es doctora y\n" +
                             " maestra en Antropología Social por la Universidad de Texas en Austin, y tiene la licenciatura en Antropología y Artes Teatrales por la Brown University. Ha publicado en libros y revistas especializadas, nacionales e internacionales, incluyendo artículos en la Revista Colombiana de\n" +
                             " Antropología (2023) y Acta Astronautica (2021), y capítulos en los libros Space Feminisms (Routledge, 2024), The Routledge Encyclopedia of the Social Studies of Outer Space (Routledge,\n" +
@@ -701,12 +701,12 @@ fun initInformation()  {
             exponents = listOf(
                 Speaker(
                     name = "Dra. Nadia Alejandra Rivero Segura",
-                    image = R.drawable.NADIA_RIVERO_SEGURA,
+                    image = R.drawable.nadia_rivero_segura,
                     biography = "- Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
                 ),
                 Speaker(
                     name = "Dr. Juan Carlos Gómez Verjan",
-                    image = R.drawable.JUAN_CARLOS_VERJAN,
+                    image = R.drawable.juan_carlos_verjan,
                     biography = "Juan Carlos Gómez Verjan es mexicano, Investigador en Ciencias Médica del Instituto Nacional de Geriatría (INGER) y pertenece al Sistema Nacional de Investigadores nivel 2. De formación es Químico Farmacéutico Biólogo por la Facultad de Química, UNAM. Maestro en Ciencias Biológicas con orientación en Biología Experimental por la Facultad de Ciencias, UNAM y Doctor en Ciencias Biomédicas por el Instituto de Química, UNAM; ambos títulos de posgrado obtenidos con Mención Honorífica. Posee diplomados en Epidemiología, Medicina y Complejidad, Análisis de Información Geoespacial así como en Riesgos Sanitarios. Ha publicado más de 40 artículos científicos, más de 10 capítulos de libro y es editor de 3 libros. Ha realizado 3 estancias de investigación internacionales en el Laboratorio de Biología de Redes del Instituto de Investigación Biomédica en Barcelona, el Laboratorio de Transcriptómica del Instituto de Medicina Molecular de la Universidad de Lisboa y el Sealy Aging Institute de la Universidad de Texas. Sus líneas de investigación se centran en el impacto que tienen las condiciones socioambientales en la edad epigenética de los individuos y en el desarrollo de fármacos geroprotectores.\n"
                 )
             ),
