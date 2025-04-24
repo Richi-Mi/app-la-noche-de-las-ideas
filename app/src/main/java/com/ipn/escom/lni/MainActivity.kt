@@ -107,7 +107,7 @@ fun initInformation()  {
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -161,7 +161,7 @@ fun initInformation()  {
                 )
             ),
             type = TipoEvento.CONFERENCIA,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
@@ -171,13 +171,13 @@ fun initInformation()  {
             description = "La utopía de los océanos con el interoceánico sería un corredor azul, donde la tecnología y la innovación permitan el comercio sin sacrificar la salud del mar. Un modelo en el que los la océanos se regeneren más rápido de lo que se impactan, asegurando su equilibrio para las futuras generaciones",
             exponents = listOf(
                 Speaker(
-                    name = "Dr. Javier Aguilera Peña",
+                    name = "Dr. Javier Aguilera Peña\nDir. Gral. de PROISTMO",
                     image = R.drawable.dr_javier_aguilera,
                     biography = "Javier Aguilera Peña es el presidente del Consejo de Administración de la Promotora de Desarrollo de Industria y Bienestar del Istmo de Tehuantepec .Esta organización participa activamente en el desarrollo del Corredor Interoceánico del Istmo de Tehuantepec (CIIT), un proyecto destinado a impulsar el crecimiento económico en la región sureste del país."
                 )
             ),
             type = TipoEvento.EXPOSICION,
-            place = "Auditorio de la universidad nacional rosario castellanos",
+            place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         )
     )
@@ -224,7 +224,7 @@ fun initInformation()  {
     )
     eventosCine = eventosCine.sortedBy { it.startHora }
     val cine = IslaInfo(
-        "ARTES EN UTOPÍAS: Carpa Negra",
+        "ARTES EN UTOPÍAS: Satelite",
         R.drawable.baseline_movie_24,
         eventosCine,
         description = "Prepárate para una experiencia enriquecedora con nuestra selección de eventos. Déjate llevar por las historias del cine, desde momentos divertidos y conmovedores hasta viajes a mundos futuristas. Amplía tus horizontes con la presentación de un interesante documental que explora la teología desde una perspectiva contemporánea."
@@ -258,9 +258,9 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Problemas de comunicación que provocan la ambigüedad lingüística",
-            startHora = LocalTime.of(6,0),
-            finishHora = LocalTime.of(7,0),
-            description = "Representación humorística de corta duración en torno a los problemas de comunicación que provocan la ambigüedad lingüística,\n" +
+            startHora = LocalTime.of(5,0),
+            finishHora = LocalTime.of(6,0),
+            description = "Representación humorística de corta duración en torno a los problemas de comunicación que provocan la ambigüedad lingüística (IPN),\n" +
                     "Inicio (10 min): Presentación de la actividad.\n" +
                     "Desarrollo (5 min): Se presenta el sketch a la audiencia. \n" +
                     "Reflexión (20 min):  El presentador dirige un análisis mediante preguntas en el que el público comprende las situaciones presentadas y analiza el origen de la ambigüedad lingüística\n" +
@@ -272,9 +272,9 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Acto Musical",
-            startHora = LocalTime.of(7,0),
-            finishHora = LocalTime.of(7,30),
-            description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores",
+            startHora = LocalTime.of(6,0),
+            finishHora = LocalTime.of(6,30),
+            description = "Presentación de música en vivo propia de la tradición francesa interpretada por un cuarteto de profesores (IPN)",
             exponents = null,
             type = TipoEvento.ACTO_MUSICAL,
             place = "Escenario Principal (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -283,7 +283,7 @@ fun initInformation()  {
     )
     eventosEscena = eventosEscena.sortedBy { it.startHora }
     val escena = IslaInfo(
-        "ARTES EN UTOPÍAS: Escenario Principal",
+        "ARTES EN UTOPÍAS: Satelite",
         R.drawable.ic_launcher_foreground,
         eventosEscena,
         description = "Disfruta de diversas formas de expresión artística, desde la danza contemporánea explorando la conexión humana hasta una representación humorística sobre los desafíos de la comunicación lingüística. Culminaremos con una presentación de música tradicional francesa en vivo. Únete a esta muestra de la creatividad y el arte en escena."
@@ -308,8 +308,40 @@ fun initInformation()  {
         EventInfo(
             name = "LA FONDUE SALE A LA CALLE",
             startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(6, 15),
-            description = "Una calle cerrada al transito se transformara en un espacio comunotario. Se instalaran mesas comunales decoradas con elemento urbanos y naturales. Cada mesa contara con una fondue cenral que los participantes compartiran mientras participan a un dialogo guiado. Un mediator especializado planteara preguntas claves.",
+            finishHora = LocalTime.of(7, 0),
+            description = "Una calle cerrada al transito se transformara en un espacio comunitario. Se instalaran mesas comunales decoradas con elemento urbanos y naturales. Cada mesa contara con una fondue cenral que los participantes compartiran mientras participan a un dialogo guiado. Un mediator especializado planteara preguntas claves. (IPN)",
+            type = TipoEvento.ACTIVIDAD_LUDICA,
+            exponents = null,
+            place = "Calle Manuel Carpio",
+            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
+        ),
+        EventInfo(
+            name = "Juego de cartas",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(7, 0),
+            description = "Juego de mesa para reconocer a los personajes o " +
+                    "íconos de la cultura francesa (IPN). ",
+            type = TipoEvento.ACTIVIDAD_LUDICA,
+            exponents = null,
+            place = "Calle Manuel Carpio",
+            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
+        ),
+        EventInfo(
+            name = "EXHIBICIONES",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(7, 0),
+            description = "Dra. Dalila ARANDA ALDANA: “Las Marianas del Mar” \n" +
+                    "Arq. Jacques ROUGERIE “Construir sus sueños bajo el mar”",
+            type = TipoEvento.EXHIBICION_ARTE,
+            exponents = null,
+            place = "Calle Manuel Carpio",
+            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
+        ),
+        EventInfo(
+            name = "Show Científico",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(7, 0),
+            description = "(IPN)",
             type = TipoEvento.ACTIVIDAD_LUDICA,
             exponents = null,
             place = "Calle Manuel Carpio",
@@ -317,60 +349,73 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Poesía Slam",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(5, 40),
-            description = "Versos de Utopía",
-            type = TipoEvento.TALLER,
+            startHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(6, 30),
+            description = "Versos de Utopía (IPN)",
+            type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
-            place = "Calle Manuel Carpio",
+            place = "Calle Manuel Carpio (Escenario Musical)",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         ),
         EventInfo(
-            name = "Actos Musicales",
-            startHora = LocalTime.of(5, 40),
-            finishHora = LocalTime.of(6, 25),
-            description = "",
+            name = "Animalitos en peligro",
+            startHora = LocalTime.of(4, 40),
+            finishHora = LocalTime.of(5, 20),
+            description = "Canto por la fauna mexicana (IPN)",
             type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
-            place = "Calle Manuel Carpio",
+            place = "Calle Manuel Carpio (Escenario Musical)",
+            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
+        ),
+        EventInfo(
+            name = "Acto Musical",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(4, 40),
+            description = "Presentación de música en vivo propia de la tradición francesa " +
+                    "interpretada por un cuarteto de profesores (IPN).",
+            type = TipoEvento.ACTO_MUSICAL,
+            exponents = null,
+            place = "Calle Manuel Carpio (Escenario Musical)",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         ),
         EventInfo(
             name = "La primavera de los poetas",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(7, 0),
-            description = "",
+            startHora = LocalTime.of(5, 20),
+            finishHora = LocalTime.of(6, 5),
+            description = "Instalación artística en la cual los " +
+                    "visitantes escriben ideas o poemas. Los poemas serán colgados en ramas de árboles (IPN).",
             type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
-            place = "Calle Manuel Carpio",
+            place = "Calle Manuel Carpio (Escenario Musical)",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         )
     )
     eventosRioAnidro = eventosRioAnidro.sortedBy { it.startHora }
     val rioAnidro = IslaInfo(
-        "ARTES EN UTOPÍAS: Calle Manuel Carpio",
+        "Calle Manuel Carpio",
         R.drawable.ic_launcher_foreground,
         eventosRioAnidro,
-        description = "Transforma la calle en un vibrante espacio comunitario. Participa en la creación de universos imaginarios a través del dibujo, comparte un diálogo guiado alrededor de una fondue colectiva, experimenta la fuerza de la poesía slam con versos de utopía, disfruta de juegos de cartas y déjate llevar por diversas presentaciones musicales. Únete a esta corriente de creatividad y conexión al aire libre."
+        description = "La calle Manuel Carpio se convierte en un vibrante espacio comunitario donde la creatividad y la imaginación toman el control. Explora universos imaginarios mediante el dibujo, comparte una fondue mientras dialogas con otras personas, déjate llevar por la poesía slam y los versos de utopía, participa en juegos de cartas con temática cultural y disfruta de presentaciones musicales en vivo. Una experiencia colectiva al aire libre que celebra la expresión artística, la ciencia y la convivencia."
     )
 
     var eventosArteEnUtopias = listOf(
         EventInfo(
             name = "Concierto \"Tengo un sueño\"",
             startHora = LocalTime.of(8,0),
-            finishHora = LocalTime.of(9,30),
+            finishHora = LocalTime.of(9,45),
             description = "La Orquesta Iberoamericana, dirigida por Lizzi Ceniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hija del compositor.\n" +
                     "Contará también con el Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), bajo la dirección de Alejandro León.\n\n" +
                     "Además, se interpretarán obras del repertorio francés y mexicano:\n\n" +
                     "REPERTORIO FRANCÉS  \n" +
                     "« Les sauvages, forêts paisibles\" (Les Indes galantes), de Jean-Philippe Rameau. \n" +
                     "« La vie en rose » de Édith Piaf. \n" +
+                    "« Non, Je Ne Regrette Rien” de Édith Piaf. \n" +
                     "« Cerf-volant », (Les Choristes), de Bruno Coulais. \n" +
                     "« Caresse sur l'océan », (Les Choristes), de Bruno Coulais. \n" +
                     "REPERTORIO MEXICANO  \n" +
                     "“Danzón No 2” de Arturo Márquez. \n" +
                     "“Bésame mucho “ de Consuelo Velázquez. \n" +
-                    "“Sones de México”. Homenaje. \n" +
+                    "“México en la Piel” de  Jose Manuel Fernández \n" +
                     "“Huapango” de José Pablo Moncayo. ",
             exponents = listOf(
                 Speaker(
@@ -391,7 +436,7 @@ fun initInformation()  {
     )
     eventosArteEnUtopias = eventosArteEnUtopias.sortedBy { it.startHora }
     val arteEnUtipias = IslaInfo(
-        name = "ARTES EN UTOPÍAS",
+        name = "ARTES EN UTOPÍAS: Clausura de la noche de las ideas",
         image = R.drawable.ic_launcher_foreground,
         events = eventosArteEnUtopias,
         description = "Sumérgete en una experiencia artística que explora la conexión entre el arte y las utopías. Culmina la jornada con un emotivo concierto a cargo de la Orquesta Iberoamericana, interpretando la cantata \"Tengo un sueño\" del maestro Arturo Márquez"
@@ -424,13 +469,11 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Anne W. JOHNSON",
                     image = R.drawable.johnson,
-                    biography = "Profesora-Investigadora del Posgrado en Antropología Social del Departamento de Ciencias Políticas y Sociales de la Universidad Iberoamericana, donde imparte cursos sobre ciencia y tecnología, antropología de los futuros y cultura material. Es doctora y\n" +
-                            " maestra en Antropología Social por la Universidad de Texas en Austin, y tiene la licenciatura en Antropología y Artes Teatrales por la Brown University. Ha publicado en libros y revistas especializadas, nacionales e internacionales, incluyendo artículos en la Revista Colombiana de\n" +
-                            " Antropología (2023) y Acta Astronautica (2021), y capítulos en los libros Space Feminisms (Routledge, 2024), The Routledge Encyclopedia of the Social Studies of Outer Space (Routledge,\n" +
-                            " 2023) y Southern Space Studies (Springer, 2022). Su libro sobre los imaginarios mexicanos sobre el espacio exterior y el futuro desde perspectivas tecnocientíficas y artísticas está en prensa con la\n" +
-                            " Universidad de Arizona.\n" +
-                            " \n" +
-                            "\n"
+                    biography = "Profesora-Investigadora del Posgrado en Antropología Social del Departamento de Ciencias Políticas y Sociales de la Universidad Iberoamericana, donde imparte cursos sobre ciencia y tecnología, antropología de los futuros y cultura material. Es doctora y" +
+                            " maestra en Antropología Social por la Universidad de Texas en Austin, y tiene la licenciatura en Antropología y Artes Teatrales por la Brown University. Ha publicado en libros y revistas especializadas, nacionales e internacionales, incluyendo artículos en la Revista Colombiana de" +
+                            " Antropología (2023) y Acta Astronautica (2021), y capítulos en los libros Space Feminisms (Routledge, 2024), The Routledge Encyclopedia of the Social Studies of Outer Space (Routledge," +
+                            " 2023) y Southern Space Studies (Springer, 2022). Su libro sobre los imaginarios mexicanos sobre el espacio exterior y el futuro desde perspectivas tecnocientíficas y artísticas está en prensa con la" +
+                            " Universidad de Arizona."
                 )
             ),
             place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -441,19 +484,19 @@ fun initInformation()  {
             startHora = LocalTime.of(4, 30),
             finishHora = LocalTime.of(4, 45),
             description = "",
-            type = TipoEvento.EXPOSICION,
+            type = TipoEvento.GRABACION,
             exponents = listOf(
                 Speaker(
-                    name = "Stéphane Basa",
+                    name = "Stéphane Basa\n(Aix-Marseille Université)",
                     image = R.drawable.person_solid,
-                    biography = "" //falta la biografia
+                    biography = "Stéphane Basa es un astrónomo del Laboratoire d’Astrophysique de Marseille, con una trayectoria que comenzó en la física de partículas en el CERN y el telescopio ANTARES. Actualmente se dedica al estudio del universo energético y transitorio, utilizando estallidos de rayos gamma (GRB) para investigar galaxias lejanas y la reionización del universo. Ha contribuido a descubrimientos clave como los primeros eventos de disrupción por marea y participa en misiones espaciales como SVOM, THESEUS y Athena, donde co-preside el grupo de trabajo \"Targets of Opportunity\""
                 )
             ),
             place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "Utopías Extraterrestres", //TODO
+            name = "Utopías Extraterrestres",
             startHora = LocalTime.of(4, 50),
             finishHora = LocalTime.of(5, 45),
             description = "",
@@ -462,28 +505,26 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. José FRANCO",
                     image = R.drawable.pepe_franco,
-                    biography = "Obtuvo el doctorado en Física por la Universidad de Wisconsin-Madison, USA. Actualmente\n" +
-                            "es Investigador Titular del Instituto de Astronomía de la UNAM (IA-UNAM). Su labor abarca\n" +
-                            "un amplio rango de actividades que incluyen docencia, investigación, gestión institucional,\n" +
-                            "promoción de proyectos científicos y artísticos y la comunicación de la ciencia. Ha publicado\n" +
-                            "más de 230 trabajos de investigación, docencia y difusión, y ha editado más de 35 libros y\n" +
+                    biography = "Obtuvo el doctorado en Física por la Universidad de Wisconsin-Madison, USA. Actualmente " +
+                            "es Investigador Titular del Instituto de Astronomía de la UNAM (IA-UNAM). Su labor abarca " +
+                            "un amplio rango de actividades que incluyen docencia, investigación, gestión institucional, " +
+                            "promoción de proyectos científicos y artísticos y la comunicación de la ciencia. Ha publicado " +
+                            "más de 230 trabajos de investigación, docencia y difusión, y ha editado más de 35 libros y " +
                             "revistas sobre estos temas.\n" +
-                            "\n" +
-                            "Su trabajo es reconocido internacionalmente y ha obtenido premios nacionales y extranjeros,\n" +
-                            "entre ellos el Doctorado Honoris Causa del Instituto Nacional de Astrofísica Óptica y\n" +
-                            "Electrónica (INAOE), así como el nombramiento de Caballero de la Orden de las Palmas\n" +
-                            "Académicas y la Condecoración de Oficial de la Orden Nacional del Mérito, ambos del Gobierno\n" +
+                            "Su trabajo es reconocido internacionalmente y ha obtenido premios nacionales y extranjeros, " +
+                            "entre ellos el Doctorado Honoris Causa del Instituto Nacional de Astrofísica Óptica y " +
+                            "Electrónica (INAOE), así como el nombramiento de Caballero de la Orden de las Palmas " +
+                            "Académicas y la Condecoración de Oficial de la Orden Nacional del Mérito, ambos del Gobierno " +
                             "de Francia.\n" +
+                            "Fue Director del IA-UNAM, Presidente de la Academia Mexicana de Ciencias, Director" +
+                            "General de la Dirección General de Divulgación de la Ciencia de la UNAM, Coordinador " +
+                            "General del Foro Consultivo Científico y Tecnológico AC, Coordinador del Programa de " +
+                            "Astrofísica Avanzada Guillermo Haro del INAOE y Editor de la serie Cambridge Contemporary " +
+                            "Astrophysics de la Universidad de Cambridge, Reino Unido. " +
                             "\n" +
-                            "Fue Director del IA-UNAM, Presidente de la Academia Mexicana de Ciencias, Director\n" +
-                            "General de la Dirección General de Divulgación de la Ciencia de la UNAM, Coordinador\n" +
-                            "General del Foro Consultivo Científico y Tecnológico AC, Coordinador del Programa de\n" +
-                            "Astrofísica Avanzada Guillermo Haro del INAOE y Editor de la serie Cambridge Contemporary\n" +
-                            "Astrophysics de la Universidad de Cambridge, Reino Unido.\n" +
-                            "\n" +
-                            "En 2009 integró la ciencia al Festival Internacional Cervantino, y en 2012 al Festival\n" +
-                            "Internacional de la Cultura Maya. Desde 2009 es Coordinador Nacional de la Noche de las\n" +
-                            "Estrellas, el evento de comunicación de la ciencia más importante de Latinoamérica, el cual se\n" +
+                            "En 2009 integró la ciencia al Festival Internacional Cervantino, y en 2012 al Festival " +
+                            "Internacional de la Cultura Maya. Desde 2009 es Coordinador Nacional de la Noche de las " +
+                            "Estrellas, el evento de comunicación de la ciencia más importante de Latinoamérica, el cual se " +
                             "realiza en más de 100 sedes de todo el país y ha atendido a más de 4 millones de personas."
                 ),
                 Speaker(
@@ -513,7 +554,7 @@ fun initInformation()  {
                     biography = "Licenciado, maestro y doctor en filosofía. Es académico de tiempo completo en la Biblioteca Francisco Xavier Clavigero de la Universidad Iberoamericana, donde ha coordinado diversas actividades académica y culturales, además de presidir el Club de Ciencia Ficción Ibero. Es también profesor del Departamento de Filosofía de la misma universidad y del doctorado en bioética en la Universidad Anáhuac."
                 ),
                 Speaker(
-                    name = "Gerardo Martínez Avilés",
+                    name = "Gerardo Martínez Avilés (IBERO)",
                     image = R.drawable.gerardo_martinez,
                     biography = "Licenciado en física por la UNAM, maestro en ciencias por la Universidad de Innsbruck, Austria y doctor en Astronomía por el Observatorio de Niza, Francia.\n" +
                             "Su tema de especialidad son observaciones de cúmulos de galaxias. Ha trabajado en astrobiología, modelos numéricos de interacción de marea en estrellas binarias y radioastronomía. Ha sido docente de física, matemáticas, historia y geografía en el Colegio Marymount Cuernavaca y la Universidad Panamericana CDMX.\n" +
@@ -531,7 +572,7 @@ fun initInformation()  {
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Nahiely Flores Fajardo",
+                    name = "Nahiely Flores Fajardo (UNAM)",
                     image = R.drawable.nahiely_flores_fajardo,
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
@@ -572,7 +613,7 @@ fun initInformation()  {
             type = TipoEvento.TALLER,
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Nahiely Flores Fajardo (coordinador)",
+                    name = "Dra. Nahiely Flores Fajardo (coordinadora)",
                     image = R.drawable.nahiely_flores_fajardo,
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
@@ -583,7 +624,7 @@ fun initInformation()  {
     )
     eventosObservacion = eventosObservacion.sortedBy { it.startHora }
     val observacion = IslaInfo(
-        "UTOPÍAS EXTRATERRESTRES : Observación",
+        "UTOPÍAS EXTRATERRESTRES: Satelite",
         R.drawable.ic_launcher_foreground,
         eventosObservacion,
         description = "Acompañanos a explorar el cosmos. Sumérgete en la experiencia de un planetario y, si el clima lo permite, observa el Sol con telescopios especiales durante la tarde. Al caer la noche, maravíllate con la Luna y Júpiter a través de nuestros telescopios. Una oportunidad para conectar directamente con las maravillas del universo."
@@ -593,7 +634,7 @@ fun initInformation()  {
             name = "La ciudad de la imaginación",
             startHora = LocalTime.of(4, 0),
             finishHora = LocalTime.of(7, 30),
-            description = "Galería de constelaciones y de objetos, como nebulosas o galaxias que nos lleva a la imaginación de la mente humana para encontrar formas en el cielo",
+            description = "Galería de constelaciones y de objetos, como nebulosas o galaxias que nos lleva a la imaginación de la mente humana para encontrar formas en el cielo (IBERO)",
             type = TipoEvento.EXPOSICION,
             exponents = null,
             place = "Sala B (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -602,7 +643,7 @@ fun initInformation()  {
     )
     eventosImaginacion = eventosImaginacion.sortedBy { it.startHora }
     val imaginacion = IslaInfo(
-        "UTOPÍAS EXTRATERRESTRES: Imaginación",
+        "UTOPÍAS EXTRATERRESTRES: Satelite",
         R.drawable.ic_launcher_foreground,
         eventosImaginacion,
         description = "Haz un viaje visual a través de una galería de constelaciones y objetos celestes. Descubre cómo la mente humana proyecta formas y narrativas en el firmamento, explorando la conexión entre el universo y nuestra capacidad de imaginar."
@@ -665,12 +706,8 @@ fun initInformation()  {
                 ),
                 Speaker(
                     name = "Dra. Nadia Alejandra Rivero Segura",
-                    image = R.drawable.person_solid,
-                    biography = "Posdoctorado.\n" +
-                            "Instituto de Fisiología Celular, UNAM.\n" +
-                            "Doctorado en Ciencias Biomédicas.\n" +
-                            "Facultad de Médicina, UNAM.\n" +
-                            "Licenciatura en Biología. Facultad de Ciencias, UNAM."
+                    image = R.drawable.nadia_rivero_segura,
+                    biography = "Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
                 )
             ),
             place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -696,18 +733,34 @@ fun initInformation()  {
             name = "En búsqueda de la fuente de la eterna juventud",
             startHora = LocalTime.of(6, 30),
             finishHora = LocalTime.of(7, 0),
-            description = "",
+            description = "Desde tiempos muy antiguos se ha mostrado un genuino interés por conocer ¿Por qué envejecemos?. Incluso este interés nos ha llevado a desafiar al envejecimiento y buscar estrategias que nos permitan evadir nuestro inexorable destino. Continuamos en búsqueda de La Fuente de la Eterna Juventud, tal como Lucas Cranach “ El Viejo”, lo plasmó en su óleo de 1556. En esta conferencia abordaremos el panorama actual de investigación científica en torno al envejecimiento (gerociencia) y revisaremos algunas de las estrategias actuales para conocer acerca del proceso y de cómo contrarrestarlo. ",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
                     name = "Dra. Nadia Alejandra Rivero Segura",
                     image = R.drawable.nadia_rivero_segura,
-                    biography = "- Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
+                    biography = "Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
                 ),
                 Speaker(
                     name = "Dr. Juan Carlos Gómez Verjan",
                     image = R.drawable.juan_carlos_verjan,
                     biography = "Juan Carlos Gómez Verjan es mexicano, Investigador en Ciencias Médica del Instituto Nacional de Geriatría (INGER) y pertenece al Sistema Nacional de Investigadores nivel 2. De formación es Químico Farmacéutico Biólogo por la Facultad de Química, UNAM. Maestro en Ciencias Biológicas con orientación en Biología Experimental por la Facultad de Ciencias, UNAM y Doctor en Ciencias Biomédicas por el Instituto de Química, UNAM; ambos títulos de posgrado obtenidos con Mención Honorífica. Posee diplomados en Epidemiología, Medicina y Complejidad, Análisis de Información Geoespacial así como en Riesgos Sanitarios. Ha publicado más de 40 artículos científicos, más de 10 capítulos de libro y es editor de 3 libros. Ha realizado 3 estancias de investigación internacionales en el Laboratorio de Biología de Redes del Instituto de Investigación Biomédica en Barcelona, el Laboratorio de Transcriptómica del Instituto de Medicina Molecular de la Universidad de Lisboa y el Sealy Aging Institute de la Universidad de Texas. Sus líneas de investigación se centran en el impacto que tienen las condiciones socioambientales en la edad epigenética de los individuos y en el desarrollo de fármacos geroprotectores.\n"
+                )
+            ),
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
+        ),
+        EventInfo(
+            name = "Exhibición de arte",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(7, 30),
+            description = "",
+            type = TipoEvento.EXHIBICION_ARTE,
+            exponents = listOf(
+                Speaker(
+                    name = "Artista plástico PERI",
+                    image = R.drawable.peri,
+                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
                 )
             ),
             place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -791,7 +844,7 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         ),
         EventInfo(
-            name = "La ciudad, utopía permanente",
+            name = "La ciudad, Utopía permanente",
             startHora = LocalTime.of(5,0),
             finishHora = LocalTime.of(5,45),
             description = "La utopía desde su definición se identifica como la idea de una sociedad futura guiada por características favorecedoras del bien humano y consta de un plan, un proyecto, una doctrina o un sistema ideales que parecen de muy difícil realización. Trata de un sueño inalcanzable y a su vez de la metodología para intentar lograrlo. La mesa iniciará con el recordatorio de varias Ciudades Utópicas a través de la Historia, tanto reales como ficticias; se hablará de la Atlántida, de la Republica de Platón y de Brasilia. Se podrá mencionar otros ejemplos como Metrópolis, la Ciudad del Sol o Filadelfia. En un segundo tiempo, se cuestionará cuáles son las utopías actuales para las ciudades contemporáneas y los retos que pueden representar. Posteriormente se presentará el proyecto de ciudad eco amigable del Mtro. Broissin. La platica de cierre retomara el tema de las utopías contemporáneas y de los mecanismos e instrumentos para lograrlas.\n",
@@ -888,10 +941,10 @@ fun initInformation()  {
         events = eventosUtopiasUrbanas,
         description = "Sumérgete en una exploración del pensamiento utópico y su relación con el tiempo, analizando cómo concebimos y a veces negamos el futuro. Descubre visiones de ciudades ideales a través de la historia y reflexiona sobre los retos y las utopías de las urbes contemporáneas. Además, explora proyectos arquitectónicos innovadores y participa en actividades creativas que reimaginan el espacio urbano."
     )
-    var eventosLudos = listOf( //TODO checar horas
+    var eventosLudos = listOf(
         EventInfo(
             name = "Contruyendo la ciudad del futuro \n" +
-                    "Fomentar la reflexión crítica y la creatividad sobre la organización de ciudades ideales",
+                    "Fomentar la reflexión crítica y la creatividad sobre la organización de ciudades ideales (IPN)",
             startHora = LocalTime.of(3,0),
             finishHora = LocalTime.of(5,30),
             description = "Inicio (15 min): Explicación y formación de equipos.\n" +
@@ -919,12 +972,12 @@ fun initInformation()  {
     )
     eventosLudos = eventosLudos.sortedBy { it.startHora }
     val ludos = IslaInfo(
-        name = "UTOPÍAS URBANAS: Ludos",
+        name = "UTOPÍAS URBANAS: Satelite",
         image = R.drawable.ic_launcher_foreground,
         events = eventosLudos,
         description = "Participa activamente en la creación y reimaginación de la ciudad ideal. Construye tu visión del futuro urbano en equipos y colabora en un mural colectivo. Un espacio lúdico para fomentar la creatividad y la reflexión crítica sobre nuestros entornos."
     )
-    var eventosArkhi = listOf( //TODO checar horas
+    var eventosArkhi = listOf(
         EventInfo(
             name = "Historia y teoría de la arquitectura",
             startHora = LocalTime.of(5,0),
@@ -932,13 +985,13 @@ fun initInformation()  {
             description = "Reflexion de 20 estudiantes de la Ibero de la matéria Historia y teoria de la arquitectura del siglo XVII a inicios del XIX. Presentaran laminas. ",
             exponents = null,
             type = TipoEvento.EXPOSICION,
-            place = "Pasillo de la sala B Centro Histórico y Cultural Juan de Dios Bátiz IPN",
+            place = "PASILLO DE LA SALA B (Centro Histórico y Cultural \"Juan de Dios Bátiz\" IPN) ",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )
     )
     eventosArkhi = eventosArkhi.sortedBy { it.startHora }
     val arkhi = IslaInfo(
-        name = "UTOPÍAS URBANAS: Arkhi",
+        name = "UTOPÍAS URBANAS: Satelite",
         image = R.drawable.ic_launcher_foreground,
         events = eventosArkhi,
         description = "Haz un viaje sobre la historia y teoria de la arquitectura."
@@ -1036,7 +1089,7 @@ fun initInformation()  {
         EventInfo(
             name = "Utopías y distopías en la relación del ser humano con las maquinas",
             startHora = LocalTime.of(6, 0),
-            finishHora = LocalTime.of(6, 30),
+            finishHora = LocalTime.of(6, 45),
             description = "La tecnología ha sido siempre compañera y aliada de la humanidad. Pero las nuevas tecnologías basadas en los avances de la computación y la robótica ofrecen posibilidades cada día más cercanas que, si bien abren perspectivas nuevas e inexploradas que son fascinantes, también pueden resultar inquietantes y hasta riesgosas. Conocerlos y entenderlos ayudará a su buen uso.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
@@ -1087,7 +1140,7 @@ fun initInformation()  {
                     biography = "Brenda Osnaya Álvarez es una deportista mexicana que ha logrado clasificar a los Juegos Paralímpicos de Tokio, Japón, en la rama femenil de patinaje sobre ruedas a alta velocidad. A los 28 años de edad, es la primer mujer mexicana en participar en el paratriatlón de los Juegos Olímpicos"
                 ),
                 Speaker(
-                    name = "Lic. Jessica Edith Gonzáles Martínez",
+                    name = "Lic. Jessica Edith Gonzáles Martínez (COPAME)",
                     image = R.drawable.jess_gonzales,
                     biography = ""
                 )
@@ -1119,7 +1172,7 @@ fun initInformation()  {
             description = "La utopía social (en contraposición a la literaria o filosófica) nos invita a construir una sociedad ideal (no solo a leerla o pensarla). Pero ¿qué sociedad ideal? O, mejor, ¿cómo decidimos qué sociedad ideal? Esta última formulación pone en juego la utopía democrática, para quienes creemos en la igualdad política sustantiva. Ahora bien, ¿el actual sistema político de democracia liberal-representativa –la democracia existente– encarna suficientemente esa utopía democrática? Si no lo creemos (y muchos datos nos invitan a no creerlo), entonces la pregunta deviene: ¿qué sistema político democrático podría facilitar la construcción de una sociedad ideal? En esta ponencia abordaré tal interrogante, planteando la posibilidad realista (no fantasiosa) de una democracia pospartidista. Discutiré tanto la falla fundamental de la democracia existente como su superación a través de la institución y operación de un Cuarto Poder del Estado, el Poder Ciudadano.",
             exponents = listOf(
                 Speaker(
-                    name = "Guillem Compte Nunes",
+                    name = "Dr. Guillem Compte Nunes (UNAM)",
                     image = R.drawable.guillem_compte,
                     biography = "Guillem Compte Nunes es Doctor en Ciencia Social con especialidad en Sociología por El Colegio de México. Investigador de tiempo completo, adscrito al Instituto de Investigaciones Sociales, UNAM. Profesor de asignatura de la Facultad de Ciencias Políticas y Sociales, UNAM. Desde 2021 Coordinador de la Cátedra Extraordinaria “Francisco de Vitoria-Bartolomé de las Casas”, UNAM. Miembro del Sistema Nacional de Investigadores, Nivel I. Sus líneas de investigación incluyen utopía, ideología, religiosidades contemporáneas, Estado, democracia, ciudadanía y derechos humanos. Ha publicado artículos en revistas académicas nacionales e internacionales. Es el autor del libro “Laicidad y religión civil”, co-compilador del libro “La autodeterminación de los pueblos: controversias en Europa y las Américas”, y coordinador del libro “Globalización desde un enfoque de derechos”."
                 )
@@ -1131,10 +1184,10 @@ fun initInformation()  {
     )
     eventosMundosDeseablesYNoDeseables2 = eventosMundosDeseablesYNoDeseables2.sortedBy { it.startHora }
     val mundosDeseablesYNoDeseables2 = IslaInfo(
-        name = "UTOPÍAS vs DISTOPÍAS: AULA 7",
+        name = "UTOPÍAS vs DISTOPÍAS: Satelite",
         image = R.drawable.ic_launcher_foreground,
         events = eventosMundosDeseablesYNoDeseables2,
-        description = "Adéntrate en un espacio de reflexión crítica sobre los futuros que anhelamos y aquellos que debemos evitar. A través de diversas ponencias, mesas redondas y conversatorios, exploraremos desde la utopía de una democracia pospartidista y las distopías imaginadas desde los estudios de género, hasta la propuesta de una sociedad más inclusiva y la persistencia de la misoginia. Analizaremos cómo construimos nuestras visiones de mundos deseables y los obstáculos que enfrentamos en el camino."
+        description = "¿Te has preguntado cómo sería un mundo verdaderamente justo, inclusivo y sostenible? ¿Y qué pasa cuando los sueños colectivos se enfrentan a las realidades más duras? Te invitamos a reflexionar, imaginar y debatir en este ciclo de ponencias con enfoques diversos sobre futuros posibles, desde la experiencia zapatista hasta la utopía del deporte y la democracia pospartidista."
     )
 
     var eventosSonoro = listOf(
@@ -1189,10 +1242,10 @@ fun initInformation()  {
     )
     eventosSonoro = eventosSonoro.sortedBy { it.startHora }
     val sonoro = IslaInfo(
-        name = "UTOPÍAS vs DISTOPÍAS: Sonoro",
+        name = "UTOPÍAS vs DISTOPÍAS: Satelite",
         image = R.drawable.ic_launcher_foreground,
         events = eventosSonoro,
-        description = "Disfruta de una pieza audiovisual que cuestiona los orígenes de la misoginia, explorando su impacto cultural y sus manifestaciones más extremas como el feminicidio. A través de fotografía viva, paisajes significativos y la lectura de un antiguo poema, la obra invita a reflexionar sobre las raíces occidentales de este problema."
+        description = "Reflexiona sobre el papel de la religión, la cultura y sus implicaciones sociales. A través del documental Teología en Contingencia y la obra visual De los Orígenes de la Misoginia, se propone un diálogo entre pensamiento teológico contemporáneo y crítica artística sobre los orígenes culturales de la violencia de género, explorando símbolos, mitos y realidades que siguen marcando nuestras sociedades."
     )
 
     var eventosUtopiasCientificas = listOf(
@@ -1219,7 +1272,7 @@ fun initInformation()  {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Verónica Díaz de León (UNAM)",
+                    name = "Verónica Díaz de León Bermúdez (IBERO)",
                     image = R.drawable.veronica_diaz,
                     biography = "Doctora en Filosofía por la Ibero, CDMX, Maestra en Filosofía por la UNAM y Licenciada en Filosofía por la UCSJ. Es integrante del Sistema Nacional de Investigadoras e Investigadores (SNII). Ha sido Personal Docente e Investigador (PDI) en la Universitat de Barcelona. (2019-2020). Pertenece a la Asociación de Epistemología de la Universidad Complutense de Madrid, a la Red de Mujeres Filósofas de América Latina y a la Asociación Filosófica de México. Se ha desempeñado como Árbitro en el Programa de Apoyo a Proyectos de Investigación e Innovación Tecnológica (PAPIT), Convocatorias 2024-2025, de la UNAM. También ha realizado dictámenes para revistas internacionales y nacionales. Es co-autora del libro El desmontaje de la filosofía. Editorial Sicómoro, Madrid, 2022. ISBN 9788412538908, y autora de artículos en revistas arbitradas. Cuenta con 18 años de experiencia como catedrática universitaria, tanto en posgrado como en licenciatura. Es especialista en filosofía de la tecnología disruptiva, historia de la filosofía, filosofía de la cultura e interseccionalidad."
                 )
@@ -1235,7 +1288,7 @@ fun initInformation()  {
             description = "Tres autoras de la revista Obsidiana, investigadoras mexicanas de diversas disciplinas, se reúnen para conversar y compartir con el público respecto a la influencia que ejercen las utopías y la imaginación en el futuro y en la construcción de nuevo conocimiento. ¡Imagina con ellas el futuro de la ciencia!",
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Elva Excobar Briones",
+                    name = "Dra. Elva Escobar Briones",
                     image = R.drawable.elva_escobar_briones,
                     biography = "Es investigadora del Instituto de Ciencias del Mar y Limnología (ICML) y docente de la UNAM. Ella realiza investigación en la biodiversidad de los fondos marinos profundos a bordo de los buques oceanográficos. El conocimiento que ha generado apoya la toma de decisiones nacionales e internacionales. Fue directora del ICML y representa al país como miembro de diversos foros internacionales y comités enfocados a las ciencias del océano."
                 ),
@@ -1245,7 +1298,7 @@ fun initInformation()  {
                     biography = "Matemática hispano-mexicana especializada en la teoría de control de ecuaciones diferenciales parciales parabólicas. Es investigadora del Instituto de Matemáticas de la UNAM, y expresidenta de la Sociedad Matemática Mexicana. (para el período 2018-2020). En 2020 fue nombrada miembro de la junta de gobierno del consejo universitario de la UNAM. Ha colaborado con matemáticos e ingenieros de México, Francia, España, Chile, Brasil, Colombia, Estados Unidos, Italia, Rumanía y Argentina."
                 ),
                 Speaker(
-                    name = "Luisa F. González Arribas",
+                    name = "Luisa F. González Arribas (UNAM)",
                     image = R.drawable.luisa_gonzalez,
                     biography = "Luisa inició su labor en comunicación de la ciencia a partir del año 2000. Desde entonces ha colaborado como reportera, editora, profesora, coordinadora de prensa, guionista, tallerista y consultora en diversos proyectos e instituciones. Actualmente es Vicepresidenta de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica (Somedicyt) y Editora en jefe de la revista Obsidiana: ciencia y cultura por México."
                 )
@@ -1290,7 +1343,7 @@ fun initInformation()  {
                     "También se busca que haya participación por parte del público para discutir sobre el rol que tendrá el humano para co existir con la Inteligencia Artificial.",
             exponents = listOf(
                 Speaker(
-                    name = "Carlos Andrés Hernández Alamillo",
+                    name = "Carlos Andrés Hernández Alamillo (Tec de Monterrey)",
                     image = R.drawable.carlos_andres_hernandez_alamillo,
                     biography = "Titulado como Licenciado en Administración de Empresas por el Instituto Tecnológico y de Estudios Superiores de Monterrey. \n" +
                             "Adquirió un Master en Administración por la universidad de Doshisha en Kioto. \n" +
@@ -1310,7 +1363,7 @@ fun initInformation()  {
             description = "Como decía Eduardo Galeano \"Las utopías sirven para caminar\".  Para caminar hacia la utopía de un futuro sostenible con una sociedad equitativa e incluyente se requiere de la construcción de otra utopía: la de la Sociedad Educativa que propusieron Jacques Delors y sus colegas. En la construcción de esta gran utopía, la comunicación pública de la ciencia desempeña un papel protagónico.",
             exponents = listOf(
                 Speaker(
-                    name = "Elaine Reynoso Haynes",
+                    name = "Dra. Elaine Reynoso Haynes (DGDC)",
                     image = R.drawable.elaine_reynoso,
                     biography = "Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados. Sus áreas de especialización en el campo de la CPC incluyen la planeación, evaluación, desarrollo y operación de museos de ciencia; la formación de divulgadores; y el diseño curricular en comunicación pública de la ciencia. Con una amplia trayectoria académica, cuenta con más de 100 publicaciones en revistas especializadas y libros, además de numerosas participaciones en congresos nacionales e internacionales. Ha organizado diversos congresos y foros académicos en el ámbito de la CPC, tanto en México como en el extranjero. Ha sido profesora invitada en prestigiosas instituciones como la Universidad Federal Fluminense y la Universidad Federal de Río de Janeiro, en Brasil; la Universidad “La Sapienza” en Roma y la Universidad de Messina, en Italia. Asimismo, ha asesorado a varios museos de ciencia en México y otros países. "
                 )
@@ -1336,7 +1389,7 @@ fun initInformation()  {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Leopoldo Iribarren ",
+                    name = "Leopoldo Iribarren",
                     image = R.drawable.person_solid,
                     biography = ""
                 )
@@ -1454,7 +1507,7 @@ fun initInformation()  {
                     biography = "Anne-Cécile Ott es actualmente investigadora Posdoctoral en sociología en el Centro Émile Durkheim de la Universidad de Burdeos.  Después de haber realizado una tesis sobre las representaciones infantiles del espacio mundial, ha trabajado como postdoctoral en la construcción de prácticas culturales y gustos musicales, así como en las transformaciones de estas prácticas durante la pandemia de COVID-1919, dentro de los proyectos MaMa y RECORDS, en el Centro de Investigación sobre las Desigualdades Sociales de SciencesPo."
                 )
             ),
-            type = TipoEvento.VIDEOCONFERENCIA,
+            type = TipoEvento.GRABACION,
             place = "Aula 2 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
@@ -1511,7 +1564,7 @@ fun initInformation()  {
         ), EventInfo(
         name = "La utopía de Gaia: ¿Puede nuestro planeta recuperar el equilibrio y la autoorganización?",
         startHora = LocalTime.of(6,30),
-        finishHora = LocalTime.of(7,15),
+        finishHora = LocalTime.of(7,30),
         description = "Se ha propuesto que la criticalidad, definida como la zona fronteriza entre dos fases (o estados colectivos diferentes) en los que pueden encontrarse los sistemas complejos, corresponde a un equilibrio dinámico en estos sistemas. Esto puede interpretarse, en el caso biológico, como el estado al que tienden por selección natural los sistemas que evolucionan en un medio ambiente cambiante, de manera que optimizan los requerimientos antagónicos de robustez y adaptabilidad. Esto ha sido comprobado, por ejemplo, a través de la medición de la variabilidad del ritmo cardíaco en mamíferos jóvenes y sanos, incluyendo los seres humanos. Estudiamos el comportamiento de la temperatura promedio de nuestro planeta desde 1880 hasta la fecha para demostrar el sorprendente equilibrio que se ha establecido entre la vida (nuestra biósfera) y nuestra atmósfera: el comportamiento  autoorganizado de la Tierra (Gaia) y su acelerada pérdida, debida esencialmente al desequilibrio ecológico y a la emisión de gases de invernadero.\n",
         exponents = listOf(
             Speaker(
@@ -1535,7 +1588,7 @@ fun initInformation()  {
 
     var eventosFuturo = listOf(
         EventInfo(
-            name = "Economía basada en futur thinking",
+            name = "Economía basada en future thinking",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
             description = "Esta plática tiene como objetivo explorar el espacio cognitivo y a través del pensamiento futuro donde haremos un recorrido por algunas teorías económicas y a partir de ello viajaremos al año 2050 para traernos ideas y algún artefacto que nos permita el bien común, generar bienestar social y por supuesto crecimiento y desarrollo económico en nuestro entorno.",
@@ -1564,7 +1617,7 @@ fun initInformation()  {
                     "Duración: 52 minutos \n",
             exponents = listOf(
                 Speaker(
-                    name = "Jordi Mariscal",
+                    name = "Jordi Marsical",
                     image = R.drawable.jordi_mariscal,
                     biography = "Es un director, guionista y productor que ha combinado ficción y documental. Entre 2019 y 2024 dirigió y creó Héroes Verdes México, una serie sobre activistas ambientales que transforman su entorno. Para ello recorrió el país, desde las selvas de Chiapas hasta el desierto de Sonora. Ha sido productor ejecutivo de filmes como Días negros (2020) y Niebla de Culpa (2017). En 2012 dirigió y coescribió Canela, una historia que destaca la unión familiar y la cocina mexicana de gran éxito en Estados Unidos. También codirigió el documental El danzón del coyote (2007). \n" +
                             "Ha vivido por temporadas en Francia, España e India. Cuenta con maestrías de periodismo y de literatura. Además, ha escrito dos libros e impartido pláticas de cine y de literatura."
@@ -1637,7 +1690,7 @@ fun initInformation()  {
     )
     eventosFuturo = eventosFuturo.sortedBy { it.startHora }
     val sateliteElMundoQueViene = IslaInfo(
-        name = "UTOPÍAS DEL MUNDO QUE VIENE: Futuro",
+        name = "UTOPÍAS DEL MUNDO QUE VIENE: Satelite",
         image = R.drawable.ic_launcher_foreground,
         events = eventosFuturo,
         description = "Este satelite explora el futuro desde diversas perspectivas: la economía impulsada por el pensamiento prospectivo, la defensa del medio marino, la filosofía como base para construir el mañana, y el análisis crítico de las distopías para imaginar futuros utópicos. Únete a esta reflexión sobre cómo concebimos y creamos el porvenir."
@@ -1671,7 +1724,7 @@ fun initInformation()  {
             description = "El mundo post-apocalíptico, imaginado por los teólogos cristianos medievales, es utópico: para los humanos, es un mundo justo donde unos reciben penas bien merecidas y otros son recompensados. Ahora bien, ¿qué pasa con la naturaleza en este mundo que se supone es el más perfecto posible?  ¿Qué destino espera a los astros, las plantas, los animales o incluso los cuatro elementos de los que están hechos todos los cuerpos? Tantas preguntas planteadas en los escritos de los siglos XIII-XIV.",
             exponents = listOf(
                 Speaker(
-                    name = "Maria Sorokina (UPEC)",
+                    name = "Maria Sorokina\n(Universidad Paris-Est Créteil)",
                     image = R.drawable.maria_sorokina,
                     biography = "Investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. "
                 )
@@ -1744,17 +1797,7 @@ fun initInformation()  {
             type = TipoEvento.EXPOSICION,
             place = "Aula 4 Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        )/*,
-        EventInfo(
-            name = "Teología en Contigencia",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(7, 0),
-            description = "Coedición entre el ITESO, Universidad Jesuita de Guadalajara, a través de la Biblioteca Dr. Jorge Villalobos Padilla SJ, el Departamento de Ciencias Religiosas de la Universidad Iberoamericana Ciudad de México y el CEX",
-            type = TipoEvento.DOCUMENTAL,
-            exponents = null,
-            place = "Salón Niño Álvarez IPN",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
-        )*/
+        )
     )
     eventosEspiritualidades = eventosEspiritualidades.sortedBy { it.startHora }
     val espiritualidadesYReligiones = IslaInfo(
@@ -1763,34 +1806,13 @@ fun initInformation()  {
         events = eventosEspiritualidades,
         description = "Sumérgete en un viaje a través de las utopías inherentes a diferentes expresiones de la espiritualidad. Desde la concepción masónica de una fraternidad universal y la visión cristiana del paraíso post-apocalíptico, hasta los ideales de justicia social en la evangelización dominicana y la Teología de la Liberación, exploraremos cómo la fe ha inspirado la búsqueda de mundos ideales y la transformación de la realidad."
     )
-/*
-    var eventosTeologia = listOf(
-        EventInfo(
-            name = "Teología en Contigencia",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(7, 0),
-            description = "Coedición entre el ITESO, Universidad Jesuita de Guadalajara, a través de la Biblioteca Dr. Jorge Villalobos Padilla SJ, el Departamento de Ciencias Religiosas de la Universidad Iberoamericana Ciudad de México y el CEX",
-            type = TipoEvento.DOCUMENTAL,
-            exponents = null,
-            place = "AULA 5 UNIVERSIDAD NACIONAL ROSARIO CASTELLANOS",
-            direction = "https://maps.app.goo.gl/BqU6EEr8XxGmR43i8"
-        )
-    )
-    eventosTeologia = eventosTeologia.sortedBy { it.startHora }
-    val teologia = IslaInfo(
-        name = "Espiritualidades y religiones: Teología",
-        image = R.drawable.ic_launcher_foreground,
-        events = eventosTeologia,
-        description = "¿Qué significa la teología hoy? Desvélalo en \"Teología en Contigencia\". Una coedición imperdible del ITESO, la Ibero y el CEX que te invita a cuestionar y comprender el papel de la teología en un mundo en constante cambio. Prepárate para una experiencia documental que te hará pensar."
-    )
-*/
     islasGlobal = mutableListOf(
         amaurote, //UTOPÍA 0
         cine, //ARTES:CINE (carpa negra) 1
         estraterrestres, //EXTRATERRESTRE 2
         observacion, //EXTRATERRESTRE: OBSERVACION 3
         imaginacion, //EXTRATERRESTRE: IMAGINACION 4
-        fabricaDelCuerpo, //FABRICA DEL CUERPO 5
+        fabricaDelCuerpo, //FABRICA DEL CUERPO 5 //TODO juntar amorfo a la fabrica del cuerpo
         amorfo, //FABRICA DEL CUERPO: AMORFO 6
         utopiasUrbanas, // UTOPÍAS URBANAS 7
         ludos, // UTOPÍAS URBANAS: LUDOS 8

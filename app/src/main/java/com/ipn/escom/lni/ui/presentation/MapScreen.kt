@@ -109,12 +109,13 @@ fun ScrollableMap(
                 idIsland = 18
                 showDialog = true
             }
-            // TODO: Definir isla. satelite de Mundo que viene.
+            // Isla: Mundo que viene: Futuro.
             CirclePoint( modifier = Modifier.size(72.dp)
                 .constrainAs(U7) {
                     top.linkTo(U2.top, margin = (-16).dp)
                     start.linkTo(secondGuideline)
                 }) {
+                idIsland = 19
                 showDialog = true
             }
             // Isla: Espiritualidades y religiones
@@ -136,20 +137,22 @@ fun ScrollableMap(
                 showDialog = true
 
             }
-            // TODO: Define la isla. Satelite de utopias vs distopias
+            // Isla: Utopias vs distopias: Satelite 1
             CirclePoint( modifier = Modifier.size(64.dp)
                 .constrainAs(U8) {
                     bottom.linkTo(U4.top)
                     start.linkTo(U4.start)
                 }) {
+                idIsland = 11
                 showDialog = true
             }
-            // TODO: Define la isla. Satelite de utopias vs distopias
+            // Isla: Utopias vs distopias: Satelite 2
             CirclePoint( modifier = Modifier.size(80.dp)
                 .constrainAs(U9) {
                     bottom.linkTo(U4.top, margin = (-16).dp)
                     start.linkTo(U4.end, margin = 32.dp)
                 }) {
+                idIsland = 12
                 showDialog = true
             }
             // Isla: Ciencia y tecnología
@@ -174,7 +177,7 @@ fun ScrollableMap(
                 showDialog = true
 
             }
-            // TODO: Define la isla. Calle manuel carpio
+            // Isla: Calle manuel carpio
             CirclePoint(
                 modifier = Modifier.size(120.dp)
                     .constrainAs(M) {
@@ -182,6 +185,7 @@ fun ScrollableMap(
                         start.linkTo(middleGuidelineH, margin = (-30).dp)
                     }
             ) {
+                idIsland = 16
                 showDialog = true
 
             }
@@ -197,7 +201,7 @@ fun ScrollableMap(
                 showDialog = true
 
             }
-            // TODO: Define la isla. Satelite de artes
+            // Isla: Artes - Satelite 1
             CirclePoint(
                 modifier = Modifier.size(72.dp)
                     .constrainAs(I9) {
@@ -205,9 +209,10 @@ fun ScrollableMap(
                         start.linkTo(I1.end)
                     }
             ) {
+                idIsland = 15
                 showDialog = true
             }
-            // TODO: Define la isla. Satelite de artes
+            // Isla: Artes - Satelite 2
             CirclePoint(
                 modifier = Modifier.size(88.dp)
                     .constrainAs(I10) {
@@ -215,6 +220,7 @@ fun ScrollableMap(
                         start.linkTo(I1.end, margin = (-16).dp)
                     }
             ) {
+                idIsland = 1
                 showDialog = true
             }
             // Isla: Extraterrestres.
@@ -228,7 +234,7 @@ fun ScrollableMap(
                 idIsland = 2
                 showDialog = true
             }
-            // TODO: Define la isla. Satelite de utopias Extraterrestres.
+            // Isla: Extraterrestres - Satelite 1.
             CirclePoint(
                 modifier = Modifier.size(80.dp)
                     .constrainAs(I8) {
@@ -237,6 +243,18 @@ fun ScrollableMap(
                     }
             ) {
                 showDialog = true
+                idIsland = 3
+            }
+            // Isla: Extraterrestres - Satelite 2.
+            CirclePoint(
+                modifier = Modifier.size(width = 120.dp, height = 64.dp)
+                    .constrainAs(I7) {
+                        bottom.linkTo(I5.top, margin = 16.dp)
+                        start.linkTo(I4.end, margin = 16.dp)
+                    }
+            ) {
+                showDialog = true
+                idIsland = 4
             }
             // Isla: Fabrica del cuerpo
             CirclePoint(
@@ -261,7 +279,7 @@ fun ScrollableMap(
                 idIsland = 7
                 showDialog = true
             }
-            // TODO: Define la isla. Satelite de utopias urbanas.
+            // Utopias Urbanas - Satelite 1.
             CirclePoint(
                 modifier = Modifier.size(width = 80.dp, height = 72.dp)
                     .constrainAs(I5) {
@@ -269,9 +287,10 @@ fun ScrollableMap(
                         start.linkTo(I4.end)
                     }
             ) {
+                idIsland = 8
                 showDialog = true
             }
-            // TODO: Define la isla. Satelite de utopias urbanas.
+            // Utopias Urbanas - Satelite 2.
             CirclePoint(
                 modifier = Modifier.size(width = 72.dp, height = 102.dp)
                     .constrainAs(I6) {
@@ -279,16 +298,7 @@ fun ScrollableMap(
                         end.linkTo(I4.start)
                     }
             ) {
-                showDialog = true
-            }
-            // TODO: Define la isla. Alchile quien sabe que pedo con esta.
-            CirclePoint(
-                modifier = Modifier.size(width = 120.dp, height = 64.dp)
-                    .constrainAs(I7) {
-                        bottom.linkTo(I5.top, margin = 16.dp)
-                        start.linkTo(I4.end, margin = 16.dp)
-                    }
-            ) {
+                idIsland = 9
                 showDialog = true
             }
         }
