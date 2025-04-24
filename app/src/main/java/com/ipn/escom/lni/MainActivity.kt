@@ -45,10 +45,10 @@ fun initInformation()  {
         EventInfo(
             name = "Inaguración del evento",
             startHora = LocalTime.of(3,0),
-            finishHora = LocalTime.of(3,45),
+            finishHora = LocalTime.of(4,0),
             description = "Presidium :" +
                     "Dra. Alma Herrera, Rectora de la UNRC, \n" +
-                    "Dr. Arturo Reyes Sandoval, Director general del IPN, \n" +
+                    "Mtra. Yessica Gasca Leyva, Secretaria de Innovación e Integración Social \n" +
                     "Dr. Luis Arriaga Valenzuela, S.J., Rector de la Universidad Iberoamericana, \n" +
                     "Dra. Rosaura Ruiz Gutiérrez, Secretaria de Ciencias, Humanidades, Tecnología e Innovaciones, \n" +
                     "Sra. Delphine Borione, Embajadora de Francia en México. \n",
@@ -111,10 +111,10 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
         EventInfo(
-            name = "Construir, cooperar y comunicar en ciencia, porque ciencia que no se comunica no sirve",
+            name = "Ciencia que no se comunica no sirve",
             startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(6,0),
-            description = "",
+            description = "Construir, cooperar y comunicar en ciencia, porque ciencia que no se comunica no sirve",
             exponents = listOf(
                 Speaker(
                     name = "Dalila Aldana Aranda\n" +
@@ -318,7 +318,7 @@ fun initInformation()  {
         EventInfo(
             name = "Poesía Slam",
             startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(5, 0),
+            finishHora = LocalTime.of(5, 40),
             description = "Versos de Utopía",
             type = TipoEvento.TALLER,
             exponents = null,
@@ -327,8 +327,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Actos Musicales",
-            startHora = LocalTime.of(5, 0),
-            finishHora = LocalTime.of(5, 45),
+            startHora = LocalTime.of(5, 40),
+            finishHora = LocalTime.of(6, 25),
             description = "",
             type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
@@ -337,8 +337,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "La primavera de los poetas",
-            startHora = LocalTime.of(5, 45),
-            finishHora = LocalTime.of(6, 15),
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(7, 0),
             description = "",
             type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
@@ -385,7 +385,7 @@ fun initInformation()  {
                 )
             ),
             type = TipoEvento.ACTO_MUSICAL,
-            place = "Centro histórico y cultural Juan de Dios Batiz IPN",
+            place = "Escenario principal Centro histórico y cultural Juan de Dios Batiz IPN",
             direction = "https://maps.app.goo.gl/jWXyn7X3mgFq5h2h9"
         )
     )
@@ -410,6 +410,43 @@ fun initInformation()  {
                     name = "Marcela Chao",
                     image = R.drawable.marcela_chao,
                     biography = "Marcela Chao es psicóloga, curadora y artista. Desde 2016 dirige Marsarchive.org, una plataforma dedicada a la investigación y creación artística en torno al planeta Marte como metáfora para repensar los futuros de la humanidad y sus ficciones. Su trabajo articula arte, ciencias y pensamiento crítico para cuestionar las visiones hegemónicas sobre la exploración espacial."
+                ),
+                Speaker(
+                    name = "Karla GASCÓN",
+                    image = R.drawable.`Karla_Gascón`,
+                    biography = "Karla Gascón (CDMX) estudió psicología social y diseño de la comunicación gráfica, entusiasta incansable, improvisadora en el teatro y en la vida. Actualmente se dedica a acompañar procesos de formación y empoderamiento para mujeres en América Latina.\n"
+                ),
+                Speaker(
+                    name = "Alejandra ESPINO DEL CASTILLO",
+                    image = R.drawable.Alejandra_ESPINO,
+                    biography = "Historietista y artista visual. Becaria del programa Jóvenes Creadores del FONCA (2011-2012) y miembro del Sistema Nacional de Creadores de Arte (2019-2022). Realizó la residencia de creación de historieta de la Casa del Autor de Zapopan (2024) y fue seleccionada para la colaboración entre esta institución y la editorial/librería Casa Impronta. Fue seleccionada para el proyecto de intercambio de artistas de cómic Transcómic, como parte del Año Dual Alemania-México. Ha colaborado en antologías como Keret en su tinta (Ed. Sexto Piso, 2013), La Familia Mexicana (Éditions FLBLB, 2016) y Transcómic (Marvin/Goethe Institut, 2018). Con el colectivo Cúmulo de Tesla publicó el libro Mis pies tienen raíz (Océano, 2022). Desde 2021 es parte del Seminario de Estéticas de Ciencia Ficción del CENIDIAP. Desde 2020 desarrolla el podcast de divulgación de historieta Conversacómix con Alfredo Guzmán Tinajero.\n"
+                ),
+                Speaker(
+                    name = "Dra. Anne W. JOHNSON",
+                    image = R.drawable.Johnson,
+                    biography = "Profesora-Investigadora del Posgrado en Antropología Social del Departamento de Ciencias Políticas y Sociales de la Universidad Iberoamericana, donde imparte cursos sobre ciencia y tecnología, antropología de los futuros y cultura material. Es doctora y\n" +
+                            " maestra en Antropología Social por la Universidad de Texas en Austin, y tiene la licenciatura en Antropología y Artes Teatrales por la Brown University. Ha publicado en libros y revistas especializadas, nacionales e internacionales, incluyendo artículos en la Revista Colombiana de\n" +
+                            " Antropología (2023) y Acta Astronautica (2021), y capítulos en los libros Space Feminisms (Routledge, 2024), The Routledge Encyclopedia of the Social Studies of Outer Space (Routledge,\n" +
+                            " 2023) y Southern Space Studies (Springer, 2022). Su libro sobre los imaginarios mexicanos sobre el espacio exterior y el futuro desde perspectivas tecnocientíficas y artísticas está en prensa con la\n" +
+                            " Universidad de Arizona.\n" +
+                            " \n" +
+                            "\n"
+                )
+            ),
+            place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
+        ),
+        EventInfo(
+            name = "Las hipótesis de vida extraterrestre",
+            startHora = LocalTime.of(4, 30),
+            finishHora = LocalTime.of(4, 45),
+            description = "",
+            type = TipoEvento.EXPOSICION,
+            exponents = listOf(
+                Speaker(
+                    name = "Stéphane Basa",
+                    image = R.drawable.person_solid,
+                    biography = "" //falta la biografia
                 )
             ),
             place = "SALON JUAN DE DIOS BATIZ (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -417,20 +454,37 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Utopías Extraterrestres", //TODO
-            startHora = LocalTime.of(4, 30),
-            finishHora = LocalTime.of(5, 15),
+            startHora = LocalTime.of(4, 50),
+            finishHora = LocalTime.of(5, 45),
             description = "",
             type = TipoEvento.MESA_REDONDA,
             exponents = listOf(
                 Speaker(
-                    name = "Pepe Franco",
-                    image = R.drawable.person_solid,
-                    biography = ""
-                ),
-                Speaker(
-                    name = "Stéphane Basa",
-                    image = R.drawable.person_solid,
-                    biography = ""
+                    name = "Dr. José FRANCO",
+                    image = R.drawable.pepe_franco,
+                    biography = "Obtuvo el doctorado en Física por la Universidad de Wisconsin-Madison, USA. Actualmente\n" +
+                            "es Investigador Titular del Instituto de Astronomía de la UNAM (IA-UNAM). Su labor abarca\n" +
+                            "un amplio rango de actividades que incluyen docencia, investigación, gestión institucional,\n" +
+                            "promoción de proyectos científicos y artísticos y la comunicación de la ciencia. Ha publicado\n" +
+                            "más de 230 trabajos de investigación, docencia y difusión, y ha editado más de 35 libros y\n" +
+                            "revistas sobre estos temas.\n" +
+                            "\n" +
+                            "Su trabajo es reconocido internacionalmente y ha obtenido premios nacionales y extranjeros,\n" +
+                            "entre ellos el Doctorado Honoris Causa del Instituto Nacional de Astrofísica Óptica y\n" +
+                            "Electrónica (INAOE), así como el nombramiento de Caballero de la Orden de las Palmas\n" +
+                            "Académicas y la Condecoración de Oficial de la Orden Nacional del Mérito, ambos del Gobierno\n" +
+                            "de Francia.\n" +
+                            "\n" +
+                            "Fue Director del IA-UNAM, Presidente de la Academia Mexicana de Ciencias, Director\n" +
+                            "General de la Dirección General de Divulgación de la Ciencia de la UNAM, Coordinador\n" +
+                            "General del Foro Consultivo Científico y Tecnológico AC, Coordinador del Programa de\n" +
+                            "Astrofísica Avanzada Guillermo Haro del INAOE y Editor de la serie Cambridge Contemporary\n" +
+                            "Astrophysics de la Universidad de Cambridge, Reino Unido.\n" +
+                            "\n" +
+                            "En 2009 integró la ciencia al Festival Internacional Cervantino, y en 2012 al Festival\n" +
+                            "Internacional de la Cultura Maya. Desde 2009 es Coordinador Nacional de la Noche de las\n" +
+                            "Estrellas, el evento de comunicación de la ciencia más importante de Latinoamérica, el cual se\n" +
+                            "realiza en más de 100 sedes de todo el país y ha atendido a más de 4 millones de personas."
                 ),
                 Speaker(
                     name = "William Lee",
@@ -448,8 +502,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Buscando una iluminación exterior: implicaciones filosóficas de la vida extraterrestre a partir de la C-F",
-            startHora = LocalTime.of(5, 15),
-            finishHora = LocalTime.of(5, 45),
+            startHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(6, 15),
             description = "",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
@@ -471,8 +525,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Utopías del Universo \"La astronomía en el urbanismo prehispánico\"",
-            startHora = LocalTime.of(5, 45),
-            finishHora = LocalTime.of(6, 15),
+            startHora = LocalTime.of(6, 15),
+            finishHora = LocalTime.of(6, 45),
             description = "Eventos como la salida y puesta del Sol en ciertos días, la aparición de algunas estrellas en el cielo, y otros, determinaron el urbanismo del México prehispánico. A 700 años de la fundación de Tenochtitlán, exploraremos algunos de estos ejemplos.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
@@ -487,8 +541,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Cielos utópicos: entre la astronomía cultural y la exploración del cosmos",
-            startHora = LocalTime.of(6, 15),
-            finishHora = LocalTime.of(6, 45),
+            startHora = LocalTime.of(6, 45),
+            finishHora = LocalTime.of(7, 15),
             description = "Desde tiempos inmemoriales, las civilizaciones han mirado al cielo en busca de significado, orden y respuestas. Los pueblos antiguos imaginaron sus propias \"utopías celestes\", reflejando en el cosmos sus esperanzas y estructuras sociales. En la actualidad, la astronomía y la exploración espacial nos llevan a imaginar nuevas utopías extraterrestres, desde colonias en Marte hasta ciudades flotantes en Venus. Esta ponencia explorará cómo las visiones ancestrales del cosmos dialogan con los proyectos actuales de colonización espacial, planteando preguntas sobre la sostenibilidad, la ética y el futuro de la humanidad más allá de la Tierra.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
@@ -578,7 +632,7 @@ fun initInformation()  {
         EventInfo(
             name = "Antienvejecimiento:¿de quién estamos corriendo?",
             startHora = LocalTime.of(4, 45),
-            finishHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(5, 15),
             description = "En esta charla exploraré cómo la narrativa del anti-envejecimiento está plagada de promesas utópicas: una búsqueda por desafiar el tiempo, detener la muerte y alcanzar una juventud eterna. Revisaré los mensajes culturales que nos han condicionado en Occidente sobre la lucha contra la edad y cómo esta narrativa se entrelaza con expectativas de salud, bienestar, riqueza y belleza.\n" +
                     "A través de ejemplos de publicidad y narrativas de la industria wellness, plantearé preguntas como: ¿Qué futuro imaginamos al correr del envejecimiento? ¿Qué tipo de utopía buscamos cuando esperamos que la medicina o la industria del bienestar nos detengan el tiempo? ¿Porque hablar de la muerte es necesario?\n",
             type = TipoEvento.EXPOSICION,
@@ -594,8 +648,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "La utopía de la juventud y de la belleza perpetuales",
-            startHora = LocalTime.of(5, 45),
-            finishHora = LocalTime.of(6, 30),
+            startHora = LocalTime.of(5, 15),
+            finishHora = LocalTime.of(6, 0),
             description = "",
             type = TipoEvento.MESA_REDONDA,
             exponents = listOf(
@@ -624,8 +678,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Proceso creativo detrás de seres híbridos",
-            startHora = LocalTime.of(6, 30),
-            finishHora = LocalTime.of(7, 0),
+            startHora = LocalTime.of(6, 0),
+            finishHora = LocalTime.of(6, 30),
             description = "Mi ponencia abordará el proceso creativo detrás de los seres híbridos que caracterizan mi trabajo escultórico. Hablaré desde el origen conceptual de cada obra, la elección simbólica de las especies humanas y animales, hasta el desarrollo del diseño y modelado. Compartiré cómo se materializa la pieza a través de técnicas como el moldeado, vaciado y fundición en bronce. Exploraré la relación entre naturaleza, cuerpo y transformación, que da vida a estas criaturas fantásticas. La charla busca revelar el viaje completo de una escultura, desde la idea hasta su forma final.",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
@@ -639,20 +693,21 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
-            name = "Ponencia de la Dra. Nadia Rivero Segura",
-            startHora = LocalTime.of(7, 0),
-            finishHora = LocalTime.of(7, 30),
+            name = "En búsqueda de la fuente de la eterna juventud",
+            startHora = LocalTime.of(6, 30),
+            finishHora = LocalTime.of(7, 0),
             description = "",
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
                     name = "Dra. Nadia Alejandra Rivero Segura",
-                    image = R.drawable.person_solid,
-                    biography = "Posdoctorado.\n" +
-                            "Instituto de Fisiología Celular, UNAM.\n" +
-                            "Doctorado en Ciencias Biomédicas.\n" +
-                            "Facultad de Médicina, UNAM.\n" +
-                            "Licenciatura en Biología. Facultad de Ciencias, UNAM."
+                    image = R.drawable.NADIA_RIVERO_SEGURA,
+                    biography = "- Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
+                ),
+                Speaker(
+                    name = "Dr. Juan Carlos Gómez Verjan",
+                    image = R.drawable.JUAN_CARLOS_VERJAN,
+                    biography = "Juan Carlos Gómez Verjan es mexicano, Investigador en Ciencias Médica del Instituto Nacional de Geriatría (INGER) y pertenece al Sistema Nacional de Investigadores nivel 2. De formación es Químico Farmacéutico Biólogo por la Facultad de Química, UNAM. Maestro en Ciencias Biológicas con orientación en Biología Experimental por la Facultad de Ciencias, UNAM y Doctor en Ciencias Biomédicas por el Instituto de Química, UNAM; ambos títulos de posgrado obtenidos con Mención Honorífica. Posee diplomados en Epidemiología, Medicina y Complejidad, Análisis de Información Geoespacial así como en Riesgos Sanitarios. Ha publicado más de 40 artículos científicos, más de 10 capítulos de libro y es editor de 3 libros. Ha realizado 3 estancias de investigación internacionales en el Laboratorio de Biología de Redes del Instituto de Investigación Biomédica en Barcelona, el Laboratorio de Transcriptómica del Instituto de Medicina Molecular de la Universidad de Lisboa y el Sealy Aging Institute de la Universidad de Texas. Sus líneas de investigación se centran en el impacto que tienen las condiciones socioambientales en la edad epigenética de los individuos y en el desarrollo de fármacos geroprotectores.\n"
                 )
             ),
             place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -748,7 +803,7 @@ fun initInformation()  {
                 ),
                 Speaker(
                     name = "Arq. Bruno Roche\n(Secretaria de Comunicaciones y Transporte - SICT)",
-                    image = R.drawable.person_solid,
+                    image = R.drawable.person_solid, //todavia no hay foto
                     biography = "Bruno Roche es un arquitecto nacido en Francia en 1982 y titulado de la Escuela Nacional de Arquitectura y Paisaje de Bordeaux (Burdeos). Después de varios viajes a México, toma la decisión en 2012 de mudarse e inicia una colaboración de 10 años con el despacho liderado por el arq. Gerardo Broissin. En 2022, se le ofrece de participar en el Programa de Mejoramiento Urbano realizado por la Secretaria de Desarrollo Territorial (SEDATU); durante 2 años participa en mas de 100 proyectos ejecutivos y obras en toda la República. Actualmente se encuentra en la Secretaria de Comunicaciones y Transporte (SICT) como Director Ejecutivo en la Unidad de Proyectos de Infraestructura Urbana y Espacio Público con el arq. Roman Meyer con el propósito de mantener una estética basada en una arquitectura económica y funcional en colaboración con las distintas instancias del Gobierno Federal."
                 ),
                 Speaker(
@@ -837,8 +892,8 @@ fun initInformation()  {
         EventInfo(
             name = "Contruyendo la ciudad del futuro \n" +
                     "Fomentar la reflexión crítica y la creatividad sobre la organización de ciudades ideales",
-            startHora = LocalTime.of(4,0),
-            finishHora = LocalTime.of(5,45),
+            startHora = LocalTime.of(3,0),
+            finishHora = LocalTime.of(5,30),
             description = "Inicio (15 min): Explicación y formación de equipos.\n" +
                     "Actividad (90 min): Cada estación plantea un reto que los equipos deben completar.\n" +
                     "Exposición (30 min): Los equipos presentan sus ciudades al jurado.\n" +
@@ -850,7 +905,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Foro Creativo: reimaginando la ciudad",
-            startHora = LocalTime.of(5,45),
+            startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(7,30),
             description = "Introducción (10 min): Presentación del tema y dinámica del taller.\n" +
                     "Taller colaborativo (60 min): Los participantes trabajan en grupos pequeños.\n" +
@@ -1095,7 +1150,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "De los Origenes de la Misogenia",
-            startHora = LocalTime.of(5,15),
+            startHora = LocalTime.of(5,30),
             finishHora = LocalTime.of(7,30),
             description = "En esta pieza el mito del génesis y de la culpa de Eva en la caída del hombre son " +
                     "cuestionados como generadores de cultura, idiosincrasia, y por ende discriminacion, odio, " +
@@ -1200,7 +1255,7 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
         ),
         EventInfo(
-            name = "La Utopía de la Inteligencia Artificial y la Economía Conductual: Empresas, Tecnología e Inclusión para un México más Competitivo",
+            name = "La Utopía de la Inteligencia Artificial y la Economía Conductual",
             startHora = LocalTime.of(5,45),
             finishHora = LocalTime.of(6,30),
             description = "En un mundo donde la Inteligencia Artificial y la Economía Conductual están redefiniendo la manera en que tomamos decisiones, las empresas tienen la oportunidad (y la responsabilidad) de utilizar estas herramientas para construir un futuro más equitativo y próspero.\n" +
@@ -1275,7 +1330,7 @@ fun initInformation()  {
 
     var eventosElMundoDeAntes = listOf(
         EventInfo(
-            name = "La Republica de Platon", //TODO Falta info
+            name = "La Republica de Platon", //TODO Falta info y esta por definirse
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
             description = "",
@@ -1388,7 +1443,7 @@ fun initInformation()  {
 
     var eventosElMundoQueViene = listOf(
         EventInfo(
-            name = "Pensar el mundo de hoy, imaginar el mundo de mañana: sociogénesis de las representaciones infantiles del espacio global y de los problemas globales.",
+            name = "Representaciones Infantiles.",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,30),
             description = "Las vidas de los niños se ven afectadas a diario por los procesos globalizados y por las consecuencias de la globalización o la antropización del planeta (Klocker & Ansell, 2016; Twum-Danso Imoh et al., 2019). Sin embargo, sus propias narrativas y representaciones de los espacios y desafíos globales siguen siendo ampliamente ignoradas, tanto en el debate público como por la investigación científica (Walker, 2020; Jones & Lucas, 2023). Mis diferentes trabajos de investigación, sobre las representaciones del mundo o sobre la construcción del sentido de la justicia, muestran sin embargo que los niños tienen cosas que decir sobre el mundo. Sus representaciones del espacio mundial están además marcadas por imaginarios del futuro, a menudo preocupados por el futuro del planeta.",
@@ -1480,7 +1535,7 @@ fun initInformation()  {
 
     var eventosFuturo = listOf(
         EventInfo(
-            name = "Economía basada en future thinking",
+            name = "Economía basada en futur thinking",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
             description = "Esta plática tiene como objetivo explorar el espacio cognitivo y a través del pensamiento futuro donde haremos un recorrido por algunas teorías económicas y a partir de ello viajaremos al año 2050 para traernos ideas y algún artefacto que nos permita el bien común, generar bienestar social y por supuesto crecimiento y desarrollo económico en nuestro entorno.",
@@ -1590,7 +1645,7 @@ fun initInformation()  {
 
     var eventosEspiritualidades = listOf(
         EventInfo(
-            name = "Utopía de la masonería, una utopía polimorfa",
+            name = "Utopía de la masonería",
             startHora = LocalTime.of(4,0),
             finishHora = LocalTime.of(4,45),
             description = "La masonería es una utopía, en todos los sentidos del término de esta noción polimorfa.\n" +
