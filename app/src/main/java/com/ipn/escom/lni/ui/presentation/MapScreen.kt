@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.PointMode
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -364,7 +365,8 @@ fun DialogUtopia(
                     modifier = Modifier
                         .fillMaxWidth(0.7f)
                         .clip(RoundedCornerShape(24.dp)),
-                    contentScale = ContentScale.Fit
+                    contentScale = ContentScale.Fit,
+                    colorFilter = ColorFilter.tint(Color.Black)
                 )
 
                 Spacer(modifier = Modifier.height(8.dp))

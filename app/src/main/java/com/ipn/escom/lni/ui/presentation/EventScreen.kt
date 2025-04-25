@@ -63,6 +63,7 @@ fun EventScreen(event: EventInfo) {
     val nombreEvento = stringResource(id = event.type.value)
     Box(modifier = Modifier
         .fillMaxSize()
+        .background(Color(0xFF10131A))
         .padding(16.dp)){
         AnimatedStarsBackground()
         Column (
@@ -135,11 +136,9 @@ fun EventDetailRow(icon: ImageVector, title: String, content: String){
             Text(
                 text = title,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
             )
             Text(
                 text = content,
-                color = Color.White
             )
             Spacer(modifier = Modifier.height(8.dp))
         }

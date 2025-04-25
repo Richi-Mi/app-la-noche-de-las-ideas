@@ -61,6 +61,7 @@ fun DetailScreen( isla: IslaInfo , onClick: (Int) -> Unit) {
 
     Box(modifier = Modifier
         .fillMaxSize()
+        .background(Color(0xFF10131A))
         .padding(16.dp)
     ) {
         AnimatedStarsBackground()
@@ -94,7 +95,6 @@ fun ListOfCards ( isla: IslaInfo, events: List<EventInfo>, onClick: ( Int ) -> U
                 )
                 Text(
                     text = isla.name,
-                    color = Color.White,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier

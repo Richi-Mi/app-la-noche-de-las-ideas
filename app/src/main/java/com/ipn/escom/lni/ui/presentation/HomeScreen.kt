@@ -8,6 +8,7 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -125,7 +126,9 @@ fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
     ) }
 
     Box(
-        modifier = Modifier.fillMaxSize().padding( innerPadding )
+        modifier = Modifier.fillMaxSize()
+            .background(Color(0xFF10131A))
+            .padding( innerPadding )
     ) {
         AnimatedStarsBackground()
         Icon(
@@ -151,7 +154,8 @@ fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
                         }
                     }
                     mediaPlayer.setVolume(volume, volume)
-                }
+                },
+            tint = Color.White
         )
         Column(
             modifier = Modifier
