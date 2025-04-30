@@ -415,7 +415,7 @@ fun initInformation()  {
         "Calle Manuel Carpio",
         R.drawable.ic_rio,
         eventosRioAnidro,
-        description = "La calle Manuel Carpio se convierte en un vibrante espacio comunitario donde la creatividad y la imaginación toman el control. Explora universos imaginarios mediante el dibujo, comparte una fondue mientras dialogas con otras personas, déjate llevar por la poesía slam y los versos de utopía, participa en juegos de cartas con temática cultural y disfruta de presentaciones musicales en vivo. Una experiencia colectiva al aire libre que celebra la expresión artística, la ciencia y la convivencia."
+        description = "La calle Manuel Carpio se convierte en un vibrante espacio comunitario donde la creatividad y la imaginación toman el control. Explora universos imaginarios mediante el dibujo, comparte una fondue mientras dialogas con otras personas, participa en juegos de cartas con temática cultural y disfruta de presentaciones musicales en vivo. Una experiencia colectiva al aire libre que celebra la expresión artística, la ciencia y la convivencia."
     )
 
     var eventosArteEnUtopias = listOf(
@@ -651,8 +651,8 @@ fun initInformation()  {
     var eventosObservacion = listOf(
         EventInfo(
             name = "Observación Solar con telescopios",
-            startHora = LocalTime.of(15, 0),
-            finishHora = LocalTime.of(17, 0),
+            startHora = LocalTime.of(3, 0),
+            finishHora = LocalTime.of(5, 0),
             description = "Observación del Sol con telescopios especiales, si el clima lo permite. Con la participación de CELESTRON y la coordinación de la Dra. Nahiely Flores-Fajardo (OBSIDIANA).",
             type = TipoEvento.TALLER,
             exponents = listOf(
@@ -667,8 +667,8 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Observación Nocturna: Luna y Júpiter",
-            startHora = LocalTime.of(18, 0),
-            finishHora = LocalTime.of(19, 30), // o el cierre real del evento
+            startHora = LocalTime.of(6, 0),
+            finishHora = LocalTime.of(8, 0), // o el cierre real del evento
             description = "Observación de la Luna y Júpiter con telescopios. Con la participación de CELESTRON y la coordinación de la Dra. Nahiely Flores-Fajardo (OBSIDIANA).",
             type = TipoEvento.TALLER,
             exponents = listOf(
@@ -678,6 +678,26 @@ fun initInformation()  {
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, vinculada a la revista Obsidiana."
                 )
             ),
+            place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
+        ),
+        EventInfo(
+            name = "Planetario (IPN)",
+            startHora = LocalTime.of(2, 0),
+            finishHora = LocalTime.of(7, 0),
+            description = "Disfruta del planetario y sus experiencias",
+            type = TipoEvento.TALLER,
+            exponents = null,
+            place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
+        ),
+        EventInfo(
+            name = "Stand de crepas (IPN)",
+            startHora = LocalTime.of(3, 0),
+            finishHora = LocalTime.of(7, 0),
+            description = "Disfruta de crepas utopicas y especiales",
+            type = TipoEvento.COMIDA,
+            exponents = null,
             place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
             direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
         )

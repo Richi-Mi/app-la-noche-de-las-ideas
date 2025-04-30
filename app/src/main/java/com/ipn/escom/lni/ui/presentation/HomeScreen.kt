@@ -48,6 +48,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -148,12 +149,18 @@ fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
                         .background(MaterialTheme.colorScheme.secondaryContainer)
                         .padding(24.dp)
                 ) {
+                    Image(
+                        painter = painterResource(R.drawable.fe99),
+                        contentDescription = "99 % fe",
+                        modifier = Modifier.width(200.dp)
+                    )
                     Text(text = "Aplicación creada por: ")
-                    Text("EQUIPO 99% fe")
+                    Text(text ="EQUIPO 99% fe", fontWeight = FontWeight.Bold)
                     Text("Mendoza Castañeda José Ricardo")
                     Text("Rodriguez Mendoza Christopher")
                     Text("Peredo Borgonio Daniel")
-                    Text("Logo hecho por: Peredo Borgonio Dahira")
+                    Text("Logo hecho por: ")
+                    Text("Peredo Borgonio Dahira")
                 }
             }
         }
