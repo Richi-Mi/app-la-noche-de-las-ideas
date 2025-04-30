@@ -66,11 +66,11 @@ fun initInformation()  {
             startHora = LocalTime.of(3,0),
             finishHora = LocalTime.of(4,0),
             description = "Presidium :" +
-                    "Dra. Alma Herrera, Rectora de la UNRC, \n" +
-                    "Mtra. Yessica Gasca Leyva, Secretaria de Innovación e Integración Social \n" +
-                    "Dr. Luis Arriaga Valenzuela, S.J., Rector de la Universidad Iberoamericana, \n" +
-                    "Dra. Rosaura Ruiz Gutiérrez, Secretaria de Ciencias, Humanidades, Tecnología e Innovaciones, \n" +
-                    "Sra. Delphine Borione, Embajadora de Francia en México. \n",
+                    "Dra. Alma Herrera Marquez, Rectora de la UNRC, \n" +
+                    "Mtra. Yessica Gasca Castillo, Secretaria de Innovación e Integración Social \n" +
+                    "Dr. Luis Kauachi Legorreta, Director de Internacionalización de la Universidad Iberoamericana, \n" +
+                    "dra. Rosaura Ruiz Gutiérrez, Secretaria de Ciencias, Humanidades, Tecnología e Innovaciones, \n" +
+                    "Embajadora de Francia Delphine Borione \n",
             exponents = null,
             type = TipoEvento.INAGURACION,
             place = "Auditorio de la Universidad Nacional Rosario Castellanos",
@@ -89,7 +89,7 @@ fun initInformation()  {
                     video = "familistere_de_guise"
                 )
             ),
-            type = TipoEvento.VIDEOCONFERENCIA,
+            type = TipoEvento.GRABACION,
             place = "Auditorio de la Universidad Nacional Rosario Castellanos",
             direction = "https://maps.app.goo.gl/ZMsaC5K3c1ty3qzv9"
         ),
@@ -156,7 +156,7 @@ fun initInformation()  {
                     "El potencial de este discurso utópico será cuestionado en comparación con otros discursos que tratan de manejar el trauma.\n",
             exponents = listOf(
                 Speaker(
-                    name = "Thomas Römer",
+                    name = "Dr. Thomas Römer",
                     image = R.drawable.thomas_romer,
                     biography = "Sus trabajos han contribuido a renovar profundamente la comprensión de la formación y de la datación del Pentateuco, así como de la constitución de las tradiciones judías sobre Abraham y Moisés en particular. Por ejemplo, su obra “The So-Called Deuteronomistic History”, publicada en inglés en 2005 y traducida a varios idiomas, marca un hito en la historia de la investigación deuteronómica. \n" +
                             "De nacionalidad alemana y suiza, se convierte en el primer extranjero en dirigir el Collège de France.\n"
@@ -192,7 +192,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Javier Aguilera Peña\nDir. Gral. de PROISTMO",
                     image = R.drawable.dr_javier_aguilera,
-                    biography = "Javier Aguilera Peña es el presidente del Consejo de Administración de la Promotora de Desarrollo de Industria y Bienestar del Istmo de Tehuantepec .Esta organización participa activamente en el desarrollo del Corredor Interoceánico del Istmo de Tehuantepec (CIIT), un proyecto destinado a impulsar el crecimiento económico en la región sureste del país."
+                    biography = "Dr. Javier Aguilera Peña es el presidente del Consejo de Administración de la Promotora de Desarrollo de Industria y Bienestar del Istmo de Tehuantepec .Esta organización participa activamente en el desarrollo del Corredor Interoceánico del Istmo de Tehuantepec (CIIT), un proyecto destinado a impulsar el crecimiento económico en la región sureste del país."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -310,13 +310,13 @@ fun initInformation()  {
     var eventosRioAnidro = listOf(
         EventInfo(
             name = "Crea tu propio Universo",
-            startHora = LocalTime.of(4, 0),
+            startHora = LocalTime.of(3, 0),
             finishHora = LocalTime.of(7, 0),
             description = "El Universo ha sorprendido a la humanidad con objetos muy diversos en tamaño, formas, colores, etc. que no son más que reflejo de la complejidad del Universo en el que vivimos. Algunos de estos hermosos objetos evidencian claramente la evolución que este Universo. En el taller, cada persona podrá imaginar su propio universo y proyectarlo con dibujos.",
             type = TipoEvento.TALLER,
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Nahiely Flores Fajardo",
+                    name = "Dra. Nahiely Flores Fajardo (OBSIDIANA)",
                     image = R.drawable.nahiely_flores_fajardo,
                     biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
                 )
@@ -326,7 +326,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "LA FONDUE SALE A LA CALLE",
-            startHora = LocalTime.of(4, 0),
+            startHora = LocalTime.of(3, 0),
             finishHora = LocalTime.of(7, 0),
             description = "Una calle cerrada al transito se transformara en un espacio comunitario. Se instalaran mesas comunales decoradas con elemento urbanos y naturales. Cada mesa contara con una fondue cenral que los participantes compartiran mientras participan a un dialogo guiado. Un mediator especializado planteara preguntas claves. (IPN)",
             type = TipoEvento.ACTIVIDAD_LUDICA,
@@ -336,7 +336,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Juego de cartas",
-            startHora = LocalTime.of(4, 0),
+            startHora = LocalTime.of(3, 0),
             finishHora = LocalTime.of(7, 0),
             description = "Juego de mesa para reconocer a los personajes o " +
                     "íconos de la cultura francesa (IPN). ",
@@ -347,7 +347,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "EXHIBICIONES",
-            startHora = LocalTime.of(4, 0),
+            startHora = LocalTime.of(3, 0),
             finishHora = LocalTime.of(7, 0),
             description = "Dra. Dalila ARANDA ALDANA: “Las Marianas del Mar” \n" +
                     "Arq. Jacques ROUGERIE “Construir sus sueños bajo el mar”",
@@ -358,7 +358,7 @@ fun initInformation()  {
         ),
         EventInfo(
             name = "Show Científico",
-            startHora = LocalTime.of(4, 0),
+            startHora = LocalTime.of(3, 0),
             finishHora = LocalTime.of(7, 0),
             description = "(IPN)",
             type = TipoEvento.ACTIVIDAD_LUDICA,
@@ -367,10 +367,11 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         ),
         EventInfo(
-            name = "Poesía Slam",
-            startHora = LocalTime.of(5, 45),
-            finishHora = LocalTime.of(6, 30),
-            description = "Versos de Utopía (IPN)",
+            name = "Acto Musical",
+            startHora = LocalTime.of(4, 0),
+            finishHora = LocalTime.of(4, 40),
+            description = "Presentación de música en vivo propia de la tradición francesa " +
+                    "interpretada por un cuarteto de profesores (IPN).",
             type = TipoEvento.ACTO_MUSICAL,
             exponents = null,
             place = "Calle Manuel Carpio (Escenario Musical)",
@@ -386,17 +387,7 @@ fun initInformation()  {
             place = "Calle Manuel Carpio (Escenario Musical)",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         ),
-        EventInfo(
-            name = "Acto Musical",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(4, 40),
-            description = "Presentación de música en vivo propia de la tradición francesa " +
-                    "interpretada por un cuarteto de profesores (IPN).",
-            type = TipoEvento.ACTO_MUSICAL,
-            exponents = null,
-            place = "Calle Manuel Carpio (Escenario Musical)",
-            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
-        ),
+
         EventInfo(
             name = "La primavera de los poetas",
             startHora = LocalTime.of(5, 20),
@@ -407,7 +398,18 @@ fun initInformation()  {
             exponents = null,
             place = "Calle Manuel Carpio (Escenario Musical)",
             direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
+        ),
+        EventInfo(
+            name = "Banda de Rock",
+            startHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(6, 30),
+            description = "Actuación en vivo de una banda de rock del IPN. Música enérgica y ambiente festivo para todos los asistentes.",
+            type = TipoEvento.ACTO_MUSICAL,
+            exponents = null,
+            place = "Calle Manuel Carpio (Escenario Musical)",
+            direction = "https://maps.app.goo.gl/wTWWXoSWx69VAD3L9"
         )
+
     )
     eventosRioAnidro = eventosRioAnidro.sortedBy { it.startHora }
     val rioAnidro = IslaInfo(
@@ -419,8 +421,25 @@ fun initInformation()  {
 
     var eventosArteEnUtopias = listOf(
         EventInfo(
-            name = "Concierto \"Tengo un sueño\"",
+            name = "presentación de Eufonía",
             startHora = LocalTime.of(8,0),
+            finishHora = LocalTime.of(8,15),
+            description = "Introducción del Dr. Jorge RIZO con la presentación de Eufonía, una novela de Hector Berlioz (1830)",
+            exponents = listOf(
+                Speaker(
+                    name = "Dr. Jorge Rizo Martinez (IBERO)",
+                    image = R.drawable.jorge_rizo,
+                    biography = "Dr. Jorge Rizo es doctor en Historia por la École des Hautes Études en Sciences Sociales (EHESS) de París y maestro en Historia por la Universidad Iberoamericana, donde se graduó con mención honorífica. Ha realizado estancias de investigación en la École Française de Rome y la Pontificia Università Gregoriana.\n" +
+                            "Su investigación se centra en la historia de la Compañía de Jesús en el Antiguo Régimen, la historia cultural de los siglos XVI y XVII y la historiografía francesa del siglo XX."
+                )
+            ),
+            type = TipoEvento.EXPOSICION,
+            place = "Aula 4 Universidad Nacional Rosario Castellanos",
+            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
+        ),
+        EventInfo(
+            name = "Introducción de la Orquesta Iberoamericana",
+            startHora = LocalTime.of(8,15),
             finishHora = LocalTime.of(9,45),
             description = "La Orquesta Iberoamericana, dirigida por Lizzi Ceniceros, presenta la CANTATA del maestro Arturo Márquez, con participación especial de Lili Márquez, hija del compositor.\n" +
                     "Contará también con el Coro Sinfónico del Sistema Nacional de Fomento Musical (SNFM), bajo la dirección de Alejandro León.\n\n" +
@@ -435,7 +454,8 @@ fun initInformation()  {
                     "“Danzón No 2” de Arturo Márquez. \n" +
                     "“Bésame mucho “ de Consuelo Velázquez. \n" +
                     "“México en la Piel” de  Jose Manuel Fernández \n" +
-                    "“Huapango” de José Pablo Moncayo. ",
+                    "“Huapango” de José Pablo Moncayo. \n" +
+                    "“Sones de México” Arr. Jorge Cozatl.",
             exponents = listOf(
                 Speaker(
                     name = "Arturo Márquez",
@@ -446,6 +466,12 @@ fun initInformation()  {
                     name = "Lizzi Ceniceros",
                     image = R.drawable.lizzi_ceniceros,
                     biography = "Lizzi Ceniceros es directora de la Orquesta Sinfónica de la BUAP. Es pianista y directora de orquesta mexicana."
+                ),
+                Speaker(
+                    name = "Vania Chávez Cerón",
+                    image = R.drawable.person_solid,
+                    biography = "Directora ejecutiva"
+
                 )
             ),
             type = TipoEvento.ACTO_MUSICAL,
@@ -522,9 +548,9 @@ fun initInformation()  {
             type = TipoEvento.MESA_REDONDA,
             exponents = listOf(
                 Speaker(
-                    name = "Dr. José FRANCO",
+                    name = "Dr. José Franco",
                     image = R.drawable.pepe_franco,
-                    biography = "Obtuvo el doctorado en Física por la Universidad de Wisconsin-Madison, USA. Actualmente " +
+                    biography = "Dr. José Franco Obtuvo el doctorado en Física por la Universidad de Wisconsin-Madison, USA. Actualmente " +
                             "es Investigador Titular del Instituto de Astronomía de la UNAM (IA-UNAM). Su labor abarca " +
                             "un amplio rango de actividades que incluyen docencia, investigación, gestión institucional, " +
                             "promoción de proyectos científicos y artísticos y la comunicación de la ciencia. Ha publicado " +
@@ -625,16 +651,32 @@ fun initInformation()  {
     )
     var eventosObservacion = listOf(
         EventInfo(
-            name = "Observación del sol y de la luna con 4 telescopios",
-            startHora = LocalTime.of(4, 0),
-            finishHora = LocalTime.of(7, 30),
-            description = "Si el clima lo permite, podremos observar el Sol con telescopios especiales entre las 3 y las 5:00 pm. Posteriormente, a partir de las 6:00 pm tendremos observación de la Luna y de Júpiter con telescopios hasta la hora de cierre del evento.",
+            name = "Observación Solar con telescopios",
+            startHora = LocalTime.of(15, 0),
+            finishHora = LocalTime.of(17, 0),
+            description = "Observación del Sol con telescopios especiales, si el clima lo permite. Con la participación de CELESTRON y la coordinación de la Dra. Nahiely Flores-Fajardo (OBSIDIANA).",
             type = TipoEvento.TALLER,
             exponents = listOf(
                 Speaker(
-                    name = "Dra. Nahiely Flores Fajardo (coordinadora)",
+                    name = "Dra. Nahiely Flores-Fajardo (OBSIDIANA, coordinadora)",
                     image = R.drawable.nahiely_flores_fajardo,
-                    biography = "Doctora en Astrofísica y divulgadora de la ciencia, adscrita al Instituto de Matemáticas de la UNAM y a Noche de las Estrellas."
+                    biography = "Doctora en Astrofísica y divulgadora de la ciencia, vinculada a la revista Obsidiana."
+                )
+            ),
+            place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/WtogKf6jYG8fFX719"
+        ),
+        EventInfo(
+            name = "Observación Nocturna: Luna y Júpiter",
+            startHora = LocalTime.of(18, 0),
+            finishHora = LocalTime.of(19, 30), // o el cierre real del evento
+            description = "Observación de la Luna y Júpiter con telescopios. Con la participación de CELESTRON y la coordinación de la Dra. Nahiely Flores-Fajardo (OBSIDIANA).",
+            type = TipoEvento.TALLER,
+            exponents = listOf(
+                Speaker(
+                    name = "Dra. Nahiely Flores-Fajardo (OBSIDIANA, coordinadora)",
+                    image = R.drawable.nahiely_flores_fajardo,
+                    biography = "Doctora en Astrofísica y divulgadora de la ciencia, vinculada a la revista Obsidiana."
                 )
             ),
             place = "Patio Exterior (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
@@ -681,7 +723,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Stéphane Charpier\n(Institut du Cerveau, Université Pierre et Marie Curie)",
                     image = R.drawable.stephane_charpier,
-                    biography = "Stéphane Charpier es coordinador del equipo de Excitabilidad celular y dinámica de las redes neuronales del ICM y profesor de neurociencias en la Universidad Pierre et Marie Curie. \n" +
+                    biography = "Dr. Stéphane Charpier es coordinador del equipo de Excitabilidad celular y dinámica de las redes neuronales del ICM y profesor de neurociencias en la Universidad Pierre et Marie Curie. \n" +
                             "Doctor (1991) y doctorado en neurociencia por la Universidad Pierre y Marie Curie (1995). Es experto para la Agencia de evaluación de la investigación y de la enseñanza superior (AERES) y miembro del consejo científico de la Fundación de Francia (comité Parkinson). En 2011, recibió el premio Valérie Chamaillard, otorgado por la Fundación francesa para la investigación de la epilepsia.",
                     video = "stephane_carpier"
                 )
@@ -698,7 +740,7 @@ fun initInformation()  {
             type = TipoEvento.EXPOSICION,
             exponents = listOf(
                 Speaker(
-                    name = "Sr. Victor Saadia, fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida. ",
+                    name = "Mtro. Victor Saadia, fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida. ",
                     image = R.drawable.victor_saadia,
                     biography = "Victor Saadia es empresario, autor, consultor, speaker y profesor. Es Licenciado en Economía por el ITAM y tiene una Maestría en Pensamiento Social Interdisciplinario por la Universidad de Nueva York. Ahora cursa su Doctorado en Filosofía y Pensamiento Crítico en Suiza. Es fundador de BioCenter, una agrupación de negocios relacionados a la medicina regenerativa; y de ALIVE, una consultora de bienestar. Es autor de 3 libros y de diversos artículos relacionados a la educación, el bienestar y la filosofía de la ciencia. También es Fundador y director ejecutivo de la Asociación Mexicana de Medicina de Estilo de Vida y creador del Podcast: \"Volver al Futuro\"."
                 )
@@ -707,9 +749,46 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
-            name = "La utopía de la juventud y de la belleza perpetuales",
+            name = "En búsqueda de la fuente de la eterna juventud",
             startHora = LocalTime.of(5, 15),
-            finishHora = LocalTime.of(6, 0),
+            finishHora = LocalTime.of(5, 45),
+            description = "Desde tiempos muy antiguos se ha mostrado un genuino interés por conocer ¿Por qué envejecemos?. Incluso este interés nos ha llevado a desafiar al envejecimiento y buscar estrategias que nos permitan evadir nuestro inexorable destino. Continuamos en búsqueda de La Fuente de la Eterna Juventud, tal como Lucas Cranach “ El Viejo”, lo plasmó en su óleo de 1556. En esta conferencia abordaremos el panorama actual de investigación científica en torno al envejecimiento (gerociencia) y revisaremos algunas de las estrategias actuales para conocer acerca del proceso y de cómo contrarrestarlo. ",
+            type = TipoEvento.EXPOSICION,
+            exponents = listOf(
+                Speaker(
+                    name = "Dra. Nadia Alejandra Rivero Segura",
+                    image = R.drawable.nadia_rivero_segura,
+                    biography = "Dra. Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
+                ),
+                Speaker(
+                    name = "Dr. Juan Carlos Gómez Verjan",
+                    image = R.drawable.juan_carlos_verjan,
+                    biography = "Dr. Juan Carlos Gómez Verjan es mexicano, Investigador en Ciencias Médica del Instituto Nacional de Geriatría (INGER) y pertenece al Sistema Nacional de Investigadores nivel 2. De formación es Químico Farmacéutico Biólogo por la Facultad de Química, UNAM. Maestro en Ciencias Biológicas con orientación en Biología Experimental por la Facultad de Ciencias, UNAM y Doctor en Ciencias Biomédicas por el Instituto de Química, UNAM; ambos títulos de posgrado obtenidos con Mención Honorífica. Posee diplomados en Epidemiología, Medicina y Complejidad, Análisis de Información Geoespacial así como en Riesgos Sanitarios. Ha publicado más de 40 artículos científicos, más de 10 capítulos de libro y es editor de 3 libros. Ha realizado 3 estancias de investigación internacionales en el Laboratorio de Biología de Redes del Instituto de Investigación Biomédica en Barcelona, el Laboratorio de Transcriptómica del Instituto de Medicina Molecular de la Universidad de Lisboa y el Sealy Aging Institute de la Universidad de Texas. Sus líneas de investigación se centran en el impacto que tienen las condiciones socioambientales en la edad epigenética de los individuos y en el desarrollo de fármacos geroprotectores.\n"
+                )
+            ),
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
+        ),
+        EventInfo(
+            name = "Proceso creativo detrás de seres híbridos",
+            startHora = LocalTime.of(5, 45),
+            finishHora = LocalTime.of(6, 15),
+            description = "Mi ponencia abordará el proceso creativo detrás de los seres híbridos que caracterizan mi trabajo escultórico. Hablaré desde el origen conceptual de cada obra, la elección simbólica de las especies humanas y animales, hasta el desarrollo del diseño y modelado. Compartiré cómo se materializa la pieza a través de técnicas como el moldeado, vaciado y fundición en bronce. Exploraré la relación entre naturaleza, cuerpo y transformación, que da vida a estas criaturas fantásticas. La charla busca revelar el viaje completo de una escultura, desde la idea hasta su forma final.",
+            type = TipoEvento.EXPOSICION,
+            exponents = listOf(
+                Speaker(
+                    name = "Artista plástico PERI",
+                    image = R.drawable.peri,
+                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
+                )
+            ),
+            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
+            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
+        ),
+        EventInfo(
+            name = "La utopía de la juventud y de la belleza perpetuales",
+            startHora = LocalTime.of(6, 15),
+            finishHora = LocalTime.of(7, 0),
             description = "",
             type = TipoEvento.MESA_REDONDA,
             exponents = listOf(
@@ -733,44 +812,7 @@ fun initInformation()  {
             direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
         ),
         EventInfo(
-            name = "Proceso creativo detrás de seres híbridos",
-            startHora = LocalTime.of(6, 0),
-            finishHora = LocalTime.of(6, 30),
-            description = "Mi ponencia abordará el proceso creativo detrás de los seres híbridos que caracterizan mi trabajo escultórico. Hablaré desde el origen conceptual de cada obra, la elección simbólica de las especies humanas y animales, hasta el desarrollo del diseño y modelado. Compartiré cómo se materializa la pieza a través de técnicas como el moldeado, vaciado y fundición en bronce. Exploraré la relación entre naturaleza, cuerpo y transformación, que da vida a estas criaturas fantásticas. La charla busca revelar el viaje completo de una escultura, desde la idea hasta su forma final.",
-            type = TipoEvento.EXPOSICION,
-            exponents = listOf(
-                Speaker(
-                    name = "Artista plástico PERI",
-                    image = R.drawable.peri,
-                    biography = "Peri (Pedro González Bustos) es un artista plástico mexicano, nacido en 1998 en Puebla, cuya obra trasciende las fronteras entre lo humano, lo natural y lo fantástico. Su trabajo se inspira profundamente en la biodiversidad y las tradiciones culturales de México, fusionando elementos de la flora y fauna mexicana con el cuerpo humano para explorar temas como la metamorfosis, la espiritualidad y la dualidad de lo visible y lo invisible."
-                )
-            ),
-            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
-            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
-        ),
-        EventInfo(
-            name = "En búsqueda de la fuente de la eterna juventud",
-            startHora = LocalTime.of(6, 30),
-            finishHora = LocalTime.of(7, 0),
-            description = "Desde tiempos muy antiguos se ha mostrado un genuino interés por conocer ¿Por qué envejecemos?. Incluso este interés nos ha llevado a desafiar al envejecimiento y buscar estrategias que nos permitan evadir nuestro inexorable destino. Continuamos en búsqueda de La Fuente de la Eterna Juventud, tal como Lucas Cranach “ El Viejo”, lo plasmó en su óleo de 1556. En esta conferencia abordaremos el panorama actual de investigación científica en torno al envejecimiento (gerociencia) y revisaremos algunas de las estrategias actuales para conocer acerca del proceso y de cómo contrarrestarlo. ",
-            type = TipoEvento.EXPOSICION,
-            exponents = listOf(
-                Speaker(
-                    name = "Dra. Nadia Alejandra Rivero Segura",
-                    image = R.drawable.nadia_rivero_segura,
-                    biography = "Nadia Alejandra Rivero Segura, es mexicana, y cursó sus estudios de licenciatura y doctorado en la Universidad Nacional Autónoma de México. Es bióloga y doctora en ciencias biomédicas, actualmente se desempeña como Investigadora en Ciencias Médicas en el Instituto Nacional de Geriatría. Sus áreas de experiencia son neurobiología del envejecimiento, metabolismo energético y envejecimiento. Actualmente desarrolla una línea de investigación enfocada en conocer cómo los trastornos del sueño afectan a la calidad de vida de los adultos mayores, a través de una perspectiva molecular y celular. Además, es conductora y creadora de contenido para el programa de radio DNA-Un programa de ciencia para generar conciencia."
-                ),
-                Speaker(
-                    name = "Dr. Juan Carlos Gómez Verjan",
-                    image = R.drawable.juan_carlos_verjan,
-                    biography = "Juan Carlos Gómez Verjan es mexicano, Investigador en Ciencias Médica del Instituto Nacional de Geriatría (INGER) y pertenece al Sistema Nacional de Investigadores nivel 2. De formación es Químico Farmacéutico Biólogo por la Facultad de Química, UNAM. Maestro en Ciencias Biológicas con orientación en Biología Experimental por la Facultad de Ciencias, UNAM y Doctor en Ciencias Biomédicas por el Instituto de Química, UNAM; ambos títulos de posgrado obtenidos con Mención Honorífica. Posee diplomados en Epidemiología, Medicina y Complejidad, Análisis de Información Geoespacial así como en Riesgos Sanitarios. Ha publicado más de 40 artículos científicos, más de 10 capítulos de libro y es editor de 3 libros. Ha realizado 3 estancias de investigación internacionales en el Laboratorio de Biología de Redes del Instituto de Investigación Biomédica en Barcelona, el Laboratorio de Transcriptómica del Instituto de Medicina Molecular de la Universidad de Lisboa y el Sealy Aging Institute de la Universidad de Texas. Sus líneas de investigación se centran en el impacto que tienen las condiciones socioambientales en la edad epigenética de los individuos y en el desarrollo de fármacos geroprotectores.\n"
-                )
-            ),
-            place = "Biblioteca Central Salvador Ragaña Garduño (Centro Histórico y Cultural Juan de Dios Bátiz IPN)",
-            direction = "https://maps.app.goo.gl/BbKv1jP5YLuN83Xn9"
-        ),
-        EventInfo(
-            name = "Exhibición de arte",
+            name = "Exhibición de arte de PERI",
             startHora = LocalTime.of(4, 0),
             finishHora = LocalTime.of(7, 30),
             description = "",
@@ -945,7 +987,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Alain Musset",
                     image = R.drawable.alain_musset,
-                    biography = "Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia. Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992)"
+                    biography = "Dr. Alain Musset es geógrafo, doctor de la EHESS, miembro del Instituto Universitario de Francia y del Consejo Científico Asesor del Centro de Estudios Interdisciplinarios de la Universidad de Coimbra (Portugal). Ha sido profesor invitado en más de 20 universidades y centros de investigación en México, Guatemala, Honduras, Costa Rica, Nicaragua, Panamá, Colombia, Brasil, Argentina, Chile, Alemania, España, Hungría, Países Bajos, Gran Bretaña e Italia. Sus investigaciones se centran en las ciudades y sociedades urbanas de América latina desde una perspectiva histórica, ambiental, crítica y social. Entre sus publicaciones en español, podemos destacar : El agua en el Valle de México, siglos XVI-XVIII (México, Pórtico de la ciudad de México-CEMCA, 1992)"
                 )
             ),
             type = TipoEvento.GRABACION,
@@ -1026,7 +1068,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Ana Paulina Gutiérrez",
                     image = R.drawable.ana_paulina,
-                    biography = "Ana Paulina Gutiérrez es profesora-investigadora del Centro de Estudios de Género de El Colegio de México. En esta misma institución, es actualmente directora de la Revista Interdisciplinaria de Estudios de Género y ha sido coordinadora de la Maestría en Estudios de Género. Es miembro del sistema Nacional de Investigadoras e Investigadores, nivel I; su formación, en Maestría y Doctorado, fue en Ciencias Sociales respectivamente en la Universidad de Quintana Roo y El Colegio de México."
+                    biography = "Dra. Ana Paulina Gutiérrez es profesora-investigadora del Centro de Estudios de Género de El Colegio de México. En esta misma institución, es actualmente directora de la Revista Interdisciplinaria de Estudios de Género y ha sido coordinadora de la Maestría en Estudios de Género. Es miembro del sistema Nacional de Investigadoras e Investigadores, nivel I; su formación, en Maestría y Doctorado, fue en Ciencias Sociales respectivamente en la Universidad de Quintana Roo y El Colegio de México."
                 ),
                 Speaker(
                     name = "Artista Ramiro Chaves (COLMEX)",
@@ -1041,7 +1083,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Karine Tinat",
                     image = R.drawable.karine_tinat,
-                    biography = "Karine Tinat es profesora-investigadora en El Colegio de México desde 2007. En la institución, ha coordinado la Cátedra Simone de Beauvoir, la Maestría en Estudios de Género y el Programa Interdisciplinario de Estudios de la Mujer; ha fundado la revista Estudios de género, dirigido el Centro de Estudios Sociológicos y el Centro de Estudios de Género donde está afiliada ahora. Sus intereses científicos se inscriben en una sociología del cuerpo y de la sexualidad, así como en los estudios de género. Su libro de autor más representativo de sus reflexiones y preocupaciones teóricas es Las bocas útiles. Aproximaciones sociológicas y antropológicas a la anorexia. Es parte del SNII nivel 2, miembro regular de la Academia Mexicana de Ciencias y Chevalier de l’Ordre National du Mérite."
+                    biography = "Dra. Karine Tinat es profesora-investigadora en El Colegio de México desde 2007. En la institución, ha coordinado la Cátedra Simone de Beauvoir, la Maestría en Estudios de Género y el Programa Interdisciplinario de Estudios de la Mujer; ha fundado la revista Estudios de género, dirigido el Centro de Estudios Sociológicos y el Centro de Estudios de Género donde está afiliada ahora. Sus intereses científicos se inscriben en una sociología del cuerpo y de la sexualidad, así como en los estudios de género. Su libro de autor más representativo de sus reflexiones y preocupaciones teóricas es Las bocas útiles. Aproximaciones sociológicas y antropológicas a la anorexia. Es parte del SNII nivel 2, miembro regular de la Academia Mexicana de Ciencias y Chevalier de l’Ordre National du Mérite."
                 ),
                 Speaker(
                     name = "Dra. Danielle Zaslavsky",
@@ -1062,7 +1104,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Laura Pedraza Pinto",
                     image = R.drawable.laura_pedraza_pinto,
-                    biography = "Laura es abogada con experiencia en el ámbito de los estudios de género, los derechos " +
+                    biography = "La Dra. Laura es abogada con experiencia en el ámbito de los estudios de género, los derechos " +
                             "humanos y la incidencia social. Cuenta con un Doctorado en Estudios Críticos de Género por la " +
                             "Universidad Iberoamericana, donde su tesis se centró en la construcción y expresión de la " +
                             "identidad de género de mujeres trans en el sistema carcelario. Asimismo, tiene una Maestría " +
@@ -1076,7 +1118,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Michelle Gama Leyva",
                     image = R.drawable.michelle_gama,
-                    biography = "Michelle Gama Leyva es la directora del Centro de Estudios Críticos de Género y Feminismos " +
+                    biography = "Ls Dra. Michelle Gama Leyva es la directora del Centro de Estudios Críticos de Género y Feminismos " +
                             "de la IBERO CDMX, institución en la que ha sido académica de tiempo completo del " +
                             "Departamento de Letras desde 2016. Sus líneas de investigación son los estudios de género, " +
                             "los feminismos, la teoría de la literatura, la narrativa contemporánea, los estudios del cuerpo " +
@@ -1138,9 +1180,9 @@ fun initInformation()  {
             description = "El objetivo de esta conferencia es mostrar cómo posterior al momento de la fundación del EZLN –aquel de la vía insurgente y guerrillera–, pronto devino en la formación de un proyecto social alternativo, donde las exigencias o demandas como tierra, trabajo, alimentación, justicia, salud, educación o cultura, fueron convertidas en áreas de trabajo por quienes fundaron el EZLN.  Irresolubles en el marco del actual sistema-mundo capitalista, estas áreas de trabajo representan una praxis revolucionaria anticapitalista y la gran contribución de los pueblos zapatistas en áreas de educación, cultura, economía, alimentación, salud, justicia y nuevas relaciones sociales, que en conjunto prefiguran un futuro emergente que nace justamente desde nuestro presente. Futuros emergentes, representan, a su vez, mundos posibles, que los zapatistas han llamado: “un mundo donde quepan muchos mundos”.",
             exponents = listOf(
                 Speaker(
-                    name = "Carlos Rios Gardillo (UAM Azcapotzalco)",
+                    name = "Dr. Carlos Alberto Rios Gordillo (UAM Azcapotzalco)",
                     image = R.drawable.guillem_compte,
-                    biography = "Carlos Alberto Ríos es historiador egresado de la Universidad Autónoma de Chiapas, doctor en historia por la Universidad Autónoma Metropolitana, Iztapalapa y alumno de “La escuelita zapatista”, organizada por el Ejército Zapatista de Liberación Nacional. Así mismo, ha sido cofundador del “Centro Immanuel Wallerstein”, cofundador de la revista Contrahistorias. La otra mirada de Clío. Actualmente, es el Jefe del Departamento de Sociología, de la UAM Azcapotzalco."
+                    biography = "El Dr. Carlos Alberto Ríos Gordillo es historiador egresado de la Universidad Autónoma de Chiapas, doctor en historia por la Universidad Autónoma Metropolitana, Iztapalapa y alumno de “La escuelita zapatista”, organizada por el Ejército Zapatista de Liberación Nacional. Así mismo, ha sido cofundador del “Centro Immanuel Wallerstein”, cofundador de la revista Contrahistorias. La otra mirada de Clío. Actualmente, es el Jefe del Departamento de Sociología, de la UAM Azcapotzalco."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1193,7 +1235,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Guillem Compte Nunes (UNAM)",
                     image = R.drawable.guillem_compte,
-                    biography = "Guillem Compte Nunes es Doctor en Ciencia Social con especialidad en Sociología por El Colegio de México. Investigador de tiempo completo, adscrito al Instituto de Investigaciones Sociales, UNAM. Profesor de asignatura de la Facultad de Ciencias Políticas y Sociales, UNAM. Desde 2021 Coordinador de la Cátedra Extraordinaria “Francisco de Vitoria-Bartolomé de las Casas”, UNAM. Miembro del Sistema Nacional de Investigadores, Nivel I. Sus líneas de investigación incluyen utopía, ideología, religiosidades contemporáneas, Estado, democracia, ciudadanía y derechos humanos. Ha publicado artículos en revistas académicas nacionales e internacionales. Es el autor del libro “Laicidad y religión civil”, co-compilador del libro “La autodeterminación de los pueblos: controversias en Europa y las Américas”, y coordinador del libro “Globalización desde un enfoque de derechos”."
+                    biography = "Dr. Guillem Compte Nunes es Doctor en Ciencia Social con especialidad en Sociología por El Colegio de México. Investigador de tiempo completo, adscrito al Instituto de Investigaciones Sociales, UNAM. Profesor de asignatura de la Facultad de Ciencias Políticas y Sociales, UNAM. Desde 2021 Coordinador de la Cátedra Extraordinaria “Francisco de Vitoria-Bartolomé de las Casas”, UNAM. Miembro del Sistema Nacional de Investigadores, Nivel I. Sus líneas de investigación incluyen utopía, ideología, religiosidades contemporáneas, Estado, democracia, ciudadanía y derechos humanos. Ha publicado artículos en revistas académicas nacionales e internacionales. Es el autor del libro “Laicidad y religión civil”, co-compilador del libro “La autodeterminación de los pueblos: controversias en Europa y las Américas”, y coordinador del libro “Globalización desde un enfoque de derechos”."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1291,7 +1333,7 @@ fun initInformation()  {
             description = "",
             exponents = listOf(
                 Speaker(
-                    name = "Verónica Díaz de León Bermúdez (IBERO)",
+                    name = "Dra. Verónica Díaz de León Bermúdez (IBERO)",
                     image = R.drawable.veronica_diaz,
                     biography = "Doctora en Filosofía por la Ibero, CDMX, Maestra en Filosofía por la UNAM y Licenciada en Filosofía por la UCSJ. Es integrante del Sistema Nacional de Investigadoras e Investigadores (SNII). Ha sido Personal Docente e Investigador (PDI) en la Universitat de Barcelona. (2019-2020). Pertenece a la Asociación de Epistemología de la Universidad Complutense de Madrid, a la Red de Mujeres Filósofas de América Latina y a la Asociación Filosófica de México. Se ha desempeñado como Árbitro en el Programa de Apoyo a Proyectos de Investigación e Innovación Tecnológica (PAPIT), Convocatorias 2024-2025, de la UNAM. También ha realizado dictámenes para revistas internacionales y nacionales. Es co-autora del libro El desmontaje de la filosofía. Editorial Sicómoro, Madrid, 2022. ISBN 9788412538908, y autora de artículos en revistas arbitradas. Cuenta con 18 años de experiencia como catedrática universitaria, tanto en posgrado como en licenciatura. Es especialista en filosofía de la tecnología disruptiva, historia de la filosofía, filosofía de la cultura e interseccionalidad."
                 )
@@ -1317,7 +1359,7 @@ fun initInformation()  {
                     biography = "Matemática hispano-mexicana especializada en la teoría de control de ecuaciones diferenciales parciales parabólicas. Es investigadora del Instituto de Matemáticas de la UNAM, y expresidenta de la Sociedad Matemática Mexicana. (para el período 2018-2020). En 2020 fue nombrada miembro de la junta de gobierno del consejo universitario de la UNAM. Ha colaborado con matemáticos e ingenieros de México, Francia, España, Chile, Brasil, Colombia, Estados Unidos, Italia, Rumanía y Argentina."
                 ),
                 Speaker(
-                    name = "Luisa F. González Arribas (UNAM)",
+                    name = "Luisa F. González Arribas (UNAM,OBSIDIANA)",
                     image = R.drawable.luisa_gonzalez,
                     biography = "Luisa inició su labor en comunicación de la ciencia a partir del año 2000. Desde entonces ha colaborado como reportera, editora, profesora, coordinadora de prensa, guionista, tallerista y consultora en diversos proyectos e instituciones. Actualmente es Vicepresidenta de la Sociedad Mexicana para la Divulgación de la Ciencia y la Técnica (Somedicyt) y Editora en jefe de la revista Obsidiana: ciencia y cultura por México."
                 )
@@ -1384,7 +1426,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dra. Elaine Reynoso Haynes (DGDC)",
                     image = R.drawable.elaine_reynoso,
-                    biography = "Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados. Sus áreas de especialización en el campo de la CPC incluyen la planeación, evaluación, desarrollo y operación de museos de ciencia; la formación de divulgadores; y el diseño curricular en comunicación pública de la ciencia. Con una amplia trayectoria académica, cuenta con más de 100 publicaciones en revistas especializadas y libros, además de numerosas participaciones en congresos nacionales e internacionales. Ha organizado diversos congresos y foros académicos en el ámbito de la CPC, tanto en México como en el extranjero. Ha sido profesora invitada en prestigiosas instituciones como la Universidad Federal Fluminense y la Universidad Federal de Río de Janeiro, en Brasil; la Universidad “La Sapienza” en Roma y la Universidad de Messina, en Italia. Asimismo, ha asesorado a varios museos de ciencia en México y otros países. "
+                    biography = "La Dra. Elaine Reynoso Haynes se desempeña en la Dirección General de Divulgación de la Ciencia (DGDC) de la Universidad Nacional Autónoma de México (UNAM), donde actualmente ocupa el cargo de Directora de Formación e Investigación en Comunicación Pública de la Ciencia (CPC).  Formada en la Facultad de Ciencias de la UNAM, obtuvo la licenciatura en Física. Posteriormente, cursó la maestría en Enseñanza Superior y el doctorado en Pedagogía en la Facultad de Filosofía y Letras de la misma universidad, obteniendo mención honorífica en ambos posgrados. Sus áreas de especialización en el campo de la CPC incluyen la planeación, evaluación, desarrollo y operación de museos de ciencia; la formación de divulgadores; y el diseño curricular en comunicación pública de la ciencia. Con una amplia trayectoria académica, cuenta con más de 100 publicaciones en revistas especializadas y libros, además de numerosas participaciones en congresos nacionales e internacionales. Ha organizado diversos congresos y foros académicos en el ámbito de la CPC, tanto en México como en el extranjero. Ha sido profesora invitada en prestigiosas instituciones como la Universidad Federal Fluminense y la Universidad Federal de Río de Janeiro, en Brasil; la Universidad “La Sapienza” en Roma y la Universidad de Messina, en Italia. Asimismo, ha asesorado a varios museos de ciencia en México y otros países. "
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1401,22 +1443,7 @@ fun initInformation()  {
     )
 
     var eventosElMundoDeAntes = listOf(
-        EventInfo(
-            name = "La Republica de Platon", //TODO Falta info y esta por definirse
-            startHora = LocalTime.of(4,0),
-            finishHora = LocalTime.of(4,30),
-            description = "",
-            exponents = listOf(
-                Speaker(
-                    name = "Leopoldo Iribarren",
-                    image = R.drawable.person_solid,
-                    biography = ""
-                )
-            ),
-            type = TipoEvento.EXPOSICION,
-            place = "Aula 1 Universidad Nacional Rosario Castellanos",
-            direction = "https://maps.app.goo.gl/wnaXDhoVSit5bFQ9A"
-        ),
+
         EventInfo(
             name = "La utopía que tuvo lugar. Los viajes cósmicos de Bergerac y otros cuentos.",
             startHora = LocalTime.of(4,30),
@@ -1445,7 +1472,7 @@ fun initInformation()  {
                     "A partir del ejemplo histórico paradigmático de la Comuna de París como ejemplo de revolución en acto se analizará la función práctica de lo utópico.\n",
             exponents = listOf(
                 Speaker(
-                    name = "Araceli Mondragon González (UAM)",
+                    name = "Dra. Araceli Mondragon González (UAM)",
                     image = R.drawable.araceli_mondragon,
                     biography = "Dra. Araceli Mondragón González, Profesora-Investigadora de la Universidad Autónoma Metropolitana, adscrita al Departamento de Relaciones Sociales. Licenciada y maestra en Ciencia Política por la Facultad de Ciencias Políticas y Sociales de la UNAM; doctora en Estudios Latinoamericanos por la Facultad de Filosofía y Letras de la UNAM. Líneas de investigación y publicaciones en torno a los temas: relación entre política y utopía; filosofía de Ernst Bloch; memoria, utopía y cambio social; interculturalidad, ethos histórico y experiencias de alteridad."
                 )
@@ -1587,7 +1614,7 @@ fun initInformation()  {
         description = "Se ha propuesto que la criticalidad, definida como la zona fronteriza entre dos fases (o estados colectivos diferentes) en los que pueden encontrarse los sistemas complejos, corresponde a un equilibrio dinámico en estos sistemas. Esto puede interpretarse, en el caso biológico, como el estado al que tienden por selección natural los sistemas que evolucionan en un medio ambiente cambiante, de manera que optimizan los requerimientos antagónicos de robustez y adaptabilidad. Esto ha sido comprobado, por ejemplo, a través de la medición de la variabilidad del ritmo cardíaco en mamíferos jóvenes y sanos, incluyendo los seres humanos. Estudiamos el comportamiento de la temperatura promedio de nuestro planeta desde 1880 hasta la fecha para demostrar el sorprendente equilibrio que se ha establecido entre la vida (nuestra biósfera) y nuestra atmósfera: el comportamiento  autoorganizado de la Tierra (Gaia) y su acelerada pérdida, debida esencialmente al desequilibrio ecológico y a la emisión de gases de invernadero.\n",
         exponents = listOf(
             Speaker(
-                name = "Alejandro Frank (UNAM)",
+                name = "Dr. Alejandro Frank (UNAM)",
                 image = R.drawable.alejandro_frank,
                 biography = "El Dr. Frank centró su investigación en las áreas de Física Nuclear y Molecular, pero su producción científica abarcó otros temas diversos, como sus estudios de aspectos fundamentales de la Mecánica Cuántica, la óptica y la teoría algebraica de la dispersión. En la última década ha dirigido su atención a la ciencia de la complejidad, en particular al estudio de sistemas ecológicos, biológicos y fisiológicos. Es uno de los fundadores y fue el primer director del Centro de Ciencias de la Complejidad (C3) de la UNAM. Recibió la Beca Guggenheim y el Premio Manuel Noriega Morales de la Organización de los Estados Americanos y es Fellow de la American Physical Society."
             )
@@ -1743,9 +1770,9 @@ fun initInformation()  {
             description = "El mundo post-apocalíptico, imaginado por los teólogos cristianos medievales, es utópico: para los humanos, es un mundo justo donde unos reciben penas bien merecidas y otros son recompensados. Ahora bien, ¿qué pasa con la naturaleza en este mundo que se supone es el más perfecto posible?  ¿Qué destino espera a los astros, las plantas, los animales o incluso los cuatro elementos de los que están hechos todos los cuerpos? Tantas preguntas planteadas en los escritos de los siglos XIII-XIV.",
             exponents = listOf(
                 Speaker(
-                    name = "Maria Sorokina\n(Universidad Paris-Est Créteil)",
+                    name = "Dra. Maria Sorokina\n(Universidad Paris-Est Créteil)",
                     image = R.drawable.maria_sorokina,
-                    biography = "Investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. "
+                    biography = "Dra. Maria Sorokina es investigadora en el Instituto de investigación e historia de los textos (IRHT), CNRS, París. Sus trabajos se sitúan en el ámbito de la historia de las ciencias medievales en el Occidente latino. Las cruces entre la ciencia y la fe constituyen la problemática central de sus investigaciones. En su tesis doctoral, analizó una teoría unánimemente aceptada en la Edad Media: la teoría de la influencia celeste que ve los astros como causas de los fenómenos terrestres. "
                 )
             ),
             type = TipoEvento.VIDEOCONFERENCIA,
@@ -1761,7 +1788,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Jorge Rizo Martinez (IBERO)",
                     image = R.drawable.jorge_rizo,
-                    biography = "Jorge Rizo es doctor en Historia por la École des Hautes Études en Sciences Sociales (EHESS) de París y maestro en Historia por la Universidad Iberoamericana, donde se graduó con mención honorífica. Ha realizado estancias de investigación en la École Française de Rome y la Pontificia Università Gregoriana.\n" +
+                    biography = "Dr. Jorge Rizo es doctor en Historia por la École des Hautes Études en Sciences Sociales (EHESS) de París y maestro en Historia por la Universidad Iberoamericana, donde se graduó con mención honorífica. Ha realizado estancias de investigación en la École Française de Rome y la Pontificia Università Gregoriana.\n" +
                             "Su investigación se centra en la historia de la Compañía de Jesús en el Antiguo Régimen, la historia cultural de los siglos XVI y XVII y la historiografía francesa del siglo XX."
                 )
             ),
@@ -1776,7 +1803,7 @@ fun initInformation()  {
             description = "En las épocas de efervescencia y transición hay muchas posibilidades en juego y muchas maneras de articular y llevar a la práctica proyectos. Estas posibilidades de futuro se reflejan en diferentes posibilidades de evangelización, aún dentro de una misma orden religiosa como sucedió a los dominicos en el siglo XVI. A pesar de compartir un carisma y una herencia religiosa común, ante la apertura de un Nuevo Mundo, los frailes construyen de diversa manera el tiempo social; conforman de manera distinta su compromiso religioso y se construyen a un otro, el indio, al que temen, aman o no alcanzan a comprender. Estos procesos son pensados a partir de tres modelos de evangelización y cuatro personajes paradigmáticos que dejarán profunda huella en las políticas indianas: Domingo de Betanzos; Francisco de Vitoria; Julián Garcés y Bartolomé de Las Casas.",
             exponents = listOf(
                 Speaker(
-                    name = "Araceli Mondragón González\nUAM",
+                    name = "Dra. Araceli Mondragón González\nUAM",
                     image = R.drawable.araceli_mondragon,
                     biography = "Dra. Araceli Mondragón González, Profesora-Investigadora de la Universidad Autónoma Metropolitana, adscrita al Departamento de Relaciones Sociales. Licenciada y maestra en Ciencia Política por la Facultad de Ciencias Políticas y Sociales de la UNAM; doctora en Estudios Latinoamericanos por la Facultad de Filosofía y Letras de la UNAM."
                 )
@@ -1794,7 +1821,7 @@ fun initInformation()  {
                 Speaker(
                     name = "Dr. Pablo Abascal (IBERO - UAM)",
                     image = R.drawable.pablo_abascal,
-                    biography = "Pablo Abascal es doctor en Historia y Civilización por el European University Institute de Florencia. Es maestro en Investigación por la misma institución y licenciado en Historia por la Universidad Iberoamericana.Miembro del Sistema Nacional de Investigadores (SNI), Nivel I, ha realizado estancias posdoctorales en la UNAM y la Universidad Autónoma de Querétaro. Su libro De residencia a colegio será publicado en 2024 por la Universidad Iberoamericana."
+                    biography = "Dr. Pablo Abascal es doctor en Historia y Civilización por el European University Institute de Florencia. Es maestro en Investigación por la misma institución y licenciado en Historia por la Universidad Iberoamericana.Miembro del Sistema Nacional de Investigadores (SNI), Nivel I, ha realizado estancias posdoctorales en la UNAM y la Universidad Autónoma de Querétaro. Su libro De residencia a colegio será publicado en 2024 por la Universidad Iberoamericana."
                 )
             ),
             type = TipoEvento.EXPOSICION,
@@ -1808,7 +1835,7 @@ fun initInformation()  {
             description = "¿Por qué una revolución política sustentada en la fe tuvo eco en la Guerra Fría latinoamericana? ¿Qué ideas de utopía había detrás? En 1966, el padre Camilo Torres Restrepo se insertó a la guerrilla del Ejército de Liberación Nacional en Colombia con la idea de que la revolución era un imperativo cristiano. En 1971, el padre Gustavo Gutierrez publicó el libro “Teología de la Liberación” con la idea de que la emancipación del hombre en lo político, lo social y lo económico tenía relación con el reino de Dios y el mundo de los pobres. Las similitudes y las distancias entre estas dos experiencias revelan una noción de utopía que se readaptó y se puso en crisis al mismo tiempo en su conexión con la historia y la acción. En este espacio hablaremos de utopías cristianas contemporáneas en contracara con un anhelo de transformación social que no llegó a concretarse.",
             exponents = listOf(
                 Speaker(
-                    name = "Laura Camila Ramírez Bonilla\nIBERO",
+                    name = "Dra. Laura Camila Ramírez Bonilla\n(IBERO)",
                     image = R.drawable.laura_camila_ramirez,
                     biography = "Laura Camila Ramírez Bonilla es doctora y maestra en Historia por El Colegio de México, magíster en Estudios Políticos por el Instituto de Estudios Políticos y Relaciones Internacionales (IEPRI) de la Universidad Nacional de Colombia y politóloga de la misma institución. Directora del Departamento de Historia de la Universidad Iberoamericana, CDMX (2024-2026)."
                 )
