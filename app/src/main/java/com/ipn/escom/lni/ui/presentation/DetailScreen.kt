@@ -49,6 +49,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.ipn.escom.lni.R
 import com.ipn.escom.lni.islasGlobal
+import com.ipn.escom.lni.mediaPlayer
+import com.ipn.escom.lni.pause
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.IslaInfo
 import com.ipn.escom.lni.ui.model.Speaker
@@ -59,6 +61,10 @@ import java.time.LocalTime
 @Composable
 fun DetailScreen( isla: IslaInfo , onClick: (Int) -> Unit) {
 
+    if(pause){
+        pause = false
+        mediaPlayer.start()
+    }
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color(0xFF10131A))

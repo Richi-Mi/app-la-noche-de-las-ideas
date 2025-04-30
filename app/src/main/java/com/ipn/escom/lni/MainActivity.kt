@@ -16,12 +16,11 @@ import java.time.LocalTime
 
 lateinit var mediaPlayer: MediaPlayer
 lateinit var islasGlobal: MutableList<IslaInfo>
+var pause = false
 var volume =1.0f
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private var pause = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

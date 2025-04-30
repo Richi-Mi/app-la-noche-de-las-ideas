@@ -137,15 +137,25 @@ fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
             .background(Color(0xFF10131A))
             .padding( innerPadding )
     ) {
-
-        Dialog(
-            onDismissRequest = { about = false }
-        ) {
-            Text(text = "Aplicación creada por: ")
-            Text("EQUIPO 99% fe")
-            Text("Mendoza Castañeda José Ricardo")
-            Text("Rodriguez Mendoza Christopher")
-            Text("Peredo Borgonio Daniel")
+        if(about) {
+            Dialog(
+                onDismissRequest = { about = false }
+            ) {
+                Column (
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .clip(RoundedCornerShape(24.dp))
+                        .background(MaterialTheme.colorScheme.secondaryContainer)
+                        .padding(24.dp)
+                ) {
+                    Text(text = "Aplicación creada por: ")
+                    Text("EQUIPO 99% fe")
+                    Text("Mendoza Castañeda José Ricardo")
+                    Text("Rodriguez Mendoza Christopher")
+                    Text("Peredo Borgonio Daniel")
+                    Text("Logo hecho por: Peredo Borgonio Dahira")
+                }
+            }
         }
 
         AnimatedStarsBackground()

@@ -50,10 +50,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.VideoSize
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
+import com.ipn.escom.lni.mediaPlayer
+import com.ipn.escom.lni.pause
 import com.ipn.escom.lni.ui.model.EventInfo
 import com.ipn.escom.lni.ui.model.Speaker
 
@@ -194,7 +197,7 @@ fun abrirNavegador (context: Context, url: String) {
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     context.startActivity(intent)
 }
-
+/*
 @Composable
 fun VideoPlayer(context: Context, videoUri: String, modifier: Modifier){
     var videoAspectRatio by remember { mutableFloatStateOf(16 / 9f) }
@@ -231,4 +234,70 @@ fun VideoPlayer(context: Context, videoUri: String, modifier: Modifier){
             useController = true
         }
     }, modifier = modifier.aspectRatio(videoAspectRatio))
+}
+*/
+@Composable
+fun VideoPlayer(context: Context, videoUri: String, modifier: Modifier) {
+    var videoAspectRatio by remember { mutableFloatStateOf(16 / 9f) }
+
+    val exoPlayer = remember {
+        ExoPlayer.Builder(context).build().apply {
+            val mediaItem = MediaItem.fromUri(Uri.parse(videoUri))
+            setMediaItem(mediaItem)
+            prepare()
+            playWhenReady = true // Reproduce automáticamente al cargar
+
+            addListener(object : Player.Listener {
+                override fun onVideoSizeChanged(videoSize: VideoSize) {
+                    videoAspectRatio = if (videoSize.height != 0)
+                        videoSize.width.toFloat() / videoSize.height
+                    else
+                        16 / 9f
+                }
+
+                override fun onIsPlayingChanged(isPlaying: Boolean) {
+                    if (isPlaying) {
+                        pause = true
+                        mediaPlayer.pause()
+                    } else {
+                        pause = false
+                        mediaPlayer.start()
+                    }
+                }
+
+                override fun onPlaybackStateChanged(state: Int) {
+                    // Cuando termine el video
+                    if (state == Player.STATE_ENDED) {
+                        pause = false
+                        mediaPlayer.start()
+                    }
+                }
+
+
+                override fun onPlayerError(error: PlaybackException) {
+                    super.onPlayerError(error)
+                    // Reanudar música si hubo un error en el video
+                    pause = false
+                    mediaPlayer.start()
+                }
+
+            })
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            exoPlayer.release()
+        }
+    }
+
+    AndroidView(
+        factory = {
+            PlayerView(context).apply {
+                player = exoPlayer
+                useController = true
+            }
+        },
+        modifier = modifier.aspectRatio(videoAspectRatio)
+    )
 }
