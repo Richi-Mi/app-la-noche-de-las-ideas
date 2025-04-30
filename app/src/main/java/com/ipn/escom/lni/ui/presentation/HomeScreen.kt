@@ -15,13 +15,17 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -30,6 +34,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -46,6 +51,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import com.ipn.escom.lni.R
 import com.ipn.escom.lni.mediaPlayer
 import com.ipn.escom.lni.volume
@@ -116,6 +122,7 @@ fun generateStars(count: Int): List<Star> {
 @Composable
 fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
     val offset = Offset(5.0f, 10.0f)
+    var about by remember { mutableStateOf(false) }
     var volumeImage by remember { mutableIntStateOf(
         when (volume) {
             0.5f -> R.drawable.volume_low_solid
@@ -130,33 +137,59 @@ fun HomeScreen( innerPadding: PaddingValues, onClick: () -> Unit ) {
             .background(Color(0xFF10131A))
             .padding( innerPadding )
     ) {
+
+        Dialog(
+            onDismissRequest = { about = false }
+        ) {
+            Text(text = "Aplicación creada por: ")
+            Text("EQUIPO 99% fe")
+            Text("Mendoza Castañeda José Ricardo")
+            Text("Rodriguez Mendoza Christopher")
+            Text("Peredo Borgonio Daniel")
+        }
+
         AnimatedStarsBackground()
-        Icon(
-            painter = painterResource(id = volumeImage),
-            contentDescription = "Volumen",
-            modifier = Modifier
-                .size(50.dp)
-                .align(Alignment.TopEnd)
-                .padding(8.dp)
-                .clickable {
-                    when (volume) {
-                        1.0f -> {
-                            volume = 0.5f
-                            volumeImage = R.drawable.volume_low_solid
+
+        Row( modifier = Modifier.align(Alignment.TopEnd)) {
+            Icon(
+                painter = painterResource(id = volumeImage),
+                contentDescription = "Volumen",
+                modifier = Modifier
+                    .size(50.dp)
+                    .padding(8.dp)
+                    .clickable {
+                        when (volume) {
+                            1.0f -> {
+                                volume = 0.5f
+                                volumeImage = R.drawable.volume_low_solid
+                            }
+                            0.5f -> {
+                                volume = 0.0f
+                                volumeImage = R.drawable.volume_off_solid
+                            }
+                            0.0f -> {
+                                volume = 1.0f
+                                volumeImage = R.drawable.volume_high_solid
+                            }
                         }
-                        0.5f -> {
-                            volume = 0.0f
-                            volumeImage = R.drawable.volume_off_solid
-                        }
-                        0.0f -> {
-                            volume = 1.0f
-                            volumeImage = R.drawable.volume_high_solid
-                        }
-                    }
-                    mediaPlayer.setVolume(volume, volume)
-                },
-            tint = Color.White
-        )
+                        mediaPlayer.setVolume(volume, volume)
+                    },
+                tint = Color.White
+            )
+            Spacer(Modifier.width(16.dp))
+            Icon(
+                imageVector = Icons.Default.Info,
+                contentDescription = "Acerca De",
+                modifier = Modifier
+                    .size(50.dp)
+                    .padding(8.dp)
+                    .clickable {
+                        about = true
+                    },
+                tint = Color.White
+            )
+
+        }
         Column(
             modifier = Modifier
                 .fillMaxSize(),

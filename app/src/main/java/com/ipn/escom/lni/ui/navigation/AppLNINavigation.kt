@@ -37,7 +37,7 @@ fun AppLNINavigation() {
             addStartScreen( applninavController, innerPadding )
             addMapScreen( applninavController, innerPadding )
             addDetailScreen( applninavController )
-            addEventScreen( applninavController)
+            addEventScreen()
         }
     }
 }
@@ -77,9 +77,7 @@ private fun NavGraphBuilder.addDetailScreen(
     }
 }
 
-private fun NavGraphBuilder.addEventScreen(
-    navController: NavHostController
-) {
+private fun NavGraphBuilder.addEventScreen() {
     composable(
         route =  NavRoutes.getEventRoute(),
         arguments = listOf(

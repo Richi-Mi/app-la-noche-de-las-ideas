@@ -14,19 +14,19 @@ import com.ipn.escom.lni.ui.theme.LaNocheDeLasIdeasTheme
 import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalTime
 
+lateinit var mediaPlayer: MediaPlayer
 lateinit var islasGlobal: MutableList<IslaInfo>
-lateinit var mediaPlayer : MediaPlayer
 var volume =1.0f
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private var pause = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         mediaPlayer = MediaPlayer.create(this, R.raw.auido_fondo)
         mediaPlayer.isLooping = true
-        mediaPlayer.start()
         volume = 1.0f
         initInformation()
 
@@ -36,6 +36,25 @@ class MainActivity : ComponentActivity() {
                 AppLNINavigation()
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (!pause) {
+            mediaPlayer.pause()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(!pause) {
+            mediaPlayer.start()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
     }
 }
 
